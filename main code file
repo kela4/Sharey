@@ -1,1 +1,2 @@
 #code
+print("hello world")
