@@ -18,3 +18,8 @@
 <?php
     echo "Test von Tom";
 ?>
+
+<?php
+    echo "Test von Tom 2";
+    echo "Das ist sehr cool";
+?>
