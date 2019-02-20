@@ -33,9 +33,9 @@
                                 name="password">
                         </div>
                         <!-- Javascript der Login Modal schließt -->
-                        <button type="button" class="btn btn-light" data-toggle="modal"
+                        <button type="submit" class="btn btn-dark float-right">Login</button>
+                        <button type="button" class="btn btn-light float-right" data-toggle="modal"
                             data-target="#registerModal">Registrieren</button>
-                        <button type="submit" class="btn btn-dark">Login</button>
                     </form>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                             <input type="password" class="form-control" id="password" placeholder="Passwort"
                                 name="password">
                         </div>
-                        <button type="submit" class="btn btn-dark">Registrieren</button>
+                        <button type="submit" class="btn btn-dark float-right">Registrieren</button>
                     </form>
                 </div>
             </div>
@@ -94,28 +94,30 @@
                     <form method="post" action="php/newOffer.php" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="title">Titel</label>
-                            <input type="text" required class="form-control" id="title" placeholder="Titel"
-                                name="title">
+                            <input type="text" required class="form-control" id="title" placeholder="Titel" name="title"
+                                title="Geben Sie hier den Titel Ihres Angebotes an.">
                         </div>
                         <div class="form-group">
                             <label for="description">Beschreibung</label>
-                            <input type="text" required class="form-control" id="description" placeholder="Beschreibung"
-                                name="desc">
+                            <textarea class="form-control" id="description" placeholder="Beschreibung" rows="3"
+                                name="desc" title="Hier können Sie das Produkt näher beschreiben."></textarea>
                         </div>
 
 
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    <label for="description">PLZ</label>
+                                    <label for="description" title="Postleitzahl">PLZ</label>
                                     <input type="text" required class="form-control" id="description" placeholder="PLZ"
-                                        name="plz">
+                                        name="plz"
+                                        title="Geben Sie hier die Postleitzahl des Ortes an, an dem Sie das Angebot anbieten.">
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    <label for="sel1">Tag</label>
-                                    <select class="form-control" id="sel1">
+                                    <label for="tag">Tag</label>
+                                    <select class="form-control" id="tag"
+                                        title="Wählen Sie den passenden Tag zu Ihrem Angebot aus.">
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -125,9 +127,9 @@
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    <label for="mhd">MHD</label>
+                                    <label for="mhd" title="Mindesthaltbarkeitsdatum">MHD</label>
                                     <input type="date" class="form-control" id="mhd" placeholder="TT.MM.JJJJ"
-                                        name="expdate">
+                                        name="expdate" title="Tragen Sie hier das Mindesthaltbarkeitsdatum ein.">
                                 </div>
                             </div>
                         </div>
@@ -136,7 +138,7 @@
 
                         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 
-                        <div class="form-group">
+                        <div class="form-group" title="Fügen Sie hier optional ein Bild Ihrem Angebot an.">
                             <label for="modalImage">Bild</label>
                             <div class="input-group" id="modalImage">
                                 <input type="text" class="form-control" readonly>
@@ -180,7 +182,7 @@
                         </script>
 
                         <!-- Achtung, dev-hinweis: ein User muss eingeloggt sein! -->
-                        <button type="submit" class="btn btn-dark">Erstellen</button>
+                        <button type="submit" class="btn btn-dark float-right">Erstellen</button>
                     </form>
                 </div>
             </div>
@@ -210,47 +212,48 @@
                 <?php 
                         for($i = 0; $i<29; $i++){
                             ?>
-                            <div class="col-auto m-3 card bg-success" id="card">
-                                <div class="row">
-                                    <div class="col-7">
-                                        <div class="row">
-                                            <div id="offerTagDiv">
-                                                <svg width="150px" height="55px">
-                                                    <polygon points="10,30 30,10 140,10 140,50 30,50" id="offerTagPolygon"/>
-                                                    <text x="40" y="36" fill="white">Essen</text>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="=col-auto">
-                                                <div id="locationTagDiv">
-                                                    <i class="fas fa-map-marker-alt" id="locationTag"></i>
-                                                </div>
-                                            </div>
-                                            <div class="col-auto">
-                                                <div id="cityDiv">
-                                                    <span id="whiteText">Mosbach</span>
-                                                    <br>
-                                                    <span id="whiteText">15 km</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-5">
-                                        <br>
-                                        <br>
-                                        <img src="images/yoghurt.jpg" id="offerImage">
+                <div class="col-auto m-3 card bg-success" id="card">
+                    <div class="row">
+                        <div class="col-7">
+                            <div class="row">
+                                <div id="offerTagDiv">
+                                    <svg width="150px" height="55px">
+                                        <polygon points="10,30 30,10 140,10 140,50 30,50" id="offerTagPolygon" />
+                                        <text x="40" y="36" fill="white">Essen</text>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="=col-auto">
+                                    <div id="locationTagDiv">
+                                        <i class="fas fa-map-marker-alt" id="locationTag"></i>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div id="offerDescriptionDiv">
-                                            <h5 id="whiteText">Ein Joghurt</h5>
-                                            <p id="whiteText">Habe einen Naturjoghurt übrig. Will den jemand?<br>Dritte Textzeile</p>
-                                        </div>
+                                <div class="col-auto">
+                                    <div id="cityDiv">
+                                        <span id="whiteText">Mosbach</span>
+                                        <br>
+                                        <span id="whiteText">15 km</span>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="col-5">
+                            <br>
+                            <br>
+                            <img src="images/yoghurt.jpg" id="offerImage">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div id="offerDescriptionDiv">
+                                <h5 id="whiteText">Ein Joghurt</h5>
+                                <p id="whiteText">Habe einen Naturjoghurt übrig. Will den jemand?<br>Dritte Textzeile
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <?php
 
