@@ -50,10 +50,10 @@ a, a:hover, a:focus {
 ----------------------------------------------------- */
 
 #sidebar {
-    width: 500px;
+    width: 400px;
     position: fixed;
     top: 0px;
-    left: -500px;
+    left: -400px;
     height: 100vh;
     z-index: 999;
     background: #767171;
@@ -257,8 +257,8 @@ a[data-toggle="collapse"] {
         display: inline;
     }
     div #sidebar {
-        width: 500px;
-        left: -500px;
+        width: 400px;
+        left: -400px;
     }
 }
 
