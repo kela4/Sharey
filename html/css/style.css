@@ -298,11 +298,12 @@ a[data-toggle="collapse"] {
 
 #newOffer {
     position: fixed;
-    bottom: 00px;
+    bottom: 10px;
     z-index: 5;
     text-align: center;
 }
 
-#newOfferCircle:hover {
-    fill-opacity: 0.8;
+#newOffer img {
+    height: 80px;
+    width: auto;
 }

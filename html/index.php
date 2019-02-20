@@ -133,23 +133,19 @@
                         </div>
 
                         <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
-                        <!--max. Upload-Size->10MB-->
-                        <div class="form-group">
-                            <label for="image">Bild</label>
-                            <input type="file" class="form-control" id="modalImage"
-                                placeholder="Bild auswählen (optional)" name="img">
-                        </div>
-
-
 
                         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-                        <div class="input-group">
-                            <label class="input-group-btn">
-                                <span class="btn btn-primary">
-                                    Browse&hellip; <input type="file" style="display: none;" multiple>
-                                </span>
-                            </label>
-                            <input type="text" class="form-control" readonly>
+
+                        <div class="form-group">
+                            <label for="modalImage">Bild</label>
+                            <div class="input-group" id="modalImage">
+                                <input type="text" class="form-control" readonly>
+                                <label class="input-group-btn">
+                                    <span class="btn btn-secondary">
+                                        Browse&hellip; <input type="file" style="display: none;" multiple>
+                                    </span>
+                                </label>
+                            </div>
                         </div>
 
                         <script text="text/javascript">
@@ -182,28 +178,6 @@
 
                         });
                         </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
                         <!-- Achtung, dev-hinweis: ein User muss eingeloggt sein! -->
                         <button type="submit" class="btn btn-dark">Erstellen</button>
@@ -673,12 +647,7 @@
         <div id="center">
 
             <a id="newOffer" class="center-block" data-toggle="modal" data-target="#newOfferModal">
-                <svg style="width:6em; height:6em; background-color:transparent">
-                    <circle id="newOfferCircle" cx="2.4em" cy="2.4em" r="2em" fill="#4B4B4B" fill-opacity="0.5" />
-                    <rect id="Test" x="2.15em" y="1.1em" rx="0.2em" ry="0.2em" width="0.5em" height="2.6em"
-                        style="fill:white;" />
-                    <rect x="1.1em" y="2.15em" rx="0.2em" ry="0.2em" width="2.6em" height="0.5em" style="fill:white;" />
-                </svg>
+                <img src="images/newOffer.PNG">
             </a>
 
         </div>
