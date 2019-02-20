@@ -8,12 +8,140 @@
 </head>
 
 <body>
+
+
+    <!-- Modal Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="post" action="php/login.php">
+                        <div class="form-group">
+                            <label for="email">E-Mail</label>
+                            <input type="email" required class="form-control" id="email"
+                                placeholder="max.mustermann@beispiel.de" name="mail">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Passwort</label>
+                            <input type="password" requeired class="form-control" id="password" placeholder="Passwort"
+                                name="password">
+                        </div>
+                        <!-- Javascript der Login Modal schließt -->
+                        <button type="button" class="btn btn-light" data-toggle="modal"
+                            data-target="#registerModal">Registrieren</button>
+                        <button type="submit" class="btn btn-dark">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end Modal-->
+
+    <!-- Modal Register -->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="email">E-Mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="max.mustermann@beispiel.de"
+                                name="mail">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Passwort</label>
+                            <input type="password" class="form-control" id="password" placeholder="Passwort"
+                                name="password">
+                        </div>
+                        <button type="submit" class="btn btn-dark">Registrieren</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end Modal-->
+
+    <!-- Modal newEntry -->
+    <div class="modal fade" id="newOfferModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Neues Angebot anlegen</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="post" action="php/newOffer.php" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="title">Titel</label>
+                            <input type="text" required class="form-control" id="title" placeholder="Titel"
+                                name="title">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Beschreibung</label>
+                            <input type="text" required class="form-control" id="description" placeholder="Beschreibung"
+                                name="desc">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">PLZ</label>
+                            <input type="text" required class="form-control" id="description" placeholder="PLZ"
+                                name="plz">
+                        </div>
+                        <div class="form-group">
+                            <label for="tag">Tag</label>
+                            <input type="text" required class="form-control" id="tag" placeholder="Tag" name="tag">
+                        </div>
+                        <div class="form-group">
+                            <label for="mhd">MHD</label>
+                            <input type="date" required class="form-control" id="mhd" placeholder="TT.MM.JJJJ"
+                                name="expdate">
+                        </div>
+                        <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
+                        <!--max. Upload-Size->10MB-->
+                        <div class="form-group">
+                            <label for="image">Bild</label>
+                            <input type="file" class="form-control" id="image" placeholder="Bild auswählen (optional)"
+                                name="img">
+                        </div>
+                        <p>Achtung, dev-hinweis: ein User muss eingeloggt sein!</p>
+                        <button type="submit" class="btn btn-dark">Erstellen</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end Modal-->
+
+
+
+
+
+
+
     <?php
         include('basicsiteelements/navigation.php');
     ?>
 
     <div class="content">
         <!-- Div content for padding-top (header) -->
+
+        <button data-toggle="modal" data-target="#newOfferModal">Neues Angebot erstellen</button>
 
         <!-- HERE CONTENT (CHRIS) -->
         <!-- Content -->

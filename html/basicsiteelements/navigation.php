@@ -12,7 +12,10 @@
 
     <ul class="list-unstyled components text-center">
         <li>
-            <a href="#" title="Login">Login</a>
+            <a data-toggle="modal" data-target="#loginModal" title="Login">Login</a>
+        </li>
+        <li>
+            <a data-toggle="modal" data-target="#registerModal" title="Registrieren">Registrieren</a>
         </li>
         <li>
             <a href="pages/account.php" title="Account">Account</a>
