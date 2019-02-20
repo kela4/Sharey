@@ -298,7 +298,11 @@ a[data-toggle="collapse"] {
 
 #newOffer {
     position: fixed;
-    bottom: 20px;
+    bottom: 00px;
     z-index: 5;
     text-align: center;
+}
+
+#newOfferCircle:hover {
+    fill-opacity: 0.8;
 }
