@@ -15,28 +15,28 @@
             <a href="#" title="Login">Login</a>
         </li>
         <li>
-            <a href="pages/account.php" title="Account">Account</a>
+            <a href="account.php" title="Account">Account</a>
         </li>
         <li>
             <a href="#" title="Logout">Logout</a>
         </li>
         <li>
-            <a href="pages/about.php" title="Über uns">Über uns</a>
+            <a href="about.php" title="Über uns">Über uns</a>
         </li>
         <li>
-            <a href="pages/contact.php" title="Kontakt">Kontakt</a>
+            <a href="contact.php" title="Kontakt">Kontakt</a>
         </li>
         <li>
-            <a href="pages/privacy.php" title="Datenschutz">Datenschutz</a>
+            <a href="privacy.php" title="Datenschutz">Datenschutz</a>
         </li>
         <li>
-            <a href="pages/imprint.php" title="Impressum">Impressum</a>
+            <a href="imprint.php" title="Impressum">Impressum</a>
         </li>
     </ul>
     <div id="social">
-        <a href="#"><img class="img-fluid" src="images/social_icons/facebook_transparent.PNG" alt="Facebook" title="Facebook"></a>
-        <a href="#"><img class="img-fluid" src="images/social_icons/insta_transparent.PNG" alt="Instagram" title="Instagram"></a>
-        <a href="#"><img class="img-fluid" src="images/social_icons/twitter_transparent.PNG" alt="Twitter" title="Twitter"></a>
+        <a href="#"><img class="img-fluid" src="../images/social_icons/facebook_transparent.PNG" alt="Facebook" title="Facebook"></a>
+        <a href="#"><img class="img-fluid" src="../images/social_icons/insta_transparent.PNG" alt="Instagram" title="Instagram"></a>
+        <a href="#"><img class="img-fluid" src="../images/social_icons/twitter_transparent.PNG" alt="Twitter" title="Twitter"></a>
         <br><br>
     </div>
 </nav>
@@ -50,7 +50,7 @@
         </div>
         <div id="placeholder"></div>
         <!-- Logo -->
-        <a href="#"><img src="images/Logo_transparent.png" id="img_logo" class="img-fluid" alt="Logo" title="Sharey"></a>
+        <a href="#"><img src="../images/Logo_transparent.png" id="img_logo" class="img-fluid" alt="Logo" title="Sharey"></a>
         <div id="placeholder"></div>
         <!-- Search Bar -->
         <div class="input-group">

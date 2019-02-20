@@ -2,7 +2,7 @@
 <html>
 
 <head>
-       <?php
+    <?php
         include('basicsiteelements/header.php');
     ?>
 </head>
