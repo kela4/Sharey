@@ -50,7 +50,7 @@
         </div>
         <div id="placeholder"></div>
         <!-- Logo -->
-        <a href="#"><img src="../images/Logo_transparent.png" id="img_logo" class="img-fluid" alt="Logo" title="Sharey"></a>
+        <a href="../index.php"><img src="../images/Logo_transparent.png" id="img_logo" class="img-fluid" alt="Logo" title="Sharey"></a>
         <div id="placeholder"></div>
         <!-- Search Bar -->
         <div class="input-group">
