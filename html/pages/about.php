@@ -15,7 +15,7 @@
     <div class="content">
         <!-- Div content for padding-top (header) -->
         <div class="container">
-            <h1>Account</h1>
+            <h1>Über uns</h1>
         </div>
     </div>
     <?php
