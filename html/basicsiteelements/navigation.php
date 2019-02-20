@@ -56,7 +56,7 @@
         <div class="input-group">
             <input type="text" class="form-control" placeholder="Suchbegriff eingeben" title="Suchbegriff eingeben">
             <div class="input-group-append">
-                <button class="btn btn-secondary" type="button" title="Suche">
+                <button class="btn btn-secondary" type="button" title="Suchen und Filtern">
                     <i class="fa fa-search"></i>
                 </button>
             </div>
