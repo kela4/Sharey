@@ -30,6 +30,8 @@
 <body>
 
     <div class="wrapper">
+        <!-- For dark, when sidebar is open -->
+        <div class="overlay"></div>
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div id="dismiss">
@@ -64,25 +66,19 @@
                 </li>
             </ul>
 
-            <ul class="list-unstyled CTAs">
-                <li>
-                    <p>Facebook</p>
-                </li>
-                <li>
-                    <p>Instagram</p>
-                </li>
-                <li>
-                    <p>Twitter</p>
-                </li>
-            </ul>
+            <div id="social">
+                <a href=""><img class="img-fluid" src="images/social_icons/facebook_transparent.PNG"></a>
+                <a href=""><img class="img-fluid" src="images/social_icons/insta_transparent.PNG"></a>
+                <a href=""><img class="img-fluid" src="images/social_icons/twitter_transparent.PNG"></a>
+            </div>
         </nav>
 
         <!-- Page Content  -->
-        <div id="content">
+        <div class="content">
 
             <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
 
-                <div class="container ">
+                <div class="container">
 
                     <!-- Hamburger menue -->
                     <button type="button" id="sidebarCollapse" class="btn btn-outline-dark">
@@ -222,8 +218,7 @@
             <!--test-->
         </div>
 
-        <!-- For dark, when sidebar is open -->
-        <div class="overlay"></div>
+
 
         <!-- jQuery CDN - Slim version (=without AJAX) -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
