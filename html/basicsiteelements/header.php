@@ -3,7 +3,7 @@
     <div class="overlay"></div>
     <!-- Sidebar  -->
     <nav id="sidebar">
-        <div id="dismiss">
+        <div id="dismiss" title="Schließen">
             <i class="fas fa-times"></i>
         </div>
 
@@ -13,32 +13,32 @@
 
         <ul class="list-unstyled components text-center">
             <li>
-                <a href="#">Login</a>
+                <a href="#" title="Login">Login</a>
             </li>
             <li>
-                <a href="#">Account</a>
+                <a href="#" title="Account">Account</a>
             </li>
             <li>
-                <a href="#">Logout</a>
+                <a href="#" title="Logout">Logout</a>
             </li>
             <li>
-                <a href="#">Über uns</a>
+                <a href="#" title="Über uns">Über uns</a>
             </li>
             <li>
-                <a href="#">Kontakt</a>
+                <a href="#" title="Kontakt">Kontakt</a>
             </li>
             <li>
-                <a href="#">Datenschutz</a>
+                <a href="#" title="Datenschutz">Datenschutz</a>
             </li>
             <li>
-                <a href="#">Impressum</a>
+                <a href="#" title="Impressum">Impressum</a>
             </li>
         </ul>
 
         <div id="social">
-            <a href=""><img class="img-fluid" src="images/social_icons/facebook_transparent.PNG"></a>
-            <a href=""><img class="img-fluid" src="images/social_icons/insta_transparent.PNG"></a>
-            <a href=""><img class="img-fluid" src="images/social_icons/twitter_transparent.PNG"></a>
+            <a href=""><img class="img-fluid" src="images/social_icons/facebook_transparent.PNG" alt="Facebook" title="Facebook"></a>
+            <a href=""><img class="img-fluid" src="images/social_icons/insta_transparent.PNG" alt="Instagram" title="Instagram"></a>
+            <a href=""><img class="img-fluid" src="images/social_icons/twitter_transparent.PNG" alt="Twitter" title="Twitter"></a>
             <br><br>
         </div>
     </nav>
@@ -47,7 +47,7 @@
 
         <div class="container">
             <!-- Hamburger menue -->
-            <div id="menu">
+            <div id="menu" title="Menü">
                 <button id="sidebarCollapse" class="btn">
                     <i class="fas fa-bars" id="hamburger"></i>
                 </button>
@@ -55,13 +55,13 @@
 
             <div id="placeholder"></div>
             <!-- Logo -->
-            <a href="#"><img src=" images/Logo_transparent.png" id="img_logo" class="img-fluid" alt="Logo"></a>
+            <a href="#"><img src=" images/Logo_transparent.png" id="img_logo" class="img-fluid" alt="Logo" title="Sharey"></a>
             <div id="placeholder"></div>
             <!-- Search Bar -->
             <div class="input-group">
-                <input type="text" class="form-control" placeholder="Suchbegriff eingeben">
+                <input type="text" class="form-control" placeholder="Suchbegriff eingeben" title="Suchbegriff eingeben">
                 <div class="input-group-append">
-                    <button class="btn btn-secondary" type="button">
+                    <button class="btn btn-secondary" type="button" title="Suche">
                         <i class="fa fa-search"></i>
                     </button>
                 </div>
