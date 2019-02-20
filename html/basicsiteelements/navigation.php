@@ -15,22 +15,22 @@
             <a href="#" title="Login">Login</a>
         </li>
         <li>
-            <a href="#" title="Account">Account</a>
+            <a href="pages/account.php" title="Account">Account</a>
         </li>
         <li>
             <a href="#" title="Logout">Logout</a>
         </li>
         <li>
-            <a href="#" title="Über uns">Über uns</a>
+            <a href="pages/about.php" title="Über uns">Über uns</a>
         </li>
         <li>
-            <a href="#" title="Kontakt">Kontakt</a>
+            <a href="pages/contact.php" title="Kontakt">Kontakt</a>
         </li>
         <li>
-            <a href="#" title="Datenschutz">Datenschutz</a>
+            <a href="pages/privacy.php" title="Datenschutz">Datenschutz</a>
         </li>
         <li>
-            <a href="#" title="Impressum">Impressum</a>
+            <a href="pages/imprint.php" title="Impressum">Impressum</a>
         </li>
     </ul>
     <div id="social">
