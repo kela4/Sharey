@@ -79,15 +79,17 @@
             <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
 
                 <div class="container">
-
                     <!-- Hamburger menue -->
-                    <button type="button" id="sidebarCollapse" class="btn btn-outline-dark">
-                        <i class="fas fa-bars"></i>
-                    </button>
+                    <div id="menu">
+                        <button id="sidebarCollapse" class="btn">
+                            <i class="fas fa-bars" id="hamburger"></i>
+                        </button>
+                    </div>
 
+                    <div id="placeholder"></div>
                     <!-- Logo -->
                     <img src=" images/Logo_transparent.png" id="img_logo" class="img-fluid" alt="Logo">
-
+                    <div id="placeholder"></div>
                     <!-- Search Bar -->
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Suchbegriff eingeben">
@@ -217,8 +219,6 @@
             </div>
             <!--test-->
         </div>
-
-
 
         <!-- jQuery CDN - Slim version (=without AJAX) -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

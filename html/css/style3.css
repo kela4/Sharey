@@ -67,6 +67,23 @@ a, a:hover, a:focus {
     left: 0;
 }
 
+#sidebarCollapse {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+#hamburger {
+    height: 50px !important;
+    width: auto;
+}
+
+#menu button:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
 #dismiss {
     width: 35px;
     height: 35px;
@@ -149,11 +166,11 @@ a[data-toggle="collapse"] {
 /* Images */
 
 #img_logo {
-    height: 50px;
+    height: 60px;
     width: auto;
 }
 
-.img-fluid {
+#social .img-fluid {
     height: 40px;
     width: auto;
 }
@@ -187,35 +204,39 @@ a[data-toggle="collapse"] {
     color: #aaa;
 }
 
+#placeholder {
+    margin-left: 100px;
+}
+
 /* Media Queries */
 
 @media (min-width: 100px) {
     div.content {
-        padding-top: 120px;
+        padding-top: 140px;
     }
 }
 
 @media (min-width: 576px) {
     div.content {
-        padding-top: 120px;
+        padding-top: 140px;
     }
 }
 
 @media (min-width: 768px) {
     div.content {
-        padding-top: 120px;
+        padding-top: 140px;
     }
 }
 
 @media (min-width: 992px) {
     div.content {
-        padding-top: 80px;
+        padding-top: 100px;
     }
 }
 
 @media (min-width: 1200px) {
     div.content {
-        padding-top: 80px;
+        padding-top: 100px;
     }
 }
 
