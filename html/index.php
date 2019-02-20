@@ -102,27 +102,83 @@
                             <input type="text" required class="form-control" id="description" placeholder="Beschreibung"
                                 name="desc">
                         </div>
-                        <div class="form-group">
-                            <label for="description">PLZ</label>
-                            <input type="text" required class="form-control" id="description" placeholder="PLZ"
-                                name="plz">
+
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="description">PLZ</label>
+                                    <input type="text" required class="form-control" id="description" placeholder="PLZ"
+                                        name="plz">
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="sel1">Tag</label>
+                                    <select class="form-control" id="sel1">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="mhd">MHD</label>
+                                    <input type="date" class="form-control" id="mhd" placeholder="TT.MM.JJJJ"
+                                        name="expdate">
+                                </div>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="tag">Tag</label>
-                            <input type="text" required class="form-control" id="tag" placeholder="Tag" name="tag">
-                        </div>
-                        <div class="form-group">
-                            <label for="mhd">MHD</label>
-                            <input type="date" required class="form-control" id="mhd" placeholder="TT.MM.JJJJ"
-                                name="expdate">
-                        </div>
+
                         <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
-                        <!--max. Upload-Size->10MB-->
+
+                        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
                         <div class="form-group">
-                            <label for="image">Bild</label>
-                            <input type="file" class="form-control" id="image" placeholder="Bild auswählen (optional)"
-                                name="img">
+                            <label for="modalImage">Bild</label>
+                            <div class="input-group" id="modalImage">
+                                <input type="text" class="form-control" readonly>
+                                <label class="input-group-btn">
+                                    <span class="btn btn-secondary">
+                                        Browse&hellip; <input type="file" style="display: none;" multiple>
+                                    </span>
+                                </label>
+                            </div>
                         </div>
+
+                        <script text="text/javascript">
+                        $(function() {
+
+                            // We can attach the `fileselect` event to all file inputs on the page
+                            $(document).on('change', ':file', function() {
+                                var input = $(this),
+                                    numFiles = input.get(0).files ? input.get(0).files.length : 1,
+                                    label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+                                input.trigger('fileselect', [numFiles, label]);
+                            });
+
+                            // We can watch for our custom `fileselect` event like this
+                            $(document).ready(function() {
+                                $(':file').on('fileselect', function(event, numFiles, label) {
+
+                                    var input = $(this).parents('.input-group').find(':text'),
+                                        log = numFiles > 1 ? numFiles + ' files selected' :
+                                        label;
+
+                                    if (input.length) {
+                                        input.val(log);
+                                    } else {
+                                        if (log) alert(log);
+                                    }
+
+                                });
+                            });
+
+                        });
+                        </script>
+
                         <!-- Achtung, dev-hinweis: ein User muss eingeloggt sein! -->
                         <button type="submit" class="btn btn-dark">Erstellen</button>
                     </form>
@@ -589,8 +645,11 @@
         </div>
         <!-- Create new Offer -->
         <div id="center">
-            <button id="newOffer" class="center-block" data-toggle="modal" data-target="#newOfferModal">Neues Angebot
-                erstellen</button>
+
+            <a id="newOffer" class="center-block" data-toggle="modal" data-target="#newOfferModal">
+                <img src="images/newOffer.PNG">
+            </a>
+
         </div>
 
         <?php

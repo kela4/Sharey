@@ -298,7 +298,12 @@ a[data-toggle="collapse"] {
 
 #newOffer {
     position: fixed;
-    bottom: 20px;
+    bottom: 10px;
     z-index: 5;
     text-align: center;
+}
+
+#newOffer img {
+    height: 80px;
+    width: auto;
 }
