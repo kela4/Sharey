@@ -9,7 +9,6 @@
 
 <body>
 
-
     <!-- Modal Login -->
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -50,7 +49,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Registrieren</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -64,6 +63,11 @@
                         </div>
                         <div class="form-group">
                             <label for="password">Passwort</label>
+                            <input type="password" class="form-control" id="password" placeholder="Passwort"
+                                name="password">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Passwort wiederholen</label>
                             <input type="password" class="form-control" id="password" placeholder="Passwort"
                                 name="password">
                         </div>
@@ -119,7 +123,7 @@
                             <input type="file" class="form-control" id="image" placeholder="Bild auswählen (optional)"
                                 name="img">
                         </div>
-                        <p>Achtung, dev-hinweis: ein User muss eingeloggt sein!</p>
+                        <!-- Achtung, dev-hinweis: ein User muss eingeloggt sein! -->
                         <button type="submit" class="btn btn-dark">Erstellen</button>
                     </form>
                 </div>
@@ -128,11 +132,11 @@
     </div>
     <!--end Modal-->
 
+    <!-- Modal updateEntery -->
 
+    <!-- Not Implemented -->
 
-
-
-
+    <!-- end Modal -->
 
     <?php
         include('basicsiteelements/navigation.php');
