@@ -50,10 +50,10 @@ a, a:hover, a:focus {
 ----------------------------------------------------- */
 
 #sidebar {
-    width: 250px;
+    width: 500px;
     position: fixed;
     top: 0px;
-    left: -250px;
+    left: -500px;
     height: 100vh;
     z-index: 999;
     background: #767171;
@@ -217,6 +217,10 @@ a[data-toggle="collapse"] {
     div #placeholder {
         display: none;
     }
+    div #sidebar {
+        width: 250px;
+        left: -250px;
+    }
 }
 
 @media (min-width: 576px) {
@@ -225,6 +229,10 @@ a[data-toggle="collapse"] {
     }
     div #placeholder {
         display: none;
+    }
+    div #sidebar {
+        width: 250px;
+        left: -250px;
     }
 }
 
@@ -235,6 +243,10 @@ a[data-toggle="collapse"] {
     div #placeholder {
         display: none;
     }
+    div #sidebar {
+        width: 250px;
+        left: -250px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -243,6 +255,10 @@ a[data-toggle="collapse"] {
     }
     div #placeholder {
         display: inline;
+    }
+    div #sidebar {
+        width: 500px;
+        left: -500px;
     }
 }
 
