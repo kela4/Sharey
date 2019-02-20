@@ -1,6 +1,6 @@
-/*
-    DEMO STYLE
-*/
+/* ---------------------------------------------------
+    NORMAL
+----------------------------------------------------- */
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body {
@@ -127,7 +127,6 @@ a, a:hover, a:focus {
 
 #sidebar ul.components {
     padding: 20px 0;
-    /* border-bottom: 1px solid #47748b; */
 }
 
 #sidebar ul p {
@@ -163,7 +162,9 @@ a[data-toggle="collapse"] {
     transform: translateY(-50%);
 }
 
-/* Images */
+/* ---------------------------------------------------
+    IMAGE STYLE
+----------------------------------------------------- */
 
 #img_logo {
     height: 60px;
@@ -186,7 +187,9 @@ a[data-toggle="collapse"] {
     -o-transform: scale(1.1);
 }
 
-/* Search */
+/* ---------------------------------------------------
+    SEARCH STYLE
+----------------------------------------------------- */
 
 .has-search .form-control {
     padding-left: 2.375rem;
@@ -208,7 +211,9 @@ a[data-toggle="collapse"] {
     margin-left: 100px;
 }
 
-/* Media Queries */
+/* ---------------------------------------------------
+    MEDIA QUERIES
+----------------------------------------------------- */
 
 @media (min-width: 100px) {
     div.content {
