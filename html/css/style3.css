@@ -217,7 +217,7 @@ a[data-toggle="collapse"] {
     div #placeholder {
         display: none;
     }
-    div #sidebar {
+    #sidebar {
         width: 250px;
         left: -250px;
     }
@@ -230,7 +230,7 @@ a[data-toggle="collapse"] {
     div #placeholder {
         display: none;
     }
-    div #sidebar {
+    #sidebar {
         width: 250px;
         left: -250px;
     }
@@ -243,7 +243,7 @@ a[data-toggle="collapse"] {
     div #placeholder {
         display: none;
     }
-    div #sidebar {
+    #sidebar {
         width: 250px;
         left: -250px;
     }
@@ -256,7 +256,7 @@ a[data-toggle="collapse"] {
     div #placeholder {
         display: inline;
     }
-    div #sidebar {
+    #sidebar {
         width: 400px;
         left: -400px;
     }
