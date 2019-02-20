@@ -210,7 +210,7 @@
                 <?php 
                         for($i = 0; $i<29; $i++){
                             ?>
-                            <div class="col-auto m-3 card bg-primary" id="card">
+                            <div class="col-auto m-3 card bg-success" id="card">
                                 <div class="row">
                                     <div class="col-7">
                                         <div class="row">
