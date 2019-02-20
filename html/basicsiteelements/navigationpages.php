@@ -1,4 +1,3 @@
-
 <!-- For dark, when sidebar is open -->
 <div class="overlay"></div>
 <!-- Sidebar  -->
@@ -9,7 +8,6 @@
     <div class="sidebar-header text-center">
         <h3>Menü</h3>
     </div>
-
     <ul class="list-unstyled components text-center">
         <li>
             <a href="#" title="Login">Login</a>

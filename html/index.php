@@ -15,8 +15,6 @@
     <div class="content">
         <!-- Div content for padding-top (header) -->
 
-
-
         <!-- HERE CONTENT (CHRIS) -->
         <!-- Content -->
         <div class="container">
