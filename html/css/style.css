@@ -286,6 +286,55 @@ a[data-toggle="collapse"] {
     right: 0;
 }
 
+#card {
+    height: 300px;
+    width: 300px;
+}
+
+#offerTagDiv {
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+#offerTagPolygon {
+    fill: transparent;
+    stroke: white;
+    stroke-width: 3;
+    stroke-linejoin: round;
+}
+
+#locationTagDiv {
+    margin-top: 20px;
+}
+
+#locationTag {
+    color: white;
+    height: 30px;
+    width: 30px;
+    margin: 8px 10px 10px 20px;
+}
+
+#cityDiv {
+    margin-top: 20px;
+}
+
+#whiteText {
+    color: white;
+}
+
+#offerImage {
+    max-height: 100px;
+    max-width: 100px;
+    margin-left: -5px;
+    margin-top: -5px;
+}
+
+#offerDescriptionDiv {
+    height: 100px;
+    overflow: hidden;
+    margin-top: 20px
+}
+
 /* ---------------------------------------------------
     BUTTON NEW OFFER
 ----------------------------------------------------- */
