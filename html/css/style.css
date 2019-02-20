@@ -10,9 +10,6 @@ body {
 
 p {
     font-family: 'Poppins', sans-serif;
-    font-size: 1.1em;
-    font-weight: 300;
-    line-height: 1.7em;
     color: rgb(41, 41, 41);
 }
 
@@ -293,7 +290,15 @@ a[data-toggle="collapse"] {
     BUTTON NEW OFFER
 ----------------------------------------------------- */
 
+#center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #newOffer {
     position: fixed;
+    bottom: 20px;
     z-index: 5;
+    text-align: center;
 }
