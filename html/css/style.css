@@ -171,7 +171,7 @@ a[data-toggle="collapse"] {
 
 #img_logo {
     height: 60px;
-    width: auto;
+    max-width: 500px;
 }
 
 #social .img-fluid {
@@ -375,5 +375,57 @@ a[data-toggle="collapse"] {
 ----------------------------------------------------- */
 
 #toggle {
-    display: inline;
+    position: relative;
+}
+
+.onoffswitch {
+    position: relative;
+    width: 30px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.onoffswitch-checkbox {
+    display: none;
+}
+
+.onoffswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    height: 13px;
+    padding: 0;
+    line-height: 13px;
+    border: 2px solid #E3E3E3;
+    border-radius: 13px;
+    background-color: #FFFFFF;
+    transition: background-color 0.3s ease-in;
+}
+
+.onoffswitch-label:before {
+    content: "";
+    display: block;
+    width: 13px;
+    margin: 0px;
+    background: #FFFFFF;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 15px;
+    border: 2px solid #E3E3E3;
+    border-radius: 13px;
+    transition: all 0.3s ease-in 0s;
+}
+
+.onoffswitch-checkbox:checked+.onoffswitch-label {
+    background-color: #92D050;
+}
+
+.onoffswitch-checkbox:checked+.onoffswitch-label, .onoffswitch-checkbox:checked+.onoffswitch-label:before {
+    border-color: #92D050;
+}
+
+.onoffswitch-checkbox:checked+.onoffswitch-label:before {
+    right: 0px;
 }

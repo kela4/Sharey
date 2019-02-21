@@ -20,17 +20,20 @@
                 <div class="col-sm-6">
                     <h1>Account</h1>
                     <ul class="list-unstyled">
-                        <li>
+                        <li class="row">
                             E-Mail-Benachrichtigung
-                            <!-- Default switch -->
-                            <div class="custom-control custom-switch" id="toggle">
-                                <input type="checkbox" checked class="custom-control-input" id="customSwitches">
-                                <label class="custom-control-label" for="customSwitches"></label>
+                            <div id="toggle">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox"
+                                        id="myonoffswitch" checked>
+                                    <label class="onoffswitch-label" for="myonoffswitch"></label>
+                                </div>
                             </div>
+
                         </li>
-                        <li><a href="#">Passwort ändern</a></li>
-                        <li><a href="#">E-Mail ändern</a></li>
-                        <li><a href="#">Account löschen</a></li>
+                        <li class="row"><a class="col-12" href="#">Passwort ändern</a></li>
+                        <li class="row"><a class="col-12" href="#">E-Mail ändern</a></li>
+                        <li class="row"><a class="col-12" href="#">Account löschen</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-6">
