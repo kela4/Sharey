@@ -17,15 +17,10 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-lg-6">
                     <h1>Account</h1>
 
                     <ul class="list-unstyled">
-                        <li>E-Mail-Benachrichtigung
-                            <div class="form-check" id="checkbox">
-                                <input type="checkbox" class="form-check-input">
-                            </div>
-                        </li>
                         <li><a title="Passwort ändern">Passwort ändern</a></li>
                         <li><a title="E-Mail ändern">E-Mail ändern</a></li>
                         <li><a title="Account löschen"> Account löschen</a></li>
@@ -33,8 +28,62 @@
 
                 </div>
 
-                <div class="col-sm-6">
+                <div id="message" class="col-lg-6">
                     <h1>Nachrichten</h1>
+                    <ul class="list-unstyled">
+                        <li>E-Mail-Benachrichtigung
+                            <div class="form-check" id="checkbox">
+                                <input type="checkbox" class="form-check-input">
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="card" id="messageDark">
+
+                        <h4>Ein Jogurt</h4>
+                        <form method="POST" action="conversation.php">
+                            <input type="text" hidden required name="conID" value="'.$conversation->getConID().'" />
+                            <div class="col-12">
+                                <button class="btn shadow-none" type="submit">
+                                    @1: 12345678901234567890123456fjsdafjuijhrujfosrhv ngd ngndgjdjghjpds7890
+                                    <div class="float-right" id="timestampDark">01.01.2000 12:00</div>
+                                </button>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn shadow-none" type="submit">
+                                    @1: 123456789012345678901234567890
+                                    <div class="float-right" id="timestampDark">01.01.2000 12:00</div>
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+
+
+
+                    <div class="card" id="messageLight">
+
+                        <h4>Ein Jogurt</h4>
+                        <form method="POST" action="conversation.php">
+                            <input type="text" hidden required name="conID" value="'.$conversation->getConID().'" />
+                            <div class="col-12">
+                                <button class="btn shadow-none" type="submit">
+                                    <div style="display: inline;">@1: 123456789012345678901234567890</div>
+                                    <div class="float-right" id="timestampLight">01.01.2000 12:00</div>
+                                </button>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn shadow-none" type="submit">
+                                    <div style="display: inline;">@1: 123456789fsjladfhjlsafhsdwuierphfgurihv
+                                        netheuihnveruighrudhuivhngvuishgvuierhtv eu012345678901234567890</div>
+                                    <div class="float-right" id="timestampLight">01.01.2000 12:00</div>
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+
+
 
 
                 </div>
