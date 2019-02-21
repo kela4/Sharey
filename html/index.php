@@ -33,9 +33,9 @@
                                 name="password">
                         </div>
                         <!-- Javascript der Login Modal schließt -->
-                        <button type="submit" class="btn btn-dark float-right">Login</button>
-                        <button type="button" class="btn btn-light float-right" data-toggle="modal"
+                        <button type="button" class="btn btn-light" data-toggle="modal"
                             data-target="#registerModal">Registrieren</button>
+                        <button type="submit" class="btn btn-dark">Login</button>
                     </form>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                             <input type="password" class="form-control" id="password" placeholder="Passwort"
                                 name="password">
                         </div>
-                        <button type="submit" class="btn btn-dark float-right">Registrieren</button>
+                        <button type="submit" class="btn btn-dark">Registrieren</button>
                     </form>
                 </div>
             </div>
@@ -85,7 +85,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Angebot anlegen</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Neues Angebot anlegen</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -94,30 +94,28 @@
                     <form method="post" action="php/newOffer.php" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="title">Titel</label>
-                            <input type="text" required class="form-control" id="title" placeholder="Titel" name="title"
-                                title="Geben Sie hier den Titel Ihres Angebotes an.">
+                            <input type="text" required class="form-control" id="title" placeholder="Titel"
+                                name="title">
                         </div>
                         <div class="form-group">
                             <label for="description">Beschreibung</label>
-                            <textarea class="form-control" id="description" placeholder="Beschreibung" rows="3"
-                                name="desc" title="Hier können Sie das Produkt näher beschreiben."></textarea>
+                            <input type="text" required class="form-control" id="description" placeholder="Beschreibung"
+                                name="desc">
                         </div>
 
 
                         <div class="row">
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    <label for="description" title="Postleitzahl">PLZ</label>
+                                    <label for="description">PLZ</label>
                                     <input type="text" required class="form-control" id="description" placeholder="PLZ"
-                                        name="plz"
-                                        title="Geben Sie hier die Postleitzahl des Ortes an, an dem Sie das Angebot anbieten.">
+                                        name="plz">
                                 </div>
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    <label for="tag">Tag</label>
-                                    <select class="form-control" id="tag"
-                                        title="Wählen Sie den passenden Tag zu Ihrem Angebot aus.">
+                                    <label for="sel1">Tag</label>
+                                    <select class="form-control" id="sel1">
                                         <option>1</option>
                                         <option>2</option>
                                         <option>3</option>
@@ -127,9 +125,9 @@
                             </div>
                             <div class="col-sm-4">
                                 <div class="form-group">
-                                    <label for="mhd" title="Mindesthaltbarkeitsdatum">MHD</label>
+                                    <label for="mhd">MHD</label>
                                     <input type="date" class="form-control" id="mhd" placeholder="TT.MM.JJJJ"
-                                        name="expdate" title="Tragen Sie hier das Mindesthaltbarkeitsdatum ein.">
+                                        name="expdate">
                                 </div>
                             </div>
                         </div>
@@ -138,7 +136,7 @@
 
                         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 
-                        <div class="form-group" title="Fügen Sie hier optional ein Bild Ihrem Angebot an.">
+                        <div class="form-group">
                             <label for="modalImage">Bild</label>
                             <div class="input-group" id="modalImage">
                                 <input type="text" class="form-control" readonly>
@@ -152,28 +150,37 @@
 
                         <script text="text/javascript">
                         $(function() {
+
+                            // We can attach the `fileselect` event to all file inputs on the page
                             $(document).on('change', ':file', function() {
                                 var input = $(this),
                                     numFiles = input.get(0).files ? input.get(0).files.length : 1,
                                     label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
                                 input.trigger('fileselect', [numFiles, label]);
                             });
+
+                            // We can watch for our custom `fileselect` event like this
                             $(document).ready(function() {
                                 $(':file').on('fileselect', function(event, numFiles, label) {
+
                                     var input = $(this).parents('.input-group').find(':text'),
                                         log = numFiles > 1 ? numFiles + ' files selected' :
                                         label;
+
                                     if (input.length) {
                                         input.val(log);
                                     } else {
                                         if (log) alert(log);
                                     }
+
                                 });
                             });
+
                         });
                         </script>
+
                         <!-- Achtung, dev-hinweis: ein User muss eingeloggt sein! -->
-                        <button type="submit" class="btn btn-dark float-right">Erstellen</button>
+                        <button type="submit" class="btn btn-dark">Erstellen</button>
                     </form>
                 </div>
             </div>
@@ -201,50 +208,51 @@
             <div class="row justify-content-center">
 
                 <?php 
-                        for($i = 0; $i<29; $i++){
-                            ?>
-                <div class="col-auto m-3 card bg-success" id="card">
-                    <div class="row">
-                        <div class="col-7">
-                            <div class="row">
-                                <div id="offerTagDiv">
-                                    <svg width="150px" height="55px">
-                                        <polygon points="10,30 30,10 140,10 140,50 30,50" id="offerTagPolygon" />
-                                        <text x="40" y="36" fill="white">Essen</text>
-                                    </svg>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="=col-auto">
-                                    <div id="locationTagDiv">
-                                        <i class="fas fa-map-marker-alt" id="locationTag"></i>
+                    for($i = 0; $i<29; $i++){
+                        ?>
+                        <div class="col-auto m-3 card" id="card">
+                            <div id="cardContent">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <div class="row">
+                                            <div id="offerTagDiv">
+                                                <svg width="150px" height="55px">
+                                                    <polygon points="10,30 30,10 140,10 140,50 30,50" id="offerTagPolygon"/>
+                                                    <text x="40" y="36" fill="white">Essen</text>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="=col-auto">
+                                                <div id="locationTagDiv">
+                                                    <i class="fas fa-map-marker-alt" id="locationTag"></i>
+                                                </div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div id="cityDiv">
+                                                    <span class="whiteText">Mosbach</span>
+                                                    <br>
+                                                    <span class="whiteText">15 km</span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-auto">
-                                    <div id="cityDiv">
-                                        <span id="whiteText">Mosbach</span>
+                                    <div class="col-5">
                                         <br>
-                                        <span id="whiteText">15 km</span>
+                                        <br>
+                                        <img src="../images/yoghurt.jpg" id="offerImage">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div id="offerDescriptionDiv">
+                                            <h5 class="whiteText">Ein Joghurt</h5>
+                                            <p class="whiteText">Habe einen Naturjoghurt übrig. Will den jemand?<br>Dritte Textzeile</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-5">
-                            <br>
-                            <br>
-                            <img src="images/yoghurt.jpg" id="offerImage">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div id="offerDescriptionDiv">
-                                <h5 id="whiteText">Ein Joghurt</h5>
-                                <p id="whiteText">Habe einen Naturjoghurt übrig. Will den jemand?<br>Dritte Textzeile
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <?php
 
@@ -270,19 +278,6 @@
             </a>
 
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <?php
             include('basicsiteelements/scripts.php');
