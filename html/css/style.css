@@ -295,11 +295,12 @@ a[data-toggle="collapse"] {
 #card {
     height: 300px;
     width: 300px;
-    background-color: green;
+    background-color: magenta;
 }
 
 #cardContent {
     margin-top: 7px;
+    margin-bottom: 5px;
 }
 
 #offerTagDiv {
