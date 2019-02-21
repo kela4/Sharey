@@ -35,9 +35,12 @@
         </li>
     </ul>
     <div id="social">
-        <a href="#"><img class="img-fluid" src="../images/social_icons/facebook_transparent.PNG" alt="Facebook" title="Facebook"></a>
-        <a href="#"><img class="img-fluid" src="../images/social_icons/insta_transparent.PNG" alt="Instagram" title="Instagram"></a>
-        <a href="#"><img class="img-fluid" src="../images/social_icons/twitter_transparent.PNG" alt="Twitter" title="Twitter"></a>
+        <a href="#"><img class="img-fluid" src="../images/social_icons/facebook_transparent.PNG" alt="Facebook"
+                title="Facebook"></a>
+        <a href="#"><img class="img-fluid" src="../images/social_icons/insta_transparent.PNG" alt="Instagram"
+                title="Instagram"></a>
+        <a href="#"><img class="img-fluid" src="../images/social_icons/twitter_transparent.PNG" alt="Twitter"
+                title="Twitter"></a>
         <br><br>
     </div>
 </nav>
@@ -51,13 +54,15 @@
         </div>
         <div id="placeholder"></div>
         <!-- Logo -->
-        <a href="../index.php"><img src="../images/Logo_transparent.png" id="img_logo" class="img-fluid" alt="Logo" title="Sharey"></a>
+        <a href="../index.php"><img src="../images/Logo_transparent.png" id="img_logo" class="img-fluid" alt="Logo"
+                title="Sharey"></a>
         <div id="placeholder"></div>
         <!-- Search Bar -->
         <div class="input-group">
-            <input type="text" class="form-control" placeholder="Suchbegriff eingeben" title="Suchbegriff eingeben">
+            <input type="text" id="searchBox" class="form-control" placeholder="Suchbegriff eingeben"
+                title="Suchbegriff eingeben">
             <div class="input-group-append">
-                <button class="btn btn-secondary" type="button" title="Suchen und Filtern">
+                <button class="btn btn-secondary" id="search" type="button" title="Suchen und Filtern">
                     <i class="fa fa-search"></i>
                 </button>
             </div>

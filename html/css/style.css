@@ -4,12 +4,12 @@
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body {
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     background: #fafafa;
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     color: rgb(41, 41, 41);
 }
 
@@ -72,6 +72,7 @@ a, a:hover, a:focus {
 #hamburger {
     height: 50px !important;
     width: auto;
+    color: rgb(70, 70, 70);
 }
 
 #menu button:hover {
@@ -79,6 +80,11 @@ a, a:hover, a:focus {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
+}
+
+#searchBox {
+    height: 40px;
+    width: auto;
 }
 
 #dismiss {
@@ -165,7 +171,7 @@ a[data-toggle="collapse"] {
 
 #img_logo {
     height: 60px;
-    width: auto;
+    max-width: 500px;
 }
 
 #social .img-fluid {
@@ -286,6 +292,60 @@ a[data-toggle="collapse"] {
     right: 0;
 }
 
+#card {
+    height: 300px;
+    width: 300px;
+    background-color: #92D050;
+}
+
+#cardContent {
+    margin-top: 10px;
+}
+
+#offerTagDiv {
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+#offerTagPolygon {
+    fill: transparent;
+    stroke: white;
+    stroke-width: 3;
+    stroke-linejoin: round;
+}
+
+#locationTagDiv {
+    margin-top: 20px;
+}
+
+#locationTag {
+    color: white;
+    height: 30px;
+    width: 30px;
+    margin: 8px 10px 10px 20px;
+}
+
+#cityDiv {
+    margin-top: 20px;
+}
+
+.whiteText {
+    color: white;
+}
+
+#offerImage {
+    max-height: 100px;
+    max-width: 100px;
+    margin-left: -5px;
+    margin-top: -5px;
+}
+
+#offerDescriptionDiv {
+    height: 110px;
+    overflow: hidden;
+    margin-top: 20px
+}
+
 /* ---------------------------------------------------
     BUTTON NEW OFFER
 ----------------------------------------------------- */
@@ -313,4 +373,13 @@ a[data-toggle="collapse"] {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
+}
+
+/* ---------------------------------------------------
+    ACCOUNT
+----------------------------------------------------- */
+
+#checkbox {
+    display: inline;
+    margin-left: 10px
 }
