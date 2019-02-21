@@ -15,7 +15,106 @@
     <div class="content">
         <!-- Div content for padding-top (header) -->
         <div class="container">
-            <h1>Konversation</h1>
+            <div>
+                <h1>Konversation</h1>
+            </div>
+
+
+
+
+
+            <div id="messageArea">
+
+                <div class="row justify-content-end">
+                    <div class="card col-sm-8" id="senderDark">
+                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
+                            '.$message->getContent().'</p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="card col-sm-8" id="senderLight">
+                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
+                            '.$message->getContent().'</p>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-end">
+                    <div class="card col-sm-8" id="senderDark">
+                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
+                            '.$message->getContent().'</p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="card col-sm-8" id="senderLight">
+                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
+                            '.$message->getContent().'</p>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-end">
+                    <div class="card col-sm-8" id="senderDark">
+                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
+                            '.$message->getContent().'</p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="card col-sm-8" id="senderLight">
+                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
+                            '.$message->getContent().'</p>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-end">
+                    <div class="card col-sm-8" id="senderDark">
+                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
+                            '.$message->getContent().'</p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="card col-sm-8" id="senderLight">
+                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
+                            '.$message->getContent().'</p>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-end">
+                    <div class="card col-sm-8" id="senderDark">
+                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
+                            '.$message->getContent().'</p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="card col-sm-8" id="senderLight">
+                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
+                            '.$message->getContent().'</p>
+                    </div>
+                </div>
+                <br>
+            </div>
+
+
+            <p id="anker"></p>
+            <div id="newMessage">
+                <div class="container">
+                    <div class="input-group">
+                        <textarea id="newMessageText" class="form-control" rows="1"></textarea>
+                        <?php echo '<input id="conIDMessage" hidden value="'.$_POST['conID'].'"/>'; ?>
+                        <button id="sendButton" class="btn btn-secondary float-right">Send</button>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     </div>
     <?php
