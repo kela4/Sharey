@@ -44,15 +44,15 @@
                         <form method="POST" action="conversation.php">
                             <input type="text" hidden required name="conID" value="'.$conversation->getConID().'" />
                             <div class="col-12">
-                                <button class="btn shadow-none" type="submit">@1: Hey
-                                    idsdsdsdsdsjdsdajdhjfhjsghs
-                                    <span>Test</span>
-
+                                <button class="btn shadow-none" type="submit">
+                                    @1: 123456789012345678901234567890
+                                    <div class="float-right" id="timestampDark">01.01.2000 12:00</div>
                                 </button>
                             </div>
                             <div class="col-12">
-                                <button class="btn shadow-none" type="submit">@1: Hey ich hätte das
-                                    Angebot gerne</button>
+                                @2: Hallo das will ich haben mit viel coole ndinfenne
+                                fdsofj
+                                <div class="float-right" id="timestampDark">01.01.2000 12:00</div>
                             </div>
                         </form>
 
@@ -66,12 +66,17 @@
                         <form method="POST" action="conversation.php">
                             <input type="text" hidden required name="conID" value="'.$conversation->getConID().'" />
                             <div class="col-12">
-                                <button class="btn shadow-none" type="submit">@1: Hey ich hätte das
-                                    Angebot fefefefefefef</button>
+                                <button class="btn shadow-none" type="submit">
+                                    <div style="display: inline;">@1: 123456789012345678901234567890</div>
+                                    <div class="float-right" id="timestampLight">01.01.2000 12:00</div>
+                                </button>
                             </div>
                             <div class="col-12">
-                                <button class="btn shadow-none" type="submit">@1: Hey ich hätte das
-                                    Angebot gerne</button>
+                                <div style="display: inline;">@2: Hallo das will icnoch rgb(248,ch rgb(248,ch rgb(248,ch
+                                    rgb(248,ch rgb(248,ch rgb(248,ch rgb(248,ch rgb(248,ch rgb(248,ch rgb(248, 248,
+                                    248);h haben mit viel coole ndinfenne
+                                    fdsofj</div>
+                                <div class="float-right" id="timestampLight">01.01.2000 12:00</div>
                             </div>
                         </form>
 
