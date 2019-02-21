@@ -9,39 +9,7 @@
 
 <body>
 
-    <!-- Modal Login -->
-    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form method="post" action="php/login.php">
-                        <div class="form-group">
-                            <label for="email">E-Mail</label>
-                            <input type="email" required class="form-control" id="email"
-                                placeholder="max.mustermann@beispiel.de" name="mail">
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Passwort</label>
-                            <input type="password" requeired class="form-control" id="password" placeholder="Passwort"
-                                name="password">
-                        </div>
-                        <!-- Javascript der Login Modal schließt -->
-                        <button type="button" class="btn btn-light" data-toggle="modal"
-                            data-target="#registerModal">Registrieren</button>
-                        <button type="submit" class="btn btn-dark">Login</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--end Modal-->
+
 
     <!-- Modal Register -->
     <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -71,7 +39,7 @@
                             <input type="password" class="form-control" id="password" placeholder="Passwort"
                                 name="password">
                         </div>
-                        <button type="submit" class="btn btn-dark">Registrieren</button>
+                        <button type="submit" class="btn btn-dark float-right">Registrieren</button>
                     </form>
                 </div>
             </div>
@@ -180,7 +148,7 @@
                         </script>
 
                         <!-- Achtung, dev-hinweis: ein User muss eingeloggt sein! -->
-                        <button type="submit" class="btn btn-dark">Erstellen</button>
+                        <button type="submit" class="btn btn-dark float-right">Erstellen</button>
                     </form>
                 </div>
             </div>
@@ -201,132 +169,62 @@
     <div class="content">
         <!-- Div content for padding-top (header) -->
 
-
-
-
         <div class="container mt-4">
             <div class="row justify-content-center">
 
                 <?php 
                     for($i = 0; $i<29; $i++){
                         ?>
-                        <a data-toggle="modal" data-target="#offerModal">
-                            <div class="col-auto m-3 card" id="card">
-                                <div id="cardContent">
-                                    <div class="row">
-                                        <div class="col-7">
-                                            <div class="row">
-                                                <div id="offerTagDiv">
-                                                    <svg width="150px" height="55px">
-                                                        <polygon points="10,30 30,10 140,10 140,50 30,50" id="offerTagPolygon"/>
-                                                        <text x="40" y="36" fill="white">Essen</text>
-                                                    </svg>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="=col-auto">
-                                                    <div id="locationTagDiv">
-                                                        <i class="fas fa-map-marker-alt" id="locationTag"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="col-auto">
-                                                    <div id="cityDiv">
-                                                        <span class="whiteText">Mosbach</span>
-                                                        <br>
-                                                        <span class="whiteText">15 km</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-5">
-                                            <br>
-                                            <br>
-                                            <img src="images/yoghurt.jpg" id="offerImage">
+                <div class="col-auto m-3 card" id="card">
+                    <div id="cardContent">
+                        <div class="row">
+                            <div class="col-7">
+                                <div class="row">
+                                    <div id="offerTagDiv">
+                                        <svg width="150px" height="55px">
+                                            <polygon points="10,30 30,10 140,10 140,50 30,50" id="offerTagPolygon" />
+                                            <text x="40" y="36" fill="white">Essen</text>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="=col-auto">
+                                        <div id="locationTagDiv">
+                                            <i class="fas fa-map-marker-alt" id="locationTag"></i>
                                         </div>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div id="offerDescriptionDiv">
-                                                <h5 class="whiteText">Ein Joghurt</h5>
-                                                <p class="whiteText">Habe einen Naturjoghurt übrig. Will den jemand?<br>Dritte Textzeile</p>
-                                            </div>
+                                    <div class="col-auto">
+                                        <div id="cityDiv">
+                                            <span class="whiteText">Mosbach</span>
+                                            <br>
+                                            <span class="whiteText">15 km</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </a>
-
-                <?php
-
-                        }
-                    ?>
-                <div class="modal fade" id="offerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                     aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header omColor" id="omHeader">
-                                <h3 class="modal-title whiteText" id="exampleModalLabel">Angebot</h3>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
+                            <div class="col-5">
+                                <br>
+                                <br>
+                                <img src="images/yoghurt.jpg" id="offerImage">
                             </div>
-                            <div class="modal-body omColor" id="omBody">
-                                <div id="omContent">
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="row">
-                                                <div class="col-auto">
-                                                    <div>
-                                                        <h4 class="whiteText">Ein Joghurt</h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="=col-auto">
-                                                    <div id="omLocationTagDiv">
-                                                        <i class="fas fa-map-marker-alt locationTag" id="omLocationTag"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="col-auto">
-                                                    <div id="omCityDiv">
-                                                        <span class="whiteText">Mosbach</span>
-                                                        <br>
-                                                        <span class="whiteText">15 km</span>
-                                                    </div>
-                                                </div>
-                                                <div class="col-auto">
-                                                    <div id="omTagDiv">
-                                                        <svg width="150px" height="55px">
-                                                            <polygon points="10,30 30,10 140,10 140,50 30,50" id="offerTagPolygon"/>
-                                                            <text x="40" y="36" fill="white">Essen</text>
-                                                        </svg>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div id="omDescriptionDiv">
-                                                        <p class="whiteText">MDH: 01.01.2020</p>
-                                                        <p class="whiteText">Habe einen Naturjoghurt übrig. Will den jemand?</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <img src="../images/yoghurt.jpg" id="omImage">
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <button type="submit" class="btn btn-dark float-right">Interesse</button>
-                                            <button type="button" class="btn btn-light float-right whiteText" id="omReportOffer">Melden</button>
-                                        </div>
-                                    </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div id="offerDescriptionDiv">
+                                    <h5 class="whiteText">Ein Joghurt</h5>
+                                    <p class="whiteText">Habe einen Naturjoghurt übrig. Will den jemand?<br>Dritte
+                                        Textzeile</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <?php
+
+                        }
+                    ?>
+
 
             </div>
         </div>
