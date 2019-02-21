@@ -4,12 +4,12 @@
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body {
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     background: #fafafa;
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     color: rgb(41, 41, 41);
 }
 
@@ -362,4 +362,13 @@ a[data-toggle="collapse"] {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
+}
+
+/* ---------------------------------------------------
+    ACCOUNT
+----------------------------------------------------- */
+
+#toggle {
+    display: inline;
+    padding-left: 50px;
 }

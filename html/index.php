@@ -5,6 +5,32 @@
     <?php
         include('basicsiteelements/header.php');
     ?>
+
+
+    <link rel="stylesheet" type="text/css"
+        href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+    <script>
+    window.addEventListener("load", function() {
+        window.cookieconsent.initialise({
+            "palette": {
+                "popup": {
+                    "background": "#edeff5",
+                    "text": "#838391"
+                },
+                "button": {
+                    "background": "#4b81e8"
+                }
+            },
+            "position": "bottom-right",
+            "content": {
+                "message": "<b>Magst du Cookies?</b> &#127850;Wir benutzen Cookies, um das beste Erlebnis auf der Webseite zu ermöglichen.",
+                "dismiss": "Verstanden",
+                "link": "Mehr dazu"
+            }
+        })
+    });
+    </script>
 </head>
 
 <body>
@@ -85,7 +111,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Neues Angebot anlegen</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Angebot anlegen</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -152,32 +178,24 @@
 
                         <script text="text/javascript">
                         $(function() {
-
-                            // We can attach the `fileselect` event to all file inputs on the page
                             $(document).on('change', ':file', function() {
                                 var input = $(this),
                                     numFiles = input.get(0).files ? input.get(0).files.length : 1,
                                     label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
                                 input.trigger('fileselect', [numFiles, label]);
                             });
-
-                            // We can watch for our custom `fileselect` event like this
                             $(document).ready(function() {
                                 $(':file').on('fileselect', function(event, numFiles, label) {
-
                                     var input = $(this).parents('.input-group').find(':text'),
                                         log = numFiles > 1 ? numFiles + ' files selected' :
                                         label;
-
                                     if (input.length) {
                                         input.val(log);
                                     } else {
                                         if (log) alert(log);
                                     }
-
                                 });
                             });
-
                         });
                         </script>
 
@@ -279,6 +297,19 @@
             </a>
 
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <?php
             include('basicsiteelements/scripts.php');
