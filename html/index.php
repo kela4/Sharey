@@ -235,7 +235,7 @@
     <!-- Not Implemented -->
 
     <!-- end Modal -->
-    <!---->
+
 
     <?php
         include('basicsiteelements/navigation.php');
