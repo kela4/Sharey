@@ -261,7 +261,7 @@
                                             <div class="row">
                                                 <div class="=col-auto">
                                                     <div id="locationTagDiv">
-                                                        <i class="fas fa-map-marker-alt" id="locationTag"></i>
+                                                        <i class="fas fa-map-marker-alt" id="offerLocationTag"></i>
                                                     </div>
                                                 </div>
                                                 <div class="col-auto">
