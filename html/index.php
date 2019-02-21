@@ -24,7 +24,7 @@
             },
             "position": "bottom-right",
             "content": {
-                "message": "<b>Magst du Cookies?</b> &#127850;Wir benutzen Cookies, um das beste Erlebnis auf der Webseite zu ermöglichen.",
+                "message": "<b>Magst du Cookies?</b> &#127850; Wir benutzen Cookies, um das beste Erlebnis auf der Webseite zu ermöglichen.",
                 "dismiss": "Verstanden",
                 "link": "Mehr dazu"
             }
