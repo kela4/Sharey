@@ -155,7 +155,7 @@
         </div>
     </div>
     <!--end Modal-->
-<!---->
+
     <!-- offer Modal -->
     <div class="modal fade" id="offerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
