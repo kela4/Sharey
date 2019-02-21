@@ -210,43 +210,45 @@
                 <?php 
                         for($i = 0; $i<29; $i++){
                             ?>
-                            <div class="col-auto m-3 card bg-success" id="card">
-                                <div class="row">
-                                    <div class="col-7">
-                                        <div class="row">
-                                            <div id="offerTagDiv">
-                                                <svg width="150px" height="55px">
-                                                    <polygon points="10,30 30,10 140,10 140,50 30,50" id="offerTagPolygon"/>
-                                                    <text x="40" y="36" fill="white">Essen</text>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="=col-auto">
-                                                <div id="locationTagDiv">
-                                                    <i class="fas fa-map-marker-alt" id="locationTag"></i>
+                            <div class="col-auto m-3 card" id="card">
+                                <div id="cardContent">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <div class="row">
+                                                <div id="offerTagDiv">
+                                                    <svg width="150px" height="55px">
+                                                        <polygon points="10,30 30,10 140,10 140,50 30,50" id="offerTagPolygon"/>
+                                                        <text x="40" y="36" fill="white">Essen</text>
+                                                    </svg>
                                                 </div>
                                             </div>
-                                            <div class="col-auto">
-                                                <div id="cityDiv">
-                                                    <span id="whiteText">Mosbach</span>
-                                                    <br>
-                                                    <span id="whiteText">15 km</span>
+                                            <div class="row">
+                                                <div class="=col-auto">
+                                                    <div id="locationTagDiv">
+                                                        <i class="fas fa-map-marker-alt" id="locationTag"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-auto">
+                                                    <div id="cityDiv">
+                                                        <span class="whiteText">Mosbach</span>
+                                                        <br>
+                                                        <span class="whiteText">15 km</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="col-5">
+                                            <br>
+                                            <br>
+                                            <img src="../images/yoghurt.jpg" id="offerImage">
+                                        </div>
                                     </div>
-                                    <div class="col-5">
-                                        <br>
-                                        <br>
-                                        <img src="images/yoghurt.jpg" id="offerImage">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div id="offerDescriptionDiv">
-                                            <h5 id="whiteText">Ein Joghurt</h5>
-                                            <p id="whiteText">Habe einen Naturjoghurt übrig. Will den jemand?<br>Dritte Textzeile</p>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div id="offerDescriptionDiv">
+                                                <h5 class="whiteText">Ein Joghurt</h5>
+                                                <p class="whiteText">Habe einen Naturjoghurt übrig. Will den jemand?<br>Dritte Textzeile</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
