@@ -72,6 +72,7 @@ a, a:hover, a:focus {
 #hamburger {
     height: 50px !important;
     width: auto;
+    color: rgb(70, 70, 70);
 }
 
 #menu button:hover {
@@ -79,6 +80,11 @@ a, a:hover, a:focus {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
+}
+
+#searchBox {
+    height: 40px;
+    width: auto;
 }
 
 #dismiss {

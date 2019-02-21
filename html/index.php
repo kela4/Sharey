@@ -172,7 +172,6 @@
                             });
                         });
                         </script>
-
                         <!-- Achtung, dev-hinweis: ein User muss eingeloggt sein! -->
                         <button type="submit" class="btn btn-dark float-right">Erstellen</button>
                     </form>
