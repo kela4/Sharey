@@ -19,23 +19,20 @@
             <div class="row">
                 <div class="col-sm-6">
                     <h1>Account</h1>
-                    <ul class="list-unstyled">
-                        <li class="row">
-                            E-Mail-Benachrichtigung
-                            <div id="toggle">
-                                <div class="onoffswitch">
-                                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox"
-                                        id="myonoffswitch" checked>
-                                    <label class="onoffswitch-label" for="myonoffswitch"></label>
-                                </div>
-                            </div>
 
+                    <ul class="list-unstyled">
+                        <li>E-Mail-Benachrichtigung
+                            <div class="form-check" id="checkbox">
+                                <input type="checkbox" class="form-check-input">
+                            </div>
                         </li>
-                        <li class="row"><a class="col-12" href="#">Passwort ändern</a></li>
-                        <li class="row"><a class="col-12" href="#">E-Mail ändern</a></li>
-                        <li class="row"><a class="col-12" href="#">Account löschen</a></li>
+                        <li><a title="Passwort ändern">Passwort ändern</a></li>
+                        <li><a title="E-Mail ändern">E-Mail ändern</a></li>
+                        <li><a title="Account löschen"> Account löschen</a></li>
                     </ul>
+
                 </div>
+
                 <div class="col-sm-6">
                     <h1>Nachrichten</h1>
 
@@ -88,7 +85,8 @@
                                     <div class="col-12">
                                         <div id="offerDescriptionDiv">
                                             <h5 id="whiteText">Ein Joghurt</h5>
-                                            <p id="whiteText">Habe einen Naturjoghurt übrig. Will den jemand?<br>Dritte
+                                            <p id="whiteText">Habe einen Naturjoghurt übrig. Will den
+                                                jemand?<br>Dritte
                                                 Textzeile
                                             </p>
                                         </div>
