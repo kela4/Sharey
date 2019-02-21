@@ -41,7 +41,7 @@
                     <div class="card" id="messageDark">
 
                         <h4>Ein Jogurt</h4>
-                        <form method="POST" action="conversation.php">
+                        <form method="POST" action="conversation.php#anker">
                             <input type="text" hidden required name="conID" value="'.$conversation->getConID().'" />
                             <div class="col-12">
                                 <button class="btn shadow-none" type="submit">
@@ -64,7 +64,7 @@
                     <div class="card" id="messageLight">
 
                         <h4>Ein Jogurt</h4>
-                        <form method="POST" action="conversation.php">
+                        <form method="POST" action="conversation.php#anker">
                             <input type="text" hidden required name="conID" value="'.$conversation->getConID().'" />
                             <div class="col-12">
                                 <button class="btn shadow-none" type="submit">
