@@ -1,10 +1,10 @@
-<?php
+<!-- <?php
     require_once('../php/classes/User.php');
     require_once('../php/classes/Offer.php');
     require_once('../php/classes/Tag.php');
     require_once('../php/classes/Conversation.php');
     require_once('../php/classes/Message.php');
-?>
+?> -->
 
 <html>
 
@@ -12,12 +12,12 @@
     <meta charset="ISO-8859-1">
     <title>Account</title>
 </head>
-    
+
 <body>
 
-<h3>Account</h3>
+    <h3>Account</h3>
 
-<?php
+    <?php
     session_start();
     if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
         echo '<a class="btn" href="../php/logout.php">Logout</a>';
@@ -25,10 +25,10 @@
     }
 ?>
 
-<br>
-<h5>Konversationen</h5>
+    <br>
+    <h5>Konversationen</h5>
 
-<?php 
+    <?php 
     //session_start();
     if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
         $conversations = $_SESSION['user']->getConversations();
@@ -70,10 +70,10 @@
     }
 ?>
 
-<br>
-<h5>Eigene Angebote</h5>
+    <br>
+    <h5>Eigene Angebote</h5>
 
-<?php 
+    <?php 
     //session_start();
     if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
         $offers = $_SESSION['user']->getOwnOffers();

@@ -17,15 +17,10 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-lg-6">
                     <h1>Account</h1>
 
                     <ul class="list-unstyled">
-                        <li>E-Mail-Benachrichtigung
-                            <div class="form-check" id="checkbox">
-                                <input type="checkbox" class="form-check-input">
-                            </div>
-                        </li>
                         <li><a title="Passwort ändern">Passwort ändern</a></li>
                         <li><a title="E-Mail ändern">E-Mail ändern</a></li>
                         <li><a title="Account löschen"> Account löschen</a></li>
@@ -33,8 +28,31 @@
 
                 </div>
 
-                <div class="col-sm-6">
+                <div class="col-lg-6">
                     <h1>Nachrichten</h1>
+                    <ul class="list-unstyled">
+                        <li>E-Mail-Benachrichtigung
+                            <div class="form-check" id="checkbox">
+                                <input type="checkbox" class="form-check-input">
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h4>Ein Jogurt</h4>
+                    <form method="POST" action="conversation.php">
+                        <input type="text" hidden required name="conID" value="'.$conversation->getConID().'" />
+                        <button class="btn col-12" type="submit">@1: Hey ich hätte das Angebot gerne</button>
+                        <button class="btn col-12" type="submit">@2: Hey ich hätte das Angebot gerne</button>
+                    </form>
+
+                    <h4>Ein Jogurt</h4>
+                    <form method="POST" action="conversation.php">
+                        <input type="text" hidden required name="conID" value="'.$conversation->getConID().'" />
+                        <button class="btn" type="submit">@1: Hey ich hätte das Angebot gerne</button>
+                        <button class="btn" type="submit">@2: Hey ich hätte das Angebot gerne</button>
+                    </form>
+
+
 
 
                 </div>

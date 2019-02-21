@@ -33,9 +33,9 @@
                                 name="password">
                         </div>
                         <!-- Javascript der Login Modal schließt -->
-                        <button type="button" class="btn btn-light" data-toggle="modal"
+                        <button type="submit" class="btn btn-dark float-right">Login</button>
+                        <button type="button" class="btn btn-light float-right" data-toggle="modal"
                             data-target="#registerModal">Registrieren</button>
-                        <button type="submit" class="btn btn-dark">Login</button>
                     </form>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                             <input type="password" class="form-control" id="password" placeholder="Passwort"
                                 name="password">
                         </div>
-                        <button type="submit" class="btn btn-dark">Registrieren</button>
+                        <button type="submit" class="btn btn-dark float-right">Registrieren</button>
                     </form>
                 </div>
             </div>
@@ -180,7 +180,7 @@
                         </script>
 
                         <!-- Achtung, dev-hinweis: ein User muss eingeloggt sein! -->
-                        <button type="submit" class="btn btn-dark">Erstellen</button>
+                        <button type="submit" class="btn btn-dark float-right">Erstellen</button>
                     </form>
                 </div>
             </div>
