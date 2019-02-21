@@ -9,6 +9,10 @@
 
 <body>
 
+    <?php
+        include('modal/modalLogin.php');
+    ?>
+
 
 
     <!-- Modal Register -->
