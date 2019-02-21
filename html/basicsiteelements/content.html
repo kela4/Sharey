@@ -28,339 +28,121 @@
 <body>
 <div class="container mt-4">
     <div class="row justify-content-center">
-        <div class="col-auto m-3 card" id="card">
-            <div id="cardContent">
-                <div class="row">
-                    <div class="col-7">
-                        <div class="row">
-                            <div id="offerTagDiv">
-                                <svg width="150px" height="55px">
-                                    <polygon points="10,30 30,10 140,10 140,50 30,50" id="offerTagPolygon"/>
-                                    <text x="40" y="36" fill="white">Essen</text>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="=col-auto">
-                                <div id="locationTagDiv">
-                                    <i class="fas fa-map-marker-alt" id="locationTag"></i>
+        <a data-toggle="modal" data-target="#offerModal">
+            <div class="col-auto m-3 card" id="card">
+                <div id="cardContent">
+                    <div class="row">
+                        <div class="col-7">
+                            <div class="row">
+                                <div id="offerTagDiv">
+                                    <svg width="150px" height="55px">
+                                        <polygon points="10,30 30,10 140,10 140,50 30,50" id="offerTagPolygon"/>
+                                        <text x="40" y="36" fill="white">Essen</text>
+                                    </svg>
                                 </div>
                             </div>
-                            <div class="col-auto">
-                                <div id="cityDiv">
-                                    <span class="whiteText">Mosbach</span>
-                                    <br>
-                                    <span class="whiteText">15 km</span>
+                            <div class="row">
+                                <div class="=col-auto">
+                                    <div id="locationTagDiv">
+                                        <i class="fas fa-map-marker-alt" id="offerLocationTag"></i>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div id="cityDiv">
+                                        <span class="whiteText">Mosbach</span>
+                                        <br>
+                                        <span class="whiteText">15 km</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-5">
-                        <br>
-                        <br>
-                        <img src="../images/yoghurt.jpg" id="offerImage">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div id="offerDescriptionDiv">
-                            <h5 class="whiteText">Ein Joghurt</h5>
-                            <p class="whiteText">Habe einen Naturjoghurt übrig. Will den jemand?<br><a>Angebot</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-auto m-3 card bg-primary" style="height: 300px; width: 300px;">
-            <div class="row">
-                <div class="col-7">
-                    <div class="row">
-                        <div style="margin-top: 10px; margin-left: 15px">
-                            <svg width="150px" height="55px">
-                                <polygon points="10,30 30,10 140,10 140,50 30,50" style="fill: transparent; stroke:white;stroke-width:3; stroke-linejoin: round"/>
-                                <text x="40" y="36" fill="white">Essen</text>
-                            </svg>
+                        <div class="col-5">
+                            <br>
+                            <br>
+                            <img src="../images/yoghurt.jpg" id="offerImage">
                         </div>
                     </div>
                     <div class="row">
-                        <div class="=col-auto">
-                            <div style="margin-top: 20px">
-                                <i class="fas fa-map-marker-alt" style="color: white; height: 30px; width: 30px; margin: 8px 10px 10px 20px"></i>
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <div style="margin-top: 20px">
-                                <span style="color: white">Mosbach</span>
-                                <br>
-                                <span style="color: white">15 km</span>
+                        <div class="col-12">
+                            <div id="offerDescriptionDiv">
+                                <h5 class="whiteText">Ein Joghurt</h5>
+                                <p class="whiteText">Habe einen Naturjoghurt übrig. Will den jemand?</p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-5">
-                    <br>
-                    <br>
-                    <img src="../images/yoghurt.jpg" style="max-height: 100px; max-width: 100px; margin-left: -5px; margin-top: -5px">
-                </div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <div style="height: 100px; overflow: hidden; margin-top: 20px">
-                        <h5 style="color: white">Ein Joghurt</h5>
-                        <p style="color: white">Habe einen Naturjoghurt übrig. Will den jemand?<br>Dritte Textzeile</p>
-                    </div>
-                </div>
+        </a>
+    </div>
+</div>
+
+<div class="modal fade" id="offerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header omColor" id="omHeader">
+                <h3 class="modal-title whiteText" id="exampleModalLabel">Angebot</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
-        </div>
-        <div class="col-auto m-3 card bg-primary" style="height: 300px; width: 300px;">
-            <div class="row">
-                <div class="col-7">
+            <div class="modal-body omColor" id="omBody">
+                <div id="omContent">
                     <div class="row">
-                        <div style="margin-top: 10px; margin-left: 15px">
-                            <svg width="150px" height="55px">
-                                <polygon points="10,30 30,10 140,10 140,50 30,50" style="fill: transparent; stroke:white;stroke-width:3; stroke-linejoin: round"/>
-                                <text x="40" y="36" fill="white">Essen</text>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="=col-auto">
-                            <div style="margin-top: 20px">
-                                <i class="fas fa-map-marker-alt" style="color: white; height: 30px; width: 30px; margin: 8px 10px 10px 20px"></i>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-auto">
+                                    <div>
+                                        <h4 class="whiteText">Ein Joghurt</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="=col-auto">
+                                    <div id="omLocationTagDiv">
+                                        <i class="fas fa-map-marker-alt locationTag" id="omLocationTag"></i>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div id="omCityDiv">
+                                        <span class="whiteText">Mosbach</span>
+                                        <br>
+                                        <span class="whiteText">15 km</span>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <div id="omTagDiv">
+                                        <svg width="150px" height="55px">
+                                            <polygon points="10,30 30,10 140,10 140,50 30,50" id="offerTagPolygon"/>
+                                            <text x="40" y="36" fill="white">Essen</text>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div id="omDescriptionDiv">
+                                        <p class="whiteText">MDH: 01.01.2020</p>
+                                        <p class="whiteText">Habe einen Naturjoghurt übrig. Will den jemand?</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-auto">
-                            <div style="margin-top: 20px">
-                                <span style="color: white">Mosbach</span>
-                                <br>
-                                <span style="color: white">15 km</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-5">
-                    <br>
-                    <br>
-                    <img src="../images/yoghurt.jpg" style="max-height: 100px; max-width: 100px; margin-left: -5px; margin-top: -5px">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div style="height: 100px; overflow: hidden; margin-top: 20px">
-                        <h5 style="color: white">Ein Joghurt</h5>
-                        <p style="color: white">Habe einen Naturjoghurt übrig. Will den jemand?<br>Dritte Textzeile</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-auto m-3 card bg-primary" style="height: 300px; width: 300px;">
-            <div class="row">
-                <div class="col-7">
-                    <div class="row">
-                        <div style="margin-top: 10px; margin-left: 15px">
-                            <svg width="150px" height="55px">
-                                <polygon points="10,30 30,10 140,10 140,50 30,50" style="fill: transparent; stroke:white;stroke-width:3; stroke-linejoin: round"/>
-                                <text x="40" y="36" fill="white">Essen</text>
-                            </svg>
+                        <div class="col-6">
+                            <img src="../images/yoghurt.jpg" id="omImage">
                         </div>
                     </div>
                     <div class="row">
-                        <div class="=col-auto">
-                            <div style="margin-top: 20px">
-                                <i class="fas fa-map-marker-alt" style="color: white; height: 30px; width: 30px; margin: 8px 10px 10px 20px"></i>
-                            </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-dark float-right">Interesse</button>
+                            <button type="button" class="btn btn-light float-right whiteText" id="omReportOffer">Melden</button>
                         </div>
-                        <div class="col-auto">
-                            <div style="margin-top: 20px">
-                                <span style="color: white">Mosbach</span>
-                                <br>
-                                <span style="color: white">15 km</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-5">
-                    <br>
-                    <br>
-                    <img src="../images/yoghurt.jpg" style="max-height: 100px; max-width: 100px; margin-left: -5px; margin-top: -5px">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div style="height: 100px; overflow: hidden; margin-top: 20px">
-                        <h5 style="color: white">Ein Joghurt</h5>
-                        <p style="color: white">Habe einen Naturjoghurt übrig. Will den jemand?<br>Dritte Textzeile</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-auto m-3 card bg-primary" style="height: 300px; width: 300px;">
-            <div class="row">
-                <div class="col-7">
-                    <div class="row">
-                        <div style="margin-top: 10px; margin-left: 15px">
-                            <svg width="150px" height="55px">
-                                <polygon points="10,30 30,10 140,10 140,50 30,50" style="fill: transparent; stroke:white;stroke-width:3; stroke-linejoin: round"/>
-                                <text x="40" y="36" fill="white">Essen</text>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="=col-auto">
-                            <div style="margin-top: 20px">
-                                <i class="fas fa-map-marker-alt" style="color: white; height: 30px; width: 30px; margin: 8px 10px 10px 20px"></i>
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <div style="margin-top: 20px">
-                                <span style="color: white">Mosbach</span>
-                                <br>
-                                <span style="color: white">15 km</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-5">
-                    <br>
-                    <br>
-                    <img src="../images/yoghurt.jpg" style="max-height: 100px; max-width: 100px; margin-left: -5px; margin-top: -5px">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div style="height: 100px; overflow: hidden; margin-top: 20px">
-                        <h5 style="color: white">Ein Joghurt</h5>
-                        <p style="color: white">Habe einen Naturjoghurt übrig. Will den jemand?<br>Dritte Textzeile</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-auto m-3 card bg-primary" style="height: 300px; width: 300px;">
-            <div class="row">
-                <div class="col-7">
-                    <div class="row">
-                        <div style="margin-top: 10px; margin-left: 15px">
-                            <svg width="150px" height="55px">
-                                <polygon points="10,30 30,10 140,10 140,50 30,50" style="fill: transparent; stroke:white;stroke-width:3; stroke-linejoin: round"/>
-                                <text x="40" y="36" fill="white">Essen</text>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="=col-auto">
-                            <div style="margin-top: 20px">
-                                <i class="fas fa-map-marker-alt" style="color: white; height: 30px; width: 30px; margin: 8px 10px 10px 20px"></i>
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <div style="margin-top: 20px">
-                                <span style="color: white">Mosbach</span>
-                                <br>
-                                <span style="color: white">15 km</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-5">
-                    <br>
-                    <br>
-                    <img src="../images/yoghurt.jpg" style="max-height: 100px; max-width: 100px; margin-left: -5px; margin-top: -5px">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div style="height: 100px; overflow: hidden; margin-top: 30px">
-                        <h5 style="color: white">Ein Joghurt</h5>
-                        <p style="color: white">Habe einen Naturjoghurt übrig. Will den jemand?<br>Dritte Textzeile</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-auto m-3 card bg-primary" style="height: 300px; width: 300px;">
-            <div class="row">
-                <div class="col-7">
-                    <div class="row">
-                        <div style="margin-top: 10px; margin-left: 15px">
-                            <svg width="150px" height="55px">
-                                <polygon points="10,30 30,10 140,10 140,50 30,50" style="fill: transparent; stroke:white;stroke-width:3; stroke-linejoin: round"/>
-                                <text x="40" y="36" fill="white">Essen</text>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="=col-auto">
-                            <div style="margin-top: 20px">
-                                <i class="fas fa-map-marker-alt" style="color: white; height: 30px; width: 30px; margin: 8px 10px 10px 20px"></i>
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <div style="margin-top: 20px">
-                                <span style="color: white">Mosbach</span>
-                                <br>
-                                <span style="color: white">15 km</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-5">
-                    <br>
-                    <br>
-                    <img src="../images/yoghurt.jpg" style="max-height: 100px; max-width: 100px; margin-left: -5px; margin-top: -5px">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div style="height: 100px; overflow: hidden; margin-top: 20px">
-                        <h5 style="color: white">Ein Joghurt</h5>
-                        <p style="color: white">Habe einen Naturjoghurt übrig. Will den jemand?<br>Dritte Textzeile</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-auto m-3 card bg-primary" style="height: 300px; width: 300px;">
-            <div class="row">
-                <div class="col-7">
-                    <div class="row">
-                        <div style="margin-top: 10px; margin-left: 15px">
-                            <svg width="150px" height="55px">
-                                <polygon points="10,30 30,10 140,10 140,50 30,50" style="fill: transparent; stroke:white;stroke-width:3; stroke-linejoin: round"/>
-                                <text x="40" y="36" fill="white">Essen</text>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="=col-auto">
-                            <div style="margin-top: 20px">
-                                <i class="fas fa-map-marker-alt" style="color: white; height: 30px; width: 30px; margin: 8px 10px 10px 20px"></i>
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <div style="margin-top: 20px">
-                                <span style="color: white">Mosbach</span>
-                                <br>
-                                <span style="color: white">15 km</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-5">
-                    <br>
-                    <br>
-                    <img src="../images/yoghurt.jpg" style="max-height: 100px; max-width: 100px; margin-left: -5px; margin-top: -5px">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div style="height: 100px; overflow: hidden; margin-top: 20px">
-                        <h5 style="color: white">Ein Joghurt</h5>
-                        <p style="color: white">Habe einen Naturjoghurt übrig. Will den jemand?<br>Dritte Textzeile</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
