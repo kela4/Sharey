@@ -28,7 +28,7 @@
 
                 </div>
 
-                <div class="col-lg-6">
+                <div id="message" class="col-lg-6">
                     <h1>Nachrichten</h1>
                     <ul class="list-unstyled">
                         <li>E-Mail-Benachrichtigung
@@ -38,19 +38,44 @@
                         </li>
                     </ul>
 
-                    <h4>Ein Jogurt</h4>
-                    <form method="POST" action="conversation.php">
-                        <input type="text" hidden required name="conID" value="'.$conversation->getConID().'" />
-                        <button class="btn col-12" type="submit">@1: Hey ich hätte das Angebot gerne</button>
-                        <button class="btn col-12" type="submit">@2: Hey ich hätte das Angebot gerne</button>
-                    </form>
+                    <div class="card" id="messageDark">
 
-                    <h4>Ein Jogurt</h4>
-                    <form method="POST" action="conversation.php">
-                        <input type="text" hidden required name="conID" value="'.$conversation->getConID().'" />
-                        <button class="btn" type="submit">@1: Hey ich hätte das Angebot gerne</button>
-                        <button class="btn" type="submit">@2: Hey ich hätte das Angebot gerne</button>
-                    </form>
+                        <h4>Ein Jogurt</h4>
+                        <form method="POST" action="conversation.php">
+                            <input type="text" hidden required name="conID" value="'.$conversation->getConID().'" />
+                            <div class="col-12">
+                                <button class="btn shadow-none" type="submit">@1: Hey
+                                    idsdsdsdsdsjdsdajdhjfhjsghs
+                                    <span>Test</span>
+
+                                </button>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn shadow-none" type="submit">@1: Hey ich hätte das
+                                    Angebot gerne</button>
+                            </div>
+                        </form>
+
+                    </div>
+
+
+
+                    <div class="card" id="messageLight">
+
+                        <h4>Ein Jogurt</h4>
+                        <form method="POST" action="conversation.php">
+                            <input type="text" hidden required name="conID" value="'.$conversation->getConID().'" />
+                            <div class="col-12">
+                                <button class="btn shadow-none" type="submit">@1: Hey ich hätte das
+                                    Angebot fefefefefefef</button>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn shadow-none" type="submit">@1: Hey ich hätte das
+                                    Angebot gerne</button>
+                            </div>
+                        </form>
+
+                    </div>
 
 
 

@@ -381,5 +381,24 @@ a[data-toggle="collapse"] {
 
 #checkbox {
     display: inline;
-    margin-left: 10px
+    margin-left: 10px;
+}
+
+#message {
+    white-space: nowrap;
+}
+
+#message h4 {
+    padding-left: 5px;
+}
+
+#messageDark {
+    background-color: #DCDCDC;
+    overflow: hidden;
+}
+
+#messageLight {
+    background-color: rgba(220, 220, 220, 0.281);
+    overflow: hidden;
+    margin-top: 5px;
 }
