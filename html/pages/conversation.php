@@ -26,7 +26,7 @@
             <div id="messageArea">
 
                 <div class="row justify-content-end">
-                    <div class="card col-sm-8" id="senderDark">
+                    <div class="card col-sm-8 col-9" id="senderDark">
                         <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
                             '.$message->getContent().'</p>
                     </div>
@@ -34,14 +34,14 @@
                 <br>
 
                 <div class="row">
-                    <div class="card col-sm-8" id="senderLight">
+                    <div class="card col-sm-8 col-9" id="senderLight">
                         <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
                             '.$message->getContent().'</p>
                     </div>
                 </div>
                 <br>
                 <div class="row justify-content-end">
-                    <div class="card col-sm-8" id="senderDark">
+                    <div class="card col-sm-8 col-9" id="senderDark">
                         <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
                             '.$message->getContent().'</p>
                     </div>
@@ -49,14 +49,14 @@
                 <br>
 
                 <div class="row">
-                    <div class="card col-sm-8" id="senderLight">
+                    <div class="card col-sm-8 col-9" id="senderLight">
                         <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
                             '.$message->getContent().'</p>
                     </div>
                 </div>
                 <br>
                 <div class="row justify-content-end">
-                    <div class="card col-sm-8" id="senderDark">
+                    <div class="card col-sm-8 col-9" id="senderDark">
                         <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
                             '.$message->getContent().'</p>
                     </div>
@@ -64,14 +64,14 @@
                 <br>
 
                 <div class="row">
-                    <div class="card col-sm-8" id="senderLight">
+                    <div class="card col-sm-8 col-9" id="senderLight">
                         <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
                             '.$message->getContent().'</p>
                     </div>
                 </div>
                 <br>
                 <div class="row justify-content-end">
-                    <div class="card col-sm-8" id="senderDark">
+                    <div class="card col-sm-8 col-9" id="senderDark">
                         <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
                             '.$message->getContent().'</p>
                     </div>
@@ -79,14 +79,14 @@
                 <br>
 
                 <div class="row">
-                    <div class="card col-sm-8" id="senderLight">
+                    <div class="card col-sm-8 col-9" id="senderLight">
                         <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
                             '.$message->getContent().'</p>
                     </div>
                 </div>
                 <br>
                 <div class="row justify-content-end">
-                    <div class="card col-sm-8" id="senderDark">
+                    <div class="card col-sm-8 col-9" id="senderDark">
                         <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
                             '.$message->getContent().'</p>
                     </div>
@@ -94,7 +94,82 @@
                 <br>
 
                 <div class="row">
-                    <div class="card col-sm-8" id="senderLight">
+                    <div class="card col-sm-8 col-9" id="senderLight">
+                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
+                            '.$message->getContent().'</p>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-end">
+                    <div class="card col-sm-8 col-9" id="senderDark">
+                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
+                            '.$message->getContent().'</p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="card col-sm-8 col-9" id="senderLight">
+                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
+                            '.$message->getContent().'</p>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-end">
+                    <div class="card col-sm-8 col-9" id="senderDark">
+                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
+                            '.$message->getContent().'</p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="card col-sm-8 col-9" id="senderLight">
+                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
+                            '.$message->getContent().'</p>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-end">
+                    <div class="card col-sm-8 col-9" id="senderDark">
+                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
+                            '.$message->getContent().'</p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="card col-sm-8 col-9" id="senderLight">
+                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
+                            '.$message->getContent().'</p>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-end">
+                    <div class="card col-sm-8 col-9" id="senderDark">
+                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
+                            '.$message->getContent().'</p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="card col-sm-8 col-9" id="senderLight">
+                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
+                            '.$message->getContent().'</p>
+                    </div>
+                </div>
+                <br>
+                <div class="row justify-content-end">
+                    <div class="card col-sm-8 col-9" id="senderDark">
+                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
+                            '.$message->getContent().'</p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div class="card col-sm-8 col-9" id="senderLight">
                         <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
                             '.$message->getContent().'</p>
                     </div>
