@@ -421,5 +421,6 @@ a[data-toggle="collapse"] {
     height: 100%;
     right: 0px;
     padding-right: 10px;
+    padding-left: 10px;
     background: rgb(248, 248, 248);
 }
