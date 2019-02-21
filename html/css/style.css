@@ -318,7 +318,7 @@ a[data-toggle="collapse"] {
     margin-top: 20px;
 }
 
-#locationTag {
+#offerLocationTag {
     color: white;
     height: 30px;
     width: 30px;
@@ -343,7 +343,64 @@ a[data-toggle="collapse"] {
 #offerDescriptionDiv {
     height: 110px;
     overflow: hidden;
-    margin-top: 20px
+    margin-top: 20px;
+}
+
+#omHeader {
+    height: 75px;
+    width: 750px;
+    align-self: center;
+}
+
+#omBody {
+    width: 750px;
+    align-self: center;
+    border-bottom-left-radius: 0.3rem;
+    border-bottom-right-radius: 0.3rem;
+}
+
+#omContent {
+    margin-top: 10px;
+}
+
+#omTagDiv {
+    margin-top: 10px;
+    margin-left: -10px;
+}
+
+#omLocationTagDiv {
+    margin-top: 20px;
+}
+
+#omLocationTag {
+    color: white;
+    height: 30px;
+    width: 30px;
+    margin: 8px 10px 10px 20px;
+}
+
+#omCityDiv {
+    margin-top: 20px;
+    margin-left: -10px;
+}
+
+#omImage {
+    max-height: 350px;
+    max-width: 350px;
+    margin-left: -25px;
+}
+
+#omDescriptionDiv {
+    margin-top: 20px;
+}
+
+.omColor {
+    background-color: #92D050;
+}
+
+#omReportOffer {
+    background-color: transparent;
+    border: none;
 }
 
 /* ---------------------------------------------------
