@@ -240,7 +240,7 @@
                                     <div class="col-5">
                                         <br>
                                         <br>
-                                        <img src="../images/yoghurt.jpg" id="offerImage">
+                                        <img src="images/yoghurt.jpg" id="offerImage">
                                     </div>
                                 </div>
                                 <div class="row">
