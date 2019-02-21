@@ -5,32 +5,6 @@
     <?php
         include('basicsiteelements/header.php');
     ?>
-
-
-    <link rel="stylesheet" type="text/css"
-        href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
-    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
-    <script>
-    window.addEventListener("load", function() {
-        window.cookieconsent.initialise({
-            "palette": {
-                "popup": {
-                    "background": "#edeff5",
-                    "text": "#838391"
-                },
-                "button": {
-                    "background": "#4b81e8"
-                }
-            },
-            "position": "bottom-right",
-            "content": {
-                "message": "<b>Magst du Cookies?</b> &#127850; Wir benutzen Cookies, um das beste Erlebnis auf der Webseite zu ermöglichen.",
-                "dismiss": "Verstanden",
-                "link": "Mehr dazu"
-            }
-        })
-    });
-    </script>
 </head>
 
 <body>
