@@ -3,6 +3,7 @@ require_once('Tag.php');
 require_once('Offer.php');
 require_once('Conversation.php');
 require_once('Message.php');
+//required_once('../dbconnect.php');
 
 class User{
     private $active; //bool
@@ -24,7 +25,8 @@ class User{
     }
 
     public static function login(string $mail, string $password){ 
-        require_once('./dbconnect.php');
+        $connection = mysqli_connect('localhost', 'fsdbuser', 'YeMN9ZKy=9F4');
+        mysqli_select_db($connection, 'db_sharey');
         
         $query = "SELECT ur_userID, ur_userPassword, ur_notification FROM tbl_user WHERE ur_mail = '".$mail."' AND ur_active = true;";
         
@@ -108,22 +110,23 @@ class User{
      */
     public function getOwnOffers(){
         
-        $connection = mysqli_connect('localhost', 'root', '');
-        mysqli_select_db($connection, 'shareyvorlage');
+        $connection = mysqli_connect('localhost', 'fsdbuser', 'YeMN9ZKy=9F4');
+        mysqli_select_db($connection, 'db_sharey');
         
-        $query = "SELECT o.*, p.plz, p.ort, t.description AS tagDescription, t.color AS tagColor FROM `offer` AS o 
-                    JOIN tag AS t
-                    ON o.tagID = t.tagID
-                    JOIN plz AS p
-                    ON o.plzID = p.plzID
-                    WHERE o.ocID = ".$this->userID." AND o.active = true;";
+        $query = "SELECT o.*, p.pz_plz, p.pz_location, t.tg_description AS tagDescription, t.tg_color AS tagColor, t.tg_tagID AS tagID 
+                    FROM `tbl_offer` AS o 
+                    JOIN tbl_tag AS t 
+                        ON o.or_tagID = t.tg_tagID 
+                    JOIN tbl_plz AS p 
+                        ON o.or_plzID = p.pz_plzID 
+                    WHERE o.or_ocID = ".$this->getUserID()." AND o.or_active = true;";
 
         $res = mysqli_query($connection, $query);
 
         $offers = [];
         
         while(($data = mysqli_fetch_array($res)) != false){
-            $offers[] = new Offer($data['active'], new DateTime($data['creationDate']), utf8_encode($data['description']), new DateTime($data['mhd']), $data['offerID'], $data['picture'], $data['plz'], utf8_encode($data['ort']), $data['report'], new Tag($data['tagColor'], utf8_encode($data['tagDescription']), $data['tagID']), utf8_encode($data['title']), $data['ocID']);
+            $offers[] = new Offer($data['or_active'], new DateTime($data['or_creationDate']), utf8_encode($data['or_description']), new DateTime($data['or_mhd']), $data['or_offerID'], $data['or_picture'], $data['pz_plz'], utf8_encode($data['pz_location']), $data['or_report'], new Tag($data['tagColor'], utf8_encode($data['tagDescription']), $data['tagID']), utf8_encode($data['or_title']), $data['or_ocID']);
         }
 
         return $offers;
@@ -137,7 +140,7 @@ class User{
      * returns all conversations and the last message to each conversation
      */
     public function getConversations(){
-        //required_once('./php/dbconnect.php');
+        
         $connection = mysqli_connect('localhost', 'fsdbuser', 'YeMN9ZKy=9F4');
         mysqli_select_db($connection, 'db_sharey');
 

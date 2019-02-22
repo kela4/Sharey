@@ -1,5 +1,6 @@
 <?php
 require_once('Tag.php');
+//required_once('../dbconnect.php');
 
 class Offer{
     private $active; //bool

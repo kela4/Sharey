@@ -1,4 +1,5 @@
 <?php
+//required_once('../dbconnect.php');
 
 class Message{
     private $conID; //int
