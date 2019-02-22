@@ -420,6 +420,12 @@ a[data-toggle="collapse"] {
     margin-top: 25px;
 }
 
+#register {
+    background-color: transparent;
+    border: none;
+    margin-right: 10px;
+}
+
 /* ---------------------------------------------------
     BUTTON NEW OFFER
 ----------------------------------------------------- */

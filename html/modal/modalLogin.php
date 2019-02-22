@@ -24,7 +24,7 @@
                     <!-- Javascript der Login Modal schließt -->
                     <button type="submit" class="btn btn-dark float-right">Login</button>
                     <button type="button" class="btn btn-light float-right" data-toggle="modal"
-                        data-target="#registerModal">Registrieren</button>
+                        data-target="#registerModal" id="register">Registrieren</button>
                 </form>
             </div>
         </div>
