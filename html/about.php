@@ -3,13 +3,17 @@
 
 <head>
     <?php
-        include('../basicsiteelements/headerpages.php');
+        include('basicsiteelements/header.php');
     ?>
 </head>
 
 <body>
+
     <?php
-        include('../basicsiteelements/navigationpages.php');
+        include('modal/modalLogin.php');
+    ?>
+    <?php
+        include('basicsiteelements/navigation.php');
     ?>
 
     <div class="content">
@@ -19,7 +23,7 @@
         </div>
     </div>
     <?php
-        include('../basicsiteelements/scripts.php');
+        include('basicsiteelements/scripts.php');
     ?>
 </body>
 

@@ -17,22 +17,22 @@
             <a data-toggle="modal" data-target="#registerModal" title="Registrieren">Registrieren</a>
         </li>
         <li>
-            <a href="pages/account.php" title="Account">Account</a>
+            <a href="account.php" title="Account">Account</a>
         </li>
         <li>
             <a href="#" title="Logout">Logout</a>
         </li>
         <li>
-            <a href="pages/about.php" title="Über uns">Über uns</a>
+            <a href="about.php" title="Über uns">Über uns</a>
         </li>
         <li>
-            <a href="pages/contact.php" title="Kontakt">Kontakt</a>
+            <a href="contact.php" title="Kontakt">Kontakt</a>
         </li>
         <li>
-            <a href="pages/privacy.php" title="Datenschutz">Datenschutz</a>
+            <a href="privacy.php" title="Datenschutz">Datenschutz</a>
         </li>
         <li>
-            <a href="pages/imprint.php" title="Impressum">Impressum</a>
+            <a href="imprint.php" title="Impressum">Impressum</a>
         </li>
     </ul>
     <div id="social">
