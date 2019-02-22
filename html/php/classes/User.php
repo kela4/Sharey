@@ -32,11 +32,7 @@ class User{
         
         $res = mysqli_query($connection, $query);
 
-        if(!empty($res)){
-            echo true;
-        }else{
-            echo false;
-        }
+        echo $res;
         
         $data = mysqli_fetch_array($res);
 
