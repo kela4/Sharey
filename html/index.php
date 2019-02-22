@@ -92,13 +92,6 @@
             </div>
         </div>
 
-
-
-
-
-
-
-
         <!-- Create new Offer -->
         <div id="center">
 
