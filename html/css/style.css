@@ -508,6 +508,7 @@ a[data-toggle="collapse"] {
 
 #conversationButtons {
     padding-top: 2px;
+    z-index: 1;
 }
 
 #conversationHeading {
