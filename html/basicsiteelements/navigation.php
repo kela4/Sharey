@@ -1,5 +1,5 @@
 <?php
-    require_once('php/isLoggedIn.php');
+    require_once('php/isLoggedInFunction.php');
 ?>
 
 <!-- For dark, when sidebar is open -->
