@@ -6,7 +6,7 @@
         $success = $_SESSION['user']->logout();
             
         if($success == true){
-            header("Location: ../index.php");
+            header("Location: ../loggedout.php");
         }else{
             echo "<p>Da ist wohl etwas schief gegangen, bitte erneut versuchen.</p>";  //hier vielleicht auf eine initiale Fehler-Meldungsseite verweisen, der verschiedenen get-Params mitgegeben werden und je nach Param wird die Fehlermeldung angezeigt
         }
