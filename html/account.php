@@ -1,3 +1,7 @@
+<?php
+    require_once('php/classes/User.php');
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -8,8 +12,17 @@
 </head>
 
 <body>
+
     <?php
         include('basicsiteelements/navigation.php');
+    ?>
+
+    <?php
+        session_start();
+        if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
+            echo '<a class="btn" href="php/logout.php">Logout</a>';
+            echo "<p>Hello ".$_SESSION['user']->getMail()."</p>";
+        }
     ?>
 
     <div class="content">
