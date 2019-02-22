@@ -152,7 +152,7 @@
                                                                             <div id="offerTagDiv">
                                                                                 <svg width="150px" height="55px">
                                                                                     <polygon points="10,30 30,10 140,10 140,50 30,50" id="offerTagPolygon"/>
-                                                                                    <text x="40" y="36" fill="white">'.$offer->getTag()->getDescription().'</text>
+                                                                                    <text x="40" y="36" fill="white">'.utf8_decode($offer->getTag()->getDescription()).'</text>
                                                                                 </svg>
                                                                             </div>
                                                                         </div>
@@ -164,7 +164,7 @@
                                                                             </div>
                                                                             <div class="col-auto">
                                                                                 <div id="cityDiv">
-                                                                                    <span class="whiteText">'.$offer->getPlace().'</span>
+                                                                                    <span class="whiteText">'.utf8_decode($offer->getPlace()).'</span>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -182,7 +182,7 @@
                                                                 <div class="row">
                                                                     <div class="col-12">
                                                                         <div id="offerDescriptionDiv">
-                                                                            <h5 class="whiteText">'.$offer->getTitle().'</h5>
+                                                                            <h5 class="whiteText">'.utf8_decode($offer->getTitle()).'</h5>
                                                                             <p class="whiteText">'.utf8_decode($offer->getDescription()).'</p>
                                                                         </div>
                                                                     </div>
