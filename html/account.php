@@ -55,9 +55,7 @@
                             <?php
                                 $conversations = $_SESSION['user']->getConversations();
 
-                                echo "Cons:".var_dump($conversations);
-
-                                /*if(!empty($conversations)){
+                                if(!empty($conversations)){
                                     $currentOfferID = 0;
                                     $acceptorCounter = 1;
                                     $offerCounter = 1;
@@ -110,7 +108,7 @@
                                         }
                                     }
                                     echo '</div>'; //closing div for last offer-con-container
-                                }*/
+                                }
                             
                             ?>
 
