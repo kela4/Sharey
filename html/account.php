@@ -80,7 +80,7 @@
                                                             </div>
                                                         </form>';
                                             }else{ //if offerID of current conversation not equals to offerID of the previous conversation --> add a new title and then the lastMessage
-                                                $offerCounter++;
+                                                
                                                 if($currentOfferID != 0){
                                                     echo '</div>'; //closing div of the group of conversations of one offer
                                                 }
@@ -92,6 +92,8 @@
                                                 if(intval($offerCounter)%2 == 0){
                                                     $colorOfferGroup = "messageLight";
                                                 }
+
+                                                $offerCounter++;
 
                                                 //if offer-counter ist ungerade, dann dunkelgrau er div, sonst hellgrau
                                                 echo '<div class="card" id="'.$colorOfferGroup.'">
