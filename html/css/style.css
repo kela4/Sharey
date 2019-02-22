@@ -347,14 +347,10 @@ a[data-toggle="collapse"] {
 }
 
 #omHeader {
-    height: 75px;
-    width: 750px;
-    align-self: center;
+    border-bottom: none;
 }
 
 #omBody {
-    width: 750px;
-    align-self: center;
     border-bottom-left-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
 }
@@ -385,8 +381,6 @@ a[data-toggle="collapse"] {
 }
 
 #omImage {
-    max-height: 350px;
-    max-width: 350px;
     margin-left: -25px;
 }
 
@@ -486,6 +480,16 @@ a[data-toggle="collapse"] {
 /* ---------------------------------------------------
     CONVERSATION
 ----------------------------------------------------- */
+
+#conversationButtons {
+    position: fixed;
+    top: 110px;
+    z-index: 1;
+}
+
+#conversationHeading {
+    margin-top: 50px;
+}
 
 #messageArea {
     padding-bottom: 70px;
