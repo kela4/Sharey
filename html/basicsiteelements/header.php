@@ -25,6 +25,9 @@
     integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous">
 </script>
 
+<!--jQuery Libary-->
+<script src="../js/jquery.min.js"></script>
+
 <!-- Cookie -->
 <link rel="stylesheet" type="text/css"
     href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
