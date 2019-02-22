@@ -7,12 +7,12 @@
             //call login-method of User
             $success = User::login($_POST['mail'], $_POST['password']);
             
-            /*if($success == true){
+            if($success == true){
                 header("Location: ../account.php");
             }else{
                 echo "<p>Nutzerdaten falsch.</p>";  //hier vielleicht auf eine initiale Fehler-Meldungsseite verweisen, der verschiedenen get-Params mitgegeben werden und je nach Param wird die Fehlermeldung angezeigt
-            }*/
-            echo var_dump($success);
+            }
+            
         }else{
             echo "<p>Bitte Passwort eingeben..</p>";
         }
