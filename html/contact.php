@@ -9,6 +9,9 @@
 
 <body>
     <?php
+        include('modal/modalLogin.php');
+    ?>
+    <?php
         include('basicsiteelements/navigation.php');
     ?>
 
