@@ -52,7 +52,7 @@
             <p>
                 Wir freuen uns auf ein fröhliches Sharing mit euch - euer Sharey-Team.
             </p>
-            <small>Made with <span>&#10084;</span> by FoStDev. Für Umweltschutz und .<small>
+            <small>Made with <span>&#10084;</span> by FoStDev.<small>
         </div>
     </div>
     <?php
