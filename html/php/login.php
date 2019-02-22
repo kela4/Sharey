@@ -1,5 +1,7 @@
 <?php 
-    require_once('classes/User.php');
+
+    echo "test";
+    /*require_once('classes/User.php');
 
     if(isset($_POST['mail']) && !empty($_POST['mail'])){
         if(isset($_POST['password']) && !empty($_POST['password'])){
@@ -17,5 +19,5 @@
         }
     }else{
         echo "<p>Bitte E-Mail eingeben.</p>";
-    }
+    }*/
 ?>
