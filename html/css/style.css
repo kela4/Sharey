@@ -233,7 +233,7 @@ a[data-toggle="collapse"] {
         top: 140px;
     }
     div #conversationHeading {
-        margin-top: 50px;
+        margin-top: 60px;
     }
 }
 
@@ -402,10 +402,6 @@ a[data-toggle="collapse"] {
     margin-top: 17px;
 }
 
-#omImage {}
-
-#omDescriptionDiv {}
-
 .omColor {
     background-color: #92D050;
 }
@@ -418,6 +414,12 @@ a[data-toggle="collapse"] {
 
 #divider {
     margin-top: 25px;
+}
+
+#register {
+    background-color: transparent;
+    border: none;
+    margin-right: 10px;
 }
 
 /* ---------------------------------------------------
@@ -505,8 +507,7 @@ a[data-toggle="collapse"] {
 ----------------------------------------------------- */
 
 #conversationButtons {
-    position: fixed;
-    top: 100px;
+    padding-top: 2px;
     z-index: 1;
 }
 

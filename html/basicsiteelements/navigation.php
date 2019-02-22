@@ -48,12 +48,12 @@
         </li>
     </ul>
     <div id="social">
-        <a href="#"><img class="img-fluid" src="images/social_icons/facebook_transparent.PNG" alt="Facebook"
-                title="Facebook"></a>
-        <a href="#"><img class="img-fluid" src="images/social_icons/insta_transparent.PNG" alt="Instagram"
-                title="Instagram"></a>
-        <a href="#"><img class="img-fluid" src="images/social_icons/twitter_transparent.PNG" alt="Twitter"
-                title="Twitter"></a>
+        <a href="https://www.facebook.com/sharey.plattform.3"><img class="img-fluid"
+                src="images/social_icons/facebook_transparent.PNG" alt="Facebook" title="Facebook"></a>
+        <a href="https://www.instagram.com/sharey.plattform/?hl=de"><img class="img-fluid"
+                src="images/social_icons/insta_transparent.PNG" alt="Instagram" title="Instagram"></a>
+        <a href="https://twitter.com/Sharey25174232?lang=de"><img class="img-fluid"
+                src="images/social_icons/twitter_transparent.PNG" alt="Twitter" title="Twitter"></a>
         <br><br>
     </div>
 </nav>
