@@ -25,8 +25,10 @@ class User{
     }
 
     public static function login(string $mail, string $password){ 
-        $connection = mysqli_connect('localhost', 'fsdbuser', 'YeMN9ZKy=9F4');
-        mysqli_select_db($connection, 'db_sharey');
+        require_once(dirname(__FILE__) . "../dbconnect.php");
+
+        /*$connection = mysqli_connect('localhost', 'fsdbuser', 'YeMN9ZKy=9F4');
+        mysqli_select_db($connection, 'db_sharey');*/
         
         $query = "SELECT ur_userID, ur_userPassword, ur_notification FROM tbl_user WHERE ur_mail = '".$mail."' AND ur_active = true;";
         

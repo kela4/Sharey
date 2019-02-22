@@ -71,6 +71,7 @@
 
         <!--Script for pagedynamic e.g. dynamic offer loading-->
         <script type="text/javascript" src="js/dynamicOfferLoading.js"></script>
+        <script type="text/javascript" src="js/createOfferModalFiller.js"></script>
 
 </body>
 
