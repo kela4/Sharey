@@ -28,7 +28,7 @@
             </p>
             <p>
                 Das große Problem hierbei: sowohl für die Erzeugung, als auch die Vernichtung dieser weggeworfenen
-                Lebensmittel werden wertvolle Ressourcen verschwendet wir z. B. Rohstoffe, Energie und Wasser. <br>
+                Lebensmittel werden wertvolle Ressourcen verschwendet wir z. B. Rohstoffe, Energie und Wasser.
             </p>
             <p>
                 Das lässt sich nicht nur auf Lebensmittel eingrenzen. Auch beispielsweise Drogerie- oder sonstige
