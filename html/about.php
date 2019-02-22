@@ -64,11 +64,11 @@
                     <p>
                         Nach dem Motto <i>bevor du etwas wegschmeißt, das noch nutzbar ist - share it</i> 
                         kannst du dich auf Sharey austoben und einer breiten Nutzergruppe deine nicht mehr benötigten Lebensmittel 
-                        und sonstige Verbrauchsprodukte bereitstellen. Gib diesen die Chance, dass sie doch noch genutzt werden!
+                        und sonstigen Verbrauchsprodukte bereitstellen. Gib diesen die Chance, doch noch genutzt zu werden!
                         Teile auch du unsere Vision von einer Welt ohne Ressourcenverschwendung.
                     </p>
                     <p>
-                        Wir freuen uns auf ein fröhliches Sharing mit euch - euer Sharey-Team.
+                        Wir freuen uns auf ein fröhliches Sharing mit dir - dein Sharey-Team.
                     </p>
                     
                     <small>Made with <span>&#10084;</span> by FoStDev<small>
