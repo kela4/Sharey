@@ -172,7 +172,7 @@
                 <div class="modal-body omColor" id="omBody">
                     <div id="omContent">
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-5">
                                 <div class="row">
                                     <div class="col-auto">
                                         <div>
@@ -203,8 +203,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-8">
-                                <img src="images/yoghurt.jpg" class="img-fluid" id="omImage">
+                            <div class="col-7">
+                                <img src="../images/yoghurt.jpg" class="img-fluid" id="omImage">
                             </div>
                         </div>
                         <div class="row">

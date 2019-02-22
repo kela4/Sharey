@@ -229,9 +229,6 @@ a[data-toggle="collapse"] {
         width: 250px;
         left: -250px;
     }
-    div #conversationButtons {
-        top: 140px;
-    }
 }
 
 @media (min-width: 576px) {
@@ -244,9 +241,6 @@ a[data-toggle="collapse"] {
     #sidebar {
         width: 250px;
         left: -250px;
-    }
-    div #conversationButtons {
-        top: 140px;
     }
 }
 
@@ -261,9 +255,6 @@ a[data-toggle="collapse"] {
         width: 250px;
         left: -250px;
     }
-    div #conversationButtons {
-        top: 140px;
-    }
 }
 
 @media (min-width: 992px) {
@@ -277,9 +268,6 @@ a[data-toggle="collapse"] {
         width: 400px;
         left: -400px;
     }
-    div #conversationButtons {
-        top: 100px;
-    }
 }
 
 @media (min-width: 1200px) {
@@ -288,9 +276,6 @@ a[data-toggle="collapse"] {
     }
     div #placeholder {
         display: inline;
-    }
-    div #conversationButtons {
-        top: 100px;
     }
 }
 
@@ -378,7 +363,9 @@ a[data-toggle="collapse"] {
     margin-left: 10px;
 }
 
-#omLocationTagDiv {}
+#omLocationTagDiv {
+    margin-top: 17px;
+}
 
 #omLocationTag {
     color: white;
@@ -387,11 +374,17 @@ a[data-toggle="collapse"] {
     margin: 8px 10px 10px 20px;
 }
 
-#omCityDiv {}
+#omCityDiv {
+    margin-top: 17px;
+}
 
-#omImage {}
+#omImage {
 
-#omDescriptionDiv {}
+}
+
+#omDescriptionDiv {
+
+}
 
 .omColor {
     background-color: #92D050;
@@ -498,11 +491,21 @@ a[data-toggle="collapse"] {
 }
 
 #conversationHeading {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 #messageArea {
     padding-bottom: 70px;
+}
+
+#timestampMessage {
+    font-size: 10px;
+    display: inline;
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 #senderLight {
