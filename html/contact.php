@@ -76,7 +76,8 @@
 
                 </div>
         </div>
-        <?php
+    </div>
+    <?php
         include('basicsiteelements/scripts.php');
     ?>
 </body>
