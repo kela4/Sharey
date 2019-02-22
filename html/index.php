@@ -13,8 +13,6 @@
         include('modal/modalLogin.php');
     ?>
 
-
-
     <!-- Modal Register -->
     <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
