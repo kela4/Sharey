@@ -1,6 +1,6 @@
 <?php
 require_once('Message.php');
-//required_once('../dbconnect.php');
+//require_once('../dbconnect.php');
 
 class Conversation{
     private $active; //bool

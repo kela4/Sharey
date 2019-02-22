@@ -3,7 +3,7 @@ require_once('Tag.php');
 require_once('Offer.php');
 require_once('Conversation.php');
 require_once('Message.php');
-//required_once('../dbconnect.php');
+require_once('../dbconnect.php');
 
 class User{
     private $active; //bool
