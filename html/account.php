@@ -55,7 +55,7 @@
                             <?php
                                 $conversations = $_SESSION['user']->getConversations();
 
-                                //echo "Cons:".var_dump($conversations);
+                                echo "Cons:".var_dump($conversations);
 
                                 if(!empty($conversations)){
                                     $currentOfferID = 0;
