@@ -34,7 +34,7 @@ class User{
 
         echo $res;
         
-        $data = mysqli_fetch_array($res);
+        /*$data = mysqli_fetch_array($res);
 
         if(hash('sha256', $password) == $data['ur_userPassword']){
             //password right
@@ -44,7 +44,7 @@ class User{
         }else{
             //password wrong
             return true;
-        }
+        }*/
     }
 
     public static function deleteUser(int $userID){
