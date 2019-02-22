@@ -44,7 +44,7 @@
 
                 <div class="row justify-content-end">
                     <div class="card col-sm-8 col-9" id="senderDark">
-                        <p>Hallo'</p>
+                        <p>Hallo du :D</p>
                         <div class="float-right" id="timestampMessage">01.01.2000 12:00</div>
                     </div>
                 </div>
