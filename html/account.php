@@ -62,14 +62,20 @@
 
                                     foreach($conversations as $conversation){ //if offerID of current conversation equals to offerID of the previous conversation --> add only the lastMessage
                                         if(!empty($conversation->getLastMessage())){ //if in the conversation actually a message is present
+                                            
+                                            //color for timestamp-field:
+                                            $colorTimeStamp = "timestampDark";   
+                                            if(intval($offerCounter)%2 == 0){
+                                                $colorTimeStamp = "timestampLight";
+                                            }
+
                                             if($conversation->getOfferID() == $currentOfferID){
                                                 echo '  <form method="POST" action="conversation.php#anker">
                                                             <input type="text" hidden required name="conID" value="'.$conversation->getConID().'" />
                                                             <div class="col-12">
                                                                 <button class="btn shadow-none" type="submit">
                                                                     <div style="display: inline;">@'.$acceptorCounter.' '.$conversation->getLastMessage()->getContent().'</div>
-                                                                    <div style="display: inline;">...</div>
-                                                                    <div class="float-right" id="timestampLight">'.$conversation->getLastMessage()->getDate()->format('Y-m-d H:i').'</div>
+                                                                    <div class="float-right" id="'.$colorTimeStamp.'">'.$conversation->getLastMessage()->getDate()->format('Y-m-d H:i').'</div>
                                                                 </button>
                                                             </div>
                                                         </form>';
@@ -88,14 +94,13 @@
 
                                                 //if offer-counter ist ungerade, dann dunkelgrau er div, sonst hellgrau
                                                 echo '<div class="card" id="'.$colorOfferGroup.'">
-                                                        <h4>Ein Jogurt</h4>
+                                                        <h4>'.$conversation->getOfferTitle().'</h4>
                                                         <form method="POST" action="conversation.php#anker">
                                                             <input type="text" hidden required name="conID" value="'.$conversation->getConID().'" />
                                                             <div class="col-12">
                                                                 <button class="btn shadow-none" type="submit">
                                                                     <div style="display: inline;">@'.$acceptorCounter.' '.$conversation->getLastMessage()->getContent().'</div>
-                                                                    <div style="display: inline;">...</div>
-                                                                    <div class="float-right" id="timestampLight">'.$conversation->getLastMessage()->getDate()->format('Y-m-d H:i').'</div>
+                                                                    <div class="float-right" id="'.$colorTimeStamp.'">'.$conversation->getLastMessage()->getDate()->format('Y-m-d H:i').'</div>
                                                                 </button>
                                                             </div>
                                                         </form>';
