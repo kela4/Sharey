@@ -2,7 +2,7 @@ $(document).ready(function(){
     //filler for tags:
     $.ajax({
         url: 'php/sendMessage.php',
-        data: {messageContent: newMessageText, conID: conID},
+        data: {},
         dataType: 'json',
         type: 'post',
         success: function(data){
