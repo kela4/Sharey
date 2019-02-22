@@ -58,7 +58,7 @@
                                 if(!empty($conversations)){
                                     $currentOfferID = 0;
                                     $acceptorCounter = 1;
-                                    $offerCounter = 1;
+                                    $offerCounter = 0;
 
                                     foreach($conversations as $conversation){ //if offerID of current conversation equals to offerID of the previous conversation --> add only the lastMessage
                                         if(!empty($conversation->getLastMessage())){ //if in the conversation actually a message is present
@@ -80,6 +80,7 @@
                                                             </div>
                                                         </form>';
                                             }else{ //if offerID of current conversation not equals to offerID of the previous conversation --> add a new title and then the lastMessage
+                                                $offerCounter++;
                                                 if($currentOfferID != 0){
                                                     echo '</div>'; //closing div of the group of conversations of one offer
                                                 }
@@ -106,7 +107,6 @@
                                                         </form>';
 
                                                 $currentOfferID = $conversation->getOfferID();
-                                                $offerCounter++;
                                             }
 
                                             $acceptorCounter++;
