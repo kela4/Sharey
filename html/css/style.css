@@ -506,7 +506,9 @@ a[data-toggle="collapse"] {
     CONVERSATION
 ----------------------------------------------------- */
 
-#conversationButtons {}
+#conversationButtons {
+    padding-top: 2px;
+}
 
 #conversationHeading {
     margin-top: 30px;
