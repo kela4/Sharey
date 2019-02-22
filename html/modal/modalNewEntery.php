@@ -33,12 +33,7 @@
                          <div class="col-sm-4">
                              <div class="form-group">
                                  <label for="sel1">Tag</label>
-                                 <select id="tagSelectionNewOffer" class="form-control" id="sel1" name="tag">
-                                     <option>1</option>
-                                     <option>2</option>
-                                     <option>3</option>
-                                     <option>4</option>
-                                 </select>
+                                 <select id="tagSelectionNewOffer" class="form-control" id="sel1" name="tag"></select>
                              </div>
                          </div>
                          <div class="col-sm-4">

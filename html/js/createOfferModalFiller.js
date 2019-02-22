@@ -1,10 +1,11 @@
 $(document).ready(function(){
     //filler for tags:
 
+    alert('works');
     var tagSelectionNewOffer = $('#tagSelectionNewOffer');
 
     $.ajax({
-        url: 'php/getAllTags.php',
+        url: '../php/getAllTags.php',
         dataType: 'json',
         type: 'post',
         success: function(data){
