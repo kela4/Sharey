@@ -28,7 +28,7 @@ class User{
         /*$connection = mysqli_connect('localhost', 'phpmyadmin', 's2at5g#nuzqE');
         mysqli_select_db($connection, 'db_sharey');*/
         
-        $query = "SELECT ur_userID, ur_userPassword, ur_notification FROM tbl_user WHERE ur_mail = 'test@test.de' AND ur_active = 1;";
+        $query = "SELECT ur_userID, ur_userPassword, ur_notification FROM tbl_user WHERE ur_mail = 'test@test.de' AND ur_active = true;";
         
         $res = mysqli_query($connection, $query);
         
