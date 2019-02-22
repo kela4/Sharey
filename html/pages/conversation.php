@@ -182,9 +182,9 @@
             <div id="newMessage">
                 <div class="container">
                     <div class="input-group">
-                        <textarea id="newMessageText" class="form-control" rows="1"></textarea>
+                        <textarea id="newMessageText" class="form-control" rows="2"></textarea>
                         <?php echo '<input id="conIDMessage" hidden value="'.$_POST['conID'].'"/>'; ?>
-                        <button id="sendButton" class="btn btn-secondary float-right">Send</button>
+                        <button id="sendButton" class="btn btn-secondary float-right">Senden</button>
                     </div>
                 </div>
             </div>
