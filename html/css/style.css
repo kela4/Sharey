@@ -381,8 +381,6 @@ a[data-toggle="collapse"] {
 }
 
 #omImage {
-    max-height: 250px;
-    max-width: 250px;
     margin-left: -25px;
 }
 
