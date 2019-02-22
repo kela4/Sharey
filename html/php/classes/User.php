@@ -24,7 +24,7 @@ class User{
     }
 
     public static function login(string $mail, string $password){ 
-        include_once('../dbconnect.php');
+        include_once('./dbconnect.php');
         
         $query = "SELECT ur_userID, ur_userPassword, ur_notification FROM tbl_user WHERE ur_mail = 'test@test.de' AND ur_active = true;";
         
