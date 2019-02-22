@@ -35,7 +35,7 @@
                         <a href="account.php" title="Account">Account</a>
                     </li>
                     <li>
-                        <a href="#" title="Logout">Logout</a>
+                        <a href="../php/logout.php" title="Logout">Logout</a>
                     </li>
                 <?php
             }
