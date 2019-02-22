@@ -19,7 +19,7 @@
         </li>
 
         <?php
-            if(!isLoggedIn()){
+            if(!isLoggedIn()){ //user isn't logged in
                 ?>
                      <li>
                         <a data-toggle="modal" data-target="#loginModal" title="Login">Login</a>
@@ -29,11 +29,7 @@
                         <a data-toggle="modal" data-target="#registerModal" title="Registrieren">Registrieren</a>
                     </li>
                 <?php
-            }
-        ?>
-
-        <?php
-            if(isLoggedIn()){
+            }else{ //user is logged in
                 ?>
                     <li>
                         <a href="account.php" title="Account">Account</a>
@@ -44,7 +40,7 @@
                 <?php
             }
         ?>
-        
+
         <li>
             <a href="about.php" title="Über uns">Über uns</a>
         </li>
