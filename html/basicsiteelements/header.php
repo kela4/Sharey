@@ -43,7 +43,7 @@ window.addEventListener("load", function() {
         },
         "position": "bottom-right",
         "content": {
-            "message": "<b>Magst du Cookies?</b> &#127850; Wir benutzen Cookies, um dir das beste Erlebnis auf unserer Webseite zu ermöglichen.",
+            "message": "<b>Magst du Cookies?</b> &#127850; - Wir auch! &#128522; Wir benutzen Cookies, um dir das beste Erlebnis auf unserer Webseite zu ermöglichen.",
             "dismiss": "Verstanden",
             "link": "Mehr dazu"
         }
