@@ -24,10 +24,12 @@
             <div class="row">
                 <div class="col-lg-6">
                     <h1>Account</h1>
-
+                    <p>test</p>
                     <?php
                         session_start();
+                        echo "test";
                         if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
+                            echo "test";
                             echo '<a class="btn" href="php/logout.php">Logout</a>';
                             echo "<p>Hello ".$_SESSION['user']->getMail()."</p>";
                         }
