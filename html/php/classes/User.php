@@ -31,6 +31,10 @@ class User{
         $query = "SELECT ur_userID, ur_userPassword, ur_notification FROM tbl_user WHERE ur_mail = 'test@test.de' AND ur_active = true;";
         
         $res = mysqli_query($connection, $query);
+
+        if($res){
+            echo false;
+        }
         
         $data = mysqli_fetch_array($res);
 
@@ -41,7 +45,7 @@ class User{
             return true;
         }else{
             //password wrong
-            return false;
+            return true;
         }
     }
 
