@@ -3,7 +3,7 @@
     require_once('php/classes/Offer.php');
     require_once('php/classes/Tag.php');
     require_once('php/classes/Conversation.php');
-    require_once('php/classes/Messages.php');
+    require_once('php/classes/Message.php');
 ?>
 
 <!DOCTYPE html>
