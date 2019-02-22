@@ -229,6 +229,9 @@ a[data-toggle="collapse"] {
         width: 250px;
         left: -250px;
     }
+    div #conversationButtons {
+        top: 140px;
+    }
 }
 
 @media (min-width: 576px) {
@@ -241,6 +244,9 @@ a[data-toggle="collapse"] {
     #sidebar {
         width: 250px;
         left: -250px;
+    }
+    div #conversationButtons {
+        top: 140px;
     }
 }
 
@@ -255,6 +261,9 @@ a[data-toggle="collapse"] {
         width: 250px;
         left: -250px;
     }
+    div #conversationButtons {
+        top: 140px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -268,6 +277,9 @@ a[data-toggle="collapse"] {
         width: 400px;
         left: -400px;
     }
+    div #conversationButtons {
+        top: 100px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -276,6 +288,9 @@ a[data-toggle="collapse"] {
     }
     div #placeholder {
         display: inline;
+    }
+    div #conversationButtons {
+        top: 100px;
     }
 }
 
@@ -482,7 +497,7 @@ a[data-toggle="collapse"] {
 
 #conversationButtons {
     position: fixed;
-    top: 110px;
+    top: 100px;
     z-index: 1;
 }
 
