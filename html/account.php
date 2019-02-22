@@ -17,14 +17,6 @@
         include('basicsiteelements/navigation.php');
     ?>
 
-    <?php
-        session_start();
-        if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
-            echo '<a class="btn" href="php/logout.php">Logout</a>';
-            echo "<p>Hello ".$_SESSION['user']->getMail()."</p>";
-        }
-    ?>
-
     <div class="content">
         <!-- Div content for padding-top (header) -->
         <div class="container">
@@ -32,6 +24,14 @@
             <div class="row">
                 <div class="col-lg-6">
                     <h1>Account</h1>
+
+                    <?php
+                        session_start();
+                        if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
+                            echo '<a class="btn" href="php/logout.php">Logout</a>';
+                            echo "<p>Hello ".$_SESSION['user']->getMail()."</p>";
+                        }
+                    ?>
 
                     <ul class="list-unstyled">
                         <li><a title="Passwort ändern">Passwort ändern</a></li>
