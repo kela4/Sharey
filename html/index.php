@@ -58,7 +58,7 @@
             include('basicsiteelements/scripts.php');
         ?>
 
-        <!--Script for Page-Dynamic e.g. dynamic offer loading-->
+        <!--Script for pagedynamic e.g. dynamic offer loading-->
         <script type="text/javascript" src="js/dynamicOfferLoading.js"></script>
 
 </body>
