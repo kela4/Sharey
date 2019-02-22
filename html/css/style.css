@@ -360,12 +360,11 @@ a[data-toggle="collapse"] {
 }
 
 #omTagDiv {
-    margin-top: 10px;
-    margin-left: -10px;
+    margin-left: 10px;
 }
 
 #omLocationTagDiv {
-    margin-top: 20px;
+
 }
 
 #omLocationTag {
@@ -376,16 +375,15 @@ a[data-toggle="collapse"] {
 }
 
 #omCityDiv {
-    margin-top: 20px;
-    margin-left: -10px;
+
 }
 
 #omImage {
-    margin-left: -25px;
+
 }
 
 #omDescriptionDiv {
-    margin-top: 20px;
+
 }
 
 .omColor {
@@ -395,6 +393,7 @@ a[data-toggle="collapse"] {
 #omReportOffer {
     background-color: transparent;
     border: none;
+    margin-right: 10px;
 }
 
 /* ---------------------------------------------------
