@@ -16,7 +16,7 @@
         <!-- Div content for padding-top (header) -->
         <div class="container">
             <div id="conversationButtons">
-                <div class="btn-group" role="group">
+                <div class="btn-group btn-group-sm" role="group">
                     <button type="button" class="btn btn-success" title="Angebot
                         angenommen"><i
                             class="fas fa-check"></i> Angebot
