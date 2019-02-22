@@ -24,7 +24,7 @@ class User{
     }
 
     public static function login(string $mail, string $password){ 
-        include_once('./dbconnect.php');
+        require_once('./dbconnect.php');
         
         $query = "SELECT ur_userID, ur_userPassword, ur_notification FROM tbl_user WHERE ur_mail = '".$mail."' AND ur_active = true;";
         
@@ -137,21 +137,28 @@ class User{
      * returns all conversations and the last message to each conversation
      */
     public function getConversations(){
+        require_once('./dbconnect.php');
         
-        $connection = mysqli_connect('localhost', 'root', '');
-        mysqli_select_db($connection, 'shareyvorlage');
-        
-        $query = "SELECT c.*, m.messageID, m.content, m.sendDate, m.messageRead, m.senderID, o.title FROM conversation c
-                    JOIN message m
-                    ON c.conID = m.conID
-                    JOIN (SELECT max(m.messageID) AS messageID, m.conID as conID 
-                            FROM message m 
-                            GROUP BY m.conID) AS mes
-                    ON mes.messageID = m.messageID
-                    JOIN offer o
-                    ON c.offerID = o.offerID
-                    WHERE (c.oaID = ".$this->userID." OR c.ocID = ".$this->userID.") AND c.active = true
-                    ORDER BY o.offerID"; //order by offerID is important for grouping conversations under an offer
+        $query = "SELECT c.*, m.me_messageID, m.me_content, m.me_sendDate, m.me_messageRead, m.me_senderID, o.or_title 
+                    FROM tbl_conversation c
+                    JOIN tbl_message m
+                        ON c.cn_conID = m.me_conID
+                    JOIN (SELECT max(m.me_messageID) AS messageID, m.me_conID as conID 
+                            FROM tbl_message m 
+                            GROUP BY m.me_conID) AS mes
+                        ON mes.messageID = m.me_messageID
+                    
+                    LEFT JOIN (SELECT min(m.me_messageID) AS msgID, m.me_conID as convID 
+                            FROM tbl_message m 
+                            GROUP BY m.me_conID) AS msg
+                        ON msg.msgID = m.me_messageID
+                    
+                    JOIN tbl_offer o
+                        ON c.cn_offerID = o.or_offerID
+                    
+                    WHERE (c.cn_oaID = ".$this->getUserID()." OR c.cn_ocID = ".$this->getUserID().")
+                    AND c.cn_active = true
+                    ORDER BY o.or_offerID;"; //order by offerID is important for grouping conversations under an offer
         
         $res = mysqli_query($connection, $query);
 
