@@ -27,7 +27,8 @@ class User{
         $connection = mysqli_connect('localhost', 'root', '');
         mysqli_select_db($connection, 'shareyvorlage');
         
-        $query = "SELECT * FROM suser WHERE mail ='".$mail."';";
+        $query = "SELECT ur_userID, ur_password FROM tbl_user WHERE ur_mail = '".$mail."' AND ur_active = 1;";
+        
         $res = mysqli_query($connection, $query);
         
         $data = mysqli_fetch_array($res);

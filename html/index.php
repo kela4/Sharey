@@ -13,8 +13,6 @@
         include('modal/modalLogin.php');
     ?>
 
-
-
     <!-- Modal Register -->
     <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -214,7 +212,7 @@
                                 </div>
                             </div>
                             <div class="col-6">
-                                <img src="images/yoghurt.jpg" id="omImage">
+                                <img src="images/yoghurt.jpg" class="img-fluid" id="omImage">
                             </div>
                         </div>
                         <div class="row">
