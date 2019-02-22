@@ -39,7 +39,7 @@
                     </p>
                 </div>
                 <div class="col-12 col-md-5">
-                    <img src="images/trash.jpg" class="img-fluid" alt="waste"/>
+                    <img src="images/trash.jpg" class="img-fluid rounded" alt="waste"/>
                 </div>
 
                 <div class="col-12">
@@ -52,8 +52,8 @@
                     <br>
                 </div>
                 
-                <div class="col-12 col-md-5">
-                    <img src="images/tree.jpg" class="img-fluid" alt="waste"/>
+                <div class="col-12 col-md-5 text-center">
+                    <img src="images/tree.jpg" class="img-fluid rounded" alt="waste"/>
                 </div>
 
                 <div class="col-12 col-md-7">
@@ -73,8 +73,6 @@
                     
                     <small>Made with <span>&#10084;</span> by FoStDev<small>
                 </div>
-
-                <br>
                 
             </div>
             
