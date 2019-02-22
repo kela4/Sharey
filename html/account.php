@@ -200,6 +200,8 @@
             </div>
 
         <?php                    
+    }else{
+        echo "<p>Du bist nicht eingeloggt. Mitte melde dich an um auf deinen Account zuzugreifen.</p>";
     }
 ?>
 
