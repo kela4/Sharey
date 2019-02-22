@@ -4,6 +4,8 @@
 
 <title>Sharey</title>
 
+<link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.ico">
+
 <!-- Bootstrap CSS CDN -->
 <link rel="stylesheet" href="css/bootstrap.css">
 <!-- Our Custom CSS -->
