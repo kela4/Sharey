@@ -4,6 +4,7 @@
     require_once('php/classes/Tag.php');
     require_once('php/classes/Conversation.php');
     require_once('php/classes/Messages.php');
+    session_start();
 ?>
 
 <!DOCTYPE html>
