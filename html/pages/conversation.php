@@ -15,9 +15,22 @@
     <div class="content">
         <!-- Div content for padding-top (header) -->
         <div class="container">
-            <div>
+            <div id="conversationButtons">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-success" title="Angebot
+                        angenommen"><i
+                            class="fas fa-check"></i> Angebot
+                        angenommen</button>
+                    <button type="button" class="btn btn-danger" title="Konversation
+                        löschen"><i
+                            class="fas fa-trash"></i> Konversation
+                        löschen</button>
+                </div>
+            </div>
+            <div id="conversationHeading">
                 <h1>Konversation</h1>
             </div>
+
 
 
 
@@ -183,7 +196,6 @@
                 <div class="container">
                     <div class="input-group">
                         <textarea id="newMessageText" class="form-control" rows="2"></textarea>
-                        <?php echo '<input id="conIDMessage" hidden value="'.$_POST['conID'].'"/>'; ?>
                         <button id="sendButton" class="btn btn-secondary float-right">Senden</button>
                     </div>
                 </div>

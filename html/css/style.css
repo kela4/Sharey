@@ -487,6 +487,16 @@ a[data-toggle="collapse"] {
     CONVERSATION
 ----------------------------------------------------- */
 
+#conversationButtons {
+    position: fixed;
+    top: 110px;
+    z-index: 1;
+}
+
+#conversationHeading {
+    margin-top: 50px;
+}
+
 #messageArea {
     padding-bottom: 70px;
 }
