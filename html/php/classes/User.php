@@ -137,7 +137,7 @@ class User{
      * returns all conversations and the last message to each conversation
      */
     public function getConversations(){
-        require_once('./dbconnect.php');
+        require_once('php/dbconnect.php');
         
         $query = "SELECT c.*, m.me_messageID, m.me_content, m.me_sendDate, m.me_messageRead, m.me_senderID, o.or_title 
                     FROM tbl_conversation c
@@ -161,15 +161,15 @@ class User{
                     ORDER BY o.or_offerID;"; //order by offerID is important for grouping conversations under an offer
         
         $res = mysqli_query($connection, $query);
-
-        $conversations = [];
+        return $res;
+        /*$conversations = [];
         
         while(($data = mysqli_fetch_array($res)) != false){
             $conversations[] = $data;
             //$conversations[] = new Conversation($data['cn_active'], $data['cn_conID'], $data['cn_oaID'], $data['cn_ocID'], $data['cn_offerID'], new Message($data['cn_conID'], $data['me_content'], new DateTime($data['me_sendDate']), $data['me_messageID'], $data['me_messageRead'], $data['me_senderID']), $data['or_title']);
         }
 
-        return $conversations;
+        return $conversations;*/
     }
 
     #region getter
