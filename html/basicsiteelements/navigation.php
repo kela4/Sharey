@@ -15,11 +15,22 @@
 
     <ul class="list-unstyled components text-center">
         <li>
-            <a data-toggle="modal" data-target="#loginModal" title="Login">Login</a>
+            <a href="index.php" title="Startseite">Startseite</a>
         </li>
-        <li>
-            <a data-toggle="modal" data-target="#registerModal" title="Registrieren">Registrieren</a>
-        </li>
+
+        <?php
+            if(!isLoggedIn()){
+                ?>
+                     <li>
+                        <a data-toggle="modal" data-target="#loginModal" title="Login">Login</a>
+                    </li>
+
+                    <li>
+                        <a data-toggle="modal" data-target="#registerModal" title="Registrieren">Registrieren</a>
+                    </li>
+                <?php
+            }
+        ?>
 
         <?php
             if(isLoggedIn()){
