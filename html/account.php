@@ -21,13 +21,13 @@
         include('basicsiteelements/navigation.php');
     ?>
 
-<?php
-    if(isset($_SESSION['user']) && !empty($_SESSION['user'])){ //only show page if a user is logged in
-        ?>
-            <div class="content">
-                <!-- Div content for padding-top (header) -->
-                <div class="container">
+<div class="content">
+    <!-- Div content for padding-top (header) -->
+    <div class="container">
 
+        <?php
+            if(isset($_SESSION['user']) && !empty($_SESSION['user'])){ //only show page if a user is logged in
+                ?>
                     <div class="row">
 
                         <div class="col-lg-6">
@@ -196,14 +196,16 @@
                         </div>
 
                     </div>
-                </div>
-            </div>
+                
 
-        <?php                    
-    }else{
-        echo "<p>Du bist nicht eingeloggt. Mitte melde dich an um auf deinen Account zuzugreifen.</p>";
-    }
-?>
+                <?php                    
+            }else{
+                echo "<p>Du bist nicht eingeloggt. Mitte melde dich an um auf deinen Account zuzugreifen.</p>";
+            }
+        ?>
+
+    </div>
+</div>
 
     <?php
         include('basicsiteelements/scripts.php');
