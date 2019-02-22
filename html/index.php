@@ -45,11 +45,22 @@
 
         </div>
 
-        <!-- Create new Offer -->
+        <!-- Create new Offer -> if a user is logged in, the newOffer modal is shown, else the login modal -->
         <div id="center">
 
-            <a id="newOffer" class="center-block" data-toggle="modal" data-target="#newOfferModal">
-                <img src="images/newOffer.PNG">
+            <?php
+                //if user is logged in --> show new offer modal
+                if(isLoggedIn()){
+                    ?>
+                        <a id="newOffer" class="center-block" data-toggle="modal" data-target="#newOfferModal">
+                    <?php
+                }else{ //if no user is logged in --> show login modal
+                    ?>
+                        <a id="newOffer" class="center-block" data-toggle="modal" data-target="#loginModal">
+                    <?php
+                }
+            ?>
+                            <img src="images/newOffer.PNG">
             </a>
 
         </div>
