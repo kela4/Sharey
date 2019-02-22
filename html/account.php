@@ -75,7 +75,7 @@
                                                             <div class="col-12">
                                                                 <button class="btn shadow-none" type="submit">
                                                                     <div style="display: inline;">@'.$acceptorCounter.' '.$conversation->getLastMessage()->getContent().'</div>
-                                                                    <div class="float-right" id="'.$colorTimeStamp.'">'.$conversation->getLastMessage()->getDate()->format('Y-m-d H:i').'</div>
+                                                                    <div class="float-right" id="timestamp">'.$conversation->getLastMessage()->getDate()->format('Y-m-d H:i').'</div>
                                                                 </button>
                                                             </div>
                                                         </form>';
@@ -103,7 +103,7 @@
                                                             <div class="col-12">
                                                                 <button class="btn shadow-none" type="submit">
                                                                     <div style="display: inline;">@'.$acceptorCounter.' '.$conversation->getLastMessage()->getContent().'</div>
-                                                                    <div class="float-right" id="'.$colorTimeStamp.'">'.$conversation->getLastMessage()->getDate()->format('Y-m-d H:i').'</div>
+                                                                    <div class="float-right" id="timestamp">'.$conversation->getLastMessage()->getDate()->format('Y-m-d H:i').'</div>
                                                                 </button>
                                                             </div>
                                                         </form>';
