@@ -137,8 +137,10 @@ class User{
      * returns all conversations and the last message to each conversation
      */
     public function getConversations(){
-        required_once('./php/dbconnect.php');
-        
+        //required_once('./php/dbconnect.php');
+        $connection = mysqli_connect('localhost', 'fsdbuser', 'YeMN9ZKy=9F4');
+        mysqli_select_db($connection, 'db_sharey');
+
         $query = "SELECT c.*, m.me_messageID, m.me_content, m.me_sendDate, m.me_messageRead, m.me_senderID, o.or_title 
                     FROM tbl_conversation c
                     JOIN tbl_message m
