@@ -55,6 +55,8 @@
                             <?php
                                 $conversations = $_SESSION['user']->getConversations();
 
+                                echo var_dump($conversations);
+
                                 if(!empty($conversations)){
                                     $currentOfferID = 0;
                                     $acceptorCounter = 1;
@@ -110,53 +112,6 @@
                                     echo '</div>'; //closing div for last offer-con-container
                                  }
                             ?>
-
-                            <!--
-                            <div class="card" id="messageDark">
-                                <h4>Ein Jogurt</h4>
-                                <form method="POST" action="conversation.php#anker">
-                                    <input type="text" hidden required name="conID" value="'.$conversation->getConID().'" />
-                                    <div class="col-12">
-                                        <button class="btn shadow-none" type="submit">
-                                            @1: 12345678901234567890123456fjsdafjuijhrujfosrhv ngd ngndgjdjghjpds7890
-                                            <div class="float-right" id="timestampDark">01.01.2000 12:00</div>
-                                        </button>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn shadow-none" type="submit">
-                                            @1: 123456789012345678901234567890
-                                            <div class="float-right" id="timestampDark">01.01.2000 12:00</div>
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-
-                            <div class="card" id="messageLight">
-                                <h4>Ein Jogurt</h4>
-                                <form method="POST" action="conversation.php#anker">
-                                    <input type="text" hidden required name="conID" value="'.$conversation->getConID().'" />
-                                    <div class="col-12">
-                                        <input type="text" hidden required name="conID" value="'.$conversation->getConID().'"/>
-                                        <button class="btn shadow-none" type="submit">
-                                            <div style="display: inline;">@1: 123456789012345678901234567890</div>
-                                            <div style="display: inline;">...</div>
-                                            <div class="float-right" id="timestampLight">01.01.2000 12:00</div>
-                                        </button>
-                                    </div>
-                                </form> 
-                                <form method="POST" action="conversation.php#anker">   
-                                    <div class="col-12">
-                                    <input type="text" hidden required name="conID" value="'.$conversation->getConID().'"/>
-                                        <button class="btn shadow-none" type="submit">
-                                            <div style="display: inline;">@1: 123456789fsjladfhjlsafhsdwuierphfgurihv
-                                                netheuihnveruighrudhuivhngvuishgvuierhtv eu012345678901234567890</div>
-                                            <div style="display: inline;">...</div>
-                                            <div class="float-right" id="timestampLight">01.01.2000 12:00</div>
-                                        </button>
-                                    </div>
-                                </form> 
-                            </div>
-                            -->     
 
                         </div>
 
@@ -222,7 +177,6 @@
 
                                 }
                             ?>
-
 
                                 </div>
                             </div>
