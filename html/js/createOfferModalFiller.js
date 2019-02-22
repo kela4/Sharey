@@ -1,7 +1,6 @@
 $(document).ready(function(){
     //filler for tags:
-
-    alert('works');
+    
     var tagSelectionNewOffer = $('#tagSelectionNewOffer');
 
     $.ajax({
