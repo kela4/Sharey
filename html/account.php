@@ -183,7 +183,7 @@
                                                                     <div class="col-12">
                                                                         <div id="offerDescriptionDiv">
                                                                             <h5 class="whiteText">'.$offer->getTitle().'</h5>
-                                                                            <p class="whiteText">'.$offer->getDescription().'</p>
+                                                                            <p class="whiteText">'.utf8_decode($offer->getDescription()).'</p>
                                                                         </div>
                                                                     </div>
                                                                 </div>
