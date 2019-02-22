@@ -28,7 +28,7 @@ class User{
         /*$connection = mysqli_connect('localhost', 'phpmyadmin', 's2at5g#nuzqE');
         mysqli_select_db($connection, 'db_sharey');*/
         
-        $query = "SELECT ur_userID, ur_userPassword, ur_notification FROM tbl_user WHERE ur_mail = '".strtolower($mail)."' AND ur_active = 1;";
+        $query = "SELECT ur_userID, ur_userPassword, ur_notification FROM tbl_user WHERE ur_mail = '".$mail."' AND ur_active = 1;";
         
         $res = mysqli_query($connection, $query);
         
@@ -37,7 +37,7 @@ class User{
         if(hash('sha256', $password) == $data['ur_userPassword']){
             //password right
             session_start();
-            $_SESSION['user'] = new User(true, strtolower($mail), $data['ur_notification'], $data['ur_userPassword'], $data['ur_userID']);
+            $_SESSION['user'] = new User(true, $mail, $data['ur_notification'], $data['ur_userPassword'], $data['ur_userID']);
             return true;
         }else{
             //password wrong
