@@ -1,5 +1,6 @@
 <?php
     require_once('php/classes/User.php');
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +27,7 @@
                     <h1>Account</h1>
                     <p>test</p>
                     <?php
-                        session_start();
+                        
                         echo "test";
                         if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
                             echo "test";
