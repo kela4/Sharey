@@ -24,7 +24,10 @@ class User{
     }
 
     public static function login(string $mail, string $password){ 
-        require_once('../dbconnect.php');
+        //require_once('../dbconnect.php');
+        $connection = mysqli_connect('localhost', 'phpmyadmin', 's2at5g#nuzqE');
+        mysqli_select_db($connection, 'db_sharey');
+
         
         $query = "SELECT ur_userID, ur_userPassword, ur_notification FROM tbl_user WHERE ur_mail = '".strtolower($mail)."' AND ur_active = 1;";
         
