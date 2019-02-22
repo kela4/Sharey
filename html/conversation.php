@@ -16,28 +16,29 @@
         <!-- Div content for padding-top (header) -->
         <div class="container">
 
-            <div id="conversationButtons">
-                <div class="btn-group btn-group-sm col-12" role="group">
-                    <button type="button" class="btn btn-success" title="Angebot
-                        angenommen"><i
-                            class="fas fa-check"></i> Angebot
-                        angenommen</button>
-                    <button type="button" class="btn btn-danger" title="Konversation
-                        löschen"><i
-                            class="fas fa-trash"></i>
-                        Konversation
-                        löschen</button>
-                </div>
 
+            <div class="container fixed-top" id="conversationButtons">
+                <div class="row">
+                    <div class="col-10">
+                        <button type="button" class="btn btn-sm btn-success" title="Angebot angenommen"><i
+                                class="fas fa-check"></i> Angebot angenommen</button>
+                        <button type="button" class="btn btn-sm btn-danger" title="Konversation löschen"><i
+                                class="fas fa-trash"></i>
+                            Konversation löschen</button>
+                    </div>
+                    <div class="col-2">
+                        <button type="button" class="btn btn-sm btn-secondary float-right" title="Angebot angenommen"><i
+                                class="fas fa-times"></i></button>
+
+                    </div>
+
+                </div>
             </div>
+
+
             <div id="conversationHeading">
                 <h1>Konversation</h1>
             </div>
-
-
-
-
-
 
             <div id="messageArea">
 
@@ -127,8 +128,8 @@
                 </div>
             </div>
 
-
         </div>
+
     </div>
     <?php
         include('basicsiteelements/scripts.php');
