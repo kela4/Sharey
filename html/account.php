@@ -30,7 +30,7 @@
                         if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
                             echo "test";
                             echo '<a class="btn" href="php/logout.php">Logout</a>';
-                            echo "<p>Hello ".$_SESSION['user']->getMail()."</p>";
+                            echo "<p>Hello ".$_SESSION['user']->getMail()." ID: ".$_SESSION['user']->getUserID()."</p>";
                         }
                     ?>
 
