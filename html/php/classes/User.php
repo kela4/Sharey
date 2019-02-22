@@ -24,19 +24,18 @@ class User{
     }
 
     public static function login(string $mail, string $password){ 
-        $connection = mysqli_connect('localhost', 'root', '');
-        mysqli_select_db($connection, 'shareyvorlage');
+        require_once('../dbconnect.php');
         
-        $query = "SELECT ur_userID, ur_password FROM tbl_user WHERE ur_mail = '".$mail."' AND ur_active = 1;";
+        $query = "SELECT ur_userID, ur_userPassword, ur_notification FROM tbl_user WHERE ur_mail = '".strtolower($mail)."' AND ur_active = 1;";
         
         $res = mysqli_query($connection, $query);
         
         $data = mysqli_fetch_array($res);
 
-        if(hash('sha256', $password) == $data['userPassword']){
+        if(hash('sha256', $password) == $data['ur_userPassword']){
             //password right
             session_start();
-            $_SESSION['user'] = new User($data['active'], $data['mail'], $data['notification'], $data['userPassword'], $data['userID']);
+            $_SESSION['user'] = new User(true, strtolower($mail), $data['ur_notification'], $data['ur_userPassword'], $data['ur_userID']);
             return true;
         }else{
             //password wrong

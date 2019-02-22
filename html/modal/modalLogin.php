@@ -18,7 +18,7 @@
                     </div>
                     <div class="form-group">
                         <label for="password">Passwort</label>
-                        <input type="password" requeired class="form-control" id="password" placeholder="Passwort"
+                        <input type="password" required class="form-control" id="password" placeholder="Passwort"
                             name="password">
                     </div>
                     <!-- Javascript der Login Modal schließt -->
