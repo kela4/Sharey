@@ -44,8 +44,7 @@
 
                 <div class="row justify-content-end">
                     <div class="card col-sm-8 col-9" id="senderDark">
-                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
-                            '.$message->getContent().'</p>
+                        <p>Hallo'</p>
                         <div class="float-right" id="timestampMessage">01.01.2000 12:00</div>
                     </div>
                 </div>
@@ -53,17 +52,14 @@
 
                 <div class="row">
                     <div class="card col-sm-8 col-9" id="senderLight">
-                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
-                            '.$message->getContent().dsdsdsdsdsdsdsdsdsdsdsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd'
-                        </p>
+                        <p>Was geht so?</p>
                         <div class="float-right" id="timestampMessage">01.01.2000 12:00</div>
                     </div>
                 </div>
                 <br>
                 <div class="row justify-content-end">
                     <div class="card col-sm-8 col-9" id="senderDark">
-                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
-                            '.$message->getContent().'</p>
+                        <p>Gut und dir?</p>
                         <div class="float-right" id="timestampMessage">01.01.2000 12:00</div>
                     </div>
                 </div>
@@ -71,9 +67,7 @@
 
                 <div class="row">
                     <div class="card col-sm-8 col-9" id="senderLight">
-                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
-                            '.$message->getContent().dsdsdsdsdsdsdsdsdsdsdsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd'
-                        </p>
+                        <p>Kannst mir den Jogurt geben?</p>
                         <div class="float-right" id="timestampMessage">01.01.2000 12:00</div>
                     </div>
                 </div>
