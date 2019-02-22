@@ -1,4 +1,5 @@
 <?php 
+
     require_once('classes/User.php');
 
     if(isset($_POST['mail']) && !empty($_POST['mail'])){
