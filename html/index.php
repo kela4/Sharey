@@ -204,7 +204,7 @@
                                 </div>
                             </div>
                             <div class="col-6">
-                                <img src="../images/yoghurt.jpg" class="img-fluid" id="omImage">
+                                <img src="images/yoghurt.jpg" class="img-fluid" id="omImage">
                             </div>
                         </div>
                         <div class="row">
