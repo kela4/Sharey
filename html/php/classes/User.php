@@ -137,7 +137,7 @@ class User{
      * returns all conversations and the last message to each conversation
      */
     public function getConversations(){
-        require_once('php/dbconnect.php');
+        required_once('./php/dbconnect.php');
         
         $query = "SELECT c.*, m.me_messageID, m.me_content, m.me_sendDate, m.me_messageRead, m.me_senderID, o.or_title 
                     FROM tbl_conversation c
