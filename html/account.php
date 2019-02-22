@@ -27,8 +27,6 @@
                     <h1>Account</h1>
                     <p>test</p>
                     <?php
-                        
-                        echo "test";
                         if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
                             echo "test";
                             echo '<a class="btn" href="php/logout.php">Logout</a>';

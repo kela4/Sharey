@@ -1,3 +1,7 @@
+<?php
+    require_once('php/isLoggedIn.php');
+?>
+
 <!-- For dark, when sidebar is open -->
 <div class="overlay"></div>
 <!-- Sidebar  -->
@@ -16,12 +20,20 @@
         <li>
             <a data-toggle="modal" data-target="#registerModal" title="Registrieren">Registrieren</a>
         </li>
-        <li>
-            <a href="account.php" title="Account">Account</a>
-        </li>
-        <li>
-            <a href="#" title="Logout">Logout</a>
-        </li>
+
+        <?php
+            if(isLoggedIn()){
+                ?>
+                    <li>
+                        <a href="account.php" title="Account">Account</a>
+                    </li>
+                    <li>
+                        <a href="#" title="Logout">Logout</a>
+                    </li>
+                <?php
+            }
+        ?>
+        
         <li>
             <a href="about.php" title="Über uns">Über uns</a>
         </li>

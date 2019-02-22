@@ -24,7 +24,7 @@ class User{
     }
 
     public static function login(string $mail, string $password){ 
-        include('../dbconnect.php');
+        include_once('../dbconnect.php');
         /*$connection = mysqli_connect('localhost', 'phpmyadmin', 's2at5g#nuzqE');
         mysqli_select_db($connection, 'db_sharey');*/
         
