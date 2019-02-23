@@ -232,7 +232,7 @@ a[data-toggle="collapse"] {
 }
 
 @media (min-width: 576px) {
-    div #paddingtopMobill {
+    div #paddingtopMobil {
         padding-top: 70px;
     }
     div #placeholder {
@@ -248,7 +248,7 @@ a[data-toggle="collapse"] {
 }
 
 @media (min-width: 768px) {
-    div #paddingtopMobill {
+    div #paddingtopMobil {
         padding-top: 70px;
     }
     div #placeholder {
@@ -261,7 +261,7 @@ a[data-toggle="collapse"] {
 }
 
 @media (min-width: 992px) {
-    div #paddingtopMobill {
+    div #paddingtopMobil {
         display: none;
     }
     div #placeholder {
