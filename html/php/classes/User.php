@@ -22,9 +22,7 @@ class User{
         return $user;
     }
 
-    public static function login(string $mail, string $password){ 
-        //$connection = mysqli_connect('localhost', 'fsdbuser', 'YeMN9ZKy=9F4');
-        
+    public static function login(string $mail, string $password){         
         require('dbconnect.php');
         mysqli_select_db($connection, 'db_sharey');
         
@@ -109,7 +107,6 @@ class User{
      * returns an array of all active offers of the current user
      */
     public function getOwnOffers(){
-        //$connection = mysqli_connect('localhost', 'fsdbuser', 'YeMN9ZKy=9F4');
         require('dbconnect.php');
         mysqli_select_db($connection, 'db_sharey');
         
@@ -140,9 +137,6 @@ class User{
      * returns all conversations and the last message to each conversation
      */
     public function getConversations(){
-        
-        //$connection = mysqli_connect('localhost', 'fsdbuser', 'YeMN9ZKy=9F4');
-
         require('dbconnect.php');
         mysqli_select_db($connection, 'db_sharey');
 

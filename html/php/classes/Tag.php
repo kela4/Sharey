@@ -19,7 +19,6 @@ class Tag{
     }
 
     public static function getAllTags(){
-        //$connection = mysqli_connect('localhost', 'fsdbuser', 'YeMN9ZKy=9F4');
         require('dbconnect.php');
         mysqli_select_db($connection, 'db_sharey');
         
