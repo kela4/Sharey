@@ -19,42 +19,54 @@
 <body>
 
     <?php
-        include('basicsiteelements/navigation.php');
+        include('basicsiteelements/navigationpages.php');
         include('modal/modalLogin.php');
     ?>
 
-<div class="content">
-    <!-- Div content for padding-top (header) -->
-    <div class="container">
+    <div class="content">
+        <!-- Div content for padding-top (header) -->
+        <div class="container">
 
-        <?php
+            <div class="container fixed-top" id="conversationButtons">
+                <div class="row">
+                    <div class="col-10">
+                    </div>
+                    <div class="col-2">
+                        <button type="button" class="btn btn-sm btn-secondary float-right" title="Zurück"
+                            onclick="history.go(-1)"><i class=" fas fa-times"></i></button>
+                    </div>
+
+                </div>
+            </div>
+
+            <?php
             if(isset($_SESSION['user']) && !empty($_SESSION['user'])){ //only show page if a user is logged in
                 ?>
-                    <div class="row">
+            <div class="row">
 
-                        <div class="col-lg-6">
-                            <h1>Account</h1>
-                            <!--account features not implemented yet-->
-                            <ul class="list-unstyled">
-                                <li><a title="Passwort ändern">Passwort ändern</a></li>
-                                <li><a title="E-Mail ändern">E-Mail ändern</a></li>
-                                <li><a title="Account löschen"> Account löschen</a></li>
-                            </ul>
-                        </div>
+                <div class="col-lg-6">
+                    <h1>Account</h1>
+                    <!--account features not implemented yet-->
+                    <ul class="list-unstyled">
+                        <li><a title="Passwort ändern">Passwort ändern</a></li>
+                        <li><a title="E-Mail ändern">E-Mail ändern</a></li>
+                        <li><a title="Account löschen"> Account löschen</a></li>
+                    </ul>
+                </div>
 
-                        <div id="message" class="col-lg-6">
-                            <h1>Nachrichten</h1>
-                            <ul class="list-unstyled">
-                                <!--feature not implemented yet-->
-                                <li>E-Mail-Benachrichtigung
-                                    <div class="form-check" id="checkbox">
-                                        <input type="checkbox" class="form-check-input">
-                                    </div>
-                                </li>
-                            </ul>
+                <div id="message" class="col-lg-6">
+                    <h1>Nachrichten</h1>
+                    <ul class="list-unstyled">
+                        <!--feature not implemented yet-->
+                        <li>E-Mail-Benachrichtigung
+                            <div class="form-check" id="checkbox">
+                                <input type="checkbox" class="form-check-input">
+                            </div>
+                        </li>
+                    </ul>
 
-                            <!--print conversations with last message-->
-                            <?php
+                    <!--print conversations with last message-->
+                    <?php
                                 $conversations = $_SESSION['user']->getConversations();
 
                                 if(!empty($conversations)){
@@ -127,18 +139,18 @@
                             
                             ?>
 
-                        </div>
+                </div>
 
-                  </div>
+            </div>
 
-                    <div class="row">
+            <div class="row">
 
-                        <div class="col-sm-12">
-                            <h1>Eigene Angebote</h1>
-                            <div class="container mt-4">
-                                <div class="row justify-content-center">
+                <div class="col-sm-12">
+                    <h1>Eigene Angebote</h1>
+                    <div class="container mt-4">
+                        <div class="row justify-content-center">
 
-                                    <?php 
+                            <?php 
                                     $offers = $_SESSION['user']->getOwnOffers();
 
                                     //print own offers:
@@ -195,22 +207,22 @@
                                     }
                                     ?>
 
-                                </div>
-                            </div>
-
                         </div>
-
                     </div>
-                
 
-                <?php                    
+                </div>
+
+            </div>
+
+
+            <?php                    
             }else{
                 echo "<p>Du bist nicht eingeloggt. Mitte melde dich an um auf deinen Account zuzugreifen.</p>";
             }
         ?>
 
+        </div>
     </div>
-</div>
 
     <?php
         include('basicsiteelements/scripts.php');

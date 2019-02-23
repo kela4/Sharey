@@ -219,8 +219,8 @@ a[data-toggle="collapse"] {
 ----------------------------------------------------- */
 
 @media (min-width: 100px) {
-    div.content {
-        padding-top: 140px;
+    div #paddingtopMobil {
+        padding-top: 40px;
     }
     div #placeholder {
         display: none;
@@ -228,18 +228,12 @@ a[data-toggle="collapse"] {
     #sidebar {
         width: 250px;
         left: -250px;
-    }
-    div #conversationButtons {
-        top: 140px;
-    }
-    div #conversationHeading {
-        margin-top: 60px;
     }
 }
 
 @media (min-width: 576px) {
-    div.content {
-        padding-top: 140px;
+    div #paddingtopMobil {
+        padding-top: 40px;
     }
     div #placeholder {
         display: none;
@@ -247,12 +241,6 @@ a[data-toggle="collapse"] {
     #sidebar {
         width: 250px;
         left: -250px;
-    }
-    div #conversationButtons {
-        top: 140px;
-    }
-    div #conversationHeading {
-        margin-top: 30px;
     }
     div #omImage {
         margin-left: -45px;
@@ -260,8 +248,8 @@ a[data-toggle="collapse"] {
 }
 
 @media (min-width: 768px) {
-    div.content {
-        padding-top: 140px;
+    div #paddingtopMobil {
+        padding-top: 40px;
     }
     div #placeholder {
         display: none;
@@ -270,14 +258,11 @@ a[data-toggle="collapse"] {
         width: 250px;
         left: -250px;
     }
-    div #conversationButtons {
-        top: 140px;
-    }
 }
 
 @media (min-width: 992px) {
-    div.content {
-        padding-top: 100px;
+    div #paddingtopMobil {
+        display: none;
     }
     div #placeholder {
         display: inline;
@@ -286,26 +271,21 @@ a[data-toggle="collapse"] {
         width: 400px;
         left: -400px;
     }
-    div #conversationButtons {
-        top: 100px;
-    }
 }
 
 @media (min-width: 1200px) {
-    div.content {
-        padding-top: 100px;
-    }
     div #placeholder {
         display: inline;
-    }
-    div #conversationButtons {
-        top: 100px;
     }
 }
 
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
+
+.content {
+    padding-top: 100px;
+}
 
 #content {
     z-index: 1;
@@ -314,6 +294,7 @@ a[data-toggle="collapse"] {
     position: absolute;
     top: 70px;
     right: 0;
+    padding-top: 100px;
 }
 
 #card {
@@ -422,6 +403,45 @@ a[data-toggle="collapse"] {
     margin-right: 10px;
 }
 
+#accountSiteOfferDescription {
+    height: 85px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+#symbolsDiv {
+    height: 12px;
+    text-align: right;
+    margin-top: 3px;
+}
+
+#checkSymbol {
+    color: white;
+    height: 24px;
+    width: 24px;
+    color: #464646;
+}
+
+#editSymbol {
+    color: white;
+    height: 24px;
+    width: 24px;
+    color: #464646;
+}
+
+#deleteSymbol {
+    color: white;
+    height: 24px;
+    width: 24px;
+    color: #464646;
+}
+
+.buttonSymbols {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 /* ---------------------------------------------------
     BUTTON NEW OFFER
 ----------------------------------------------------- */
@@ -449,6 +469,10 @@ a[data-toggle="collapse"] {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
+}
+
+#offerSiteCityDiv {
+    margin-top: 32px;
 }
 
 /* ---------------------------------------------------
@@ -507,6 +531,7 @@ a[data-toggle="collapse"] {
 ----------------------------------------------------- */
 
 #conversationButtons {
+    top: 100px;
     padding-top: 2px;
     z-index: 1;
 }

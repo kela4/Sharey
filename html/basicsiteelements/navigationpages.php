@@ -1,5 +1,6 @@
 <?php
     require_once('php/isLoggedInFunction.php');
+    require_once('dbconnect.php');
 ?>
 
 <!-- For dark, when sidebar is open -->
@@ -14,9 +15,9 @@
     </div>
 
     <ul class="list-unstyled components text-center">
-        <!-- <li>
+        <li>
             <a href="index.php" title="Startseite">Startseite</a>
-        </li> -->
+        </li>
 
         <?php
             if(!isLoggedIn()){ //user isn't logged in
@@ -77,15 +78,8 @@
         <a href="index.php"><img src="images/Logo_transparent.png" id="img_logo" class="img-fluid" alt="Logo"
                 title="Sharey"></a>
         <div id="placeholder"></div>
-        <!-- Search Bar -->
         <div class="input-group">
-            <input type="text" id="searchBox" class="form-control" placeholder="Suchbegriff eingeben"
-                title="Suchbegriff eingeben">
-            <div class="input-group-append">
-                <button class="btn btn-secondary" id="search" type="button" title="Suchen und Filtern">
-                    <i class="fa fa-search"></i>
-                </button>
-            </div>
+
         </div>
     </div>
 </nav>

@@ -9,12 +9,13 @@
 
 <body>
     <?php
-        include('basicsiteelements/navigation.php');
+        include('basicsiteelements/navigationpages.php');
     ?>
 
     <div class="content">
         <!-- Div content for padding-top (header) -->
         <div class="container">
+            <div id="paddingtopMobil"></div>
 
 
             <div class="container fixed-top" id="conversationButtons">
@@ -27,9 +28,8 @@
                             Konversation löschen</button>
                     </div>
                     <div class="col-2">
-                        <button type="button" class="btn btn-sm btn-secondary float-right" title="Angebot angenommen"><i
-                                class="fas fa-times"></i></button>
-
+                        <button type="button" class="btn btn-sm btn-secondary float-right" title="Zurück"
+                            onclick="history.go(-1)"><i class=" fas fa-times"></i></button>
                     </div>
 
                 </div>
@@ -116,7 +116,7 @@
             <div id="newMessage">
                 <div class="container">
                     <div class="input-group">
-                        <textarea id="newMessageText" class="form-control" rows="2"></textarea>
+                        <textarea id="newMessageText" class="form-control" rows="1"></textarea>
                         <button id="sendButton" class="btn btn-secondary float-right">Senden</button>
                     </div>
                 </div>
