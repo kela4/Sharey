@@ -1,5 +1,6 @@
 <?php
-    require_once('php/isLoggedIn.php');
+    require_once('php/isLoggedInFunction.php');
+    //require_once('../dbconnect.php');
 ?>
 
 <!-- For dark, when sidebar is open -->
@@ -19,7 +20,7 @@
         </li>
 
         <?php
-            if(!isLoggedIn()){
+            if(!isLoggedIn()){ //user isn't logged in
                 ?>
                      <li>
                         <a data-toggle="modal" data-target="#loginModal" title="Login">Login</a>
@@ -29,22 +30,18 @@
                         <a data-toggle="modal" data-target="#registerModal" title="Registrieren">Registrieren</a>
                     </li>
                 <?php
-            }
-        ?>
-
-        <?php
-            if(isLoggedIn()){
+            }else{ //user is logged in
                 ?>
                     <li>
                         <a href="account.php" title="Account">Account</a>
                     </li>
                     <li>
-                        <a href="#" title="Logout">Logout</a>
+                        <a href="../php/logout.php" title="Logout">Logout</a>
                     </li>
                 <?php
             }
         ?>
-        
+
         <li>
             <a href="about.php" title="Über uns">Über uns</a>
         </li>

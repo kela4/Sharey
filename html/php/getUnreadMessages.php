@@ -1,8 +1,8 @@
 <?php
 
-require_once('../php/classes/User.php');
-require_once('../php/classes/Message.php');
-require_once('../php/classes/Conversation.php');
+require_once('classes/User.php');
+require_once('classes/Message.php');
+require_once('classes/Conversation.php');
 
 session_start();
 if(isset($_SESSION['user']) && !empty($_SESSION['user'])){

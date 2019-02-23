@@ -3,6 +3,7 @@ require_once('Tag.php');
 require_once('Offer.php');
 require_once('Conversation.php');
 require_once('Message.php');
+require_once('../dbconnect.php');
 
 class User{
     private $active; //bool
@@ -24,11 +25,12 @@ class User{
     }
 
     public static function login(string $mail, string $password){ 
-        include_once('../dbconnect.php');
-        /*$connection = mysqli_connect('localhost', 'phpmyadmin', 's2at5g#nuzqE');
-        mysqli_select_db($connection, 'db_sharey');*/
+        //require_once(dirname(__FILE__) . "../dbconnect.php");
+        //$connection = mysqli_connect('localhost', 'fsdbuser', 'YeMN9ZKy=9F4');
         
-        $query = "SELECT ur_userID, ur_userPassword, ur_notification FROM tbl_user WHERE ur_mail = '".$mail."' AND ur_active = 1;";
+        mysqli_select_db($connection, 'db_sharey');
+        
+        $query = "SELECT ur_userID, ur_userPassword, ur_notification FROM tbl_user WHERE ur_mail = '".$mail."' AND ur_active = true;";
         
         $res = mysqli_query($connection, $query);
         
@@ -110,22 +112,23 @@ class User{
      */
     public function getOwnOffers(){
         
-        $connection = mysqli_connect('localhost', 'root', '');
-        mysqli_select_db($connection, 'shareyvorlage');
+        //$connection = mysqli_connect('localhost', 'fsdbuser', 'YeMN9ZKy=9F4');
+        mysqli_select_db($connection, 'db_sharey');
         
-        $query = "SELECT o.*, p.plz, p.ort, t.description AS tagDescription, t.color AS tagColor FROM `offer` AS o 
-                    JOIN tag AS t
-                    ON o.tagID = t.tagID
-                    JOIN plz AS p
-                    ON o.plzID = p.plzID
-                    WHERE o.ocID = ".$this->userID." AND o.active = true;";
+        $query = "SELECT o.*, p.pz_plz, p.pz_location, t.tg_description AS tagDescription, t.tg_color AS tagColor, t.tg_tagID AS tagID 
+                    FROM `tbl_offer` AS o 
+                    JOIN tbl_tag AS t 
+                        ON o.or_tagID = t.tg_tagID 
+                    JOIN tbl_plz AS p 
+                        ON o.or_plzID = p.pz_plzID 
+                    WHERE o.or_ocID = ".$this->getUserID()." AND o.or_active = true;";
 
         $res = mysqli_query($connection, $query);
 
         $offers = [];
         
         while(($data = mysqli_fetch_array($res)) != false){
-            $offers[] = new Offer($data['active'], new DateTime($data['creationDate']), utf8_encode($data['description']), new DateTime($data['mhd']), $data['offerID'], $data['picture'], $data['plz'], utf8_encode($data['ort']), $data['report'], new Tag($data['tagColor'], utf8_encode($data['tagDescription']), $data['tagID']), utf8_encode($data['title']), $data['ocID']);
+            $offers[] = new Offer($data['or_active'], new DateTime($data['or_creationDate']), utf8_encode($data['or_description']), new DateTime($data['or_mhd']), $data['or_offerID'], $data['or_picture'], $data['pz_plz'], utf8_encode($data['pz_location']), $data['or_report'], new Tag($data['tagColor'], utf8_encode($data['tagDescription']), $data['tagID']), utf8_encode($data['or_title']), $data['or_ocID']);
         }
 
         return $offers;
@@ -140,27 +143,36 @@ class User{
      */
     public function getConversations(){
         
-        $connection = mysqli_connect('localhost', 'root', '');
-        mysqli_select_db($connection, 'shareyvorlage');
-        
-        $query = "SELECT c.*, m.messageID, m.content, m.sendDate, m.messageRead, m.senderID, o.title FROM conversation c
-                    JOIN message m
-                    ON c.conID = m.conID
-                    JOIN (SELECT max(m.messageID) AS messageID, m.conID as conID 
-                            FROM message m 
-                            GROUP BY m.conID) AS mes
-                    ON mes.messageID = m.messageID
-                    JOIN offer o
-                    ON c.offerID = o.offerID
-                    WHERE (c.oaID = ".$this->userID." OR c.ocID = ".$this->userID.") AND c.active = true
-                    ORDER BY o.offerID"; //order by offerID is important for grouping conversations under an offer
+        //$connection = mysqli_connect('localhost', 'fsdbuser', 'YeMN9ZKy=9F4');
+        mysqli_select_db($connection, 'db_sharey');
+
+        $query = "SELECT c.*, m.me_messageID, m.me_content, m.me_sendDate, m.me_messageRead, m.me_senderID, o.or_title 
+                    FROM tbl_conversation c
+                    JOIN tbl_message m
+                        ON c.cn_conID = m.me_conID
+                    JOIN (SELECT max(m.me_messageID) AS messageID, m.me_conID as conID 
+                            FROM tbl_message m 
+                            GROUP BY m.me_conID) AS mes
+                        ON mes.messageID = m.me_messageID
+                    
+                    LEFT JOIN (SELECT min(m.me_messageID) AS msgID, m.me_conID as convID 
+                            FROM tbl_message m 
+                            GROUP BY m.me_conID) AS msg
+                        ON msg.msgID = m.me_messageID
+                    
+                    JOIN tbl_offer o
+                        ON c.cn_offerID = o.or_offerID
+                    
+                    WHERE (c.cn_oaID = ".$this->getUserID()." OR c.cn_ocID = ".$this->getUserID().")
+                    AND c.cn_active = true
+                    ORDER BY o.or_offerID;"; //order by offerID is important for grouping conversations under an offer
         
         $res = mysqli_query($connection, $query);
-
+        
         $conversations = [];
         
         while(($data = mysqli_fetch_array($res)) != false){
-            $conversations[] = new Conversation($data['active'], $data['conID'], $data['oaID'], $data['ocID'], $data['offerID'], new Message($data['conID'], $data['content'], new DateTime($data['sendDate']), $data['messageID'], $data['messageRead'], $data['senderID']), $data['title']);
+            $conversations[] = new Conversation($data['cn_active'], $data['cn_conID'], $data['cn_oaID'], $data['cn_ocID'], $data['cn_offerID'], new Message($data['cn_conID'], $data['me_content'], new DateTime($data['me_sendDate']), $data['me_messageID'], $data['me_messageRead'], $data['me_senderID']), $data['or_title']);
         }
 
         return $conversations;

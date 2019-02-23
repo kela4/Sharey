@@ -1,6 +1,7 @@
 <?php 
 
     require_once('classes/User.php');
+    require_once('../dbconnect.php');
 
     if(isset($_POST['mail']) && !empty($_POST['mail'])){
         if(isset($_POST['password']) && !empty($_POST['password'])){
@@ -12,6 +13,7 @@
             }else{
                 echo "<p>Nutzerdaten falsch.</p>";  //hier vielleicht auf eine initiale Fehler-Meldungsseite verweisen, der verschiedenen get-Params mitgegeben werden und je nach Param wird die Fehlermeldung angezeigt
             }
+            
         }else{
             echo "<p>Bitte Passwort eingeben..</p>";
         }
