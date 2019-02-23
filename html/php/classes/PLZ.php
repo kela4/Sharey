@@ -1,5 +1,7 @@
 <?php
-require_once('dbconnect.php');
+/**
+ * if you use PLZ-Class in an other file, include also <>-Class
+ */
 
 class PLZ{
     private $location; //string
@@ -17,7 +19,8 @@ class PLZ{
     }
 
     public static function getPLZStartWithNumbers(string $firstNumbers){
-        $connection = mysqli_connect('localhost', 'fsdbuser', 'YeMN9ZKy=9F4');
+        //$connection = mysqli_connect('localhost', 'fsdbuser', 'YeMN9ZKy=9F4');
+        require('dbconnect.php');
         mysqli_select_db($connection, 'db_sharey');
         
         $query = "SELECT `pz_location`,`pz_plz`,`pz_plzID` 

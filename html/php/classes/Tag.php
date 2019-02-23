@@ -1,5 +1,7 @@
 <?php
-require_once('dbconnect.php');
+/**
+ * if you use User-Class in an other file, include also <>-Class
+ */
 
 class Tag{
     private $color; //string
@@ -17,7 +19,8 @@ class Tag{
     }
 
     public static function getAllTags(){
-        $connection = mysqli_connect('localhost', 'fsdbuser', 'YeMN9ZKy=9F4');
+        //$connection = mysqli_connect('localhost', 'fsdbuser', 'YeMN9ZKy=9F4');
+        require('dbconnect.php');
         mysqli_select_db($connection, 'db_sharey');
         
         $query = "SELECT * FROM tbl_tag";

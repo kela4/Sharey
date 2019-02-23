@@ -1,5 +1,7 @@
 <?php
-require_once('dbconnect.php');
+/**
+ * if you use Offer-Class in an other file, include also <Tag>-Class
+ */
 
 class Offer{
     private $active; //bool

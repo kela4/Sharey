@@ -1,5 +1,7 @@
 <?php
-require_once('dbconnect.php');
+/**
+ * if you use Conversation-Class in an other file, include also <Message>-Class
+ */
 
 class Conversation{
     private $active; //bool

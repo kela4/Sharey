@@ -1,6 +1,5 @@
 <?php
     session_start();
-    require_once('dbconnect.php');
 ?>
 
 <meta charset="utf-8">

@@ -1,5 +1,7 @@
 <?php
-require_once('dbconnect.php');
+/**
+ * if you use Message-Class in an other file, include also <>-Class
+ */
 
 class Message{
     private $conID; //int
