@@ -1,6 +1,7 @@
 <?php 
 
     require_once('classes/User.php');
+    require_once('../dbconnect.php');
 
     if(isset($_POST['mail']) && !empty($_POST['mail'])){
         if(isset($_POST['password']) && !empty($_POST['password'])){
