@@ -68,7 +68,6 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <!-- Hamburger menue -->
-        test2
         <div id="menu" title="Menü">
             <button id="sidebarCollapse" class="btn">
                 <i class="fas fa-bars" id="hamburger"></i>
