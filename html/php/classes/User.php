@@ -1,4 +1,5 @@
 <?php
+require_once('../dbconnect.php');
 
 class User{
     private $active; //bool

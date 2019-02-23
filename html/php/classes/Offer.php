@@ -1,4 +1,5 @@
 <?php
+require_once('../dbconnect.php');
 
 class Offer{
     private $active; //bool
