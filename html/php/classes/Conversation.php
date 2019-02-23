@@ -1,5 +1,5 @@
 <?php
-require_once('../dbconnect.php');
+require_once('dbconnect.php');
 
 class Conversation{
     private $active; //bool
