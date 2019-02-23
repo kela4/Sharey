@@ -219,9 +219,6 @@ a[data-toggle="collapse"] {
 ----------------------------------------------------- */
 
 @media (min-width: 100px) {
-    div.content {
-        padding-top: 100px;
-    }
     div #placeholder {
         display: none;
     }
@@ -232,9 +229,6 @@ a[data-toggle="collapse"] {
 }
 
 @media (min-width: 576px) {
-    div.content {
-        padding-top: 100px;
-    }
     div #placeholder {
         display: none;
     }
@@ -248,9 +242,6 @@ a[data-toggle="collapse"] {
 }
 
 @media (min-width: 768px) {
-    div.content {
-        padding-top: 100px;
-    }
     div #placeholder {
         display: none;
     }
@@ -261,9 +252,6 @@ a[data-toggle="collapse"] {
 }
 
 @media (min-width: 992px) {
-    div.content {
-        padding-top: 100px;
-    }
     div #placeholder {
         display: inline;
     }
@@ -274,9 +262,6 @@ a[data-toggle="collapse"] {
 }
 
 @media (min-width: 1200px) {
-    div.content {
-        padding-top: 100px;
-    }
     div #placeholder {
         display: inline;
     }
@@ -293,6 +278,7 @@ a[data-toggle="collapse"] {
     position: absolute;
     top: 70px;
     right: 0;
+    padding-top: 100px;
 }
 
 #card {
