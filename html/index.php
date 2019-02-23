@@ -24,7 +24,7 @@
     ?>
 
     <?php
-        include('basicsiteelements/navigationpages.php');
+        include('basicsiteelements/navigation.php');
     ?>
 
     <div class="content">
