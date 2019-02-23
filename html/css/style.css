@@ -529,6 +529,7 @@ a[data-toggle="collapse"] {
 ----------------------------------------------------- */
 
 #conversationButtons {
+    top: 100px;
     padding-top: 2px;
     z-index: 1;
 }
