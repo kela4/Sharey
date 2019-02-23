@@ -5,7 +5,7 @@
     require_once('php/classes/Conversation.php');
     require_once('php/classes/Message.php');
     require_once('php/classes/PLZ.php');
-    require_once('php/dbconnect.php');
+    require_once('dbconnect.php');
 ?>
 
 <!DOCTYPE html>
