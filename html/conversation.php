@@ -10,7 +10,7 @@
 
 <body>
     <?php
-        include('basicsiteelements/navigation.php');
+        include('basicsiteelements/navigationpages.php');
     ?>
 
     <div class="content">
