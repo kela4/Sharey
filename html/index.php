@@ -16,7 +16,7 @@
         include('modal/modalRegister.php');
     ?>
     <?php
-        include('modal/modalNewEntery.php');
+        include('modal/modalNewEntry.php');
     ?>
     <?php
         include('modal/modalOffer.php');

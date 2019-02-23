@@ -25,14 +25,16 @@
                      <div class="row">
                          <div class="col-sm-4">
                              <div class="form-group">
-                                 <label for="description">PLZ</label>
-                                 <select id="plzSelectionNewOffer" class="form-control" id="selPLZ" name="plzID"></select>
+                                 <label for="plzSelectionNewOffer">PLZ</label>
+                                 <select id="plzSelectionNewOffer" class="form-control" name="plzID">
+                                    <option value="2049">69437 Neckargerach</option>
+                                 </select>
                              </div>
                          </div>
                          <div class="col-sm-4">
                              <div class="form-group">
-                                 <label for="sel1">Tag</label>
-                                 <select id="tagSelectionNewOffer" class="form-control" id="selTag" name="tag"></select>
+                                 <label for="tagSelectionNewOffer">Tag</label>
+                                 <select id="tagSelectionNewOffer" class="form-control" name="tagID"></select>
                              </div>
                          </div>
                          <div class="col-sm-4">
