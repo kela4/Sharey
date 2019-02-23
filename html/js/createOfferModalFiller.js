@@ -8,8 +8,9 @@ $(document).ready(function(){
         dataType: 'json',
         type: 'post',
         success: function(data){
+            console.log(data);
             var tags = JSON.parse(data);
-            console.log($tags);
+            console.log(tags);
             tags.forEach(function(tag) {
                 tagSelectionNewOffer.append('<option value="' + tag.tagID + '">' + tag.description + '</option>');
             });
