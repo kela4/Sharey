@@ -220,7 +220,7 @@ a[data-toggle="collapse"] {
 
 @media (min-width: 100px) {
     div.content {
-        padding-top: 140px;
+        padding-top: 100px;
     }
     div #placeholder {
         display: none;
@@ -233,7 +233,7 @@ a[data-toggle="collapse"] {
 
 @media (min-width: 576px) {
     div.content {
-        padding-top: 140px;
+        padding-top: 100px;
     }
     div #placeholder {
         display: none;
@@ -249,7 +249,7 @@ a[data-toggle="collapse"] {
 
 @media (min-width: 768px) {
     div.content {
-        padding-top: 140px;
+        padding-top: 100px;
     }
     div #placeholder {
         display: none;
