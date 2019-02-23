@@ -30,8 +30,7 @@
     <div class="content">
         <!-- Div content for padding-top (header) -->
 
-        <div id="paddingtopIndexMobil">
-        </div>
+        <div id="paddingtopMobil"></div>
 
         <div class="container mt-4">
 

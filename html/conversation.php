@@ -16,6 +16,7 @@
     <div class="content">
         <!-- Div content for padding-top (header) -->
         <div class="container">
+            <div id="paddingtopMobil"></div>
 
 
             <div class="container fixed-top" id="conversationButtons">

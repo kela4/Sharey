@@ -219,7 +219,7 @@ a[data-toggle="collapse"] {
 ----------------------------------------------------- */
 
 @media (min-width: 100px) {
-    div #paddingtopIndexMobil {
+    div #paddingtopMobill {
         padding-top: 40px;
     }
     div #placeholder {
@@ -232,7 +232,7 @@ a[data-toggle="collapse"] {
 }
 
 @media (min-width: 576px) {
-    div #paddingtopIndexMobil {
+    div #paddingtopMobill {
         padding-top: 40px;
     }
     div #placeholder {
@@ -248,7 +248,7 @@ a[data-toggle="collapse"] {
 }
 
 @media (min-width: 768px) {
-    div #paddingtopIndexMobil {
+    div #paddingtopMobill {
         padding-top: 40px;
     }
     div #placeholder {
@@ -261,7 +261,7 @@ a[data-toggle="collapse"] {
 }
 
 @media (min-width: 992px) {
-    div #paddingtopIndexMobil {
+    div #paddingtopMobill {
         display: none;
     }
     div #placeholder {
