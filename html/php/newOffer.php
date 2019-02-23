@@ -20,7 +20,7 @@
                 $imageData = addslashes(file_get_contents($_FILES['img']['tmp_name']));
             }
 
-            $expdate = null;
+            $expdate = new DateTime('0000-00-00');
             if(isset($_POST['expdate']) && !empty($_POST['expdate'])){
                 $expdate = new DateTime($_POST['expdate']);
             }
