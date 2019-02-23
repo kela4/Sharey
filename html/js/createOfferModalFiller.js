@@ -1,6 +1,6 @@
 $(document).ready(function(){
     //filler for tags:
-    
+
     var tagSelectionNewOffer = $('#tagSelectionNewOffer');
 
     $.ajax({
@@ -9,7 +9,7 @@ $(document).ready(function(){
         type: 'post',
         success: function(data){
             var tags = JSON.parse(data);
-
+            console.log($tags);
             tags.forEach(function(tag) {
                 tagSelectionNewOffer.append('<option value="' + tag.tagID + '">' + tag.description + '</option>');
             });
