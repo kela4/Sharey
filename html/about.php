@@ -13,7 +13,7 @@
         include('modal/modalLogin.php');
     ?>
     <?php
-        include('basicsiteelements/navigationpages.php');
+        include('basicsiteelements/navigation.php');
     ?>
 
     <div class="content">
