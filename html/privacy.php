@@ -3,6 +3,7 @@
 
 <head>
     <?php
+        require_once('dbconnect.php');
         include('basicsiteelements/header.php');
     ?>
 </head>

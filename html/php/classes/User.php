@@ -1,5 +1,5 @@
 <?php
-require_once('../dbconnect.php');
+require_once('dbconnect.php');
 
 class User{
     private $active; //bool
@@ -22,7 +22,7 @@ class User{
 
     public static function login(string $mail, string $password){ 
         //require_once(dirname(__FILE__) . "../dbconnect.php");
-        //$connection = mysqli_connect('localhost', 'fsdbuser', 'YeMN9ZKy=9F4');
+        $connection = mysqli_connect('localhost', 'fsdbuser', 'YeMN9ZKy=9F4');
         
         mysqli_select_db($connection, 'db_sharey');
         
@@ -108,7 +108,7 @@ class User{
      */
     public function getOwnOffers(){
         
-        //$connection = mysqli_connect('localhost', 'fsdbuser', 'YeMN9ZKy=9F4');
+        $connection = mysqli_connect('localhost', 'fsdbuser', 'YeMN9ZKy=9F4');
         mysqli_select_db($connection, 'db_sharey');
         
         $query = "SELECT o.*, p.pz_plz, p.pz_location, t.tg_description AS tagDescription, t.tg_color AS tagColor, t.tg_tagID AS tagID 
@@ -139,7 +139,7 @@ class User{
      */
     public function getConversations(){
         
-        //$connection = mysqli_connect('localhost', 'fsdbuser', 'YeMN9ZKy=9F4');
+        $connection = mysqli_connect('localhost', 'fsdbuser', 'YeMN9ZKy=9F4');
         mysqli_select_db($connection, 'db_sharey');
 
         $query = "SELECT c.*, m.me_messageID, m.me_content, m.me_sendDate, m.me_messageRead, m.me_senderID, o.or_title 
