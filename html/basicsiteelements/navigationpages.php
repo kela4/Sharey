@@ -68,7 +68,7 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <!-- Hamburger menue -->
-        test
+        test2
         <div id="menu" title="Menü">
             <button id="sidebarCollapse" class="btn">
                 <i class="fas fa-bars" id="hamburger"></i>
@@ -79,14 +79,8 @@
         <a href="index.php"><img src="images/Logo_transparent.png" id="img_logo" class="img-fluid" alt="Logo"
                 title="Sharey"></a>
         <div id="placeholder"></div>
-        <div class="input-group" style="dispaly: hidden">
-            <input type="text" id="searchBox" class="form-control" placeholder="Suchbegriff eingeben"
-                title="Suchbegriff eingeben">
-            <div class="input-group-append">
-                <button class="btn btn-secondary" id="search" type="button" title="Suchen und Filtern">
-                    <i class="fa fa-search"></i>
-                </button>
-            </div>
+        <div class="input-group">
+
         </div>
     </div>
 </nav>
