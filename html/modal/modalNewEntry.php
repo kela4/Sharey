@@ -45,50 +45,28 @@
 
                      <input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
 
-                     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-
                      <div class="form-group">
                          <label for="modalImage">Bild</label>
                          <div class="input-group" id="modalImage">
-                             <input type="file" hidden name="img">
-                             <input type="text" class="form-control" readonly>
+                             <input id="inputFileName" type="text" class="form-control" readonly>
                              <label class="input-group-btn">
                                  <span class="btn btn-secondary">
-                                     Browse&hellip; <input type="file" style="display: none;" multiple>
+                                     Browse&hellip; <input id="inputFile" type="file" style="display: none;" name="img">
                                  </span>
                              </label>
                          </div>
                      </div>
 
                      <script text="text/javascript">
-                     $(function() {
+                        $(document).ready(function(){
+                            var inputFile = $('#inputFile');
+                            var inputFileName = $('#inputFileName');
 
-                         // We can attach the `fileselect` event to all file inputs on the page
-                         $(document).on('change', ':file', function() {
-                             var input = $(this),
-                                 numFiles = input.get(0).files ? input.get(0).files.length : 1,
-                                 label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-                             input.trigger('fileselect', [numFiles, label]);
-                         });
-
-                         // We can watch for our custom `fileselect` event like this
-                         $(document).ready(function() {
-                             $(':file').on('fileselect', function(event, numFiles, label) {
-
-                                 var input = $(this).parents('.input-group').find(':text'),
-                                     log = numFiles > 1 ? numFiles + ' files selected' :
-                                     label;
-
-                                 if (input.length) {
-                                     input.val(log);
-                                 } else {
-                                     if (log) alert(log);
-                                 }
-
-                             });
-                         });
-
-                     });
+                            inputFile.change(function(){
+                                var labelShown = inputFile.val().replace(/\\/g, '/').replace(/.*\//, '');
+                                inputFileName.val(labelShown);
+                            });
+                        });
                      </script>
 
                      <button type="submit" class="btn btn-dark float-right">Erstellen</button>
