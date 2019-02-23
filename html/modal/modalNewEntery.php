@@ -26,14 +26,13 @@
                          <div class="col-sm-4">
                              <div class="form-group">
                                  <label for="description">PLZ</label>
-                                 <input type="text" required class="form-control" id="description" placeholder="PLZ"
-                                     name="plz">
+                                 <select id="plzSelectionNewOffer" class="form-control" id="selPLZ" name="plzID"></select>
                              </div>
                          </div>
                          <div class="col-sm-4">
                              <div class="form-group">
                                  <label for="sel1">Tag</label>
-                                 <select id="tagSelectionNewOffer" class="form-control" id="sel1" name="tag"></select>
+                                 <select id="tagSelectionNewOffer" class="form-control" id="selTag" name="tag"></select>
                              </div>
                          </div>
                          <div class="col-sm-4">
