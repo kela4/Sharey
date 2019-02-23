@@ -229,12 +229,6 @@ a[data-toggle="collapse"] {
         width: 250px;
         left: -250px;
     }
-    div #conversationButtons {
-        top: 140px;
-    }
-    div #conversationHeading {
-        margin-top: 60px;
-    }
 }
 
 @media (min-width: 576px) {
@@ -247,12 +241,6 @@ a[data-toggle="collapse"] {
     #sidebar {
         width: 250px;
         left: -250px;
-    }
-    div #conversationButtons {
-        top: 140px;
-    }
-    div #conversationHeading {
-        margin-top: 30px;
     }
     div #omImage {
         margin-left: -45px;
@@ -270,9 +258,6 @@ a[data-toggle="collapse"] {
         width: 250px;
         left: -250px;
     }
-    div #conversationButtons {
-        top: 140px;
-    }
 }
 
 @media (min-width: 992px) {
@@ -286,9 +271,6 @@ a[data-toggle="collapse"] {
         width: 400px;
         left: -400px;
     }
-    div #conversationButtons {
-        top: 100px;
-    }
 }
 
 @media (min-width: 1200px) {
@@ -297,9 +279,6 @@ a[data-toggle="collapse"] {
     }
     div #placeholder {
         display: inline;
-    }
-    div #conversationButtons {
-        top: 100px;
     }
 }
 
@@ -434,7 +413,7 @@ a[data-toggle="collapse"] {
     margin-top: 3px;
 }
 
-#checkSymbol{
+#checkSymbol {
     color: white;
     height: 24px;
     width: 24px;
