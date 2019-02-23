@@ -29,8 +29,8 @@
                     </div>
                     <div class="col-2">
                         <button type="button" class="btn btn-sm btn-secondary float-right" title="Angebot angenommen"
-                            onclick="history.go(-1)"><i class=" fas fa-times"></i></button>
-                        test
+                            href="account.php"><i class=" fas fa-times"></i></button>
+                        test2
                     </div>
 
                 </div>
