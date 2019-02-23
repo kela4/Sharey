@@ -26,9 +26,7 @@
                          <div class="col-sm-4">
                              <div class="form-group">
                                  <label for="plzSelectionNewOffer">PLZ</label>
-                                 <select id="plzSelectionNewOffer" class="form-control" name="plzID">
-                                    <option value="2049">69437 Neckargerach</option>
-                                 </select>
+                                 <select id="plzSelectionNewOffer" class="form-control" name="plzID"></select>
                              </div>
                          </div>
                          <div class="col-sm-4">

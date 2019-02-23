@@ -13,7 +13,6 @@ $(document).ready(function(){
 
     //filler for tags:
     var tagSelectionNewOffer = $('#tagSelectionNewOffer');
-    tagSelectionNewOffer.append('<option value="5">Testtag</option>');
 
     $.ajax({
         url: '../php/getAllTags.php',
@@ -23,7 +22,6 @@ $(document).ready(function(){
             data.forEach(function(tagElement) {
                 var tag = JSON.parse(tagElement);
                 tagSelectionNewOffer.append('<option value="' + tag.tagID + '">' + tag.description + '</option>');
-                plzSelectionNewOffer.append('<option value="2092">74821 Mosbach</option>');
             });
         },
         error: function(err){
