@@ -1,5 +1,4 @@
 <?php
-require_once('Message.php');
 
 class Conversation{
     private $active; //bool

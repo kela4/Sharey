@@ -1,8 +1,4 @@
 <?php
-require_once('Tag.php');
-require_once('Offer.php');
-require_once('Conversation.php');
-require_once('Message.php');
 
 class User{
     private $active; //bool

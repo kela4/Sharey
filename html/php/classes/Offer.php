@@ -1,5 +1,4 @@
 <?php
-require_once('Tag.php');
 
 class Offer{
     private $active; //bool
