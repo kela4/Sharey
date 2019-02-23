@@ -1,5 +1,4 @@
 <?php
-require_once('../dbconnect.php');
 
 class Tag{
     private $color; //string
