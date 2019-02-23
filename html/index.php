@@ -24,7 +24,7 @@
     ?>
 
     <?php
-        include('basicsiteelements/navigation.php');
+        include('basicsiteelements/navigationpages.php');
     ?>
 
     <div class="content">
@@ -35,11 +35,13 @@
             <div id="loadingOffers" class="row justify-content-center" style="display:none">
                 <div class="col-6">
                     <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Angebote werden geladen</div>
+                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+                            role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0"
+                            aria-valuemax="100">Angebote werden geladen</div>
                     </div>
                 </div>
             </div>
-                        
+
             <div id="offerContainer" class="row justify-content-center">
                 <!--is filled by JS-Funktion offerLoading()-->
             </div>
@@ -53,16 +55,16 @@
                 //if user is logged in --> show new offer modal
                 if(isLoggedIn()){
                     ?>
-                        <a id="newOffer" class="center-block" data-toggle="modal" data-target="#newOfferModal">
-                    <?php
+            <a id="newOffer" class="center-block" data-toggle="modal" data-target="#newOfferModal">
+                <?php
                 }else{ //if no user is logged in --> show login modal
                     ?>
-                        <a id="newOffer" class="center-block" data-toggle="modal" data-target="#loginModal">
+                <a id="newOffer" class="center-block" data-toggle="modal" data-target="#loginModal">
                     <?php
                 }
             ?>
-                            <img src="images/newOffer.PNG">
-            </a>
+                    <img src="images/newOffer.PNG">
+                </a>
 
         </div>
 

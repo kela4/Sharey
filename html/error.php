@@ -2,6 +2,7 @@
 <html>
 <!--Initial Error Page-->
 <!--not implemented yet-->
+
 <head>
     <?php
         require_once('dbconnect.php');
@@ -14,7 +15,7 @@
         include('modal/modalLogin.php');
     ?>
     <?php
-        include('basicsiteelements/navigation.php');
+        include('basicsiteelements/navigationpages.php');
     ?>
 
     <div class="content">
