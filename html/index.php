@@ -5,6 +5,9 @@
     <?php
         include('basicsiteelements/header.php');
     ?>
+    <?php
+        include('basicsiteelements/scripts.php');
+    ?>
 </head>
 
 <body>
@@ -70,7 +73,7 @@
         </div>
 
         <?php
-            include('basicsiteelements/scripts.php');
+            //include('basicsiteelements/scripts.php');
         ?>
 
         <!--Script for pagedynamic e.g. dynamic offer loading-->
