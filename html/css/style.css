@@ -219,6 +219,9 @@ a[data-toggle="collapse"] {
 ----------------------------------------------------- */
 
 @media (min-width: 100px) {
+    div #paddingtopIndexMobil {
+        padding-top: 140px;
+    }
     div #placeholder {
         display: none;
     }

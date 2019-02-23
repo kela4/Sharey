@@ -30,6 +30,9 @@
     <div class="content">
         <!-- Div content for padding-top (header) -->
 
+        <div id="paddingtopIndexMobil">
+        </div>
+
         <div class="container mt-4">
 
             <div id="loadingOffers" class="row justify-content-center" style="display:none">
