@@ -4,10 +4,11 @@
 <head>
     <?php
         include('basicsiteelements/header.php');
-    ?>
-    <?php
+
+        //scripts must be loaded before the modals are loaded, because of jQuery is used in the modalNewEntry
         include('basicsiteelements/scripts.php');
     ?>
+    
 </head>
 
 <body>
@@ -72,9 +73,7 @@
 
         </div>
 
-        <?php
-            //include('basicsiteelements/scripts.php');
-        ?>
+        <!--IMPORTANT NOTE: the normal script files are loaded on this page in the head area-->
 
         <!--Script for pagedynamic e.g. dynamic offer loading-->
         <script type="text/javascript" src="js/dynamicOfferLoading.js"></script>
