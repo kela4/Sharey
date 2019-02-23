@@ -1,6 +1,6 @@
 <?php
     require_once('php/isLoggedInFunction.php');
-    //require_once('../dbconnect.php');
+    require_once('../dbconnect.php');
 ?>
 
 <!-- For dark, when sidebar is open -->
