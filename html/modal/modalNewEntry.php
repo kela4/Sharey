@@ -50,7 +50,7 @@
                      <div class="form-group">
                          <label for="modalImage">Bild</label>
                          <div class="input-group" id="modalImage">
-                             <input type="file" class="form-control" readonly name="img">
+                             <input type="text" class="form-control" readonly name="img">
                              <label class="input-group-btn">
                                  <span class="btn btn-secondary">
                                      Browse&hellip; <input type="file" style="display: none;" multiple>
