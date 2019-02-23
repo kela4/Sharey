@@ -11,8 +11,7 @@
         if(isset($_POST['title']) && !empty($_POST['title'])
         && isset($_POST['desc']) && !empty($_POST['desc'])
         && isset($_POST['plzID']) && !empty($_POST['plzID'])
-        && isset($_POST['tagID']) && !empty($_POST['tagID'])
-        && isset($_POST['expdate']) && !empty($_POST['expdate'])){
+        && isset($_POST['tagID']) && !empty($_POST['tagID'])){
             
             $imageData = null;
 
@@ -21,7 +20,12 @@
                 $imageData = addslashes(file_get_contents($_FILES['img']['tmp_name']));
             }
 
-            $success = $_SESSION['user']->createOffer($_POST['desc'], new DateTime($_POST['expdate']), $_POST['title'], intval($_POST['tagID']), $imageData, intval($_POST['plzID']));
+            $expdate = null;
+            if(isset($_POST['expdate']) && !empty($_POST['expdate'])){
+                $expdate = new DateTime($_POST['expdate']);
+            }
+
+            $success = $_SESSION['user']->createOffer($_POST['desc'], $expdate, $_POST['title'], intval($_POST['tagID']), $imageData, intval($_POST['plzID']));
             
             if($success){
                 header("Location: ../account.php");
