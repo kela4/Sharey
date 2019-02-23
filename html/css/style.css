@@ -422,6 +422,45 @@ a[data-toggle="collapse"] {
     margin-right: 10px;
 }
 
+#accountSiteOfferDescription {
+    height: 85px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+#symbolsDiv {
+    height: 12px;
+    text-align: right;
+    margin-top: 3px;
+}
+
+#checkSymbol{
+    color: white;
+    height: 24px;
+    width: 24px;
+    color: #464646;
+}
+
+#editSymbol {
+    color: white;
+    height: 24px;
+    width: 24px;
+    color: #464646;
+}
+
+#deleteSymbol {
+    color: white;
+    height: 24px;
+    width: 24px;
+    color: #464646;
+}
+
+.buttonSymbols {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 /* ---------------------------------------------------
     BUTTON NEW OFFER
 ----------------------------------------------------- */
@@ -449,6 +488,10 @@ a[data-toggle="collapse"] {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
+}
+
+#offerSiteCityDiv {
+    margin-top: 32px;
 }
 
 /* ---------------------------------------------------
