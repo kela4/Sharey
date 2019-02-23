@@ -10,14 +10,13 @@ class Offer{
     private $mhd; //date
     private $offerID; //int
     private $picture; //string
-    private $plz; //int
-    private $place; //string
+    private $plz; //PLZ
     private $report; //int
     private $tag; //Tag
     private $title; //string 
     private $ocID; //int
  
-    public function __construct(bool $active, DateTime $date, string $description, DateTime $mhd, int $offerID, string $picture = null, int $plz, string $place, int $report, Tag $tag, string $title, int $ocID){
+    public function __construct(bool $active, DateTime $date, string $description, DateTime $mhd, int $offerID, string $picture = null, PLZ $plz, int $report, Tag $tag, string $title, int $ocID){
         $this->active = $active;
         $this->date = $date;
         $this->description = $description;
@@ -25,7 +24,6 @@ class Offer{
         $this->offerID = $offerID;
         $this->picture = $picture;
         $this->plz = $plz;
-        $this->place = $place;
         $this->report = $report;
         $this->tag = $tag;
         $this->title = $title;
@@ -36,8 +34,21 @@ class Offer{
         return true;
     }
 
-    public static function setSearch(string $searchTerm, int $plz, int $surrounding, int $tagID){
-        return $offers; //offer-Array
+    public static function setSearch(string $searchTerm = null, int $plzID = null, int $surrounding = null, int $tagID = null){
+        require('dbconnect.php');
+        mysqli_select_db($connection, 'db_sharey');
+        
+        $query = "!PLZID mitliefern!";
+
+        $res = mysqli_query($connection, $query);
+
+        $offers = [];
+        
+        while(($data = mysqli_fetch_array($res)) != false){
+            $offers[] = new Offer($data['or_active'], new DateTime($data['or_creationDate']), utf8_encode($data['or_description']), new DateTime($data['or_mhd']), $data['or_offerID'], $data['or_picture'], new PLZ(utf8_encode($data['pz_location']), $data['pz_plz'], $data['pz_plzID']), $data['or_report'], new Tag($data['tagColor'], utf8_encode($data['tagDescription']), $data['tagID']), utf8_encode($data['or_title']), $data['or_ocID']);
+        }
+
+        return $offers;
     }
 
     public static function getOffer(int $offerID){
@@ -57,19 +68,6 @@ class Offer{
     public function reportCount(){
         return true;
     }
-
-    /* statt der getColor-Funktion wird jetzt das Tag-Attribut statt dem tagID verwendet und hier wird immer gleich der ganze Tag hinterlegt, somit wird die Anzahl der DB-Abfragen herheblich reduziert
-    public function getColor(){
-        $connection = mysqli_connect('localhost', 'root', '');
-        mysqli_select_db($connection, 'shareyvorlage');
-        
-        $query = "SELECT color FROM tag WHERE id ='".$this->tagID."';";
-        $res = mysqli_query($connection, $query);
-        
-        $data = mysqli_fetch_array($res);
-
-        return $data['color'];
-    }*/
 
 
 #region getters
@@ -100,10 +98,6 @@ class Offer{
 
     public function getPlz(){
         return $this->plz;
-    }
-
-    public function getPlace(){
-        return $this->place;
     }
 
     public function getReport(){

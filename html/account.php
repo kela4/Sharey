@@ -177,7 +177,7 @@
                                                                             </div>
                                                                             <div class="col-auto">
                                                                                 <div id="cityDiv">
-                                                                                    <span class="whiteText">'.utf8_decode($offer->getPlace()).'</span>
+                                                                                    <span class="whiteText">'.utf8_decode($offer->getPlz()->getLocation()).'</span>
                                                                                 </div>
                                                                             </div>
                                                                         </div>

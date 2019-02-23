@@ -109,7 +109,7 @@ class User{
         require('dbconnect.php');
         mysqli_select_db($connection, 'db_sharey');
         
-        $query = "SELECT o.*, p.pz_plz, p.pz_location, t.tg_description AS tagDescription, t.tg_color AS tagColor, t.tg_tagID AS tagID 
+        $query = "SELECT o.*, p.pz_plz, p.pz_location, p.pz_plzID, t.tg_description AS tagDescription, t.tg_color AS tagColor, t.tg_tagID AS tagID 
                     FROM `tbl_offer` AS o 
                     JOIN tbl_tag AS t 
                         ON o.or_tagID = t.tg_tagID 
@@ -122,7 +122,7 @@ class User{
         $offers = [];
         
         while(($data = mysqli_fetch_array($res)) != false){
-            $offers[] = new Offer($data['or_active'], new DateTime($data['or_creationDate']), utf8_encode($data['or_description']), new DateTime($data['or_mhd']), $data['or_offerID'], $data['or_picture'], $data['pz_plz'], utf8_encode($data['pz_location']), $data['or_report'], new Tag($data['tagColor'], utf8_encode($data['tagDescription']), $data['tagID']), utf8_encode($data['or_title']), $data['or_ocID']);
+            $offers[] = new Offer($data['or_active'], new DateTime($data['or_creationDate']), utf8_encode($data['or_description']), new DateTime($data['or_mhd']), $data['or_offerID'], $data['or_picture'], new PLZ(utf8_encode($data['pz_location']), $data['pz_plz'], $data['pz_plzID']), $data['or_report'], new Tag($data['tagColor'], utf8_encode($data['tagDescription']), $data['tagID']), utf8_encode($data['or_title']), $data['or_ocID']);
         }
 
         return $offers;
