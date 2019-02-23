@@ -15,30 +15,30 @@
     </div>
 
     <ul class="list-unstyled components text-center">
-        <li>
+        <!-- <li>
             <a href="index.php" title="Startseite">Startseite</a>
-        </li>
+        </li> -->
 
         <?php
             if(!isLoggedIn()){ //user isn't logged in
                 ?>
-                     <li>
-                        <a data-toggle="modal" data-target="#loginModal" title="Login">Login</a>
-                    </li>
+        <li>
+            <a data-toggle="modal" data-target="#loginModal" title="Login">Login</a>
+        </li>
 
-                    <li>
-                        <a data-toggle="modal" data-target="#registerModal" title="Registrieren">Registrieren</a>
-                    </li>
-                <?php
+        <li>
+            <a data-toggle="modal" data-target="#registerModal" title="Registrieren">Registrieren</a>
+        </li>
+        <?php
             }else{ //user is logged in
                 ?>
-                    <li>
-                        <a href="account.php" title="Account">Account</a>
-                    </li>
-                    <li>
-                        <a href="../php/logout.php" title="Logout">Logout</a>
-                    </li>
-                <?php
+        <li>
+            <a href="account.php" title="Account">Account</a>
+        </li>
+        <li>
+            <a href="../php/logout.php" title="Logout">Logout</a>
+        </li>
+        <?php
             }
         ?>
 
