@@ -117,7 +117,7 @@
             <div id="newMessage">
                 <div class="container">
                     <div class="input-group">
-                        <textarea id="newMessageText" class="form-control" rows="2"></textarea>
+                        <textarea id="newMessageText" class="form-control" rows="1"></textarea>
                         <button id="sendButton" class="btn btn-secondary float-right">Senden</button>
                     </div>
                 </div>
