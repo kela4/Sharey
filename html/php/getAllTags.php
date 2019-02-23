@@ -1,5 +1,6 @@
 <?php
 require_once('classes/Tag.php');
+require_once('classes/Messages.php');
 
 $tags = Tag::getAllTags();
 
