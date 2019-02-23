@@ -274,6 +274,10 @@ a[data-toggle="collapse"] {
     CONTENT STYLE
 ----------------------------------------------------- */
 
+.content {
+    padding-top: 100px;
+}
+
 #content {
     z-index: 1;
     width: 100%;
