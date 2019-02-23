@@ -55,7 +55,7 @@ class User{
         return true;
     }
 
-    public function createOffer(string $content, DateTime $mhd = null, string $title, int $tagID, $picture = null, int $plzID){
+    public function createOffer(string $content, $mhd = null, string $title, int $tagID, $picture = null, int $plzID){
         //insert offer into db:
         require('dbconnect.php');
         mysqli_select_db($connection, 'db_sharey');
