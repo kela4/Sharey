@@ -9,9 +9,8 @@ $(document).ready(function(){
         type: 'post',
         success: function(data){
             console.log(data);
-            //var tags = JSON.parse(data);
-            //console.log(tags);
-            data.forEach(function(tag) {
+            data.forEach(function(tagElement) {
+                var tag = JSON.parse(tagElement);
                 tagSelectionNewOffer.append('<option value="' + tag.tagID + '">' + tag.description + '</option>');
             });
             
