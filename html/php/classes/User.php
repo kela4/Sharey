@@ -55,15 +55,14 @@ class User{
         return true;
     }
 
-    public function createOffer(string $content, DateTime $mhd, string $title, int $tagID, $picture, int $plzID){
+    public function createOffer(string $content, DateTime $mhd, string $title, int $tagID, $picture = null, int $plzID){
         //insert offer into db:
-        $connection = mysqli_connect('localhost', 'root', '');
-        mysqli_select_db($connection, 'shareyvorlage');
+        require('dbconnect.php');
+        mysqli_select_db($connection, 'db_sharey');
         
-        $query = "
-            INSERT INTO offer(ocID, active, creationDate, description, mhd, picture, plzID, report, tagID, title) 
-            VALUES ('".$this->userID."', true,'".date('Y-m-d H:i:s')."', '".$content."', '".$mhd->format('Y-m-d H:i:s')."', '".$picture."', '".$plzID."', '0', '".$tagID."', '".$title."');";
-        
+        $query = "INSERT INTO tbl_offer(or_ocID, or_active, or_creationDate, or_description, or_mhd, or_picture, or_plzID, or_report, or_tagID, or_title) 
+                    VALUES ('".$this->userID."', true, '".date('Y-m-d H:i:s')."', '".$content."', '".$mhd->format('Y-m-d')."', '".$picture."', ".$plzID.", '0', ".$tagID.", '".$title."');";
+
         if(!mysqli_query($connection, $query)){
             return false;
         }else{

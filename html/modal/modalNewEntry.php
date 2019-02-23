@@ -17,8 +17,7 @@
                      </div>
                      <div class="form-group">
                          <label for="description">Beschreibung</label>
-                         <input type="text" required class="form-control" id="description" placeholder="Beschreibung"
-                             name="desc">
+                         <input type="text" required class="form-control" id="description" placeholder="Beschreibung" name="desc">
                      </div>
 
 
@@ -51,7 +50,7 @@
                      <div class="form-group">
                          <label for="modalImage">Bild</label>
                          <div class="input-group" id="modalImage">
-                             <input type="text" class="form-control" readonly>
+                             <input type="file" class="form-control" readonly name="img">
                              <label class="input-group-btn">
                                  <span class="btn btn-secondary">
                                      Browse&hellip; <input type="file" style="display: none;" multiple>
@@ -91,7 +90,6 @@
                      });
                      </script>
 
-                     <!-- Achtung, dev-hinweis: ein User muss eingeloggt sein! -->
                      <button type="submit" class="btn btn-dark float-right">Erstellen</button>
                  </form>
              </div>
