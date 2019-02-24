@@ -86,6 +86,8 @@
 
             </div>
             
+            <div id="bottomDivForScrolling" style="display:none;"></div>
+            
             <p id="anker"></p>
             <div id="newMessage">
                 <div class="container">
@@ -96,8 +98,6 @@
                     </div>
                 </div>
             </div>
-
-            <div id="bottomDivForScrolling" style="display:none;"></div>
 
         </div>
 
