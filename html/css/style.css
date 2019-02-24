@@ -297,10 +297,9 @@ a[data-toggle="collapse"] {
     padding-top: 100px;
 }
 
-#card {
+#offerCardSize {
     height: 300px;
     width: 300px;
-    background-color: #92D050;
 }
 
 #cardContent {
@@ -381,6 +380,7 @@ a[data-toggle="collapse"] {
 
 #omCityDiv {
     margin-top: 17px;
+    padding-right: 17px;
 }
 
 .omColor {
