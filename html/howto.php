@@ -26,7 +26,7 @@
                     <img src="images/1.png" class="img-fluid rounded" alt="1" />
                 </div>
 
-                <div class="col-12 col-md-7">
+                <div class="col-12 col-md-7", style="float:right">
 
                     <p>
                         Auf dieser Plattform kannst du dazu beitragen, die Verschwendung von Ressourcen auf unserer Erde
