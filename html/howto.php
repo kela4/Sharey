@@ -26,7 +26,7 @@
                     <img src="images/1.png" class="img-fluid rounded" alt="1" />
                 </div>
 
-                <div class="col-12 col-md-8">
+                <div class="col-12 col-md-10">
 
                     <p>
                         Auf dieser Plattform kannst du dazu beitragen, die Verschwendung von Ressourcen auf unserer Erde
@@ -37,6 +37,7 @@
                         Um ein Angebot anzulegen, klickst du auf unserer Startseite auf den runden + Button in der unteren Bildschirmmitte.
 						Falls du noch nicht eingeloggt bist, erhälst du nun die Möglichkeit, dich zu registrieren oder einzuloggen.
                     </p>
+					<br/>
 
                 </div>
 				
@@ -44,7 +45,7 @@
                     <img src="images/2.png" class="img-fluid rounded" alt="2" />
                 </div>
 
-				<div class="col-12 col-md-8">
+				<div class="col-12 col-md-10">
 
                     <p>
                         Nun siehst du ein leeres Angebot, dass du mit deinen Angaben ausfüllst.
@@ -55,6 +56,7 @@
                         Wichtig ist auch, dass du das Mindesthaltbarkeitsdatum  (MHD) angibst. 
 						Keine Angst, nur weil das MHD abgelaufen ist, werden wir dein Angebot nicht löschen. Denn fast immer sind Lebensmittel und Drogerieprodukte auch nach dem MHD noch genießbar.
 					</p>
+					<br/>
 
                 </div>
 				
@@ -63,7 +65,7 @@
                     <img src="images/3.png" class="img-fluid rounded" alt="3" />
                 </div>
 
-				<div class="col-12 col-md-8">
+				<div class="col-12 col-md-10">
 
                     <p>
                         Ein Bild sagt mehr als tausend Worte. Desahlb geben wir dir auch die Möglichkeit dein Angebot mit einem Bild zu vervollständigen.
@@ -72,6 +74,7 @@
                     <p>
                         Achte darauf, dass das Produkt gut zu sehen und scharf ist. Das Bild darf dabei nicht größer als 3 MB sein. 
 					</p>
+					<br/>
 
                 </div>
 				
