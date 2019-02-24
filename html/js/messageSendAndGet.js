@@ -16,17 +16,13 @@ $(document).ready(function(){
                 dataType: 'json',
                 type: 'post',
                 success: function(data){
-                    console.log(data);
-                    console.log(data.messageSended);
-                    console.log(data.message);
                     if(data.messageSended){
                         var messageArea = $('#messageArea');
                         var message = JSON.parse(data.message);
-                        console.log(message);
                         messageArea.append('  <div class="row justify-content-end">' +
                                                         '<div class="card col-sm-8 col-9" id="senderDark">' +
                                                             '<p>' + message.content + '</p>' +
-                                                            '<div class="float-right" id="timestampMessage">' + message.date.date + '</div>' +
+                                                            '<div class="float-right" id="timestampMessage">' + message.date + '</div>' +
                                                         '</div>' +
                                                     '</div>' +
                                                     '<br>');
@@ -66,7 +62,7 @@ $(document).ready(function(){
                             messageArea.append('  <div class="row">' +
                                                             '<div class="card col-sm-8 col-9" id="senderLight">' +
                                                                 '<p>' + message.content + '</p>' +
-                                                                '<div class="float-right" id="timestampMessage">' + message.date.date + '</div>' +
+                                                                '<div class="float-right" id="timestampMessage">' + message.date + '</div>' +
                                                             '</div>' +
                                                         '</div>' +
                                                         '<br>');
