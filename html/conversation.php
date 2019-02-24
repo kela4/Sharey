@@ -1,3 +1,12 @@
+<?php
+    require_once('php/classes/User.php');
+    require_once('php/classes/Offer.php');
+    require_once('php/classes/Tag.php');
+    require_once('php/classes/Conversation.php');
+    require_once('php/classes/Message.php');
+    require_once('php/classes/PLZ.php');
+?>
+
 <!DOCTYPE html>
 <html>
 
