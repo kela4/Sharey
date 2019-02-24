@@ -333,6 +333,10 @@ a[data-toggle="collapse"] {
     margin-top: 20px;
 }
 
+#citySpan {
+    font-size: 100%;
+}
+
 .whiteText {
     color: white;
 }
@@ -381,6 +385,11 @@ a[data-toggle="collapse"] {
 #omCityDiv {
     margin-top: 17px;
     padding-right: 17px;
+}
+
+.omCitySpan {
+    -moz-text-size-adjust: auto;
+    -webkit-text-size-adjust: auto;
 }
 
 .omColor {
