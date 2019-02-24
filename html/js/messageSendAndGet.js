@@ -16,6 +16,7 @@ $(document).ready(function(){
                 dataType: 'json',
                 type: 'post',
                 success: function(data){
+                    console.log(data);
                     console.log(data.messageSended);
                     console.log(data.message);
                     if(data.messageSended){
