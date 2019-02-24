@@ -4,7 +4,11 @@
 <head>
     <?php
         include('basicsiteelements/header.php');
+
+        //scripts must be loaded before the modals are loaded, because of jQuery is used in the modalNewEntry
+        include('basicsiteelements/scripts.php');
     ?>
+    
 </head>
 
 <body>
@@ -16,7 +20,7 @@
         include('modal/modalRegister.php');
     ?>
     <?php
-        include('modal/modalNewEntery.php');
+        include('modal/modalNewEntry.php');
     ?>
     <?php
         include('modal/modalOffer.php');
@@ -31,7 +35,7 @@
 
         <div id="paddingtopMobil"></div>
 
-        <div class="container mt-4">
+        <div class="container-fluid mt-4 offerSiteContainer">
 
             <div id="loadingOffers" class="row justify-content-center" style="display:none">
                 <div class="col-6">
@@ -69,9 +73,7 @@
 
         </div>
 
-        <?php
-            include('basicsiteelements/scripts.php');
-        ?>
+        <!--IMPORTANT NOTE: the normal script files are loaded on this page in the head area-->
 
         <!--Script for pagedynamic e.g. dynamic offer loading-->
         <script type="text/javascript" src="js/dynamicOfferLoading.js"></script>

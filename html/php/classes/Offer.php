@@ -1,6 +1,6 @@
 <?php
 /**
- * if you use Offer-Class in an other file, include also <Tag>-Class
+ * if you use Offer-Class in an other file, include also <Tag, PLZ>-Class
  */
 
 class Offer{
@@ -10,14 +10,13 @@ class Offer{
     private $mhd; //date
     private $offerID; //int
     private $picture; //string
-    private $plz; //int
-    private $place; //string
+    private $plz; //PLZ
     private $report; //int
     private $tag; //Tag
     private $title; //string 
     private $ocID; //int
  
-    public function __construct(bool $active, DateTime $date, string $description, DateTime $mhd, int $offerID, string $picture = null, int $plz, string $place, int $report, Tag $tag, string $title, int $ocID){
+    public function __construct(bool $active, DateTime $date, string $description, DateTime $mhd, int $offerID, string $picture = null, PLZ $plz, int $report, Tag $tag, string $title, int $ocID){
         $this->active = $active;
         $this->date = $date;
         $this->description = $description;
@@ -25,7 +24,6 @@ class Offer{
         $this->offerID = $offerID;
         $this->picture = $picture;
         $this->plz = $plz;
-        $this->place = $place;
         $this->report = $report;
         $this->tag = $tag;
         $this->title = $title;
@@ -36,13 +34,53 @@ class Offer{
         return true;
     }
 
-    public static function setSearch(string $searchTerm, int $plz, int $surrounding, int $tagID){
-        return $offers; //offer-Array
+    public static function setSearch(string $searchTerm = null, int $plzID = null, int $surrounding = null, int $tagID = null){
+        //search- and filterparameters not implemented yet
+        require('dbconnect.php');
+        mysqli_select_db($connection, 'db_sharey');
+        
+        $query = "SELECT o.*, t.*, p.pz_plzID, p.pz_location, p.pz_plz FROM tbl_offer AS o 
+                    JOIN tbl_plz p 
+                    ON p.pz_plzID = o.or_plzID 
+                    JOIN tbl_tag t 
+                    ON t.tg_tagID = o.or_tagID 
+                    WHERE o.or_active = 1;";
+
+        $res = mysqli_query($connection, $query);
+
+        $offersWithDistanceFromPoint = [];
+        
+        while(($data = mysqli_fetch_array($res)) != false){
+            //$offers[] = new Offer($data['or_active'], new DateTime($data['or_creationDate']), utf8_encode($data['or_description']), new DateTime($data['or_mhd']), $data['or_offerID'], $data['or_picture'], new PLZ(utf8_encode($data['pz_location']), $data['pz_plz'], $data['pz_plzID']), $data['or_report'], new Tag($data['tg_color'], utf8_encode($data['tg_description']), $data['tg_tagID']), utf8_encode($data['or_title']), $data['or_ocID']);
+            $offersWithDistanceFromPoint[] = [
+                                                "offer" => new Offer($data['or_active'], new DateTime($data['or_creationDate']), $data['or_description'], new DateTime($data['or_mhd']), $data['or_offerID'], $data['or_picture'], new PLZ($data['pz_location'], $data['pz_plz'], $data['pz_plzID']), $data['or_report'], new Tag($data['tg_color'], $data['tg_description'], $data['tg_tagID']), $data['or_title'], $data['or_ocID']),
+                                                "distanceFromStartPoint" => "10"
+                                                ];
+            
+        }
+
+        return $offersWithDistanceFromPoint;
     }
 
     public static function getOffer(int $offerID){
         //wichtig, Tag nicht vergessen!
         return $offer;
+    }
+
+    public function toJson() {
+        return json_encode(array(
+            'active' => $this->getActive(),
+            'date' => $this->getDate(),
+            'description' => $this->getDescription(),
+            'mhd' => $this->getMhd(),
+            'offerID' => $this->getOfferID(),
+            'picture' => base64_encode($this->getPicture()),
+            'plz' => $this->getPLZ()->toJson(),
+            'report' => $this->getReport(),
+            'tag' => $this->getTag()->toJson(),
+            'title' => $this->getTitle(),
+            'ocID' => $this->getOcID()      
+        ));
     }
 
     public function edit(string $title, string $content, int $tagID, DateTime $mhd, string $picture){ //String, String, int, date, String
@@ -57,19 +95,6 @@ class Offer{
     public function reportCount(){
         return true;
     }
-
-    /* statt der getColor-Funktion wird jetzt das Tag-Attribut statt dem tagID verwendet und hier wird immer gleich der ganze Tag hinterlegt, somit wird die Anzahl der DB-Abfragen herheblich reduziert
-    public function getColor(){
-        $connection = mysqli_connect('localhost', 'root', '');
-        mysqli_select_db($connection, 'shareyvorlage');
-        
-        $query = "SELECT color FROM tag WHERE id ='".$this->tagID."';";
-        $res = mysqli_query($connection, $query);
-        
-        $data = mysqli_fetch_array($res);
-
-        return $data['color'];
-    }*/
 
 
 #region getters
@@ -100,10 +125,6 @@ class Offer{
 
     public function getPlz(){
         return $this->plz;
-    }
-
-    public function getPlace(){
-        return $this->place;
     }
 
     public function getReport(){

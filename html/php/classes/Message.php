@@ -27,16 +27,17 @@ class Message{
     public static function createMessage(int $senderID, int $conID, string $content){
         $sendDate = date('Y-m-d H:i:s');
         
-        $connection = mysqli_connect('localhost', 'root', '');
-        mysqli_select_db($connection, 'shareyvorlage');
+        require('dbconnect.php');
+        mysqli_select_db($connection, 'db_sharey');
         
         $query = "
-            INSERT INTO `message`(`conID`, `content`, `sendDate`, `messageRead`, `senderID`) 
-            VALUES (".$conID.", '".$content."', '".$sendDate."', 'false', ".$senderID.");";
+                    INSERT INTO tbl_message(me_conID, me_content, me_sendDate, me_messageRead, me_senderID) 
+                    VALUES (".$conID.", '".$content."', '".$sendDate."', false, ".$senderID.");";
         
         $success = mysqli_query($connection, $query);
 
         if($success){
+            //messageID and messageRead won't be needed in result, cause of this, these params are null
             return new Message($conID, $content, new DateTime($sendDate), null, null, $senderID);
         }else{
             return false;
@@ -59,7 +60,7 @@ class Message{
         return json_encode(array(
             'conID' => $this->getConID(),
             'content' => $this->getContent(),
-            'date' => $this->getDate(),
+            'date' => $this->getDate()->format('d-m-Y H:i'),
             'messageID' => $this->getMessageID(),
             'messageRead' => $this->getMessageRead(),
             'senderID' => $this->getSenderID()         

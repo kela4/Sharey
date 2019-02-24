@@ -297,10 +297,9 @@ a[data-toggle="collapse"] {
     padding-top: 100px;
 }
 
-#card {
+.offerCardSize {
     height: 300px;
     width: 300px;
-    background-color: #92D050;
 }
 
 #cardContent {
@@ -332,6 +331,10 @@ a[data-toggle="collapse"] {
 
 #cityDiv {
     margin-top: 20px;
+}
+
+#citySpan {
+    font-size: 100%;
 }
 
 .whiteText {
@@ -381,6 +384,12 @@ a[data-toggle="collapse"] {
 
 #omCityDiv {
     margin-top: 17px;
+    padding-right: 17px;
+}
+
+.omCitySpan {
+    -moz-text-size-adjust: auto;
+    -webkit-text-size-adjust: auto;
 }
 
 .omColor {
@@ -450,6 +459,10 @@ a[data-toggle="collapse"] {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.offerSiteContainer {
+    margin-bottom: 85px;
 }
 
 #newOffer {

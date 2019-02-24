@@ -34,34 +34,42 @@ class Conversation{
      * returns a conversation
      */
     public static function getConversation(int $conID){
-        $connection = mysqli_connect('localhost', 'root', '');
-        mysqli_select_db($connection, 'shareyvorlage');
+        require('dbconnect.php');
+        mysqli_select_db($connection, 'db_sharey');
         
-        $query = "SELECT c.*, o.title FROM conversation c
-                    JOIN offer o 
-                    ON c.offerID = o.offerID
-                    WHERE conID = ".$conID.";";
+        $query = "SELECT c.*, o.or_title
+                    FROM tbl_conversation c
+                    JOIN tbl_offer o
+                        ON c.cn_offerID = o.or_offerID
+                    WHERE c.cn_conID = ".$conID.";";
+
         $res = mysqli_query($connection, $query);
         
         $data = mysqli_fetch_array($res);
                 
-        return new Conversation($data['active'], $data['conID'], $data['oaID'], $data['ocID'], $data['offerID'], null, $data['title']);
+        return new Conversation($data['cn_active'], $data['cn_conID'], $data['cn_oaID'], $data['cn_ocID'], $data['cn_offerID'], null, $data['or_title']);
     }
 
     /**
      * return unread messages if conversation is open
+     * for this part, the $requestUserID is needed, cause of only messages will return, which the requestUser hasn't readed yet
      */
     public static function getUnreadMessages(int $conID, int $requestUser){
-        $connection = mysqli_connect('localhost', 'root', '');
-        mysqli_select_db($connection, 'shareyvorlage');
+        require('dbconnect.php');
+        mysqli_select_db($connection, 'db_sharey');
         
-        $query = "SELECT * FROM message WHERE conID ='".$conID."' AND messageRead = false AND senderID != ".$requestUser." ORDER BY sendDate;"; //aSC/DESC???
+        $query = "SELECT * 
+                    FROM tbl_message 
+                    WHERE me_conID = ".$conID." 
+                    AND me_messageRead = false 
+                    AND me_senderID != ".$requestUser."
+                    ORDER BY me_sendDate;";
         $res = mysqli_query($connection, $query);
 
         $messages = [];
         
         while(($data = mysqli_fetch_array($res)) != false){
-            $messages[] = new Message($data['conID'], utf8_encode($data['content']), new DateTime($data['sendDate']), $data['messageID'], $data['messageRead'], $data['senderID']);
+            $messages[] = new Message($data['me_conID'], $data['me_content'], new DateTime($data['me_sendDate']), $data['me_messageID'], $data['me_messageRead'], $data['me_senderID']);
         }
 
         markMessagesAsReaded($messages);
@@ -70,18 +78,24 @@ class Conversation{
     }
 
     //returns all messages of a conversation, the latest message is the first one, the last message the last one in the array
-    //unreaded messages will be marked as readed --> über request User abhandeln
+    //unreaded messages will be marked as readed --> for this part, the $requestUserID is needed
     public function getAllMessages($requestUserID){
-        $connection = mysqli_connect('localhost', 'root', '');
-        mysqli_select_db($connection, 'shareyvorlage');
+        require('dbconnect.php');
+        mysqli_select_db($connection, 'db_sharey');
         
-        $query = "SELECT * FROM message WHERE conID ='".$this->conID."' ORDER BY sendDate;"; //aSC/DESC???
+        $query = "SELECT m.me_messageID, m.me_conID, m.me_content, m.me_sendDate, m.me_messageRead, m.me_senderID 
+                    FROM tbl_conversation AS c 
+                    JOIN tbl_message m 
+                    ON c.cn_conID = m.me_conID 
+                    WHERE c.cn_conID = ".$this->conID."
+                    ORDER BY m.me_sendDate;";
+
         $res = mysqli_query($connection, $query);
 
         $messages = [];
         
         while(($data = mysqli_fetch_array($res)) != false){
-            $messages[] = new Message($data['conID'], utf8_encode($data['content']), new DateTime($data['sendDate']), $data['messageID'], $data['messageRead'], $data['senderID']);
+            $messages[] = new Message($data['me_conID'], $data['me_content'], new DateTime($data['me_sendDate']), $data['me_messageID'], $data['me_messageRead'], $data['me_senderID']);
         }
 
         //mark all unread messages as readed:
@@ -135,8 +149,8 @@ class Conversation{
 
 function markMessagesAsReaded($messages){
     if($messages){
-        $connection = mysqli_connect('localhost', 'root', '');
-        mysqli_select_db($connection, 'shareyvorlage');
+        require('dbconnect.php');
+        mysqli_select_db($connection, 'db_sharey');
 
         //create ID-String for Query
         $messageIDs = "";
@@ -146,7 +160,7 @@ function markMessagesAsReaded($messages){
 
         $messageIDs = substr($messageIDs, 1);
         
-        $query = "UPDATE message SET messageRead = true WHERE messageID IN (".$messageIDs.")";
+        $query = "UPDATE tbl_message SET me_messageRead = true WHERE me_messageID IN (".$messageIDs.")";
         mysqli_query($connection, $query);
 
         return true;

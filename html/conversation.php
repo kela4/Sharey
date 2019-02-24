@@ -1,3 +1,12 @@
+<?php
+    require_once('php/classes/User.php');
+    require_once('php/classes/Offer.php');
+    require_once('php/classes/Tag.php');
+    require_once('php/classes/Conversation.php');
+    require_once('php/classes/Message.php');
+    require_once('php/classes/PLZ.php');
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -42,81 +51,47 @@
 
             <div id="messageArea">
 
-                <div class="row justify-content-end">
-                    <div class="card col-sm-8 col-9" id="senderDark">
-                        <p>Hallo du :D</p>
-                        <div class="float-right" id="timestampMessage">01.01.2000 12:00</div>
-                    </div>
-                </div>
-                <br>
+                <?php
+                    if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
+                        if(isset($_POST['conID']) && !empty($_POST['conID'])){
+                            $conversation = Conversation::getConversation(intval($_POST['conID']));
+                            $messages = $conversation->getAllMessages($_SESSION['user']->getUserID());
 
-                <div class="row">
-                    <div class="card col-sm-8 col-9" id="senderLight">
-                        <p>Was geht so?</p>
-                        <div class="float-right" id="timestampMessage">01.01.2000 12:00</div>
-                    </div>
-                </div>
-                <br>
-                <div class="row justify-content-end">
-                    <div class="card col-sm-8 col-9" id="senderDark">
-                        <p>Gut und dir?</p>
-                        <div class="float-right" id="timestampMessage">01.01.2000 12:00</div>
-                    </div>
-                </div>
-                <br>
-
-                <div class="row">
-                    <div class="card col-sm-8 col-9" id="senderLight">
-                        <p>Kannst mir den Jogurt geben?</p>
-                        <div class="float-right" id="timestampMessage">01.01.2000 12:00</div>
-                    </div>
-                </div>
-                <br>
-                <div class="row justify-content-end">
-                    <div class="card col-sm-8 col-9" id="senderDark">
-                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
-                            '.$message->getContent().'</p>
-                        <div class="float-right" id="timestampMessage">01.01.2000 12:00</div>
-                    </div>
-                </div>
-                <br>
-
-                <div class="row">
-                    <div class="card col-sm-8 col-9" id="senderLight">
-                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
-                            '.$message->getContent().dsdsdsdsdsdsdsdsdsdsdsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd'
-                        </p>
-                        <div class="float-right" id="timestampMessage">01.01.2000 12:00</div>
-                    </div>
-                </div>
-                <br>
-                <div class="row justify-content-end">
-                    <div class="card col-sm-8 col-9" id="senderDark">
-                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
-                            '.$message->getContent().'</p>
-                        <div class="float-right" id="timestampMessage">01.01.2000 12:00</div>
-                    </div>
-                </div>
-                <br>
-
-                <div class="row">
-                    <div class="card col-sm-8 col-9" id="senderLight">
-                        <p>sender: '.$message->getSenderID().': '.$message->getDate()->format('Y-m-d H:i:s').'
-                            '.$message->getContent().dsdsdsdsdsdsdsdsdsdsdsdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd'
-                        </p>
-                        <div class="float-right" id="timestampMessage">01.01.2000 12:00</div>
-                    </div>
-                </div>
-                <br>
+                            foreach($messages as $message){
+                                if($message->getSenderID() == $_SESSION['user']->getUserID()){
+                                    echo '  <div class="row justify-content-end">
+                                                <div class="card col-sm-8 col-9" id="senderDark">
+                                                    <p>'.$message->getContent().'</p>
+                                                    <div class="float-right" id="timestampMessage">'.$message->getDate()->format('d-m-Y H:i').'</div>
+                                                </div>
+                                            </div>
+                                            <br>';
+                                }else{
+                                    echo '  <div class="row">
+                                                <div class="card col-sm-8 col-9" id="senderLight">
+                                                    <p>'.$message->getContent().'</p>
+                                                    <div class="float-right" id="timestampMessage">'.$message->getDate()->format('d-m-Y H:i').'</div>
+                                                </div>
+                                            </div>
+                                            <br>';
+                                }
+                            }
+                        }else{
+                            header("Location: error.php");
+                        }
+                    }else{
+                        header("Location: error.php?errormessage=Du bist nicht eingeloggt. Mitte melde dich an um auf deinen Account zuzugreifen.");
+                    }
+                ?>
 
             </div>
-
-
+                        
             <p id="anker"></p>
             <div id="newMessage">
                 <div class="container">
                     <div class="input-group">
                         <textarea id="newMessageText" class="form-control" rows="1"></textarea>
+                        <?php echo '<input id="conIDMessage" hidden value="'.$_POST['conID'].'"/>'; ?>
                         <button id="sendButton" class="btn btn-secondary float-right">Senden</button>
                     </div>
                 </div>
@@ -128,6 +103,7 @@
     <?php
         include('basicsiteelements/scripts.php');
     ?>
+    <script type="text/javascript" src="js/messageSendAndGet.js"></script>
 </body>
 
 </html>

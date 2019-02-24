@@ -156,8 +156,7 @@
                                     //print own offers:
                                     if(!empty($offers)){
                                         foreach($offers as $offer){
-                                            echo '  <a id="'.$offer->getOfferID().'" data-toggle="modal" data-target="#offerModal">
-                                                        <div class="col-auto m-3 card" id="card" style="background-color:'.$offer->getTag()->getColor().'">
+                                            echo '      <div id="'.$offer->getOfferID().'" class="col-auto m-3 card offerCardSize" style="background-color:'.$offer->getTag()->getColor().'">
                                                             <div id="cardContent">
                                                                 <div class="row">
                                                                     <div class="col-7">
@@ -176,8 +175,8 @@
                                                                                 </div>
                                                                             </div>
                                                                             <div class="col-auto">
-                                                                                <div id="cityDiv">
-                                                                                    <span class="whiteText">'.utf8_decode($offer->getPlace()).'</span>
+                                                                                <div id="offerSiteCityDiv">
+                                                                                    <span class="whiteText">'.utf8_decode($offer->getPlz()->getLocation()).'</span>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -194,15 +193,27 @@
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="col-12">
-                                                                        <div id="offerDescriptionDiv">
+                                                                        <div id="accountSiteOfferDescription">
                                                                             <h5 class="whiteText">'.utf8_decode($offer->getTitle()).'</h5>
                                                                             <p class="whiteText">'.utf8_decode($offer->getDescription()).'</p>
                                                                         </div>
+
+                                                                        <div id="symbolsDiv">
+                                                                            <button type="button" class="buttonSymbols">
+                                                                                <i class="fas fa-check" id="checkSymbol"></i>
+                                                                            </button>
+                                                                            <button type="button" class="buttonSymbols">
+                                                                                <i class="fas fa-edit" id="editSymbol"></i>
+                                                                            </button>
+                                                                            <button type="button" class="buttonSymbols">
+                                                                                <i class="fas fa-trash" id="deleteSymbol"></i>
+                                                                            </button>
+                                                                        </div>
+
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                    </a>';
+                                                        </div>';
                                         }
                                     }
                                     ?>
