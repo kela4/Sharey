@@ -23,8 +23,8 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
         success: function(data){
             if(data.offersAvailable){
                 
-                console.log(data.offers);
                 var offers = JSON.parse(data.offers);
+                console.log(offers);
 
                 offers.forEach(function(offerElement){
                     console.log(offerElement.offer);
