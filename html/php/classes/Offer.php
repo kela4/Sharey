@@ -1,6 +1,6 @@
 <?php
 /**
- * if you use Offer-Class in an other file, include also <Tag>-Class
+ * if you use Offer-Class in an other file, include also <Tag, PLZ>-Class
  */
 
 class Offer{
@@ -38,14 +38,19 @@ class Offer{
         require('dbconnect.php');
         mysqli_select_db($connection, 'db_sharey');
         
-        $query = "!PLZID mitliefern!";
+        $query = "SELECT o.*, t.*, p.pz_plzID, p.pz_location, p.pz_plz FROM tbl_offer AS o 
+                    JOIN tbl_plz p 
+                    ON p.pz_plzID = o.or_plzID 
+                    JOIN tbl_tag t 
+                    ON t.tg_tagID = o.or_tagID 
+                    WHERE o.or_active = 1;";
 
         $res = mysqli_query($connection, $query);
 
         $offers = [];
         
         while(($data = mysqli_fetch_array($res)) != false){
-            $offers[] = new Offer($data['or_active'], new DateTime($data['or_creationDate']), utf8_encode($data['or_description']), new DateTime($data['or_mhd']), $data['or_offerID'], $data['or_picture'], new PLZ(utf8_encode($data['pz_location']), $data['pz_plz'], $data['pz_plzID']), $data['or_report'], new Tag($data['tagColor'], utf8_encode($data['tagDescription']), $data['tagID']), utf8_encode($data['or_title']), $data['or_ocID']);
+            $offers[] = new Offer($data['or_active'], new DateTime($data['or_creationDate']), utf8_encode($data['or_description']), new DateTime($data['or_mhd']), $data['or_offerID'], $data['or_picture'], new PLZ(utf8_encode($data['pz_location']), $data['pz_plz'], $data['pz_plzID']), $data['or_report'], new Tag($data['tg_color'], utf8_encode($data['tg_description']), $data['tg_tagID']), utf8_encode($data['or_title']), $data['or_ocID']);
         }
 
         return $offers;
@@ -54,6 +59,22 @@ class Offer{
     public static function getOffer(int $offerID){
         //wichtig, Tag nicht vergessen!
         return $offer;
+    }
+
+    public function toJson() {
+        return json_encode(array(
+            'active' => $this->getActive(),
+            'date' => $this->getDate(),
+            'description' => $this->getDescription(),
+            'mhd' => $this->getMhd(),
+            'offerID' => $this->getOfferID(),
+            'picture' => $this->getPicture(),
+            'plz' => $this->getPLZ()->toJson(),
+            'report' => $this->getReport(),
+            'tag' => $this->getTag()->toJson(),
+            'title' => $this->getTitle(),
+            'ocID' => $this->getOcID()      
+        ));
     }
 
     public function edit(string $title, string $content, int $tagID, DateTime $mhd, string $picture){ //String, String, int, date, String

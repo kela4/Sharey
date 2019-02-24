@@ -19,10 +19,12 @@ $(document).ready(function(){
         dataType: 'json',
         type: 'post',
         success: function(data){
-            data.forEach(function(tagElement) {
-                var tag = JSON.parse(tagElement);
-                tagSelectionNewOffer.append('<option value="' + tag.tagID + '">' + tag.description + '</option>');
-            });
+            if(data){
+                data.forEach(function(tagElement) {
+                    var tag = JSON.parse(tagElement);
+                    tagSelectionNewOffer.append('<option value="' + tag.tagID + '">' + tag.description + '</option>');
+                });
+            }
         },
         error: function(err){
             alert('Fehler beim Füllen der Tags im NewOffer Modal.');

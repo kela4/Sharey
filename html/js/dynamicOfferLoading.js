@@ -5,6 +5,23 @@ $(document).ready(function(){
 function offerLoading(){ //hier noch Parameter searchTerm,...
     //load offers from DB
 
+    $.ajax({
+        url: '../php/getOffers.php',
+        dataType: 'json',
+        //data: {searchTerm: searchTerm, plzID: plzID, surrounding: surrounding, tagID: tagID},
+        type: 'post',
+        success: function(data){
+            console.log(data);
+
+            //show to messages/conversation for implementation-example
+
+        },
+        error: function(err){
+            alert('Fehler beim Laden der Offers.');
+        }
+    });
+
+    /*
     var exampleOffer = {
         id: 1,
         tag: "Essen",
@@ -77,4 +94,6 @@ function offerLoading(){ //hier noch Parameter searchTerm,...
         //hide loadingOffers-ProgressBar
         loadingOffers.css('display', 'none');
     }, 3000);
+
+    */
 }
