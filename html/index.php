@@ -35,7 +35,7 @@
 
             <div id="loadingOffers" class="row justify-content-center" style="display:none">
                 <div class="col-6">
-                    <div class="progress">
+                    <div class="progress" id="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
                             role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0"
                             aria-valuemax="100">Angebote werden geladen</div>
