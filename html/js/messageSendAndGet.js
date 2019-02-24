@@ -28,7 +28,7 @@ $(document).ready(function(){
                                                     '<br>');
 
                         $('#newMessageText').val("");
-                        messageArea.scrollIntoView(false); //false = bottom
+                        $('html, body').animate({scrollTop:$(document).height()}, 'slow');
 
                         //console.log( JSON.stringify(data) );
                     }else{
@@ -68,7 +68,7 @@ $(document).ready(function(){
                                                         '</div>' +
                                                         '<br>');
                             
-                            messageArea.scrollIntoView(false); //false = bottom
+                            $('html, body').animate({scrollTop: $(document).height()}, 'slow');
                         });
                     }
 
