@@ -24,21 +24,14 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
             if(data.offersAvailable){
                 
                 var offers = JSON.parse(data.offers);
-                console.log(offers);
 
-                offers.forEach(function(offerElementArray){
-                    console.log(offerElementArray);
-                    var offerElement = JSON.parse(offerElementArray);
-                    console.log(offerElement.distance);
-                    console.log(offerElement.offer);
-                    var offer = JSON.parse(offerElement.offer);
+                offers.forEach(function(offerElementWithDistanceArray){
+                    var offerElementWithDistance = JSON.parse(offerElementWithDistanceArray);
+
+                    var offer = JSON.parse(offerElementWithDistance.offer);
                     var tag = JSON.parse(offer.tag);
                     var plz = JSON.parse(offer.plz);
-                    var distance = JSON.parse(offerElement.distance);
-
-                    console.log(offer);
-                    console.log(tag);
-                    console.log(plz);
+                    var distance = JSON.parse(offerElementWithDistance.distance);
 
                     var image = '<img src="" id="offerImage">';
                     if(offer.picture){
