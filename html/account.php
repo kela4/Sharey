@@ -156,7 +156,6 @@
                                     //print own offers:
                                     if(!empty($offers)){
                                         foreach($offers as $offer){
-                                            //id noch in erstes div
                                             echo '      <div id="'.$offer->getOfferID().'" class="col-auto m-3 card offerCardSize" style="background-color:'.$offer->getTag()->getColor().'">
                                                             <div id="cardContent">
                                                                 <div class="row">
