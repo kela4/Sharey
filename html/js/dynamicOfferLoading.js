@@ -33,6 +33,11 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
                     console.log(tag);
                     console.log(plz);
 
+                    var image = '<img src="" id="offerImage">';
+                    if(offer.picture){
+                        image = '<img src="data:image/jpeg;base64,' + offer.picture + '" id="offerImage">';
+                    }
+
                     //print offers 
                     offerContainer.append(' <a id="' + offer.offerID + '" data-toggle="modal" data-target="#offerModal">'+
                                                 '<div class="col-auto m-3 card" id="card" style="background-color:' + tag.color + '">'+
@@ -55,7 +60,7 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
                                                                     '</div>' +
                                                                     '<div class="col-auto">' +
                                                                         '<div id="cityDiv">' +
-                                                                            '<span class="whiteText">Mosbach</span>' +
+                                                                            '<span class="whiteText">' + plz.location + '</span>' +
                                                                             '<br>' +
                                                                             '<span class="whiteText">5 km</span>' +
                                                                         '</div>' +
@@ -64,7 +69,7 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
                                                             '</div>' +
                                                             '<div class="col-5">' +
                                                                 '<br> <br>' +
-                                                                '<img src="data:image/jpeg;base64,' + offer.picture + '" id="offerImage">' +
+                                                                image +
                                                             '</div>' +
                                                         '</div>' +
                                                         '<div class="row">' +
