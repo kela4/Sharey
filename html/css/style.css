@@ -297,7 +297,7 @@ a[data-toggle="collapse"] {
     padding-top: 100px;
 }
 
-#offerCardSize {
+.offerCardSize {
     height: 300px;
     width: 300px;
 }
