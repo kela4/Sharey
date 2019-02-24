@@ -50,7 +50,8 @@ class Offer{
         $offers = [];
         
         while(($data = mysqli_fetch_array($res)) != false){
-            $offers[] = new Offer($data['or_active'], new DateTime($data['or_creationDate']), utf8_encode($data['or_description']), new DateTime($data['or_mhd']), $data['or_offerID'], $data['or_picture'], new PLZ(utf8_encode($data['pz_location']), $data['pz_plz'], $data['pz_plzID']), $data['or_report'], new Tag($data['tg_color'], utf8_encode($data['tg_description']), $data['tg_tagID']), utf8_encode($data['or_title']), $data['or_ocID']);
+            //$offers[] = new Offer($data['or_active'], new DateTime($data['or_creationDate']), utf8_encode($data['or_description']), new DateTime($data['or_mhd']), $data['or_offerID'], $data['or_picture'], new PLZ(utf8_encode($data['pz_location']), $data['pz_plz'], $data['pz_plzID']), $data['or_report'], new Tag($data['tg_color'], utf8_encode($data['tg_description']), $data['tg_tagID']), utf8_encode($data['or_title']), $data['or_ocID']);
+            $offers[] = new Offer($data['or_active'], new DateTime($data['or_creationDate']), $data['or_description'], new DateTime($data['or_mhd']), $data['or_offerID'], $data['or_picture'], new PLZ($data['pz_location'], $data['pz_plz'], $data['pz_plzID']), $data['or_report'], new Tag($data['tg_color'], $data['tg_description'], $data['tg_tagID']), $data['or_title'], $data['or_ocID']);
         }
 
         return $offers;
