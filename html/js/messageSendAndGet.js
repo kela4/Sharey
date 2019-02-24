@@ -28,6 +28,7 @@ $(document).ready(function(){
                                                     '<br>');
 
                         $('#newMessageText').val("");
+                        scrollToBottom();
 
                         //console.log( JSON.stringify(data) );
                     }else{
@@ -66,6 +67,7 @@ $(document).ready(function(){
                                                             '</div>' +
                                                         '</div>' +
                                                         '<br>');
+                            scrollToBottom();
                         });
                     }
 
@@ -74,5 +76,9 @@ $(document).ready(function(){
                     alert("Die Verbindung wurde leider getrennt. Bitte prüfe, ob du eine Internetverbindung hast und lade die Seite neu.");
                 }
             });
+        }
+
+        function scrollToBottom(){
+            $('#bottomDivForScrolling').scrollIntoView();
         }
 });
