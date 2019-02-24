@@ -22,11 +22,11 @@
 
 			<h3>Eine kurze Anleitung, wie du mitmachen kannst!</h3>
 			
-				<div class="col-12 col-md-3 text-center">
+				<div class="col-12 col-md-3 text-center", style="float:left">
                     <img src="images/1.png" class="img-fluid rounded" alt="1" />
                 </div>
 
-                <div class="col-12 col-md-10">
+                <div class="col-12 col-md-8">
 
                     <p>
                         <br/>Auf dieser Plattform kannst du dazu beitragen, die Verschwendung von Ressourcen auf unserer Erde
@@ -40,11 +40,11 @@
 
                 </div>
 				
-				<div class="col-12 col-md-3 text-center">
+				<div class="col-12 col-md-3 text-center", style="float:left">
                     <img src="images/2.png" class="img-fluid rounded" alt="2" />
                 </div>
 
-				<div class="col-12 col-md-10">
+				<div class="col-12 col-md-8">
 
                     <p>
                         Nun siehst du ein leeres Angebot, dass du mit deinen Angaben ausfüllst.
@@ -57,6 +57,24 @@
 					</p>
 
                 </div>
+				
+				
+				<div class="col-12 col-md-3 text-center", style="float:left">
+                    <img src="images/3.png" class="img-fluid rounded" alt="3" />
+                </div>
+
+				<div class="col-12 col-md-8">
+
+                    <p>
+                        Ein Bild sagt mehr als tausend Worte. Desahlb geben wir dir auch die Möglichkeit dein Angebot mit einem Bild zu vervollständigen.
+                    </p>
+            
+                    <p>
+                        Achte darauf, dass das Produkt gut zu sehen und scharf ist. Das Bild darf dabei nicht größer als 3 MB sein. 
+					</p>
+
+                </div>
+				
 				
             </div>
 
