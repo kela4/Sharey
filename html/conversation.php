@@ -92,6 +92,7 @@
                 <div class="container">
                     <div class="input-group">
                         <textarea id="newMessageText" class="form-control" rows="1"></textarea>
+                        <?php echo '<input id="conIDMessage" hidden value="'.$_POST['conID'].'"/>'; ?>
                         <button id="sendButton" class="btn btn-secondary float-right">Senden</button>
                     </div>
                 </div>
@@ -103,6 +104,7 @@
     <?php
         include('basicsiteelements/scripts.php');
     ?>
+    <script type="text/javascript" src="js/messageSendAndGet.js"></script>
 </body>
 
 </html>

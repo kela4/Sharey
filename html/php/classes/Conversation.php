@@ -52,18 +52,24 @@ class Conversation{
 
     /**
      * return unread messages if conversation is open
+     * for this part, the $requestUserID is needed, cause of only messages will return, which the requestUser hasn't readed yet
      */
     public static function getUnreadMessages(int $conID, int $requestUser){
-        $connection = mysqli_connect('localhost', 'root', '');
-        mysqli_select_db($connection, 'shareyvorlage');
+        require('dbconnect.php');
+        mysqli_select_db($connection, 'db_sharey');
         
-        $query = "SELECT * FROM message WHERE conID ='".$conID."' AND messageRead = false AND senderID != ".$requestUser." ORDER BY sendDate;"; //aSC/DESC???
+        $query = "SELECT * 
+                    FROM tbl_message 
+                    WHERE me_conID = ".$conID." 
+                    AND me_messageRead = false 
+                    AND me_senderID != ".$requestUser."
+                    ORDER BY me_sendDate;";
         $res = mysqli_query($connection, $query);
 
         $messages = [];
         
         while(($data = mysqli_fetch_array($res)) != false){
-            $messages[] = new Message($data['conID'], $data['content'], new DateTime($data['sendDate']), $data['messageID'], $data['messageRead'], $data['senderID']);
+            $messages[] = new Message($data['me_conID'], $data['me_content'], new DateTime($data['me_sendDate']), $data['me_messageID'], $data['me_messageRead'], $data['me_senderID']);
         }
 
         markMessagesAsReaded($messages);

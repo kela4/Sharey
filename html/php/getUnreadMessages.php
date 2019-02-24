@@ -9,27 +9,39 @@ require_once('classes/Conversation.php');
 
 session_start();
 if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
-    $conID = $_POST['conID'];
-    $messages = Conversation::getUnreadMessages($conID, $_SESSION['user']->getUserID());
-       
-    if(!empty($messages)){
-        $jsonMessages = [];
+    if(isset($_POST['conID']) && !empty($_POST['conID'])){
+        $conID = $_POST['conID'];
+        $messages = Conversation::getUnreadMessages($conID, $_SESSION['user']->getUserID());
+        
+        if(!empty($messages)){
+            $jsonMessages = [];
 
-        foreach($messages as $message){
-            $jsonMessages[] = $message->toJson();
-        }
+            foreach($messages as $message){
+                $jsonMessages[] = $message->toJson();
+            }
 
-        $return = json_encode(array(
-            'newMessage' => true,
-            'messages' => json_encode($jsonMessages)));
+            $return = json_encode(array(
+                'newMessage' => true,
+                'messages' => json_encode($jsonMessages)));
 
-        echo $return;
+            echo $return;
+        }else{
+            $return = json_encode(array(
+                'newMessage' => false));
+
+            echo $return;
+        }    
     }else{
         $return = json_encode(array(
             'newMessage' => false));
 
         echo $return;
-    }    
+    }
+}else{
+    $return = json_encode(array(
+        'newMessage' => false));
+
+    echo $return;
 }
 
 ?>

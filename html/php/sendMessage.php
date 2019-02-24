@@ -9,17 +9,37 @@ require_once('classes/Conversation.php');
 
 session_start();
 if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
-    $content = $_POST['messageContent'];
-    $conID = intval($_POST['conID']);
+    if(isset($_POST['messageContent']) && !empty($_POST['messageContent']) 
+        && isset($_POST['conID']) && !empty($_POST['conID'])){
+            $content = $_POST['messageContent'];
+            $conID = intval($_POST['conID']);
 
-    $message = $_SESSION['user']->sendMessage($conID, $content);
-    //$message = "test";
+            $message = $_SESSION['user']->sendMessage($conID, $content);
 
-    if(!empty($message)){
-        echo $message->toJson();
+            if(!empty($message)){
+                $return = json_encode(array(
+                    'messageSended' => true,
+                    'message' => $message->toJson()));
+            
+                echo $return;
+            }else{
+                $return = json_encode(array(
+                    'messageSended' => false));
+            
+                echo $return;
+            }   
     }else{
-        die(json_encode(array('message' => 'ERROR', 'code' => 1337)));
-    }    
+        $return = json_encode(array(
+            'messageSended' => false));
+    
+        echo $return;
+    }
+     
+}else{
+    $return = json_encode(array(
+        'messageSended' => false));
+
+    echo $return;
 }
 
 ?>

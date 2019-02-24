@@ -92,7 +92,7 @@ class User{
         $message = Message::createMessage($this->userID, $conID, $content);
 
         if($message == false){
-            return false;
+            return null;
         }else{
             return $message;
         }

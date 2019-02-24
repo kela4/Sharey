@@ -19,7 +19,7 @@ $(document).ready(function(){
         dataType: 'json',
         type: 'post',
         success: function(data){
-            if(data){
+            if(data != false){
                 data.forEach(function(tagElement) {
                     var tag = JSON.parse(tagElement);
                     tagSelectionNewOffer.append('<option value="' + tag.tagID + '">' + tag.description + '</option>');
