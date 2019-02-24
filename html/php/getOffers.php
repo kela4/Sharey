@@ -33,7 +33,7 @@ if(!empty($offersWithDistance)){
     $jsonOffers = [];
 
     foreach($offersWithDistance as $offerArray){
-        $jsonOffers[] = json_decode(array(
+        $jsonOffers[] = json_encode(array(
             'offer' => $offerArray["offer"]->toJson(),
             'distance' => $offerArray["distanceFromStartPoint"]
         ));
