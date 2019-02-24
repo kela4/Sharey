@@ -26,8 +26,9 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
                 var offers = JSON.parse(data.offers);
                 console.log(offers);
 
-                offers.forEach(function(offerElement){
-                    console.log(offerElement);
+                offers.forEach(function(offerElementArray){
+                    console.log(offerElementArray);
+                    var offerElement = JSON.parse(offerElementArray);
                     console.log(offerElement.distance);
                     console.log(offerElement.offer);
                     var offer = JSON.parse(offerElement.offer);
