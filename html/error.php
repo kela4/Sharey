@@ -22,6 +22,11 @@
         <div class="container">
             <h1>Da ist wohl etwas schief gegangen...</h1>
             <p>Bitte versuche es erneut.</p>
+            <?php
+                if(isset($_GET['errormessage']) && !empty($_GET['errormessage'])){
+                    echo '<p>'.$_GET['errormessage'].'</p>';
+                }
+            ?>
         </div>
     </div>
     <?php
