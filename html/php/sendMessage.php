@@ -30,14 +30,14 @@ if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
             }   
     }else{
         $return = json_encode(array(
-            'messageSended' => false));
+            'messageSended' => "no message data"));
     
         echo $return;
     }
      
 }else{
     $return = json_encode(array(
-        'messageSended' => false));
+        'messageSended' => "no user"));
 
     echo $return;
 }
