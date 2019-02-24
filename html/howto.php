@@ -22,7 +22,7 @@
 
 			<h3>Eine kurze Anleitung, wie du mitmachen kannst!</h3>
 
-                <div class="col-12 col-md-7", >
+                <div class="col-12 col-md-7", style="float:right" >
 
                     <p>
                         Auf dieser Plattform kannst du dazu beitragen, die Verschwendung von Ressourcen auf unserer Erde
