@@ -40,6 +40,25 @@
 
                 </div>
 
+				<div class="col-12 col-md-5 text-center">
+                    <img src="images/2.png" class="img-fluid rounded" alt="2" />
+                </div>
+
+                <div class="col-12 col-md-7">
+
+                    <p>
+                        Nun siehst du ein leeres Angebot, dass du mit deinen Angaben ausfüllst.
+						Beschreibe am besten kurz, was du anbieten möchtest und warum. Auch den Zustand sollstest du beschreiben, als z.B. ob das Produkt ungeöffnet oder geöffnet ist.
+                    </p>
+            
+                    <p>
+                        Wichtig ist auch, dass du das Mindesthaltbarkeitsdatum  (MHD) angibst. 
+						Keine Angst, nur weil das MHD abgelaufen ist, werden wir dein Angebot nicht löschen. Denn fast immer sind Lebensmittel und Drogerieprodukte auch nach dem MHD noch genießbar.
+					</p>
+
+                </div>
+				
+				
             </div>
 
         </div>
