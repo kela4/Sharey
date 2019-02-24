@@ -25,9 +25,10 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
                 var offers = JSON.parse(data.offers);
 
                 offers.forEach(function(offerElement){
-                    var offer = JSON.parse(offerElement);
+                    var offer = JSON.parse(offerElement.offer);
                     var tag = JSON.parse(offer.tag);
                     var plz = JSON.parse(offer.plz);
+                    var distance = JSON.parse(offerElement.distance);
 
                     console.log(offer);
                     console.log(tag);
@@ -62,7 +63,7 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
                                                                         '<div id="cityDiv">' +
                                                                             '<span class="whiteText">' + plz.location + '</span>' +
                                                                             '<br>' +
-                                                                            '<span class="whiteText">5 km</span>' +
+                                                                            '<span class="whiteText">' + distance + ' km</span>' +
                                                                         '</div>' +
                                                                     '</div>' +
                                                                 '</div>' +

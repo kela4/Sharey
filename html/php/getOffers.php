@@ -27,13 +27,16 @@ if(isset($_POST['tagID']) && !empty($_POST['tagID'])){
     $tagID = $_POST['tagID'];
 }
 
-$offers = Offer::setSearch($searchTerm, $plzID, $surrounding, $tagID);
+$offersWithDistance = Offer::setSearch($searchTerm, $plzID, $surrounding, $tagID);
 
-if(!empty($offers)){
+if(!empty($offersWithDistance)){
     $jsonOffers = [];
 
-    foreach($offers as $offer){
-        $jsonOffers[] = $offer->toJson();
+    foreach($offersWithDistance as $offerArray){
+        $jsonOffers[] = json_decode(array(
+            'offer' => $offerArray["offer"]->toJson(),
+            'distance' => $offerArray["distanceFromStartPoint"]
+        ));
     }
 
     $return = json_encode(array(
