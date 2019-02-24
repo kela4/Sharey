@@ -31,7 +31,7 @@ class Message{
         mysqli_select_db($connection, 'db_sharey');
         
         $query = "
-                    INSERT INTO tbl_message(me_conID, me_content, me_sendDate, me_messageRead, me_senderID`) 
+                    INSERT INTO tbl_message(me_conID, me_content, me_sendDate, me_messageRead, me_senderID) 
                     VALUES (".$conID.", '".$content."', '".$sendDate."', false, ".$senderID.");";
         
         $success = mysqli_query($connection, $query);
