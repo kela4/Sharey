@@ -22,6 +22,7 @@ $(document).ready(function(){
                     if(data.messageSended){
                         var messagesContainer = $('#messagesContainer');
                         var message = JSON.parse(data.message);
+                        console.log(message);
                         messagesContainer.append('  <div class="row justify-content-end">' +
                                                         '<div class="card col-sm-8 col-9" id="senderDark">' +
                                                             '<p>' + message.content + '</p>' +
