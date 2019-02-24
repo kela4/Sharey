@@ -22,11 +22,7 @@
 
 			<h3>Eine kurze Anleitung, wie du mitmachen kannst!</h3>
 
-                <div class="col-12 col-md-5 text-center">
-                    <img src="images/1.png" class="img-fluid rounded" alt="1" />
-                </div>
-
-                <div class="col-12 col-md-7", style="float:right">
+                <div class="col-12 col-md-7", >
 
                     <p>
                         Auf dieser Plattform kannst du dazu beitragen, die Verschwendung von Ressourcen auf unserer Erde
@@ -38,6 +34,10 @@
 						Falls du noch nicht eingeloggt bist, erhälst du nun die Möglichkeit, dich zu registrieren oder einzuloggen.
                     </p>
 
+                </div>
+				
+				<div class="col-12 col-md-5 text-center">
+                    <img src="images/1.png" class="img-fluid rounded" alt="1" />
                 </div>
 
 				<div class="col-12 col-md-5 text-center">
