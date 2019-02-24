@@ -40,7 +40,7 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
 
                     //print offers 
                     offerContainer.append(' <a id="' + offer.offerID + '" data-toggle="modal" data-target="#offerModal">'+
-                                                '<div class="col-auto col-sm-auto col-md-auto col-lg-auto col-xl-auto m-3 card" id="card" style="background-color:' + tag.color + '">'+
+                                                '<div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 m-3 card" id="card" style="background-color:' + tag.color + '">'+
                                                     '<div id="cardContent">'+
                                                         '<div class="row">'+
                                                             '<div class="col-7">' +
