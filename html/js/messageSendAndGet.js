@@ -16,7 +16,7 @@ $(document).ready(function(){
                 dataType: 'json',
                 type: 'post',
                 success: function(data){
-
+                    console.log(data.messageSended);
                     if(data.messageSended){
                         var messagesContainer = $('#messagesContainer');
                         var message = JSON.parse(data.message);
