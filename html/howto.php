@@ -21,15 +21,15 @@
             <h1>How To</h1>
 
 			<h3>Eine kurze Anleitung, wie du mitmachen kannst!</h3>
-
-                <div class="col-12 col-md-5 text-center">
+			
+				<div class="col-12 col-md-3 text-center">
                     <img src="images/1.png" class="img-fluid rounded" alt="1" />
                 </div>
 
-                <div class="col-12 col-md-7">
+                <div class="col-12 col-md-10">
 
                     <p>
-                        Auf dieser Plattform kannst du dazu beitragen, die Verschwendung von Ressourcen auf unserer Erde
+                        <br/>Auf dieser Plattform kannst du dazu beitragen, die Verschwendung von Ressourcen auf unserer Erde
                         zu reduzieren. Hier erklären wir dir Schritt für Schritt, wie du ein Angebot anlegen kannst und es übergibst.
                     </p>
             
@@ -39,12 +39,12 @@
                     </p>
 
                 </div>
-
-				<div class="col-12 col-md-5 text-center">
+				
+				<div class="col-12 col-md-3 text-center">
                     <img src="images/2.png" class="img-fluid rounded" alt="2" />
                 </div>
 
-                <div class="col-12 col-md-7">
+				<div class="col-12 col-md-10">
 
                     <p>
                         Nun siehst du ein leeres Angebot, dass du mit deinen Angaben ausfüllst.
@@ -57,7 +57,6 @@
 					</p>
 
                 </div>
-				
 				
             </div>
 
