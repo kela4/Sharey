@@ -63,7 +63,7 @@ class Conversation{
         $messages = [];
         
         while(($data = mysqli_fetch_array($res)) != false){
-            $messages[] = new Message($data['conID'], utf8_encode($data['content']), new DateTime($data['sendDate']), $data['messageID'], $data['messageRead'], $data['senderID']);
+            $messages[] = new Message($data['conID'], $data['content'], new DateTime($data['sendDate']), $data['messageID'], $data['messageRead'], $data['senderID']);
         }
 
         markMessagesAsReaded($messages);
@@ -89,7 +89,7 @@ class Conversation{
         $messages = [];
         
         while(($data = mysqli_fetch_array($res)) != false){
-            $messages[] = new Message($data['me_conID'], utf8_encode($data['me_content']), new DateTime($data['me_sendDate']), $data['me_messageID'], $data['me_messageRead'], $data['me_senderID']);
+            $messages[] = new Message($data['me_conID'], $data['me_content'], new DateTime($data['me_sendDate']), $data['me_messageID'], $data['me_messageRead'], $data['me_senderID']);
         }
 
         //mark all unread messages as readed:
