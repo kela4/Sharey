@@ -68,7 +68,7 @@ class Offer{
             'description' => $this->getDescription(),
             'mhd' => $this->getMhd(),
             'offerID' => $this->getOfferID(),
-            'picture' => $this->getPicture(),
+            'picture' => '<img src="data:image/jpeg;base64,'.base64_encode( $this->getPicture() ).'" id="offerImage">',
             'plz' => $this->getPLZ()->toJson(),
             'report' => $this->getReport(),
             'tag' => $this->getTag()->toJson(),
