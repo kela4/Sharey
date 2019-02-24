@@ -72,7 +72,8 @@
                     </p>
             
                     <p>
-                        Achte darauf, dass das Produkt gut zu sehen und scharf ist. Das Bild darf dabei nicht größer als 3 MB sein. 
+                        Achte darauf, dass das Produkt gut zu sehen und scharf ist. Außerdem sollte es gut ausgeleuchtet sein. Und je weniger drumherum sichtbar ist, desto besser für die Aufmerksamkeit auf dein Angebot.
+						Das Bild darf dabei eine Größe von 3 MB nicht überschreiten, damit wir dir die beste Performance von Sharey garantieren können.
 					</p>
 					<br/>
 
