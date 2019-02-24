@@ -20,10 +20,10 @@ $(document).ready(function(){
                     console.log(data.messageSended);
                     console.log(data.message);
                     if(data.messageSended){
-                        var messagesContainer = $('#messagesContainer');
+                        var messageArea = $('#messageArea');
                         var message = JSON.parse(data.message);
                         console.log(message);
-                        messagesContainer.append('  <div class="row justify-content-end">' +
+                        messageArea.append('  <div class="row justify-content-end">' +
                                                         '<div class="card col-sm-8 col-9" id="senderDark">' +
                                                             '<p>' + message.content + '</p>' +
                                                             '<div class="float-right" id="timestampMessage">' + message.date.date + '</div>' +
@@ -58,12 +58,12 @@ $(document).ready(function(){
                 success: function(data){
 
                     if(data.newMessage){
-                        var messagesContainer = $('#messagesContainer');
+                        var messageArea = $('#messageArea');
                         var messages = JSON.parse(data.messages);
 
                         messages.forEach(function(messageElement) {
                             var message = JSON.parse(messageElement);
-                            messagesContainer.append('  <div class="row">' +
+                            messageArea.append('  <div class="row">' +
                                                             '<div class="card col-sm-8 col-9" id="senderLight">' +
                                                                 '<p>' + message.content + '</p>' +
                                                                 '<div class="float-right" id="timestampMessage">' + message.date.date + '</div>' +
