@@ -2,8 +2,18 @@ $(document).ready(function(){
     offerLoading();
 });
 
-function offerLoading(){ //hier noch Parameter searchTerm,...
-    //load offers from DB
+function offerLoading(){ //search- and filterparameters not implemented yet,...
+    //loading offers from DB
+
+    //get html-Elements
+    var loadingOffers = $('#loadingOffers');
+    var offerContainer = $('#offerContainer');
+
+    //clear offerContainer
+    offerContainer.empty();
+
+    //show loadingOffers-ProgressBar
+    loadingOffers.css('display', '');
 
     $.ajax({
         url: '../php/getOffers.php',
@@ -11,10 +21,76 @@ function offerLoading(){ //hier noch Parameter searchTerm,...
         //data: {searchTerm: searchTerm, plzID: plzID, surrounding: surrounding, tagID: tagID},
         type: 'post',
         success: function(data){
-            console.log(data);
+            if(data.offersAvailable){
+                var offers = JSON.parse(data.offers);
+                console.log(offers);
 
-            //show to messages/conversation for implementation-example
+                offers.forEach(function(offerElement){
+                    var offer = JSON.parse(offerElement);
+                    var tag = JSON.parse(offer.tag);
+                    var plz = JSON.parse(offer.plz);
 
+                    console.log(offer);
+                    console.log(tag);
+                    console.log(plz);
+
+
+                    //print offers 
+                    /*for(var i = 0; i<29; i++){
+                        offerContainer.append(' <a id="' + exampleOffer['id'] + '" data-toggle="modal" data-target="#offerModal">'+
+                                                    '<div class="col-auto m-3 card" id="card">'+
+                                                        '<div id="cardContent">'+
+                                                            '<div class="row">'+
+                                                                '<div class="col-7">' +
+                                                                    '<div class="row">' +
+                                                                        '<div id="offerTagDiv">' +
+                                                                            '<svg width="150px" height="55px">' +
+                                                                                '<polygon points="10,30 30,10 140,10 140,50 30,50" id="offerTagPolygon" />' +
+                                                                                '<text x="40" y="36" fill="white">' + exampleOffer['tag'] + '</text>' +
+                                                                            '</svg>' +
+                                                                        '</div>' +
+                                                                    '</div>' +
+                                                                    '<div class="row">' +
+                                                                        '<div class="=col-auto">' +
+                                                                            '<div id="locationTagDiv">' +
+                                                                                '<i class="fas fa-map-marker-alt" id="offerLocationTag"></i>' +
+                                                                            '</div>' +
+                                                                        '</div>' +
+                                                                        '<div class="col-auto">' +
+                                                                            '<div id="cityDiv">' +
+                                                                                '<span class="whiteText">Mosbach</span>' +
+                                                                                '<br>' +
+                                                                                '<span class="whiteText">' + exampleOffer['km'] + ' km</span>' +
+                                                                            '</div>' +
+                                                                        '</div>' +
+                                                                    '</div>' +
+                                                                '</div>' +
+                                                                '<div class="col-5">' +
+                                                                    '<br> <br>' +
+                                                                    '<img src="' + exampleOffer['imgSrc'] + '" id="offerImage">' +
+                                                                '</div>' +
+                                                            '</div>' +
+                                                            '<div class="row">' +
+                                                                '<div class="col-12">' +
+                                                                    '<div id="offerDescriptionDiv">' +
+                                                                        '<h5 class="whiteText">' + exampleOffer['title'] + '</h5>' +
+                                                                        '<p class="whiteText">' + exampleOffer['description'] + '</p>' +
+                                                                    '</div>' +
+                                                                '</div>' +
+                                                            '</div>' +
+                                                        '</div>' +
+                                                    '</div>' +
+                                                '</a>');
+                    }*/
+
+                });
+
+            }else{
+                offerContainer.append('<p>Leider sind keine passenden Angebote vorhanden. Versuche doch mal eine andere Such- und Filtereinschränkung.</p>')
+            }
+
+            //hide loadingOffers-ProgressBar
+            loadingOffers.css('display', 'none');
         },
         error: function(err){
             alert('Fehler beim Laden der Offers.');
