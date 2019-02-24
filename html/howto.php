@@ -21,8 +21,12 @@
             <h1>How To</h1>
 
 			<h3>Eine kurze Anleitung, wie du mitmachen kannst!</h3>
+			
+				<div class="col-12 col-md-5 text-center">
+                    <img src="images/1.png" class="img-fluid rounded" alt="1" />
+                </div>
 
-                <div class="col-12 col-md-7", style="float:right" >
+                <div class="col-12 col-md-7">
 
                     <p>
                         <br/>Auf dieser Plattform kannst du dazu beitragen, die Verschwendung von Ressourcen auf unserer Erde
@@ -37,10 +41,10 @@
                 </div>
 				
 				<div class="col-12 col-md-5 text-center">
-                    <img src="images/1.png" class="img-fluid rounded" alt="1" />
+                    <img src="images/2.png" class="img-fluid rounded" alt="2" />
                 </div>
 
-				<div class="col-12 col-md-7", style="float:right">
+				<div class="col-12 col-md-7">
 
                     <p>
                         Nun siehst du ein leeres Angebot, dass du mit deinen Angaben ausfüllst.
@@ -52,10 +56,6 @@
 						Keine Angst, nur weil das MHD abgelaufen ist, werden wir dein Angebot nicht löschen. Denn fast immer sind Lebensmittel und Drogerieprodukte auch nach dem MHD noch genießbar.
 					</p>
 
-                </div>
-				
-				<div class="col-12 col-md-5 text-center">
-                    <img src="images/2.png" class="img-fluid rounded" alt="2" />
                 </div>
 				
             </div>
