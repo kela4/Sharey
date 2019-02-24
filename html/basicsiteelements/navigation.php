@@ -45,7 +45,7 @@
             <a href="about.php" title="Über uns">Über uns</a>
         </li>
         <li>
-            <a href="howto.php" title="How To">Über uns</a>
+            <a href="howto.php" title="How To">How To</a>
         </li>
         <li>
             <a href="contact.php" title="Kontakt">Kontakt</a>
