@@ -461,6 +461,10 @@ a[data-toggle="collapse"] {
     justify-content: center;
 }
 
+.offerSiteContainer {
+    margin-bottom: 85px;
+}
+
 #newOffer {
     position: fixed;
     bottom: 10px;
