@@ -101,7 +101,7 @@ function openModal(offerID, distance){
     //ggf noch ein loading-button
 
     $.ajax({
-        url: '../php/getOffer.php',
+        url: 'php/getOffer.php',
         dataType: 'json',
         data: {offerID: 1},
         type: 'post',
