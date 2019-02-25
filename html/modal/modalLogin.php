@@ -14,7 +14,7 @@
                     <div class="form-group">
                         <label for="email">E-Mail</label>
                         <input type="email" required class="form-control" id="email"
-                            placeholder="max.mustermann@beispiel.de" name="mail">
+                            placeholder="max.mustermann@beispiel.de" name="mail" tabindex="0">
                     </div>
                     <div class="form-group">
                         <label for="password">Passwort</label>
