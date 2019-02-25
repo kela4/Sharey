@@ -164,7 +164,7 @@ function showInterest(offerID){
                 //hier ajax zu interesseZeigen.php, dann Rückmeldung true/false obs geklappt hat,
                 //bei false --> Info, dass ein Fehler aufgetreten ist, 
                 //bei true --> weiterleitung auf account-Seite
-            }{
+            }else{
                 $('#loginModal').modal('show');
             }
         },
