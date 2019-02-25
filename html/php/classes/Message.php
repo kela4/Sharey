@@ -60,6 +60,12 @@ class Message{
         return $success;
     }
 
+    public static function sendConversationDeletedMessage(int $conID, int $senderID){
+        $content = "Diese Konversation wurde gelöscht. ~ diese Nachricht wurde automatisch vom System versendet ~";
+        $success = Message::createMessage($senderID, $conID, $content);
+        return $success;
+    }
+
     public function toJson() {
         return json_encode(array(
             'conID' => $this->getConID(),
