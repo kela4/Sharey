@@ -162,7 +162,7 @@ function showInterest(offerID){
             alert('passt ' + data);
         },
         error: function(err){
-            alert('Es ist ein Problem aufgetreten. Bitte erneut versuchen. ' + JSON.stringify(err));
+            alert('Es ist ein Problem aufgetreten. Bitte erneut versuchen.');
         }
     });
 }
