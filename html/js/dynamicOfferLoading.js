@@ -106,6 +106,7 @@ function openModal(offerID, distance){
         data: {offerID: offerID},
         type: 'post',
         success: function(data){
+            console.log(data);
             if(data.offerAvailable){
                 var offer = JSON.parse(data.offer);
                 var tag = JSON.parse(offer.tag);
