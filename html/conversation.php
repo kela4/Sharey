@@ -24,15 +24,14 @@
     <div class="content">
         <!-- Div content for padding-top (header) -->
 
-        <?php
-            if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
-                if(isset($_POST['conID']) && !empty($_POST['conID'])){
-                    $conversation = Conversation::getConversation(intval($_POST['conID']));
-        ?>
-
         <div class="container">
             <div id="paddingtopMobil"></div>
 
+            <?php
+        if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
+            if(isset($_POST['conID']) && !empty($_POST['conID'])){
+                $conversation = Conversation::getConversation(intval($_POST['conID']));
+        ?>
 
             <div class="container fixed-top" id="conversationButtons">
                 <div class="row">
@@ -98,15 +97,14 @@
                 </div>
             </div>
 
-        </div>
-        <?php
-                }else{
-                    header("Location: error.php");
-                }    
+            <?php
             }else{
                 echo '<br><p>Du bist nicht eingeloggt. Bitte <a data-toggle="modal" data-target="#loginModal" title="Login"><strong>melde dich an</strong></a>, um auf deine Nachrichten zuzugreifen.</p>';
             }
         ?>
+
+        </div>
+
     </div>
     <?php
         include('basicsiteelements/scripts.php');

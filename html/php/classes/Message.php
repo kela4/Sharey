@@ -49,13 +49,15 @@ class Message{
     }
 
     public static function sendAutoStartMessage(int $conID, int $senderID){
-        $content = "Hallo, ich habe Interesse an deinem Angebot. <diese Nachricht wurde automatisch vom System versendet>";
+        $content = "Hallo, ich habe Interesse an deinem Angebot. ~ diese Nachricht wurde automatisch vom System versendet ~";
         $success = Message::createMessage($senderID, $conID, $content);
         return $success;
     }
 
-    public function sendInfoMessage(int $messageID){ 
-        return true;
+    public static function sendOfferDeletedMessage(int $conID, int $senderID){ 
+        $content = "Das Angebot wurde vom Ersteller entfernt. ~ diese Nachricht wurde automatisch vom System versendet ~";
+        $success = Message::createMessage($senderID, $conID, $content);
+        return $success;
     }
 
     public function toJson() {

@@ -127,12 +127,13 @@ class User{
         mysqli_select_db($connection, 'db_sharey');
         
         $query = "SELECT o.*, p.pz_plz, p.pz_location, p.pz_plzID, t.tg_description AS tagDescription, t.tg_color AS tagColor, t.tg_tagID AS tagID 
-                    FROM `tbl_offer` AS o 
+                    FROM tbl_offer AS o 
                     JOIN tbl_tag AS t 
                         ON o.or_tagID = t.tg_tagID 
                     JOIN tbl_plz AS p 
                         ON o.or_plzID = p.pz_plzID 
-                    WHERE o.or_ocID = ".$this->getUserID()." AND o.or_active = true;";
+                    WHERE o.or_ocID = ".$this->getUserID()." AND o.or_active = true
+                    ORDER BY o.or_creationDate DESC;";
 
         $res = mysqli_query($connection, $query);
 
@@ -174,7 +175,7 @@ class User{
                         ON c.cn_offerID = o.or_offerID
                     
                     WHERE (c.cn_oaID = ".$this->getUserID()." OR c.cn_ocID = ".$this->getUserID().")
-                    AND c.cn_active = true
+                    AND (c.cn_active = true OR (m.me_messageRead = 0 AND m.me_senderID != ".$this->getUserID()."))
                     ORDER BY o.or_offerID;"; //order by offerID is important for grouping conversations under an offer
         
         $res = mysqli_query($connection, $query);

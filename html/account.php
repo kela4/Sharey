@@ -14,6 +14,8 @@
     <?php
         include('basicsiteelements/header.php');
     ?>
+
+    <script type="text/javascript" src="js/accountDeleteOffer.js"></script>
 </head>
 
 <body>
@@ -27,6 +29,10 @@
         <!-- Div content for padding-top (header) -->
         <div class="container">
 
+        <?php
+            if(isset($_SESSION['user']) && !empty($_SESSION['user'])){ //only show page if a user is logged in
+        ?>
+
             <div class="container fixed-top" id="conversationButtons">
                 <div class="row">
                     <div class="col-10">
@@ -38,10 +44,7 @@
 
                 </div>
             </div>
-
-            <?php
-            if(isset($_SESSION['user']) && !empty($_SESSION['user'])){ //only show page if a user is logged in
-                ?>
+            
             <div class="row">
 
                 <div class="col-lg-6">
@@ -115,6 +118,13 @@
                                                     $colorTimeStamp = "timestampLight";
                                                 }
 
+                                                //messageText is bold, if last message isn't readed
+                                                $messageUnreaded = "";
+                                                if($conversation->getLastMessage()->getMessageRead() == false  
+                                                    && $conversation->getLastMessage()->getSenderID() != $_SESSION['user']->getUserID()){
+                                                        $messageUnreaded = "font-weight-bold"; //set this class to last message textdiv
+                                                }
+
                                                 //if offer-counter ist ungerade, dann dunkelgrau er div, sonst hellgrau
                                                 echo '<div class="card" id="'.$colorOfferGroup.'">
                                                         <h4>'.$conversation->getOfferTitle().'</h4>
@@ -122,7 +132,7 @@
                                                             <input type="text" hidden required name="conID" value="'.$conversation->getConID().'" />
                                                             <div class="col-12">
                                                                 <button class="btn shadow-none" type="submit">
-                                                                    <div style="display: inline;">@'.$acceptorCounter.' '.$conversation->getLastMessage()->getContent().'</div>
+                                                                    <div class="'.$messageUnreaded.'" style="display: inline;">@'.$acceptorCounter.' '.$conversation->getLastMessage()->getContent().'</div>
                                                                     <div class="float-right" id="'.$colorTimeStamp.'">'.$conversation->getLastMessage()->getDate()->format('Y-m-d H:i').'</div>
                                                                 </button>
                                                             </div>
@@ -148,7 +158,7 @@
                 <div class="col-sm-12">
                     <h1>Eigene Angebote</h1>
                     <div class="container mt-4">
-                        <div class="row justify-content-center">
+                        <div id="offerContainerAccount" class="row justify-content-center">
 
                             <?php 
                                     $offers = $_SESSION['user']->getOwnOffers();
@@ -202,7 +212,7 @@
                                                                             <button type="button" class="buttonSymbols">
                                                                                 <i class="fas fa-edit" id="editSymbol"></i>
                                                                             </button>
-                                                                            <button type="button" class="buttonSymbols">
+                                                                            <button type="button" class="buttonSymbols" onclick="deleteOffer('.$offer->getOfferID().');">
                                                                                 <i class="fas fa-trash" id="deleteSymbol"></i>
                                                                             </button>
                                                                         </div>
@@ -213,7 +223,7 @@
                                                         </div>';
                                         }
                                     }
-                                    ?>
+                            ?>
 
                         </div>
                     </div>
@@ -222,8 +232,7 @@
 
             </div>
 
-
-            <?php                    
+        <?php                    
             }else{
                 echo '<br><p>Du bist nicht eingeloggt. Bitte <a data-toggle="modal" data-target="#loginModal" title="Login"><strong>melde dich an</strong></a>, um auf deinen Account zuzugreifen.<br>
                 </p>';
@@ -231,6 +240,7 @@
         ?>
 
         </div>
+
     </div>
 
     <?php

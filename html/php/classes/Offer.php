@@ -31,7 +31,29 @@ class Offer{
     }
 
     public static function deleteOffer(int $offerID){ 
-        return true;
+        require('dbconnect.php');
+        mysqli_select_db($connection, 'db_sharey');
+        
+        $query = "UPDATE tbl_offer 
+                    SET or_active = false
+                    WHERE or_offerID = ".$offerID.";";
+        
+        $success = mysqli_query($connection, $query);
+
+        if($success){
+            //get all conversations to this offer and delete them and send offer deleted message
+            $conversations = Conversation::getConversationsToOffer($offerID);
+
+            foreach($conversations as $conversation){
+                //set conversation to inactive
+                Conversation::deleteConversation($conversation->getConID());
+                Message::sendOfferDeletedMessage($conversation->getConID(), $conversation->getOcID());
+            }
+
+            return true; //offer was deleted (set to inactive)
+        }else{
+            return false;
+        }
     }
 
     public static function setSearch(string $searchTerm = null, int $plzID = null, int $surrounding = null, int $tagID = null){
