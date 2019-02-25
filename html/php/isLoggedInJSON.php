@@ -4,6 +4,6 @@
     if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
         echo json_encode(true);
     }else{
-        echo json_encode(true);
+        echo json_encode(false);
     }    
 ?>
