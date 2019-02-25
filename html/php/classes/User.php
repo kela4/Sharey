@@ -132,7 +132,8 @@ class User{
                         ON o.or_tagID = t.tg_tagID 
                     JOIN tbl_plz AS p 
                         ON o.or_plzID = p.pz_plzID 
-                    WHERE o.or_ocID = ".$this->getUserID()." AND o.or_active = true;";
+                    WHERE o.or_ocID = ".$this->getUserID()." AND o.or_active = true
+                    ORDER BY `o.or_creationDate` DESC;";
 
         $res = mysqli_query($connection, $query);
 
