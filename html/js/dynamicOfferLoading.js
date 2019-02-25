@@ -39,7 +39,7 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
                     }
 
                     //print offers 
-                    offerContainer.append(' <a onclick="openModal("' + offer.offerID + '");">'+
+                    offerContainer.append(' <a onclick="alert("tsest");">'+
                                                 '<div id="' + offer.offerID + '" class="col-auto m-3 card offerCardSize" style="background-color:' + tag.color + '">'+
                                                     '<div id="cardContent">'+
                                                         '<div class="row">'+
