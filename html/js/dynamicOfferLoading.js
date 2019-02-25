@@ -137,7 +137,7 @@ function openModal(offerID, distance){
                 //add actionbuttons:
                 var offerModalActionButtons = $('#offerModalActionButtons');
                 offerModalActionButtons.empty();
-                offerModalActionButtons.append('<button type="button" class="btn btn-dark float-right" onclick="showInterest(' + offer.offerID +');">Interesse</button>' +
+                offerModalActionButtons.append('<button type="button" class="btn btn-dark float-right" onclick="showInterest(' + offer.offerID + ');">Interesse</button>' +
                                                         '<button type="button" class="btn btn-light float-right whiteText" id="omReportOffer">Melden</button>');
 
                 $('#offerModal').modal('show');
@@ -162,7 +162,7 @@ function showInterest(offerID){
             alert('passt ' + data);
         },
         error: function(err){
-            alert('Es ist ein Problem aufgetreten. Bitte erneut versuchen.');
+            alert('Es ist ein Problem aufgetreten. Bitte erneut versuchen. ' + JSON.stringify(err));
         }
     });
 }

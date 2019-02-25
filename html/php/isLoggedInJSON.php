@@ -1,9 +1,9 @@
 <?php 
-        require_once('classes/User.php');
+    require_once('classes/User.php');
         
     if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
-        echo true;
+        echo json_encode(true);
     }else{
-        echo false;
+        echo json_encode(true);
     }    
 ?>
