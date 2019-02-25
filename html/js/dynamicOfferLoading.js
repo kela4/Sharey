@@ -154,7 +154,7 @@ function openModal(offerID, distance){
 
 function showInterest(offerID){
     $.ajax({
-        url: '../php/isLoggedIn.php',
+        url: '../php/isLoggedInJSON.php',
         data: {offerID: offerID},
         dataType: 'json',
         type: 'post',
