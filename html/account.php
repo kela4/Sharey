@@ -205,7 +205,7 @@
                                                                             <button type="button" class="buttonSymbols">
                                                                                 <i class="fas fa-edit" id="editSymbol"></i>
                                                                             </button>
-                                                                            <button type="button" class="buttonSymbols" onclick="deleteOffer('.$offer->getOfferID().'")>
+                                                                            <button type="button" class="buttonSymbols" onclick="deleteOffer('.$offer->getOfferID().');">
                                                                                 <i class="fas fa-trash" id="deleteSymbol"></i>
                                                                             </button>
                                                                         </div>
