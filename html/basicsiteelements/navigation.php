@@ -82,8 +82,45 @@
         <div id="placeholder"></div>
         <!-- Search Bar -->
         <div class="input-group">
-            <input type="text" id="searchBox" class="form-control" placeholder="Suchbegriff eingeben"
-                title="Suchbegriff eingeben">
+            <div class="input-group-append">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-outline-secondary" data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu keep-open">
+                        <form class="col-12 py-12">
+                            <div class="row">
+                                <div class="col-sm-9">
+                                    <div class="form-group">
+                                        <label>PLZ/Ort</label>
+                                        <input class="form-control" type="text" placeholder="PLZ/Ort">
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <label>Umkreis</label>
+                                    <select class="custom-select">
+
+                                        <option selected>+5</option>
+                                        <option value="1">+10</option>
+                                        <option value="2">+20</option>
+                                        <option value="3">...</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <label>Tag</label>
+                            <select class="custom-select">
+                                <option selected>Alle</option>
+                                <option value="1">Essen</option>
+                                <option value="2">Sonstiges</option>
+                                <option value="3">...</option>
+                            </select>
+                    </div>
+                </div>
+            </div>
+            <input type="text" id="searchBox" class="form-control input-group-append"
+                placeholder=" Suchbegriff eingeben" title="Suchbegriff eingeben">
+
             <div class="input-group-append">
                 <button class="btn btn-secondary" id="search" type="button" title="Suchen und Filtern">
                     <i class="fa fa-search"></i>

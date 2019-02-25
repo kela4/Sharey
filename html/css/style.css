@@ -229,6 +229,9 @@ a[data-toggle="collapse"] {
         width: 250px;
         left: -250px;
     }
+    .dropdown-menu {
+        width: auto !important;
+    }
 }
 
 @media (min-width: 576px) {
@@ -245,6 +248,9 @@ a[data-toggle="collapse"] {
     div #omImage {
         margin-left: -45px;
     }
+    .dropdown-menu {
+        width: 540px !important;
+    }
 }
 
 @media (min-width: 768px) {
@@ -257,6 +263,9 @@ a[data-toggle="collapse"] {
     #sidebar {
         width: 250px;
         left: -250px;
+    }
+    .dropdown-menu {
+        width: 720px !important;
     }
 }
 
@@ -271,11 +280,17 @@ a[data-toggle="collapse"] {
         width: 400px;
         left: -400px;
     }
+    .dropdown-menu {
+        width: 490px !important;
+    }
 }
 
 @media (min-width: 1200px) {
     div #placeholder {
         display: inline;
+    }
+    .dropdown-menu {
+        width: 670px !important;
     }
 }
 

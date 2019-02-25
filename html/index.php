@@ -8,7 +8,19 @@
         //scripts must be loaded before the modals are loaded, because of jQuery is used in the modalNewEntry
         include('basicsiteelements/scripts.php');
     ?>
-    
+
+
+
+    <!-- Filter -->
+
+    <script>
+    $(document).ready(function() {
+        $('.navbar .dropdown-menu').on('click', function(e) {
+            e.stopPropagation();
+        });
+    });
+    </script>
+
 </head>
 
 <body>
@@ -78,6 +90,17 @@
         <!--Script for pagedynamic e.g. dynamic offer loading-->
         <script type="text/javascript" src="js/dynamicOfferLoading.js"></script>
         <script type="text/javascript" src="js/createOfferModalFiller.js"></script>
+
+
+        <!-- Filter -->
+
+
+
+        <script>
+        $('.navbar .dropdown-menu').on('click', function(e) {
+            e.stopPropagation();
+        });
+        </script>
 
 </body>
 
