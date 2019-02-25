@@ -131,6 +131,7 @@ function openModal(offerID, distance){
         },
         error: function(err){
             console.log('error' + err);
+            console.log(JSON.stringify(err));
             alert('Das Angebot kann leider nicht angezeigt werden.');
         }
     });
