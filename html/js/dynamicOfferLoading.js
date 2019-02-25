@@ -101,13 +101,13 @@ function openModal(offerID, distance){
     //ggf noch ein loading-button
 
     $.ajax({
-        url: 'php/getOffer.php',
+        url: '../php/getOffer.php',
         dataType: 'json',
         data: {offerID: 1},
         type: 'post',
         success: function(data){
-            console.log(data);
-            if(data.offerAvailable){
+            console.log(JSON.stringify(data));
+            /*if(data.offerAvailable){
                 var offer = JSON.parse(data.offer);
                 var tag = JSON.parse(offer.tag);
                 var plz = JSON.parse(offer.plz);
@@ -127,7 +127,7 @@ function openModal(offerID, distance){
 
             }else{
                 alert('Das Angebot kann leider nicht angezeigt werden.');
-            }
+            }*/
         },
         error: function(err){
             console.log('error' + err);
