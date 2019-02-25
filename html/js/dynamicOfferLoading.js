@@ -137,7 +137,7 @@ function openModal(offerID, distance){
                 //add actionbuttons:
                 var offerModalActionButtons = $('#offerModalActionButtons');
                 offerModalActionButtons.empty();
-                offerModalActionButtons.append('<button type="submit" class="btn btn-dark float-right">Interesse</button>' +
+                offerModalActionButtons.append('<button type="button" class="btn btn-dark float-right" onclick="showInterest(' + offer.offerID +');">Interesse</button>' +
                                                         '<button type="button" class="btn btn-light float-right whiteText" id="omReportOffer">Melden</button>');
 
                 $('#offerModal').modal('show');
@@ -150,6 +150,19 @@ function openModal(offerID, distance){
             alert('Das Angebot kann leider nicht angezeigt werden.');
         }
     });
+}
 
-    
+function showInterest(offerID){
+    $.ajax({
+        url: '../php/isLoggedIn.php',
+        data: {offerID: offerID},
+        dataType: 'json',
+        type: 'post',
+        success: function(data){
+            alert('passt ' + data);
+        },
+        error: function(err){
+            alert('Es ist ein Problem aufgetreten. Bitte erneut versuchen.');
+        }
+    });
 }
