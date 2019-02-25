@@ -17,10 +17,6 @@ if(isset($_POST['offerID']) && !empty($_POST['offerID'])){
         echo $return;
     }
 
-    $return = json_encode(array(
-        'offerAvailable' => true));
-    echo $return;
-
 }else{
     $return = json_encode(array(
         'offerAvailable' => false));
