@@ -234,7 +234,8 @@
 
         <?php                    
             }else{
-                echo "<br><p>Du bist nicht eingeloggt. Mitte melde dich an, um auf deinen Account zuzugreifen.</p>";
+                echo '<br><p>Du bist nicht eingeloggt. Bitte <a data-toggle="modal" data-target="#loginModal" title="Login"><strong>melde dich an</strong></a>, um auf deinen Account zuzugreifen.<br>
+                </p>';
             }
         ?>
 

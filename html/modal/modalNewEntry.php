@@ -17,7 +17,8 @@
                      </div>
                      <div class="form-group">
                          <label for="description">Beschreibung</label>
-                         <input type="text" required class="form-control" id="description" placeholder="Beschreibung" name="desc">
+                         <input type="text" required class="form-control" id="description" placeholder="Beschreibung"
+                             name="desc">
                      </div>
 
 
@@ -55,18 +56,22 @@
                                  </span>
                              </label>
                          </div>
+                         <small id="emailHelp" class="form-text text-muted">Bitte nur Dateien im Format
+                             '<strong>.jpg</strong>' und
+                             '<strong>.png</strong>' mit einer maximalen Größe von <strong>1MB</strong> hochladen.
+                             &#128522;</small>
                      </div>
 
                      <script text="text/javascript">
-                        $(document).ready(function(){
-                            var inputFile = $('#inputFile');
-                            var inputFileName = $('#inputFileName');
+                     $(document).ready(function() {
+                         var inputFile = $('#inputFile');
+                         var inputFileName = $('#inputFileName');
 
-                            inputFile.change(function(){
-                                var labelShown = inputFile.val().replace(/\\/g, '/').replace(/.*\//, '');
-                                inputFileName.val(labelShown);
-                            });
-                        });
+                         inputFile.change(function() {
+                             var labelShown = inputFile.val().replace(/\\/g, '/').replace(/.*\//, '');
+                             inputFileName.val(labelShown);
+                         });
+                     });
                      </script>
 
                      <button type="submit" class="btn btn-dark float-right">Erstellen</button>

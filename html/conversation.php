@@ -21,6 +21,7 @@
 <body>
     <?php
         include('basicsiteelements/navigationpages.php');
+        include('modal/modalLogin.php');
     ?>
 
     <div class="content">
@@ -29,7 +30,7 @@
         <div class="container">
             <div id="paddingtopMobil"></div>
 
-        <?php
+            <?php
         if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
             if(isset($_POST['conID']) && !empty($_POST['conID'])){
                 $conversation = Conversation::getConversation(intval($_POST['conID']));
@@ -66,7 +67,6 @@
 
                 <?php
                         $messages = $conversation->getAllMessages($_SESSION['user']->getUserID());
-
                         foreach($messages as $message){
                             if($message->getSenderID() == $_SESSION['user']->getUserID()){
                                 echo '  <div class="row justify-content-end">
@@ -89,7 +89,7 @@
                 ?>
 
             </div>
-                        
+
             <p id="anker"></p>
             <div id="newMessage">
                 <div class="container">
@@ -101,17 +101,17 @@
                 </div>
             </div>
 
-        <?php
+            <?php
             }else{
                 header("Location: error.php");
             }    
         }else{
-            echo "<br><p>Du bist nicht eingeloggt. Mitte melde dich an um auf deine Nachrichten zuzugreifen.</p>";
+            echo '<br><p>Du bist nicht eingeloggt. Mitte <a data-toggle="modal" data-target="#loginModal" title="Login"><strong>melde dich an</strong></a>, um auf deine Nachrichten zuzugreifen.</p>';
         }
         ?>
 
         </div>
-        
+
     </div>
     <?php
         include('basicsiteelements/scripts.php');

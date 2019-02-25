@@ -23,8 +23,10 @@
                     </div>
                     <!-- Javascript der Login Modal schließt -->
                     <button type="submit" class="btn btn-dark float-right">Login</button>
-                    <button type="button" class="btn btn-light float-right" data-toggle="modal"
-                        data-target="#registerModal" id="register">Registrieren</button>
+                    <button type="button" class="btn btn-light float-right"
+                        onclick="$('#loginModal').modal('hide');
+                        $('#registerModal').modal('show');"
+                        id="register">Registrieren</button>
                 </form>
             </div>
         </div>
