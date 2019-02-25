@@ -159,7 +159,14 @@ function showInterest(offerID){
         dataType: 'json',
         type: 'post',
         success: function(data){
-            alert('passt ' + JSON.stringify(data));
+            if(data){ //true = User ist eingeloggt
+                alert('User eingeloggt.');
+                //hier ajax zu interesseZeigen.php, dann Rückmeldung true/false obs geklappt hat,
+                //bei false --> Info, dass ein Fehler aufgetreten ist, 
+                //bei true --> weiterleitung auf account-Seite
+            }{
+                $('#loginModal').modal('show');
+            }
         },
         error: function(err){
             alert('Es ist ein Problem aufgetreten. Bitte erneut versuchen.');

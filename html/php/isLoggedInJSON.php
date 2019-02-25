@@ -3,8 +3,8 @@
         
     session_start();
     if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
-        echo json_encode(array("test" => true, "user" => $_SESSION['user']));
+        echo json_encode(true);
     }else{
-        echo json_encode(array("test" => false, "user" => $_SESSION['user']));
+        echo json_encode(false);
     }    
 ?>
