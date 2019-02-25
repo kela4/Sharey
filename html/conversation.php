@@ -27,7 +27,7 @@
         <div class="container">
             <div id="paddingtopMobil"></div>
 
-        <?php
+            <?php
         if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
             if(isset($_POST['conID']) && !empty($_POST['conID'])){
                 $conversation = Conversation::getConversation(intval($_POST['conID']));
@@ -84,7 +84,7 @@
                 ?>
 
             </div>
-                        
+
             <p id="anker"></p>
             <div id="newMessage">
                 <div class="container">
@@ -96,17 +96,17 @@
                 </div>
             </div>
 
-        <?php
+            <?php
             }else{
                 header("Location: error.php");
             }    
         }else{
-            echo "<br><p>Du bist nicht eingeloggt. Mitte melde dich an um auf deine Nachrichten zuzugreifen.</p>";
+            echo '<br><p>Du bist nicht eingeloggt. Mitte <a data-toggle="modal" data-target="#loginModal" title="Login"><strong>melde dich an</strong></a>, um auf deine Nachrichten zuzugreifen.</p>';
         }
         ?>
 
         </div>
-        
+
     </div>
     <?php
         include('basicsiteelements/scripts.php');
