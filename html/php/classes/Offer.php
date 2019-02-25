@@ -51,7 +51,6 @@ class Offer{
         $offersWithDistanceFromPoint = [];
         
         while(($data = mysqli_fetch_array($res)) != false){
-            //$offers[] = new Offer($data['or_active'], new DateTime($data['or_creationDate']), utf8_encode($data['or_description']), new DateTime($data['or_mhd']), $data['or_offerID'], $data['or_picture'], new PLZ(utf8_encode($data['pz_location']), $data['pz_plz'], $data['pz_plzID']), $data['or_report'], new Tag($data['tg_color'], utf8_encode($data['tg_description']), $data['tg_tagID']), utf8_encode($data['or_title']), $data['or_ocID']);
             $offersWithDistanceFromPoint[] = [
                                                 "offer" => new Offer($data['or_active'], new DateTime($data['or_creationDate']), $data['or_description'], new DateTime($data['or_mhd']), $data['or_offerID'], $data['or_picture'], new PLZ($data['pz_location'], $data['pz_plz'], $data['pz_plzID']), $data['or_report'], new Tag($data['tg_color'], $data['tg_description'], $data['tg_tagID']), $data['or_title'], $data['or_ocID']),
                                                 "distanceFromStartPoint" => "10"
@@ -87,11 +86,10 @@ class Offer{
     }
 
     public function toJson() {
-        $mhd = $this.getMhd();
-        if($mhd == new DateTime('0000-00-00')){
-            $mhd = null;
+        $mhd = null;
+        if($this->getMhd() != new DateTime('0000-00-00')){
+            $mhd = $this->getMhd()->format('d-m-Y');
         }
-
         return json_encode(array(
             'active' => $this->getActive(),
             'date' => $this->getDate()->format('d-m-Y'),
