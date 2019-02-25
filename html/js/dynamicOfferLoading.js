@@ -111,6 +111,7 @@ function openModal(offerID, distance){
                 var tag = JSON.parse(offer.tag);
                 var plz = JSON.parse(offer.plz);
 
+                $('.omColor').css("background-color", tag.color);
                 $('#offerModalTitle').html(offer.title);
                 $('#offerModalTagText').html(tag.description);
                 $('#offerModalLocationName').html(plz.location);
@@ -118,8 +119,19 @@ function openModal(offerID, distance){
                 $('#offerModalMHDText').html('MHD: ' + offer.mhd);
                 $('#offerModalOfferDescription').html(offer.description);
 
+                //add img:
+                var imageContainer = $('#modalOfferImageContainer');
+                var image = '<img src="" class="img-fluid" id="omImage">';
+                if(offer.picture){
+                    image = '<img src="data:image/jpeg;base64,' + offer.picture + '" class="img-fluid" id="omImage">';
+                }
+                imageContainer.empty();
+                imageContainer.append(image);
+
                 //add actionbuttons:
-                $('#offerModalActionButtons').append('<button type="submit" class="btn btn-dark float-right">Interesse</button>' +
+                var offerModalActionButtons = $('#offerModalActionButtons');
+                offerModalActionButtons.empty();
+                offerModalActionButtons.append('<button type="submit" class="btn btn-dark float-right">Interesse</button>' +
                                                         '<button type="button" class="btn btn-light float-right whiteText" id="omReportOffer">Melden</button>');
 
                 $('#offerModal').modal('show');

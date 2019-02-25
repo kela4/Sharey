@@ -43,9 +43,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-6">
-                            <img src="images/yoghurt.jpg" class="img-fluid" id="omImage">
-                        </div>
+                        <div id="modalOfferImageContainer" class="col-6"></div>
                     </div>
                     <div class="row">
                         <div class="col-12">
