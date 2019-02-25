@@ -8,8 +8,6 @@ function deleteOffer(offerID){
             type: 'post',
             success: function(data){
                 if(data != false){
-                    var offerToDelete = $('#' + offerID + '');
-                    offerToDelete.remove();
                     location.reload();
                 }else{
                     alert('Es ist ein Fehler aufgetreten, bitte versuche es nochmal.');
