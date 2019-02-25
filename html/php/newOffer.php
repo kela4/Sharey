@@ -30,12 +30,11 @@
             if($success){
                 header("Location: ../account.php");
             }else{
-                header("Location: ../error.php?errormessage=Bitte überprüfe, ob dein Bild die maximale Bildgröße von <strong>1M</strong> nicht überschreitet.");
+                header("Location: ../error.php?errormessage=Bitte überprüfe, ob dein Bild die maximale Bildgröße von <strong>1MB</strong> nicht überschreitet.");
             }
                     
         }else{
-            header("Location: ../error.php");
-            //echo "<p>Fehler, ein Feld wurde nicht korrekt ausgefüllt.</p>";
+            header("Location: ../error.php?errormessage=Bitte überprüfe, ob dein Bild die maximale Bildgröße von <strong>1MB</strong> nicht überschreitet.");
         }
     }
 

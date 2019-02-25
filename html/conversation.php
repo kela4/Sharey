@@ -40,14 +40,17 @@
                 <div class="row">
                     <div class="col-10">
                         <?php
+                        if($conversation->getActive()){
                             if($_SESSION['user']->getUserID() == $conversation->getOcID()){
                                 //acceptoffer-button only for offercreator
                                 echo '<button type="button" onclick="offerWasHandedOver('.$conversation->getConID().', '.$conversation->getOfferID().')" class="btn btn-sm btn-success" title="Angebot wurde von einem User angenommen und das Produkt übergeben">
                                         <i class="fas fa-check"></i> Angebot angenommen</button>';
                             }
+
                         //deleteConversation-button for offercreator and offeracceptor
-                        echo '<button type="button" onclick="deleteConversation('.$conversation->getConID().');" class="btn btn-sm btn-danger" title="Konversation mit dem User löschen">
-                            <i class="fas fa-trash"></i> Konversation löschen</button>';
+                            echo '<button type="button" onclick="deleteConversation('.$conversation->getConID().');" class="btn btn-sm btn-danger" title="Konversation mit dem User löschen">
+                                <i class="fas fa-trash"></i> Konversation löschen</button>';
+                        }    
                         ?>    
                     </div>
                     <div class="col-2">
