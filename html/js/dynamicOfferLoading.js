@@ -157,7 +157,7 @@ function showInterest(offerID){
         url: '../php/isLoggedInJSON.php',
         dataType: 'json',
         type: 'post',
-        success: function(sccess){
+        success: function(data){
             if(data){ //true = User ist eingeloggt
                  //hier ajax zu interesseZeigen.php, dann Rückmeldung true/false obs geklappt hat,
                 $.ajax({
