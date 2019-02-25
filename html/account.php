@@ -132,7 +132,7 @@
                                                             <input type="text" hidden required name="conID" value="'.$conversation->getConID().'" />
                                                             <div class="col-12">
                                                                 <button class="btn shadow-none" type="submit">
-                                                                    <div class="" style="display: inline;">@'.$acceptorCounter.' '.$conversation->getLastMessage()->getContent().'</div>
+                                                                    <div class="'.$messageUnreaded.'" style="display: inline;">@'.$acceptorCounter.' '.$conversation->getLastMessage()->getContent().'</div>
                                                                     <div class="float-right" id="'.$colorTimeStamp.'">'.$conversation->getLastMessage()->getDate()->format('Y-m-d H:i').'</div>
                                                                 </button>
                                                             </div>
