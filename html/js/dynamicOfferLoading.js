@@ -178,6 +178,7 @@ function showInterest(offerID){
                     }
                 });
             }else{
+                $('#offerModal').modal('hide');
                 $('#loginModal').modal('show');
             }
         },

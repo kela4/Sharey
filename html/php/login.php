@@ -15,7 +15,7 @@
             if($success == true){
                 header("Location: ../account.php");
             }else{
-                echo "<p>Nutzerdaten falsch.</p>";  //hier vielleicht auf eine initiale Fehler-Meldungsseite verweisen, der verschiedenen get-Params mitgegeben werden und je nach Param wird die Fehlermeldung angezeigt
+                echo "<p>Nutzerdaten falsch.</p>";
             }
             
         }else{
