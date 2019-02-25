@@ -40,7 +40,6 @@
                     Falls du noch nicht eingeloggt bist, erhälst du nun die Möglichkeit, dich zu registrieren oder
                     einzuloggen.
                 </p>
-                <br />
 
             </div>
 
@@ -63,7 +62,6 @@
                     Keine Angst, nur weil das MHD abgelaufen ist, werden wir dein Angebot nicht löschen. Denn fast immer
                     sind Lebensmittel und Drogerieprodukte auch nach dem MHD noch genießbar.
                 </p>
-                <br />
 
             </div>
 
@@ -86,7 +84,6 @@
                     Das Bild darf dabei eine Größe von 3 MB nicht überschreiten, damit wir dir die beste Performance von
                     Sharey garantieren können.
                 </p>
-                <br />
 
             </div>
 
