@@ -34,6 +34,10 @@ class Conversation{
         $data = mysqli_fetch_array($res);
         $ocID  = $data['or_ocID'];
 
+        if($ocID == $oaID){ //eigenes Angebot
+            return false;
+        }
+
         //start con
         $query = "INSERT INTO tbl_conversation(cn_active, cn_oaID, cn_ocID, cn_offerID) 
                     VALUES (true, ".$oaID.", ".$ocID.", ".$offerID.");";
