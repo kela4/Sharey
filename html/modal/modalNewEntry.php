@@ -17,7 +17,8 @@
                      </div>
                      <div class="form-group">
                          <label for="description">Beschreibung</label>
-                         <input type="text" required class="form-control" id="description" placeholder="Beschreibung" name="desc">
+                         <input type="text" required class="form-control" id="description" placeholder="Beschreibung"
+                             name="desc">
                      </div>
 
 
@@ -55,18 +56,20 @@
                                  </span>
                              </label>
                          </div>
+                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                             else.</small>
                      </div>
 
                      <script text="text/javascript">
-                        $(document).ready(function(){
-                            var inputFile = $('#inputFile');
-                            var inputFileName = $('#inputFileName');
+                     $(document).ready(function() {
+                         var inputFile = $('#inputFile');
+                         var inputFileName = $('#inputFileName');
 
-                            inputFile.change(function(){
-                                var labelShown = inputFile.val().replace(/\\/g, '/').replace(/.*\//, '');
-                                inputFileName.val(labelShown);
-                            });
-                        });
+                         inputFile.change(function() {
+                             var labelShown = inputFile.val().replace(/\\/g, '/').replace(/.*\//, '');
+                             inputFileName.val(labelShown);
+                         });
+                     });
                      </script>
 
                      <button type="submit" class="btn btn-dark float-right">Erstellen</button>
