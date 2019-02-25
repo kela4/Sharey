@@ -106,9 +106,7 @@ function openModal(offerID, distance){
         dataType: 'json',
         type: 'post',
         success: function(data){
-            console.log(data);
-            console.log(JSON.stringify(data));
-            /*if(data.offerAvailable){
+            if(data.offerAvailable){
                 var offer = JSON.parse(data.offer);
                 var tag = JSON.parse(offer.tag);
                 var plz = JSON.parse(offer.plz);
@@ -128,12 +126,10 @@ function openModal(offerID, distance){
 
             }else{
                 alert('Das Angebot kann leider nicht angezeigt werden.');
-            }*/
+            }
         },
         error: function(err){
-            console.log('error' + err);
-            console.log(JSON.stringify(err));
-            //alert('Das Angebot kann leider nicht angezeigt werden.');
+            alert('Das Angebot kann leider nicht angezeigt werden.');
         }
     });
 
