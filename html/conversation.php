@@ -23,6 +23,11 @@
 
     <div class="content">
         <!-- Div content for padding-top (header) -->
+
+        <?php
+            if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
+        ?>
+
         <div class="container">
             <div id="paddingtopMobil"></div>
 
@@ -52,7 +57,6 @@
             <div id="messageArea">
 
                 <?php
-                    if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
                         if(isset($_POST['conID']) && !empty($_POST['conID'])){
                             $conversation = Conversation::getConversation(intval($_POST['conID']));
                             $messages = $conversation->getAllMessages($_SESSION['user']->getUserID());
@@ -79,9 +83,6 @@
                         }else{
                             header("Location: error.php");
                         }
-                    }else{
-                        header("Location: error.php?errormessage=Du bist nicht eingeloggt. Mitte melde dich an um auf deinen Account zuzugreifen.");
-                    }
                 ?>
 
             </div>
@@ -98,7 +99,11 @@
             </div>
 
         </div>
-
+        <?php
+            }else{
+                echo "<br><p>Du bist nicht eingeloggt. Mitte melde dich an um auf deine Nachrichten zuzugreifen.</p>";
+            }
+        ?>
     </div>
     <?php
         include('basicsiteelements/scripts.php');
