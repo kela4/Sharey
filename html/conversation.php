@@ -19,6 +19,7 @@
 <body>
     <?php
         include('basicsiteelements/navigationpages.php');
+        include('modal/modalLogin.php');
     ?>
 
     <div class="content">
