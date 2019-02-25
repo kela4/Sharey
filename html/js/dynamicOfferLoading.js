@@ -39,7 +39,7 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
                     }
 
                     //print offers 
-                    offerContainer.append(      '<div onclick="openModal(' + offer.offerID + ');" id="' + offer.offerID + '" class="col-auto m-3 card offerCardSize" style="background-color:' + tag.color + '">' +
+                    offerContainer.append(      '<div onclick="openModal(' + offer.offerID + ', ' + distance + ');" id="' + offer.offerID + '" class="col-auto m-3 card offerCardSize" style="background-color:' + tag.color + '">' +
                                                     '<div id="cardContent">' +
                                                         '<div class="row">' +
                                                             '<div class="col-7">' +
@@ -97,8 +97,41 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
     });
 }
 
-function openModal(offerID){
+function openModal(offerID, distance){
     //ggf noch ein loading-button
 
-    $('#offerModal').modal('show');
+    $.ajax({
+        url: '../php/getOffer.php',
+        dataType: 'json',
+        data: {offerID: offerID},
+        type: 'post',
+        success: function(data){
+            if(data.offerAvailable){
+                var offer = JSON.parse(data.offer);
+                var tag = JSON.parse(offer.tag);
+                var plz = JSON.parse(offer.plz);
+
+                $('#offerModalTitle').html(offer.title);
+                $('#offerModalTagText').html(tag.description);
+                $('#offerModalLocationName').html(plz.location);
+                $('#offerModalLocationDistance').html(distance + ' km');
+                $('#offerModalMHDText').html('MHD: ' + offer.mhd);
+                $('#offerModalOfferDescription').html(offer.description);
+
+                //add actionbuttons:
+                $('#offerModalActionButtons').append('<button type="submit" class="btn btn-dark float-right">Interesse</button>' +
+                                                        '<button type="button" class="btn btn-light float-right whiteText" id="omReportOffer">Melden</button>');
+
+                $('#offerModal').modal('show');
+
+            }else{
+                alert('Das Angebot kann leider nicht angezeigt werden.');
+            }
+        },
+        error: function(err){
+            alert('Das Angebot kann leider nicht angezeigt werden.');
+        }
+    });
+
+    
 }

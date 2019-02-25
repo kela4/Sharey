@@ -4,7 +4,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header omColor" id="omHeader">
-                <h3 class="modal-title whiteText" id="exampleModalLabel">Angebot</h3>
+                <h3 class="modal-title whiteText" id="exampleModalLabel"></h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -16,7 +16,7 @@
                             <div class="row">
                                 <div class="col-auto">
                                     <div>
-                                        <h4 class="whiteText">Ein Joghurt</h4>
+                                        <h4 id="offerModalTitle" class="whiteText"></h4>
                                     </div>
                                 </div>
                             </div>
@@ -24,7 +24,7 @@
                                 <div id="omTagDiv">
                                     <svg width="150px" height="55px">
                                         <polygon points="10,30 30,10 140,10 140,50 30,50" id="offerTagPolygon" />
-                                        <text x="40" y="36" fill="white">Essen</text>
+                                        <text id="offerModalTagText" x="40" y="36" fill="white"></text>
                                     </svg>
                                 </div>
                             </div>
@@ -36,9 +36,9 @@
                                 </div>
                                 <div class="col-auto">
                                     <div id="omCityDiv">
-                                        <span class="whiteText">Mosbach</span>
+                                        <span id="offerModalLocationName" class="whiteText"></span>
                                         <br>
-                                        <span class="whiteText">15 km</span>
+                                        <span id="offerModalLocationDistance" class="whiteText"></span>
                                     </div>
                                 </div>
                             </div>
@@ -51,16 +51,13 @@
                         <div class="col-12">
                             <div id="omDescriptionDiv">
                                 <hr id="divider">
-                                <p class="whiteText">MDH: 01.01.2020</p>
-                                <p class="whiteText">Habe einen Naturjoghurt übrig. Will den jemand?</p>
+                                <p id="offerModalMHDText" class="whiteText"></p>
+                                <p id="offerModalOfferDescription" class="whiteText"></p>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-dark float-right">Interesse</button>
-                            <button type="button" class="btn btn-light float-right whiteText"
-                                id="omReportOffer">Melden</button>
+                        <div id="offerModalActionButtons" class="col-12">
                         </div>
                     </div>
                 </div>

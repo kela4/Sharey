@@ -63,16 +63,35 @@ class Offer{
     }
 
     public static function getOffer(int $offerID){
-        //wichtig, Tag nicht vergessen!
+        require('dbconnect.php');
+        mysqli_select_db($connection, 'db_sharey');
+
+        $query = "SELECT o.*, t.*, p.pz_plzID, p.pz_location, p.pz_plz FROM tbl_offer AS o 
+                    JOIN tbl_plz p 
+                        ON p.pz_plzID = o.or_plzID 
+                    JOIN tbl_tag t 
+                        ON t.tg_tagID = o.or_tagID 
+                    WHERE o.or_offerID = ".$offerID." AND o.or_active = 1;";
+
+        $res = mysqli_query($connection, $query);
+
+        $data = mysqli_fetch_array($res);
+
+        $offer = null;
+        
+        if(isset($data)){
+            $offer = new Offer($data['or_active'], new DateTime($data['or_creationDate']), $data['or_description'], new DateTime($data['or_mhd']), $data['or_offerID'], $data['or_picture'], new PLZ($data['pz_location'], $data['pz_plz'], $data['pz_plzID']), $data['or_report'], new Tag($data['tg_color'], $data['tg_description'], $data['tg_tagID']), $data['or_title'], $data['or_ocID']);
+        }
+
         return $offer;
     }
 
     public function toJson() {
         return json_encode(array(
             'active' => $this->getActive(),
-            'date' => $this->getDate(),
+            'date' => $this->getDate()->format('d-m-Y'),
             'description' => $this->getDescription(),
-            'mhd' => $this->getMhd(),
+            'mhd' => $this->getMhd()->format('d-m-Y'),
             'offerID' => $this->getOfferID(),
             'picture' => base64_encode($this->getPicture()),
             'plz' => $this->getPLZ()->toJson(),
