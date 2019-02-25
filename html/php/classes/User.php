@@ -175,7 +175,7 @@ class User{
                         ON c.cn_offerID = o.or_offerID
                     
                     WHERE (c.cn_oaID = ".$this->getUserID()." OR c.cn_ocID = ".$this->getUserID().")
-                    AND c.cn_active = true
+                    AND (c.cn_active = true OR (m.me_messageRead = 0 AND m.me_senderID != ".$this->getUserID()."))
                     ORDER BY o.or_offerID;"; //order by offerID is important for grouping conversations under an offer
         
         $res = mysqli_query($connection, $query);

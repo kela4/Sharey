@@ -12,7 +12,7 @@ class Conversation{
     private $lastMessage; //message-Array
     private $offerTitle;
 
-    public function __construct(bool $active, int $conID, int $oaID, int $ocID, int $offerID, Message $lastMessage = null, string $offerTitle){
+    public function __construct(bool $active, int $conID, int $oaID, int $ocID, int $offerID, Message $lastMessage = null, string $offerTitle = null){
         $this->active = $active;
         $this->conID = $conID;
         $this->oaID = $oaID;
@@ -66,7 +66,33 @@ class Conversation{
     }
 
     public static function deleteConversation(int $conID){
-        return true;
+        //set conversation to inactive
+        require('dbconnect.php');
+        mysqli_select_db($connection, 'db_sharey');
+        
+        $query = "UPDATE tbl_conversation 
+                    SET cn_active = false
+                    WHERE cn_conID = ".$conID.";";
+        
+        $success = mysqli_query($connection, $query);
+
+        if($success){
+            //delete all Messages
+            require('dbconnect.php');
+            mysqli_select_db($connection, 'db_sharey');
+            
+            $query = "DELETE FROM tbl_message 
+            WHERE me_conID = ".$conID.";";
+            
+            $success = mysqli_query($connection, $query);  
+            if($success){
+                return true;
+            }else{
+                return false;
+            }          
+        }else{
+            return false;
+        }
     }
 
     /**
@@ -87,6 +113,25 @@ class Conversation{
         $data = mysqli_fetch_array($res);
                 
         return new Conversation($data['cn_active'], $data['cn_conID'], $data['cn_oaID'], $data['cn_ocID'], $data['cn_offerID'], null, $data['or_title']);
+    }
+
+    public static function getConversationsToOffer(int $offerID){
+        require('dbconnect.php');
+        mysqli_select_db($connection, 'db_sharey');
+
+        $query = "SELECT c.*
+                    FROM tbl_conversation c
+                    WHERE c.cn_offerID = ".$offerID."";
+        
+        $res = mysqli_query($connection, $query);
+        
+        $conversations = [];
+        
+        while(($data = mysqli_fetch_array($res)) != false){
+            $conversations[] = new Conversation($data['cn_active'], $data['cn_conID'], $data['cn_oaID'], $data['cn_ocID'], $data['cn_offerID'], null, null);
+        }
+
+        return $conversations;
     }
 
     /**

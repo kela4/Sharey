@@ -151,7 +151,7 @@
                 <div class="col-sm-12">
                     <h1>Eigene Angebote</h1>
                     <div class="container mt-4">
-                        <div class="row justify-content-center">
+                        <div id="offerContainerAccount" class="row justify-content-center">
 
                             <?php 
                                     $offers = $_SESSION['user']->getOwnOffers();
