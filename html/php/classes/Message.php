@@ -49,7 +49,7 @@ class Message{
     }
 
     public static function sendAutoStartMessage(int $conID, int $senderID){
-        $content = "Hallo, ich habe Interesse an deinem Angebot. <diese Nachricht wurde automatisch vom System versendet>";
+        $content = "Hallo, ich habe Interesse an deinem Angebot. ~ diese Nachricht wurde automatisch vom System versendet ~";
         $success = Message::createMessage($senderID, $conID, $content);
         return $success;
     }
