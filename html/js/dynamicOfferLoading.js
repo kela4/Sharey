@@ -39,9 +39,9 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
                     }
 
                     //print offers 
-                    offerContainer.append(      '<div onclick="openModal("' + offer.offerID + '");" id="' + offer.offerID + '" class="col-auto m-3 card offerCardSize" style="background-color:' + tag.color + '">'+
-                                                    '<div id="cardContent">'+
-                                                        '<div class="row">'+
+                    offerContainer.append(      '<div onclick="openModal(' + offer.offerID + ');" id="' + offer.offerID + '" class="col-auto m-3 card offerCardSize" style="background-color:' + tag.color + '">' +
+                                                    '<div id="cardContent">' +
+                                                        '<div class="row">' +
                                                             '<div class="col-7">' +
                                                                 '<div class="row">' +
                                                                     '<div id="offerTagDiv">' +
