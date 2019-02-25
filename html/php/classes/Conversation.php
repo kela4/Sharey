@@ -22,8 +22,43 @@ class Conversation{
         $this->offerTitle = $offerTitle;
     }
 
-    public static function startConversation(int $oaID, int $ocID, int $offerID){ 
-        return $con;
+    public static function startConversation(int $oaID, int $offerID){ 
+        //get int $ocID
+        require('dbconnect.php');
+        mysqli_select_db($connection, 'db_sharey');
+
+        $query = "SELECT or_ocID 
+                    FROM tbl_offer WHERE or_offerID = ".$offerID.";";
+
+        $res = mysqli_query($connection, $query);
+        $data = mysqli_fetch_array($res);
+        $ocID  = $data['or_ocID'];
+
+        //start con
+        $query = "INSERT INTO tbl_conversation(cn_active, cn_oaID, cn_ocID, cn_offerID) 
+                    VALUES (true, ".$oaID.", ".$ocID.", ".$offerID.");";
+
+        $success = mysqli_query($connection, $query);
+        
+        if($success){
+            $query = "SELECT cn_conID 
+                        FROM tbl_conversation 
+                        WHERE cn_oaID = ".$oaID." AND cn_ocID = ".$ocID." AND cn_offerID = ".$offerID." AND cn_active = 1";
+
+            $res = mysqli_query($connection, $query);
+            $data = mysqli_fetch_array($res);
+            $conID  = $data['cn_conID'];
+
+            //create autoStart Message:
+            $success = Message::sendAutoStartMessage($conID, $oaID);
+            return $success;
+
+        }else{
+            return false;
+        }
+
+        //send autostart message
+        return true;
     }
 
     public static function deleteConversation(int $conID){

@@ -99,7 +99,24 @@ class User{
     }
 
     public function showInterest(int $offerID){
-        return true;
+        //prüfen -> gibt es schon eine Con mit active, offerID und userID? falls nicht, starten
+        require('dbconnect.php');
+        mysqli_select_db($connection, 'db_sharey');
+
+        $query = "SELECT cn_conID 
+                    FROM tbl_conversation 
+                    WHERE cn_oaID = ".$this->userID." AND cn_offerID = ".$offerID." AND cn_active = 1;";
+
+        $res = mysqli_query($connection, $query);
+        $resRowsNo = mysqli_num_rows($res);
+        
+        if($resRowsNo == 0){ //if no conversation exists to this offer with the same oaID as the current interest-user
+            //start Conversation
+            $success = Conversation::startConversation($this->userID, $offerID);
+            return $success;
+        }else{
+            return false;
+        }
     }
 
     /**

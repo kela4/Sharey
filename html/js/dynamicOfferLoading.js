@@ -155,15 +155,28 @@ function openModal(offerID, distance){
 function showInterest(offerID){
     $.ajax({
         url: '../php/isLoggedInJSON.php',
-        data: {offerID: offerID},
         dataType: 'json',
         type: 'post',
-        success: function(data){
+        success: function(sccess){
             if(data){ //true = User ist eingeloggt
-                alert('User eingeloggt.');
-                //hier ajax zu interesseZeigen.php, dann Rückmeldung true/false obs geklappt hat,
-                //bei false --> Info, dass ein Fehler aufgetreten ist, 
-                //bei true --> weiterleitung auf account-Seite
+                 //hier ajax zu interesseZeigen.php, dann Rückmeldung true/false obs geklappt hat,
+                $.ajax({
+                    url: '../php/showInterest.php',
+                    data: {offerID: offerID},
+                    dataType: 'json',
+                    type: 'post',
+                    success: function(success){
+                        if(success){ //go to account-page
+                            var url = "https://sharey.rollingrelease.de/account.php";
+                            $(location).attr('href', url);
+                        }else{ //warning-message
+                            alert('Es ist ein Problem aufgetreten. Bitte erneut versuchen. Prüfe bitte auch, ob du bereits eine Konversation zu diesem Angebot laufen hast.');
+                        }
+                    },
+                    error: function(err){
+                        alert('Es ist ein Problem aufgetreten. Bitte erneut versuchen.');
+                    }
+                });
             }else{
                 $('#loginModal').modal('show');
             }
