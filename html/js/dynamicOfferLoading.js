@@ -116,8 +116,14 @@ function openModal(offerID, distance){
                 $('#offerModalTagText').html(tag.description);
                 $('#offerModalLocationName').html(plz.location);
                 $('#offerModalLocationDistance').html(distance + ' km');
-                $('#offerModalMHDText').html('MHD: ' + offer.mhd);
                 $('#offerModalOfferDescription').html(offer.description);
+
+                //add mhd:
+                if(offer.mhd){
+                    $('#offerModalMHDText').html('MHD: ' + offer.mhd);
+                }else{
+                    $('#offerModalMHDText').html('');
+                }
 
                 //add img:
                 var imageContainer = $('#modalOfferImageContainer');

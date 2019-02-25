@@ -29,8 +29,6 @@ $(document).ready(function(){
 
                         $('#newMessageText').val("");
                         $('html, body').animate({scrollTop:$(document).height()}, 'slow');
-
-                        //console.log( JSON.stringify(data) );
                     }else{
                         alert("Deine Nachricht konnte leider nicht gesendet werden. Bitte prüfe, ob du eine Internetverbindung hast und versuche es erneut.");
                     }

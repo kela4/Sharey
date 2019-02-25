@@ -87,11 +87,16 @@ class Offer{
     }
 
     public function toJson() {
+        $mhd = $this.getMhd();
+        if($mhd == new DateTime('0000-00-00')){
+            $mhd = null;
+        }
+
         return json_encode(array(
             'active' => $this->getActive(),
             'date' => $this->getDate()->format('d-m-Y'),
             'description' => $this->getDescription(),
-            'mhd' => $this->getMhd()->format('d-m-Y'),
+            'mhd' => $mhd,
             'offerID' => $this->getOfferID(),
             'picture' => base64_encode($this->getPicture()),
             'plz' => $this->getPLZ()->toJson(),
