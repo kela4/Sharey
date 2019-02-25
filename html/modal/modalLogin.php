@@ -11,10 +11,10 @@
             </div>
             <div class="modal-body">
                 <form method="post" action="../php/login.php">
-                    <div class="form-group">
+                    <div class="form-group" tabindex="1">
                         <label for="email">E-Mail</label>
                         <input type="email" required class="form-control" id="email"
-                            placeholder="max.mustermann@beispiel.de" name="mail" tabindex="1">
+                            placeholder="max.mustermann@beispiel.de" name="mail">
                     </div>
                     <div class="form-group">
                         <label for="password">Passwort</label>
