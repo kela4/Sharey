@@ -15,9 +15,7 @@
         include('basicsiteelements/header.php');
     ?>
 
-    <script>
-
-    </script>
+    <script type="text/javascript" src="js/accountDeleteOffer.js"></script>
 </head>
 
 <body>
@@ -31,6 +29,10 @@
         <!-- Div content for padding-top (header) -->
         <div class="container">
 
+        <?php
+            if(isset($_SESSION['user']) && !empty($_SESSION['user'])){ //only show page if a user is logged in
+        ?>
+
             <div class="container fixed-top" id="conversationButtons">
                 <div class="row">
                     <div class="col-10">
@@ -42,10 +44,6 @@
 
                 </div>
             </div>
-
-            <?php
-                if(isset($_SESSION['user']) && !empty($_SESSION['user'])){ //only show page if a user is logged in
-            ?>
             
             <div class="row">
 
@@ -227,14 +225,14 @@
 
             </div>
 
-
-            <?php                    
+        <?php                    
             }else{
                 echo "<br><p>Du bist nicht eingeloggt. Mitte melde dich an, um auf deinen Account zuzugreifen.</p>";
             }
-            ?>
+        ?>
 
         </div>
+
     </div>
 
     <?php
