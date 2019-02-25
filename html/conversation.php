@@ -26,6 +26,8 @@
 
         <?php
             if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
+                if(isset($_POST['conID']) && !empty($_POST['conID'])){
+                    $conversation = Conversation::getConversation(intval($_POST['conID']));
         ?>
 
         <div class="container">
@@ -35,11 +37,14 @@
             <div class="container fixed-top" id="conversationButtons">
                 <div class="row">
                     <div class="col-10">
-                        <button type="button" class="btn btn-sm btn-success" title="Angebot angenommen"><i
-                                class="fas fa-check"></i> Angebot angenommen</button>
-                        <button type="button" class="btn btn-sm btn-danger" title="Konversation löschen"><i
-                                class="fas fa-trash"></i>
-                            Konversation löschen</button>
+                        <?php
+                            if($_SESSION['user']->getUserID() == $conversation->getOcID()){
+                                echo '<button type="button" class="btn btn-sm btn-success" title="Angebot wurde von einem User angenommen">
+                                        <i class="fas fa-check"></i> Angebot angenommen</button>';
+                            }
+                        ?>
+                        <button type="button" class="btn btn-sm btn-danger" title="Konversation mit dem User löschen">
+                            <i class="fas fa-trash"></i> Konversation löschen</button>
                     </div>
                     <div class="col-2">
                         <button type="button" class="btn btn-sm btn-secondary float-right" title="Zurück"
@@ -57,31 +62,26 @@
             <div id="messageArea">
 
                 <?php
-                        if(isset($_POST['conID']) && !empty($_POST['conID'])){
-                            $conversation = Conversation::getConversation(intval($_POST['conID']));
-                            $messages = $conversation->getAllMessages($_SESSION['user']->getUserID());
+                        $messages = $conversation->getAllMessages($_SESSION['user']->getUserID());
 
-                            foreach($messages as $message){
-                                if($message->getSenderID() == $_SESSION['user']->getUserID()){
-                                    echo '  <div class="row justify-content-end">
-                                                <div class="card col-sm-8 col-9" id="senderDark">
-                                                    <p>'.$message->getContent().'</p>
-                                                    <div class="float-right" id="timestampMessage">'.$message->getDate()->format('d-m-Y H:i').'</div>
-                                                </div>
+                        foreach($messages as $message){
+                            if($message->getSenderID() == $_SESSION['user']->getUserID()){
+                                echo '  <div class="row justify-content-end">
+                                            <div class="card col-sm-8 col-9" id="senderDark">
+                                                <p>'.$message->getContent().'</p>
+                                                <div class="float-right" id="timestampMessage">'.$message->getDate()->format('d-m-Y H:i').'</div>
                                             </div>
-                                            <br>';
-                                }else{
-                                    echo '  <div class="row">
-                                                <div class="card col-sm-8 col-9" id="senderLight">
-                                                    <p>'.$message->getContent().'</p>
-                                                    <div class="float-right" id="timestampMessage">'.$message->getDate()->format('d-m-Y H:i').'</div>
-                                                </div>
+                                        </div>
+                                        <br>';
+                            }else{
+                                echo '  <div class="row">
+                                            <div class="card col-sm-8 col-9" id="senderLight">
+                                                <p>'.$message->getContent().'</p>
+                                                <div class="float-right" id="timestampMessage">'.$message->getDate()->format('d-m-Y H:i').'</div>
                                             </div>
-                                            <br>';
-                                }
+                                        </div>
+                                        <br>';
                             }
-                        }else{
-                            header("Location: error.php");
                         }
                 ?>
 
@@ -100,6 +100,9 @@
 
         </div>
         <?php
+                }else{
+                    header("Location: error.php");
+                }    
             }else{
                 echo "<br><p>Du bist nicht eingeloggt. Mitte melde dich an um auf deine Nachrichten zuzugreifen.</p>";
             }
