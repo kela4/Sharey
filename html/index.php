@@ -14,16 +14,16 @@
 <body>
 
     <?php
-        include('modal/modalLogin.php');
-    ?>
-    <?php
-        include('modal/modalRegister.php');
-    ?>
-    <?php
         include('modal/modalNewEntry.php');
     ?>
     <?php
         include('modal/modalOffer.php');
+    ?>
+    <?php
+        include('modal/modalLogin.php');
+    ?>
+    <?php
+        include('modal/modalRegister.php');
     ?>
 
     <?php

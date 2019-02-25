@@ -200,9 +200,6 @@
 
                                                                         <div id="symbolsDiv">
                                                                             <button type="button" class="buttonSymbols">
-                                                                                <i class="fas fa-check" id="checkSymbol"></i>
-                                                                            </button>
-                                                                            <button type="button" class="buttonSymbols">
                                                                                 <i class="fas fa-edit" id="editSymbol"></i>
                                                                             </button>
                                                                             <button type="button" class="buttonSymbols">
