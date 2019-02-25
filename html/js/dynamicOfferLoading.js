@@ -159,7 +159,7 @@ function showInterest(offerID){
         dataType: 'json',
         type: 'post',
         success: function(data){
-            alert('passt ' + data);
+            alert('passt ' + JSON.stringify(data));
         },
         error: function(err){
             alert('Es ist ein Problem aufgetreten. Bitte erneut versuchen.');
