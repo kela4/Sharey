@@ -11,7 +11,7 @@
             </div>
             <div class="modal-body">
                 <form method="post" action="../php/login.php">
-                    <div class="form-group" tabindex="1">
+                    <div class="form-group" tabindex="0">
                         <label for="email">E-Mail</label>
                         <input type="email" required class="form-control" id="email"
                             placeholder="max.mustermann@beispiel.de" name="mail">
