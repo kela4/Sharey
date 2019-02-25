@@ -106,6 +106,7 @@ function openModal(offerID, distance){
         data: {offerID: 1},
         type: 'post',
         success: function(data){
+            console.log(data);
             console.log(JSON.stringify(data));
             /*if(data.offerAvailable){
                 var offer = JSON.parse(data.offer);
@@ -132,7 +133,7 @@ function openModal(offerID, distance){
         error: function(err){
             console.log('error' + err);
             console.log(JSON.stringify(err));
-            alert('Das Angebot kann leider nicht angezeigt werden.');
+            //alert('Das Angebot kann leider nicht angezeigt werden.');
         }
     });
 
