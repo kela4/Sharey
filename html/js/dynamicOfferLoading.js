@@ -39,7 +39,7 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
                     }
 
                     //print offers 
-                    offerContainer.append(' <a data-toggle="modal" data-target="#offerModal">'+
+                    offerContainer.append(' <a onclick="openModal("' + offer.offerID + '");">'+
                                                 '<div id="' + offer.offerID + '" class="col-auto m-3 card offerCardSize" style="background-color:' + tag.color + '">'+
                                                     '<div id="cardContent">'+
                                                         '<div class="row">'+
@@ -97,5 +97,10 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
             alert('Fehler beim Laden der Offers.');
         }
     });
+}
 
+function openModal(offerID){
+    //ggf noch ein loading-button
+
+    $('#offerModal').modal('show');
 }
