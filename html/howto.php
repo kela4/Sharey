@@ -23,7 +23,7 @@
 
             <h3>Eine kurze Anleitung, wie du mitmachen kannst!</h3>
 
-            <div class="col-12 col-md-2 text-center" , style="float:left">
+            <div class="col-12 col-md-2 text-center float-right">
                 <img src="images/1.png" class="img-fluid rounded" alt="1" />
             </div>
 
@@ -46,7 +46,7 @@
 
             <hr id="divider">
 
-            <div class="col-12 col-md-2 text-center" , style="float:left">
+            <div class="col-12 col-md-2 text-center float-right">
                 <img src="images/2.png" class="img-fluid rounded" alt="2" />
             </div>
 
@@ -68,7 +68,7 @@
 
             <hr id="divider">
 
-            <div class="col-12 col-md-2 text-center" , style="float:left">
+            <div class="col-12 col-md-2 text-center float-right">
                 <img src="images/3.png" class="img-fluid rounded" alt="3" />
             </div>
 
