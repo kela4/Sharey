@@ -27,7 +27,6 @@
 <body>
     <!-- Loading Container -->
     <div id="loadingContainer">
-        <div id="loadingOverlay"></div>
         <div id="loading" class="row justify-content-center">
             <div class="col-6">
                 <div class="progress" id="progress">
@@ -37,6 +36,8 @@
                 </div>
             </div>
         </div>
+        <div id="loadingOverlay"></div>
+
     </div>
 
     <?php
