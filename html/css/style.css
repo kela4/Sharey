@@ -611,7 +611,7 @@ a[data-toggle="collapse"] {
 }
 
 #loadingOverlay {
-    z-index: 8;
+    z-index: 999;
     display: block;
     position: fixed;
     width: 100vw;
