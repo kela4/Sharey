@@ -98,13 +98,18 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
 }
 
 function openModal(offerID, distance){
-    //ggf noch ein loading-button
+    //show loadingContainer:
+    $('#loadingContainer').show();
 
     $.ajax({
         url: '../php/getOffer.php',
         data: {offerID: offerID},
         dataType: 'json',
         type: 'post',
+        complete: function(){
+            //hide loadingContainer
+            $('#loadingContainer').hide();
+        },
         success: function(data){
             if(data.offerAvailable){
                 var offer = JSON.parse(data.offer);
@@ -153,10 +158,17 @@ function openModal(offerID, distance){
 }
 
 function showInterest(offerID){
+    //show loadingContainer:
+    $('#loadingContainer').show();
+
     $.ajax({
         url: '../php/isLoggedInJSON.php',
         dataType: 'json',
         type: 'post',
+        complete: function(){
+            //hide loadingContainer
+            $('#loadingContainer').hide();
+        },
         success: function(data){
             if(data){ //true = User ist eingeloggt
                  //hier ajax zu interesseZeigen.php, dann Rückmeldung true/false obs geklappt hat,
