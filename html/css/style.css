@@ -602,11 +602,11 @@ a[data-toggle="collapse"] {
 
 #loading {
     padding-top: 50vh;
-    z-index: 9999999999;
+    z-index: 999999999;
 }
 
 #loadingOverlay {
-    z-index: 999999999;
+    z-index: 999999998;
     display: block;
     position: fixed;
     width: 100vw;
