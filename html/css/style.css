@@ -620,5 +620,5 @@ a[data-toggle="collapse"] {
 }
 
 #loadingContainer {
-    display: block;
+    display: none;
 }
