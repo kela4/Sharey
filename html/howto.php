@@ -46,7 +46,7 @@
                     </p>
 
                 </div>
-                <hr id="divider">
+                <hr class="col-12" id="divider">
             </div>
 
 
