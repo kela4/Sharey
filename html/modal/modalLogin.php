@@ -22,7 +22,7 @@
                             name="password">
                     </div>
                     <!-- Javascript der Login Modal schließt -->
-                    <button type="submit" class="btn btn-dark float-right">Login</button>
+                    <button type="button" class="btn btn-dark float-right" onclick="loginCheck();">Login</button>
                     <button type="button" class="btn btn-light float-right"
                         onclick="$('#loginModal').modal('hide');
                         $('#registerModal').modal('show');"

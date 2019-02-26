@@ -16,13 +16,16 @@
                 header("Location: ../account.php");
                 exit;
             }else{
-                echo "<p>Nutzerdaten falsch.</p>";
+                header("Location: ../error.php?errormessage=Nutzerdaten falsch.");
+                exit;
             }
             
         }else{
-            echo "<p>Bitte Passwort eingeben..</p>";
+                header("Location: ../error.php?errormessage=Bitte Passwort eingeben.");
+                exit;
         }
     }else{
-        echo "<p>Bitte E-Mail eingeben.</p>";
+        header("Location: ../error.php?errormessage=Bitte E-Mail eingeben.");
+        exit;
     }
 ?>
