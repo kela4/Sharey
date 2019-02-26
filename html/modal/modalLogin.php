@@ -10,7 +10,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form method="post" action="../php/login.php">
+                <form id="loginModalForm" method="post" action="../php/login.php">
                     <div class="form-group">
                         <label for="email">E-Mail</label>
                         <input type="email" required class="form-control" id="email"
@@ -33,3 +33,5 @@
     </div>
 </div>
 <!--end Modal-->
+
+<script type="text/javascript" src="../js/loginCheck.js"></script>

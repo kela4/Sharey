@@ -21,8 +21,10 @@ class User{
     public static function login(string $mail, string $password){         
         require('dbconnect.php');
         mysqli_select_db($connection, 'db_sharey');
+
+        $userMail = strtolower($mail);
         
-        $query = "SELECT ur_userID, ur_userPassword, ur_notification FROM tbl_user WHERE ur_mail = '".$mail."' AND ur_active = true;";
+        $query = "SELECT ur_userID, ur_userPassword, ur_notification FROM tbl_user WHERE ur_mail = '".$userMail."' AND ur_active = true;";
         
         $res = mysqli_query($connection, $query);
         
@@ -31,10 +33,34 @@ class User{
         if(hash('sha256', $password) == $data['ur_userPassword']){
             //password right
             session_start();
-            $_SESSION['user'] = new User(true, $mail, $data['ur_notification'], $data['ur_userPassword'], $data['ur_userID']);
+            $_SESSION['user'] = new User(true, $userMail, $data['ur_notification'], $data['ur_userPassword'], $data['ur_userID']);
             return true;
         }else{
             //password wrong
+            return false;
+        }
+    }
+
+    public static function checkLoginDates(string $mail, string $password){         
+        require('dbconnect.php');
+        mysqli_select_db($connection, 'db_sharey');
+
+        $userMail = strtolower($mail);
+        
+        $query = "SELECT ur_userID, ur_userPassword FROM tbl_user WHERE ur_mail = '".$userMail."' AND ur_active = true;";
+        
+        $res = mysqli_query($connection, $query);
+        $resRowsNo = mysqli_num_rows($res);
+
+        if($resRowsNo =! 0){
+            $data = mysqli_fetch_array($res);
+
+            if(hash('sha256', $password) == $data['ur_userPassword']){
+                return true;
+            }else{
+                return false;
+            }
+        }else{
             return false;
         }
     }
