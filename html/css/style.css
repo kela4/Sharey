@@ -601,7 +601,7 @@ a[data-toggle="collapse"] {
 ---------------------------------------------------- */
 
 #textfloatleft {
-    float:left;
+    float: left;
 }
 
 /* ---------------------------------------------------
@@ -622,5 +622,5 @@ a[data-toggle="collapse"] {
 }
 
 #loadingContainer {
-    display: block;
+    display: none;
 }
