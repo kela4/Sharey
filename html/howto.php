@@ -43,7 +43,7 @@
                         Um ein Angebot anzulegen, klickst du auf unserer Startseite auf den runden + Button in der
                         unteren
                         Bildschirmmitte.
-                        Falls du noch nicht eingeloggt bist, erhälst du nun die Möglichkeit, dich zu registrieren oder
+                        Falls du noch nicht eingeloggt bist, erhältst du nun die Möglichkeit, dich zu registrieren oder
                         einzuloggen.
                     </p>
 
@@ -61,7 +61,7 @@
 
                     <p>
 						Nun siehst du ein leeres Angebot, dass du mit deinen Angaben ausfüllst.
-						Beschreibe am besten kurz, was du anbieten möchtest und warum. Auch den Zustand sollstest du
+						Beschreibe am besten kurz, was du anbieten möchtest und warum. Auch den Zustand solltest du
 						beschreiben, als z.B. ob das Produkt ungeöffnet oder geöffnet ist.
 					</p>
 
@@ -84,13 +84,13 @@
                 <div class="col-12 col-md-10 align-self-center">
 
                     <p>
-						Ein Bild sagt mehr als tausend Worte. Desahlb geben wir dir auch die Möglichkeit dein Angebot mit
+						Ein Bild sagt mehr als tausend Worte. Deshalb geben wir dir auch die Möglichkeit dein Angebot mit
 						einem Bild zu vervollständigen.
 					</p>
 
 					<p>
 						Achte darauf, dass das Produkt gut zu sehen und scharf ist. Außerdem sollte es gut ausgeleuchtet
-						sein. Und je weniger drumherum sichtbar ist, desto besser für die Aufmerksamkeit auf dein Angebot.
+						sein. Und je weniger Drumherum sichtbar ist, desto besser für die Aufmerksamkeit auf dein Angebot.
 						Das Bild darf dabei eine Größe von 3 MB nicht überschreiten, damit wir dir die beste Performance von
 						Sharey garantieren können.
 					</p>
@@ -114,7 +114,7 @@
 
                     <p>
 						Angebote kann man nach Textinhalten und Tag suchen, sowie den Radius der Suche einschränken. 
-						Sobald ein User Interesse an deinem Angebot hat erhälst du von uns eine Nachricht.
+						Sobald ein User Interesse an deinem Angebot hat erhältst du von uns eine Nachricht.
                     </p>
 
                 </div>
@@ -131,7 +131,7 @@
 
                     <p>
 						Um Einzelheiten, den Übergabeort und die Zeit zu klären, könnt ihr beide euch nun Nachrichten schreiben. 
-						Wir arbeiten ohne Benutzernamen, dass heißt, die User werden nach der Reihenfolge in der sie angefragt haben, angezeigt.
+						Wir arbeiten ohne Benutzernamen, das heißt, die User werden nach der Reihenfolge in der sie angefragt haben, angezeigt.
                     </p>
 
                     <p>
@@ -174,7 +174,7 @@
                 <div class="col-12 col-md-10 align-self-center">
 
                     <p>
-						Sollte einmal etwas nicht so laufen, wie du es dir vorstellst, kannst du jeden Konversation jederzeit beenden. 
+						Sollte einmal etwas nicht so laufen, wie du es dir vorstellst, kannst du jede Konversation jederzeit beenden. 
 						Unangemessene Angebote kannst du melden.
                     </p>
 
