@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <title>Sharey</title>
     <?php
         include('basicsiteelements/header.php');
 

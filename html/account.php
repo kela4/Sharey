@@ -11,6 +11,7 @@
 <html>
 
 <head>
+    <title>Account</title>
     <?php
         include('basicsiteelements/header.php');
     ?>
@@ -29,7 +30,7 @@
         <!-- Div content for padding-top (header) -->
         <div class="container">
 
-        <?php
+            <?php
             if(isset($_SESSION['user']) && !empty($_SESSION['user'])){ //only show page if a user is logged in
         ?>
 
@@ -44,7 +45,7 @@
 
                 </div>
             </div>
-            
+
             <div class="row">
 
                 <div class="col-lg-6">
@@ -232,7 +233,7 @@
 
             </div>
 
-        <?php                    
+            <?php                    
             }else{
                 echo '<br><p>Du bist nicht eingeloggt. Bitte <a data-toggle="modal" data-target="#loginModal" title="Login"><strong>melde dich an</strong></a>, um auf deinen Account zuzugreifen.<br>
                 </p>';

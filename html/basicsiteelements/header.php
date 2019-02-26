@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>Sharey</title>
+
 
 <link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.ico">
 

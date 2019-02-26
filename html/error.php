@@ -4,6 +4,7 @@
 <!--not implemented yet-->
 
 <head>
+    <title>Fehler</title>
     <?php
         include('basicsiteelements/header.php');
     ?>

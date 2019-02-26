@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <title>How To</title>
     <?php
         include('basicsiteelements/header.php');
     ?>

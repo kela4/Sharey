@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <title>Logout</title>
     <?php
         include('basicsiteelements/header.php');
     ?>

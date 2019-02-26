@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <title>Impressum</title>
     <?php
         include('basicsiteelements/header.php');
     ?>

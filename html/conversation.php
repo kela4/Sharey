@@ -11,6 +11,7 @@
 <html>
 
 <head>
+    <title>Konversation</title>
     <?php
         include('basicsiteelements/header.php');
     ?>
@@ -51,7 +52,7 @@
                             echo '<button type="button" onclick="deleteConversation('.$conversation->getConID().');" class="btn btn-sm btn-danger" title="Konversation mit dem User löschen">
                                 <i class="fas fa-trash"></i> Konversation löschen</button>';
                         }    
-                        ?>    
+                        ?>
                     </div>
                     <div class="col-2">
                         <button type="button" class="btn btn-sm btn-secondary float-right" title="Zurück"

@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <title>Kontakt</title>
     <?php
         include('basicsiteelements/header.php');
     ?>
