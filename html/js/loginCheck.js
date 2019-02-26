@@ -3,7 +3,8 @@ function loginCheck(){
     //show loadingContainer:
     $('#loadingContainer').show();
     var mail = $('#email').val();
-    var password = $('password').val();
+    var password = $('#password').val();
+    console.log(mail + ' ' + password);
 
     $.ajax({
         url: '../php/loginCheck.php',
