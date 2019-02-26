@@ -605,11 +605,11 @@ a[data-toggle="collapse"] {
 
 #loading {
     padding-top: 50vh;
-    z-index: 999999999;
+    z-index: 9000;
 }
 
 #loadingOverlay {
-    z-index: 9999999;
+    z-index: 8000;
     display: block;
     position: fixed;
     width: 100vw;
@@ -618,5 +618,5 @@ a[data-toggle="collapse"] {
 }
 
 #loadingContainer {
-    display: none;
+    display: block;
 }
