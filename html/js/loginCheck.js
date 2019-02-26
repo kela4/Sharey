@@ -15,6 +15,7 @@ function loginCheck(){
             $('#loadingContainer').hide();
         },
         success: function(data){
+            console.log(data);
             if(data == true){
                 //if success:
                 $( "#loginModalForm" ).submit();
