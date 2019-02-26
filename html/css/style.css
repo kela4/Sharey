@@ -449,10 +449,6 @@ a[data-toggle="collapse"] {
     color: #464646;
 }
 
-#textfloatright {
-    style="float:left"
-}
-
 #deleteSymbol {
     color: white;
     height: 24px;
@@ -598,6 +594,14 @@ a[data-toggle="collapse"] {
     padding-bottom: 20px;
     padding-top: 20px;
     background-color: white;
+}
+
+/*---------------------------------------------------
+    How To
+---------------------------------------------------- */
+
+#textfloatleft {
+    style="float:left";
 }
 
 /* ---------------------------------------------------
