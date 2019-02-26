@@ -12,11 +12,13 @@
             
         if($success == true){
             header("Location: ../loggedout.php");
+            exit;
         }else{
             echo "<p>Da ist wohl etwas schief gegangen, bitte erneut versuchen.</p>";  //hier vielleicht auf eine initiale Fehler-Meldungsseite verweisen, der verschiedenen get-Params mitgegeben werden und je nach Param wird die Fehlermeldung angezeigt
         }
         
     }else{
         header("Location: ../index.php");
+        exit;
     }
 ?>

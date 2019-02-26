@@ -18,11 +18,11 @@
             if(isset($_FILES['img']) && !empty($_FILES['img'])){
                 //get image data as byte
 
-                if($_FILES["img"]["size"] > 1000000){
+                if($_FILES['img']['size'] > 1000000){
                     header("Location: ../error.php?errormessage=Dein Bild überschreitet die maximale Bildgröße von <strong>1MB</strong>.");
                     exit;
                 }else{
-                    $fileExtension = strtolower(pathinfo($_FILES["img"]["name"], PATHINFO_EXTENSION));
+                    $fileExtension = strtolower(pathinfo($_FILES['img']['name'], PATHINFO_EXTENSION));
                     
                     if($fileExtension != "jpg" && $fileExtension != "png" && $fileExtension != "jpeg"){
                         header("Location: ../error.php?errormessage=Nur Bilder mit den Formaten <strong>jpg, png oder jpeg</strong> sind gültig.");
