@@ -64,7 +64,7 @@
 
 
             <div id="conversationHeading">
-                <h1>Konversation</h1>
+                <h1>Konversation zu <?php $conversation->getOfferTitle();?></h1>
             </div>
 
             <div id="messageArea">
