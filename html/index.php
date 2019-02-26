@@ -28,15 +28,18 @@
     <!-- Loading Container -->
     <div id="loadingContainer">
         <div id="loadingOverlay"></div>
+
         <div id="loading" class="row justify-content-center">
-            <div class="col-6">
+            <div class="col-10 col-md-6">
                 <div class="progress" id="progress">
                     <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar"
                         style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Lädt...
                     </div>
                 </div>
             </div>
+
         </div>
+
     </div>
 
     <?php

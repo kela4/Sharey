@@ -348,8 +348,9 @@ a[data-toggle="collapse"] {
     margin-top: 20px;
 }
 
-#citySpan {
-    font-size: 100%;
+#offerCityDiv {
+    height: 30px;
+    width: 83px;
 }
 
 .whiteText {
@@ -371,11 +372,13 @@ a[data-toggle="collapse"] {
 
 #omHeader {
     border-bottom: none;
+    background-color: #92D050;
 }
 
 #omBody {
     border-bottom-left-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
+    background-color: #92D050;
 }
 
 #omContent {
@@ -602,11 +605,13 @@ a[data-toggle="collapse"] {
 
 #loading {
     padding-top: 50vh;
-    z-index: 999999999;
+    z-index: 9999;
+    position: fixed;
+    width: 100%
 }
 
 #loadingOverlay {
-    z-index: 999999998;
+    z-index: 999;
     display: block;
     position: fixed;
     width: 100vw;
