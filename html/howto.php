@@ -46,9 +46,10 @@
                     </p>
 
                 </div>
+                <hr id="divider">
             </div>
 
-            <hr id="divider">
+
 
             <div id="textfloatleft" class="col-12 col-md-2 text-center">
                 <img src="images/2.png" class="img-fluid rounded" alt="2" />
