@@ -24,11 +24,11 @@
             <h3>Eine kurze Anleitung, wie du mitmachen kannst!</h3>
 
             <div class="row">
-                <div class="col-12 col-md-2 text-center">
+                <div class="col-12 col-md-2 text-center align-middle">
                     <img src="images/1.png" class="img-fluid rounded" alt="1" />
                 </div>
 
-                <div class="col-12 col-md-10 text-center">
+                <div class="col-12 col-md-10 align-middle">
 
                     <p>
                         Auf dieser Plattform kannst du dazu beitragen, die Verschwendung von Ressourcen auf unserer Erde
