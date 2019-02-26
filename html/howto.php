@@ -168,7 +168,7 @@
             <!-- 7 -->
             <div class="row">
                 <div class="col-12 col-md-2 text-center align-self-center">
-                    <img src="images/7.png" class="img-fluid rounded" alt="1" />
+                    <img src="images/7.png" class="img-fluid rounded" alt="7" />
                 </div>
 
                 <div class="col-12 col-md-10 align-self-center">
