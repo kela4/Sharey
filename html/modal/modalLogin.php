@@ -10,6 +10,7 @@
                 </button>
             </div>
             <div class="modal-body">
+                <p id="loginModalInfoText"></p>
                 <form id="loginModalForm" method="post" action="../php/login.php">
                     <div class="form-group">
                         <label for="email">E-Mail</label>
