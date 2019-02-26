@@ -20,10 +20,6 @@ class Message{
         $this->senderID = $senderID;
     }
 
-    public static function getMessage(int $messageID){
-        return $message;
-    }
-
     public static function createMessage(int $senderID, int $conID, string $content){
         $sendDate = date('Y-m-d H:i:s');
         
@@ -42,10 +38,6 @@ class Message{
         }else{
             return false;
         }
-    }
-
-    public static function deleteMessage(int $messageID){ 
-        return true;
     }
 
     public static function sendAutoStartMessage(int $conID, int $senderID){
