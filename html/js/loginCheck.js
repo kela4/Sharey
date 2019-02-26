@@ -4,7 +4,6 @@ function loginCheck(){
     $('#loadingContainer').show();
     var mail = $('#email').val();
     var password = $('#password').val();
-    console.log(mail + ' ' + password);
 
     $.ajax({
         url: '../php/loginCheck.php',
@@ -16,8 +15,7 @@ function loginCheck(){
             $('#loadingContainer').hide();
         },
         success: function(data){
-            console.log(data);
-            if(data == true){
+            if(data === true){
                 //if success:
                 $( "#loginModalForm" ).submit();
             }else{
