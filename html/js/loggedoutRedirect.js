@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     setTimeout(function(){ 
-        var url = "https://sharey.rollingrelease.de/index.php";
+        var url = "/index.php";
         $(location).attr('href', url);
     }, 3000);
    
