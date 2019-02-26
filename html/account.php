@@ -128,7 +128,7 @@
 
                                                 $messageSendedByCurrentUser = "";
                                                 if($conversation->getLastMessage()->getSenderID() == $_SESSION['user']->getUserID()){
-                                                    $messageSendedByCurrentUser = "Ich: ";
+                                                    $messageSendedByCurrentUser = "<i>Ich:</i> ";
                                                 }
 
                                                 //if offer-counter ist ungerade, dann dunkelgrau er div, sonst hellgrau
