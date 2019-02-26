@@ -23,12 +23,14 @@
 
             <h3>Eine kurze Anleitung, wie du mitmachen kannst!</h3>
 
+
+            <!-- 1 -->
             <div class="row">
-                <div class="col-12 col-md-2 text-center">
+                <div class="col-12 col-md-2 text-center align-self-center">
                     <img src="images/1.png" class="img-fluid rounded" alt="1" />
                 </div>
 
-                <div class="col-12 col-md-10">
+                <div class="col-12 col-md-10 align-self-center">
 
                     <p>
                         Auf dieser Plattform kannst du dazu beitragen, die Verschwendung von Ressourcen auf unserer Erde
@@ -49,74 +51,132 @@
                 <hr class="col-12" id="divider">
             </div>
 
+            <!-- 2 -->
+            <div class="row">
+                <div class="col-12 col-md-2 text-center align-self-center">
+                    <img src="images/2.png" class="img-fluid rounded" alt="1" />
+                </div>
 
+                <div class="col-12 col-md-10 align-self-center">
 
-            <div id="textfloatleft" class="col-12 col-md-2 text-center">
-                <img src="images/2.png" class="img-fluid rounded" alt="2" />
+                    <p>
+
+                    </p>
+
+                    <p>
+
+                    </p>
+
+                </div>
+                <hr class="col-12" id="divider">
             </div>
 
-            <div class="col-12 col-md-10">
+            <!-- 3 -->
+            <div class="row">
+                <div class="col-12 col-md-2 text-center align-self-center">
+                    <img src="images/3.png" class="img-fluid rounded" alt="1" />
+                </div>
 
-                <p>
-                    Nun siehst du ein leeres Angebot, dass du mit deinen Angaben ausfüllst.
-                    Beschreibe am besten kurz, was du anbieten möchtest und warum. Auch den Zustand sollstest du
-                    beschreiben, als z.B. ob das Produkt ungeöffnet oder geöffnet ist.
-                </p>
+                <div class="col-12 col-md-10 align-self-center">
 
-                <p>
-                    Wichtig ist auch, dass du das Mindesthaltbarkeitsdatum (MHD) angibst.
-                    Keine Angst, nur weil das MHD abgelaufen ist, werden wir dein Angebot nicht löschen. Denn fast immer
-                    sind Lebensmittel und Drogerieprodukte auch nach dem MHD noch genießbar.
-                </p>
+                    <p>
 
+                    </p>
+
+                    <p>
+
+                    </p>
+
+                </div>
+                <hr class="col-12" id="divider">
             </div>
 
-            <hr id="divider">
+            <!-- 4 -->
+            <div class="row">
+                <div class="col-12 col-md-2 text-center align-self-center">
+                    <img src="images/4.png" class="img-fluid rounded" alt="1" />
+                </div>
 
-            <div id="textfloatleft" class="col-12 col-md-2 text-center">
-                <img src="images/2.png" class="img-fluid rounded" alt="2" />
+                <div class="col-12 col-md-10 align-self-center">
+
+                    <p>
+
+                    </p>
+
+                    <p>
+
+                    </p>
+
+                </div>
+                <hr class="col-12" id="divider">
             </div>
 
-            <div class="col-12 col-md-10">
+            <!-- 5 -->
+            <div class="row">
+                <div class="col-12 col-md-2 text-center align-self-center">
+                    <img src="images/5.png" class="img-fluid rounded" alt="1" />
+                </div>
 
-                <p>
-                    Nun siehst du ein leeres Angebot, dass du mit deinen Angaben ausfüllst.
-                    Beschreibe am besten kurz, was du anbieten möchtest und warum. Auch den Zustand sollstest du
-                    beschreiben, als z.B. ob das Produkt ungeöffnet oder geöffnet ist.
-                </p>
+                <div class="col-12 col-md-10 align-self-center">
 
-                <p>
-                    Wichtig ist auch, dass du das Mindesthaltbarkeitsdatum (MHD) angibst.
-                    Keine Angst, nur weil das MHD abgelaufen ist, werden wir dein Angebot nicht löschen. Denn fast immer
-                    sind Lebensmittel und Drogerieprodukte auch nach dem MHD noch genießbar.
-                </p>
+                    <p>
 
+                    </p>
+
+                    <p>
+
+                    </p>
+
+                </div>
+                <hr class="col-12" id="divider">
             </div>
 
-            <hr id="divider">
+            <!-- 6 -->
+            <div class="row">
+                <div class="col-12 col-md-2 text-center align-self-center">
+                    <img src="images/6.png" class="img-fluid rounded" alt="1" />
+                </div>
 
-            <div id="textfloatleft" class="col-12 col-md-2 text-center">
-                <img src="images/3.png" class="img-fluid rounded" alt="3" />
+                <div class="col-12 col-md-10 align-self-center">
+
+                    <p>
+
+                    </p>
+
+                    <p>
+
+                    </p>
+
+                </div>
+                <hr class="col-12" id="divider">
             </div>
 
-            <div class="col-12 col-md-10">
+            <!-- 7 -->
+            <div class="row">
+                <div class="col-12 col-md-2 text-center align-self-center">
+                    <img src="images/7.png" class="img-fluid rounded" alt="1" />
+                </div>
 
-                <p>
-                    Ein Bild sagt mehr als tausend Worte. Desahlb geben wir dir auch die Möglichkeit dein Angebot mit
-                    einem Bild zu vervollständigen.
-                </p>
+                <div class="col-12 col-md-10 align-self-center">
 
-                <p>
-                    Achte darauf, dass das Produkt gut zu sehen und scharf ist. Außerdem sollte es gut ausgeleuchtet
-                    sein. Und je weniger drumherum sichtbar ist, desto besser für die Aufmerksamkeit auf dein Angebot.
-                    Das Bild darf dabei eine Größe von 3 MB nicht überschreiten, damit wir dir die beste Performance von
-                    Sharey garantieren können.
-                </p>
+                    <p>
 
+                    </p>
+
+                    <p>
+
+                    </p>
+
+                </div>
+                <hr class="col-12" id="divider">
             </div>
+
 
 
         </div>
+
+
+    </div>
 
     </div>
     </div>
