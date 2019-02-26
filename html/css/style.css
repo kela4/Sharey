@@ -449,6 +449,10 @@ a[data-toggle="collapse"] {
     color: #464646;
 }
 
+#textfloatright{ 
+    style="float:left"
+}
+
 #deleteSymbol {
     color: white;
     height: 24px;
@@ -461,6 +465,8 @@ a[data-toggle="collapse"] {
     border: none;
     cursor: pointer;
 }
+
+
 
 /* ---------------------------------------------------
     BUTTON NEW OFFER
