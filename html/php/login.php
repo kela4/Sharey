@@ -14,6 +14,7 @@
             
             if($success == true){
                 header("Location: ../account.php");
+                exit;
             }else{
                 echo "<p>Nutzerdaten falsch.</p>";
             }
