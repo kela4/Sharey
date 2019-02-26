@@ -618,6 +618,6 @@ a[data-toggle="collapse"] {
 }
 
 #loadingContainer {
-    display: block;
+    display: fixed;
     z-index: 7000;
 }
