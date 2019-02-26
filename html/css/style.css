@@ -618,8 +618,6 @@ a[data-toggle="collapse"] {
 }
 
 #loadingContainer {
-    display: fixed;
+    display: none;
     z-index: 7000;
-    width: 100vw;
-    height: 100vh;
 }
