@@ -52,7 +52,7 @@
                              <input id="inputFileName" type="text" class="form-control" readonly>
                              <label class="input-group-btn">
                                  <span class="btn btn-secondary">
-                                     Browse&hellip; <input id="inputFile" type="file" style="display: none;" accept="image/*" name="img">
+                                     Browse&hellip; <input id="inputFile" type="file" style="display: none;" accept="image/png, image/jpeg" name="img">
                                  </span>
                              </label>
                          </div>
