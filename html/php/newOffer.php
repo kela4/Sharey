@@ -20,11 +20,13 @@
 
                 if($_FILES["img"]["size"] > 1000000){
                     header("Location: ../error.php?errormessage=Dein Bild überschreitet die maximale Bildgröße von <strong>1MB</strong>.");
+                    exit;
                 }else{
                     $fileExtension = strtolower(pathinfo($_FILES["img"]["name"], PATHINFO_EXTENSION));
                     
                     if($fileExtension != "jpg" && $fileExtension != "png" && $fileExtension != "jpeg"){
                         header("Location: ../error.php?errormessage=Nur Bilder mit den Formaten <strong>jpg, png oder jpeg</strong> sind gültig.");
+                        exit;
                     }else{
                         $imageData = addslashes(file_get_contents($_FILES['img']['tmp_name']));
                     }           
@@ -42,10 +44,12 @@
                 header("Location: ../account.php");
             }else{
                 header("Location: ../error.php?errormessage=Bitte überprüfe, ob dein Bild die maximale Bildgröße von <strong>1MB</strong> nicht überschreitet.");
+                exit;
             }
                     
         }else{
             header("Location: ../error.php?errormessage=Bitte überprüfe, ob dein Bild die maximale Bildgröße von <strong>1MB</strong> nicht überschreitet.");
+            exit;
         }
     }
 
