@@ -23,11 +23,11 @@
 
             <h3>Eine kurze Anleitung, wie du mitmachen kannst!</h3>
 
-            <div class="col-12 col-md-2 text-center float-right">
+            <div class="col-12 col-md-2 text-center">
                 <img src="images/1.png" class="img-fluid rounded" alt="1" />
             </div>
 
-            <div class="col-12 col-md-10">
+            <div class="col-12 col-md-10 float-right">
 
                 <p>
                     Auf dieser Plattform kannst du dazu beitragen, die Verschwendung von Ressourcen auf unserer Erde
@@ -46,11 +46,11 @@
 
             <hr id="divider">
 
-            <div class="col-12 col-md-2 text-center float-right">
+            <div class="col-12 col-md-2 text-center">
                 <img src="images/2.png" class="img-fluid rounded" alt="2" />
             </div>
 
-            <div class="col-12 col-md-10">
+            <div class="col-12 col-md-10 float-right">
 
                 <p>
                     Nun siehst du ein leeres Angebot, dass du mit deinen Angaben ausfüllst.
@@ -68,11 +68,11 @@
 
             <hr id="divider">
 
-            <div class="col-12 col-md-2 text-center float-right">
+            <div class="col-12 col-md-2 text-center">
                 <img src="images/3.png" class="img-fluid rounded" alt="3" />
             </div>
 
-            <div class="col-12 col-md-10">
+            <div class="col-12 col-md-10 float-right">
 
                 <p>
                     Ein Bild sagt mehr als tausend Worte. Desahlb geben wir dir auch die Möglichkeit dein Angebot mit
