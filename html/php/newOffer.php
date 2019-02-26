@@ -15,7 +15,8 @@
             
             $imageData = null;
 
-            if(isset($_FILES['img']) && !empty($_FILES['img'])){
+            if(isset($_FILES['img']) && !empty($_FILES['img']) && $_FILES['img'] != "" 
+                && isset($_FILES['img']['name']) && !empty($_FILES['img']['name']) && $_FILES['img']['name'] != ""){
                 //get image data as byte
                 header("Location: ../error.php?errormessage=".$_FILES['img']['name']);
                     exit;
