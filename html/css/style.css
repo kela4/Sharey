@@ -620,4 +620,6 @@ a[data-toggle="collapse"] {
 #loadingContainer {
     display: fixed;
     z-index: 7000;
+    width: 100vw;
+    height: 100vh;
 }
