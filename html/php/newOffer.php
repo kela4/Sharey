@@ -17,11 +17,9 @@
 
             if(isset($_FILES['img']) && !empty($_FILES['img']) && $_FILES['img'] != "" 
                 && isset($_FILES['img']['name']) && !empty($_FILES['img']['name']) && $_FILES['img']['name'] != ""){
-                //get image data as byte
-                header("Location: ../error.php?errormessage=".$_FILES['img']['name']);
-                    exit;
-
-                if($_FILES['img']['size'] > 1000000){
+                
+                if(isset($_FILES['img']['size']) && !empty($_FILES['img']['size'])
+                    && $_FILES['img']['size'] != "" && $_FILES['img']['size'] > 1000000){
                     header("Location: ../error.php?errormessage=Dein Bild überschreitet die maximale Bildgröße von <strong>1MB</strong>.");
                     exit;
                 }else{
@@ -31,6 +29,7 @@
                         header("Location: ../error.php?errormessage=Nur Bilder mit den Formaten <strong>jpg, png oder jpeg</strong> sind gültig.");
                         exit;
                     }else{
+                        //get image data as byte
                         $imageData = addslashes(file_get_contents($_FILES['img']['tmp_name']));
                     }           
                 }
