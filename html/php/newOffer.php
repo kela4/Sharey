@@ -17,7 +17,18 @@
 
             if(isset($_FILES['img']) && !empty($_FILES['img'])){
                 //get image data as byte
-                $imageData = addslashes(file_get_contents($_FILES['img']['tmp_name']));
+
+                if($_FILES["img"]["size"] > 1000000){
+                    header("Location: ../error.php?errormessage=Dein Bild überschreitet die maximale Bildgröße von <strong>1MB</strong>.");
+                }else{
+                    $fileExtension = strtolower(pathinfo($_FILES["img"]["name"], PATHINFO_EXTENSION));
+                    
+                    if($fileExtension != "jpg" && $fileExtension != "png" && $fileExtension != "jpeg"){
+                        header("Location: ../error.php?errormessage=Nur Bilder mit den Formaten <strong>jpg, png oder jpeg</strong> sind gültig.");
+                    }else{
+                        $imageData = addslashes(file_get_contents($_FILES['img']['tmp_name']));
+                    }           
+                }
             }
 
             $expdate = new DateTime('0000-00-00');
