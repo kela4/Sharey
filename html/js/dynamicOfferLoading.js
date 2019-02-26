@@ -167,7 +167,7 @@ function showInterest(offerID){
                     type: 'post',
                     success: function(success){
                         if(success){ //go to account-page
-                            var url = "https://sharey.rollingrelease.de/account.php";
+                            var url = "/account.php";
                             $(location).attr('href', url);
                         }else{ //warning-message
                             alert('Es ist ein Problem aufgetreten. Bitte erneut versuchen. Prüfe bitte auch, ob du bereits eine Konversation zu diesem Angebot laufen hast.');

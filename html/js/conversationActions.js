@@ -7,7 +7,7 @@ function offerWasHandedOver(conID, offerID){
             type: 'post',
             success: function(data){
                 if(data != false){ //action was successfull
-                    var url = "https://sharey.rollingrelease.de/account.php";
+                    var url = "/account.php";
                     $(location).attr('href', url);
                 }else{
                     alert('Es ist ein Fehler aufgetreten, bitte versuche es nochmal.');
@@ -29,7 +29,7 @@ function deleteConversation(conID){
             type: 'post',
             success: function(data){
                 if(data != false){
-                    var url = "https://sharey.rollingrelease.de/account.php";
+                    var url = "/account.php";
                     $(location).attr('href', url);
                 }else{
                     alert('Es ist ein Fehler aufgetreten, bitte versuche es nochmal.');

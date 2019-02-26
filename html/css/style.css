@@ -449,6 +449,10 @@ a[data-toggle="collapse"] {
     color: #464646;
 }
 
+#textfloatright {
+    style="float:left"
+}
+
 #deleteSymbol {
     color: white;
     height: 24px;

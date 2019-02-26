@@ -139,6 +139,11 @@
                                                         $messageUnreaded = "font-weight-bold"; //set this class to last message textdiv
                                                 }
 
+                                                $messageSendedByCurrentUser = "";
+                                                if($conversation->getLastMessage()->getSenderID() == $_SESSION['user']->getUserID()){
+                                                    $messageSendedByCurrentUser = "<i>Ich:</i> ";
+                                                }
+
                                                 //if offer-counter ist ungerade, dann dunkelgrau er div, sonst hellgrau
                                                 echo '<div class="card" id="'.$colorOfferGroup.'">
                                                         <h4>'.$conversation->getOfferTitle().'</h4>
@@ -146,7 +151,7 @@
                                                             <input type="text" hidden required name="conID" value="'.$conversation->getConID().'" />
                                                             <div class="col-12">
                                                                 <button class="btn shadow-none" type="submit">
-                                                                    <div class="'.$messageUnreaded.'" style="display: inline;">@'.$acceptorCounter.' '.$conversation->getLastMessage()->getContent().'</div>
+                                                                    <div class="'.$messageUnreaded.'" style="display: inline;">@'.$acceptorCounter.' '.$messageSendedByCurrentUser.$conversation->getLastMessage()->getContent().'</div>
                                                                     <div class="float-right" id="'.$colorTimeStamp.'">'.$conversation->getLastMessage()->getDate()->format('Y-m-d H:i').'</div>
                                                                 </button>
                                                             </div>
