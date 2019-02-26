@@ -27,7 +27,7 @@
                 <img src="images/1.png" class="img-fluid rounded" alt="1" />
             </div>
 
-            <div class="col-12 col-md-10 float-right">
+            <div class="col-12 col-md-10">
 
                 <p>
                     Auf dieser Plattform kannst du dazu beitragen, die Verschwendung von Ressourcen auf unserer Erde
@@ -50,7 +50,7 @@
                 <img src="images/2.png" class="img-fluid rounded" alt="2" />
             </div>
 
-            <div class="col-12 col-md-10 float-right">
+            <div class="col-12 col-md-10">
 
                 <p>
                     Nun siehst du ein leeres Angebot, dass du mit deinen Angaben ausfüllst.
@@ -72,7 +72,7 @@
                 <img src="images/3.png" class="img-fluid rounded" alt="3" />
             </div>
 
-            <div class="col-12 col-md-10 float-right">
+            <div class="col-12 col-md-10">
 
                 <p>
                     Ein Bild sagt mehr als tausend Worte. Desahlb geben wir dir auch die Möglichkeit dein Angebot mit

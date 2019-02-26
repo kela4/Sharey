@@ -600,9 +600,9 @@ a[data-toggle="collapse"] {
     How To
 ---------------------------------------------------- */
 
-#textfloatleft {
-    float:left;
-}
+/*#textfloatleft {
+    float: left;
+}*/
 
 /* ---------------------------------------------------
     LOADING
@@ -622,5 +622,5 @@ a[data-toggle="collapse"] {
 }
 
 #loadingContainer {
-    display: block;
+    display: none;
 }
