@@ -128,6 +128,7 @@ class Offer{
     }
 
     public function edit(string $title, string $content, int $tagID, DateTime $mhd, string $picture){ //String, String, int, date, String
+        //not implemented in prototype
         return $offer;
     }
 
@@ -137,6 +138,7 @@ class Offer{
      * if an offer has a report counter >= 5 --> the offer will be deleted
      */
     public function reportCount(){
+        //not implemented in prototype
         return true;
     }
 

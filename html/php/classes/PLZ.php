@@ -15,6 +15,7 @@ class PLZ{
     }
 
     public static function getPLZ(int $plzID){
+        //not implemented in prototype
         return $plz;
     }
 

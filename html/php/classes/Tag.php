@@ -15,6 +15,7 @@ class Tag{
     }
 
     public static function getTag(int $tagID){
+        //not implemented in prototype
         return $tag;
     }
 

@@ -18,10 +18,6 @@ class User{
         $this->userID = $userID;
     }
 
-    public static function getUser(int $userID){
-        return $user;
-    }
-
     public static function login(string $mail, string $password){         
         require('dbconnect.php');
         mysqli_select_db($connection, 'db_sharey');
@@ -44,14 +40,17 @@ class User{
     }
 
     public static function deleteUser(int $userID){
+        //not implemented in prototype
         return true;
     }
 
     public static function registration(string $mail, string $password){ 
+        //not implemented in prototype
         return $user;
     }
 
-    public function changeAccount(string $password, string $mail){ 
+    public function changeAccount(string $password, string $mail){
+        //not implemented in prototype 
         return true;
     }
 
@@ -70,11 +69,8 @@ class User{
         }
     }
 
-    public function dontTakeOffer(int $offerID){
-        return true;
-    }
-
     public function editOffer(int $offerID, bool $active, string $title, string $content, string $picture){
+        //not implemented in prototype
         return $offer;
     }
 
@@ -85,6 +81,7 @@ class User{
     }
 
     public function reportOffer(int $offerID){
+        //not implemented in prototype
         return true;
     }
 
@@ -144,10 +141,6 @@ class User{
         }
 
         return $offers;
-    }
-
-    public function takeOffer(int $offerID){
-        return true;
     }
 
     /**
