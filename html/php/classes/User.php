@@ -52,7 +52,7 @@ class User{
         $res = mysqli_query($connection, $query);
         $resRowsNo = mysqli_num_rows($res);
 
-        if($resRowsNo =! 0){
+        if($resRowsNo != 0){
             $data = mysqli_fetch_array($res);
 
             if(hash('sha256', $password) == $data['ur_userPassword']){
