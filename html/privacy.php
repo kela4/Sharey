@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Datenschutzerklärung</title>
+    <title>Datenschutz</title>
     <?php
         include('basicsiteelements/header.php');
     ?>
