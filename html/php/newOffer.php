@@ -17,6 +17,8 @@
 
             if(isset($_FILES['img']) && !empty($_FILES['img'])){
                 //get image data as byte
+                header("Location: ../error.php?errormessage=".$_FILES['img']['name']);
+                    exit;
 
                 if($_FILES['img']['size'] > 1000000){
                     header("Location: ../error.php?errormessage=Dein Bild überschreitet die maximale Bildgröße von <strong>1MB</strong>.");
