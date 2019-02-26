@@ -12,7 +12,9 @@ function loginCheck(){
         type: 'post',
         complete: function(){
             //hide loadingContainer
-            $('#loadingContainer').hide();
+            setTimeout(function(){ 
+                $('#loadingContainer').hide();
+            }, 500);
         },
         success: function(data){
             if(data === true){

@@ -108,7 +108,9 @@ function openModal(offerID, distance){
         type: 'post',
         complete: function(){
             //hide loadingContainer
-            $('#loadingContainer').hide();
+            setTimeout(function(){ 
+                $('#loadingContainer').hide();
+            }, 500);
         },
         success: function(data){
             if(data.offerAvailable){
@@ -167,7 +169,9 @@ function showInterest(offerID){
         type: 'post',
         complete: function(){
             //hide loadingContainer
-            $('#loadingContainer').hide();
+            setTimeout(function(){ 
+                $('#loadingContainer').hide();
+            }, 500);
         },
         success: function(data){
             if(data){ //true = User ist eingeloggt
