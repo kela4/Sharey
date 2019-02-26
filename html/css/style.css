@@ -449,10 +449,6 @@ a[data-toggle="collapse"] {
     color: #464646;
 }
 
-#textfloatright{ 
-    style="float:left"
-}
-
 #deleteSymbol {
     color: white;
     height: 24px;
@@ -465,8 +461,6 @@ a[data-toggle="collapse"] {
     border: none;
     cursor: pointer;
 }
-
-
 
 /* ---------------------------------------------------
     BUTTON NEW OFFER
@@ -600,4 +594,33 @@ a[data-toggle="collapse"] {
     padding-bottom: 20px;
     padding-top: 20px;
     background-color: white;
+}
+
+/*---------------------------------------------------
+    How To
+---------------------------------------------------- */
+
+#textfloatleft {
+    float:left;
+}
+
+/* ---------------------------------------------------
+    LOADING
+----------------------------------------------------- */
+
+#loading {
+    padding-top: 50vh;
+    z-index: 1;
+}
+
+#loadingOverlay {
+    display: block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#loadingContainer {
+    display: block;
 }
