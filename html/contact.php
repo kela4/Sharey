@@ -11,8 +11,6 @@
 <body>
     <?php
         include('modal/modalLogin.php');
-    ?>
-    <?php
         include('basicsiteelements/navigationpages.php');
     ?>
 
@@ -20,8 +18,6 @@
         <!-- Div content for padding-top (header) -->
         <div class="container  mt-4">
             <h1>Kontakt</h1>
-
-
 
             <form id="contact-form" method="post" action="contact.php" role="form">
 
@@ -70,7 +66,9 @@
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <input type="button" class="btn btn-secondary btn-send float-right" onclick="alert('Diese Funktion ist im Prototypen nicht implementiert.');" value="Senden">
+                            <input type="button" class="btn btn-secondary btn-send float-right"
+                                onclick="alert('Diese Funktion ist im Prototypen nicht implementiert.');"
+                                value="Senden">
                         </div>
                     </div>
 

@@ -11,12 +11,10 @@
 <body>
     <?php
         include('modal/modalLogin.php');
-    ?>
-    <?php
         include('basicsiteelements/navigationpages.php');
     ?>
 
-    <div class="content  mt-4">
+    <div class="content mt-4">
         <!-- Div content for padding-top (header) -->
         <div class="container">
             <h1>How To</h1>
@@ -192,15 +190,10 @@
                 <hr class="col-12" id="divider">
             </div>
 
-
-
         </div>
 
-
     </div>
 
-    </div>
-    </div>
     <?php
         include('basicsiteelements/scripts.php');
     ?>
