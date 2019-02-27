@@ -64,7 +64,8 @@
 
         <div id="paddingtopMobil"></div>
 
-        <div class="container-fluid mt-4 offerSiteContainer">
+        <div class="container mt-4 offerSiteContainer">
+            <!-- Fluid -->
 
             <div id="loadingOffers" class="row justify-content-center" style="display:none">
                 <div class="col-6">
