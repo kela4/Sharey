@@ -68,6 +68,7 @@ function checkImg(){
     }else{
         //no img is selected -> form submit
         console.log('in nicht files');
+        $('#loadingContainer').hide();
         $('#newOfferEntryForm').submit();
     }
     

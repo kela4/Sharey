@@ -59,7 +59,7 @@
                                  </span>
                              </label>
                          </div>
-                         <small id="emailHelp" class="form-text text-muted">Bitte nur Dateien im Format
+                         <small id="imgHelp" class="form-text text-muted">Bitte nur Dateien im Format
                              '<strong>.jpg</strong>' und
                              '<strong>.png</strong>' mit einer maximalen Größe von <strong>1MB</strong> hochladen.
                              &#128522;</small>
