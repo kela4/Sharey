@@ -68,9 +68,9 @@
                     <h1>Account</h1>
                     <!--account features not implemented yet-->
                     <ul class="list-unstyled">
-                        <li><a title="Passwort ändern">Passwort ändern</a></li>
-                        <li><a title="E-Mail ändern">E-Mail ändern</a></li>
-                        <li><a title="Account löschen"> Account löschen</a></li>
+                        <li><a title="Passwort ändern" onclick="alert('Diese Funktion ist im Prototypen nicht implementiert.');">Passwort ändern</a></li>
+                        <li><a title="E-Mail ändern" onclick="alert('Diese Funktion ist im Prototypen nicht implementiert.');">E-Mail ändern</a></li>
+                        <li><a title="Account löschen" onclick="alert('Diese Funktion ist im Prototypen nicht implementiert.');"> Account löschen</a></li>
                     </ul>
                 </div>
 
@@ -80,7 +80,7 @@
                         <!--feature not implemented yet-->
                         <li>E-Mail-Benachrichtigung
                             <div class="form-check" id="checkbox">
-                                <input type="checkbox" class="form-check-input">
+                                <input type="checkbox" class="form-check-input" onclick="alert('Diese Funktion ist im Prototypen nicht implementiert.');">
                             </div>
                         </li>
                     </ul>
