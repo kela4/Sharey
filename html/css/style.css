@@ -610,13 +610,13 @@ a[data-toggle="collapse"] {
 
 #loading {
     padding-top: 50vh;
-    z-index: 1000;
+    z-index: 2000;
     position: fixed;
     width: 100%
 }
 
 #loadingOverlay {
-    z-index: 999;
+    z-index: 1900;
     display: block;
     position: fixed;
     width: 100vw;
