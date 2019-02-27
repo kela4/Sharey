@@ -46,6 +46,7 @@ function checkImg(){
                     }else{
                         dataURL = canvas.toDataURL("image/png");
                     }
+                    console.log(dataURL);
                     document.getElementById('inputFileHiddenInForm').value = dataURL;
                     //$('#inputFileHiddenInForm').val(dataURL);
                 }
