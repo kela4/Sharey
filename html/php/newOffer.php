@@ -27,7 +27,6 @@
                 }*/
 
                 $image = str_replace('data:image/png;base64,', '', $image);
-                
                 $image = str_replace(' ', '+', $image);
 
                 $imageData = addslashes(base64_decode($image));
