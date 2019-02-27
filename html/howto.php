@@ -37,13 +37,16 @@
                 <div class="col-12 col-md-10 align-self-center">
 				
                     <p>
-                        Um ein Angebot anzulegen, klickst du auf unserer Startseite auf den runden "+" Button in der
+                        Um ein Angebot anzulegen, gegibt dich auf unsere Startseite. Dort klickst du auf den runden "+" Button in der
                         unteren
-                        Bildschirmmitte.
-                        Falls du noch nicht eingeloggt bist, erhältst du nun die Möglichkeit, dich zu registrieren oder
-                        einzuloggen.
+                        Bildschirmmitte.						
                     </p>
 
+					<p> Falls du noch nicht eingeloggt bist, erhältst du nun die Möglichkeit, dich zu registrieren oder
+                        einzuloggen.
+						Zur Registrierung benötigst du nur eine Email Adresse und ein sicheres Passwort. Wir benötigen keinen Nanen oder weitere persönliche Angaben von dir. Datenschutz ist uns wichtig!
+					<p/>	
+						
                 </div>
                 <hr class="col-12" id="divider">
             </div>
