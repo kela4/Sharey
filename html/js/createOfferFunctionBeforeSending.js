@@ -7,7 +7,7 @@ function checkImg(){
 
     if(inputFileField.get(0).files[0]){
         console.log('in files');
-        console.log(inputFileField.files[0]);
+        console.log(inputFileField.get(0).files[0]);
 
         $('#inputFileName').removeClass('is-invalid');
 
