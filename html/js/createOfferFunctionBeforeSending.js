@@ -4,17 +4,15 @@ function checkImg(){
     $('#loadingContainer').show();
 
     var inputFileField = $('#inputFile');
-    console.log('filefield' + inputFileField);
-    console.log('file ' + inputFileField.get(0).files[0]);
 
-    if(inputFileField.files){
+    if(inputFileField.get(0).files[0]){
         console.log('in files');
         console.log(inputFileField.files[0]);
 
         $('#inputFileName').removeClass('is-invalid');
 
         //check img
-        var imageFile = inputFileField.files[0];
+        var imageFile = inputFileField.get(0).files[0];
         if(imageFile.type == "image/jpeg" || imageFile.type == "image/png"){
             var fileReader = new FileReader();
 
