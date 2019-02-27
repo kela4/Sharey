@@ -59,7 +59,7 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
                                                                     '</div>' +
                                                                     '<div class="col-auto">' +
                                                                         '<div id="cityDiv">' +
-                                                                            '<span class="whiteText">' + plz.location + '</span>' +
+                                                                            '<div class="whiteText offerLocationDiv">' + plz.location + '</div>' +
                                                                             '<br>' +
                                                                             '<span class="whiteText">' + distance + ' km</span>' +
                                                                         '</div>' +
@@ -83,6 +83,8 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
                                                 '</div>');
 
                 });
+
+                $('.offerLocationDiv').boxfit();
 
             }else{
                 offerContainer.append('<p>Leider sind keine passenden Angebote vorhanden. Versuche doch mal eine andere Such- und Filtereinschränkung.</p>');
