@@ -31,7 +31,7 @@ function loginCheck(){
             }
         },
         error: function(err){
-            alert('Es ist ein Fehler aufgetreten, bitte versuche es nochmal.');
+            alert('Die Funktion konnte nicht geladen werden, bitte versuche es nochmal.');
         }
     });
 

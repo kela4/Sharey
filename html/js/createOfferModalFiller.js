@@ -27,7 +27,7 @@ $(document).ready(function(){
             }
         },
         error: function(err){
-            alert('Fehler beim Füllen der Tags im NewOffer Modal.');
+            alert('Die Funktion konnte nicht geladen werden, bitte versuche es nochmal.');
         }
     });
 
