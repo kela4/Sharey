@@ -61,7 +61,6 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
                                                                         '<div id="cityDiv">' +
                                                                             '<div id="offerLocationDiv" class="whiteText">' + plz.location + '</div>' +
                                                                             '<script>$("#offerLocationDiv").boxfit();</script>' +
-                                                                            '<br>' +
                                                                             '<span class="whiteText">' + distance + ' km</span>' +
                                                                         '</div>' +
                                                                     '</div>' +
