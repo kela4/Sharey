@@ -4,8 +4,9 @@ function checkImg(){
     $('#loadingContainer').show();
 
     var inputFileField = $('#inputFile');
+    console.log(inputFileField.val());
 
-    if(inputFileField.files[0]){
+    if(inputFileField.files){
         console.log(inputFileField.files[0]);
 
         $('#inputFileName').removeClass('is-invalid');
