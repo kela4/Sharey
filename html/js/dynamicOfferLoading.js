@@ -145,7 +145,7 @@ function openModal(offerID, distance){
                 var offerModalActionButtons = $('#offerModalActionButtons');
                 offerModalActionButtons.empty();
                 offerModalActionButtons.append('<button type="button" class="btn btn-dark float-right" onclick="showInterest(' + offer.offerID + ');">Interesse</button>' +
-                                                        '<button type="button" class="btn btn-light float-right whiteText" id="omReportOffer">Melden</button>');
+                                                        '<button type="button" class="btn btn-light float-right whiteText" id="omReportOffer" onclick="alert(\'Diese Funktion ist im Prototypen nicht implementiert.\');">Melden</button>');
 
                 $('#offerModal').modal('show');
 
