@@ -4,7 +4,7 @@ function checkImg(){
     $('#loadingContainer').show();
 
     var inputFileField = $('#inputFile');
-    //console.log(inputFileField.val());
+    console.log(inputFileField);
 
     if(inputFileField.files){
         console.log('in files');
