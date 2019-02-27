@@ -186,11 +186,11 @@ function showInterest(offerID){
                             var url = "/account.php";
                             $(location).attr('href', url);
                         }else{ //warning-message
-                            alert('Es ist ein Problem aufgetreten. Bitte erneut versuchen. Prüfe bitte auch, ob du bereits eine Konversation zu diesem Angebot laufen hast.');
+                            alert('Die Funktion konnte nicht geladen werden, bitte versuche es nochmal. Prüfe bitte auch, ob du bereits eine Konversation zu diesem Angebot laufen hast.');
                         }
                     },
                     error: function(err){
-                        alert('Es ist ein Problem aufgetreten. Bitte erneut versuchen.');
+                        alert('Die Funktion konnte nicht geladen werden, bitte versuche es nochmal.');
                     }
                 });
             }else{
@@ -199,7 +199,7 @@ function showInterest(offerID){
             }
         },
         error: function(err){
-            alert('Es ist ein Problem aufgetreten. Bitte erneut versuchen.');
+            alert('Die Funktion konnte nicht geladen werden, bitte versuche es nochmal.');
         }
     });
 }

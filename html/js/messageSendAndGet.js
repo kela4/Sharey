@@ -35,7 +35,7 @@ $(document).ready(function(){
 
                 },
                 error: function(err){
-                    alert("Ein Fehler liegt vor, bitte erneut versuchen: " + err);
+                    alert('Die Funktion konnte nicht geladen werden, bitte versuche es nochmal.');
                 }
             });
         }else{

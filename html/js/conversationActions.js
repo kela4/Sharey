@@ -10,11 +10,11 @@ function offerWasHandedOver(conID, offerID){
                     var url = "/account.php";
                     $(location).attr('href', url);
                 }else{
-                    alert('Es ist ein Fehler aufgetreten, bitte versuche es nochmal.');
+                    alert('Die Funktion konnte nicht geladen werden, bitte versuche es nochmal.');
                 }
             },
             error: function(err){
-                alert('Es ist ein Fehler aufgetreten, bitte versuche es nochmal.');
+                alert('Die Funktion konnte nicht geladen werden, bitte versuche es nochmal.');
             }
         });
     }
@@ -32,11 +32,11 @@ function deleteConversation(conID){
                     var url = "/account.php";
                     $(location).attr('href', url);
                 }else{
-                    alert('Es ist ein Fehler aufgetreten, bitte versuche es nochmal.');
+                    alert('Die Funktion konnte nicht geladen werden, bitte versuche es nochmal.');
                 }
             },
             error: function(err){
-                alert('Es ist ein Fehler aufgetreten, bitte versuche es nochmal.');
+                alert('Die Funktion konnte nicht geladen werden, bitte versuche es nochmal.');
             }
         });
     }
