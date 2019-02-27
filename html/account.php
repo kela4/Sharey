@@ -231,7 +231,7 @@
                                                                         </div>
 
                                                                         <div id="symbolsDiv">
-                                                                            <button type="button" class="buttonSymbols">
+                                                                            <button type="button" class="buttonSymbols" onclick="alert(\'Diese Funktion ist im Prototypen nicht implementiert.\');">
                                                                                 <i class="fas fa-edit" id="editSymbol"></i>
                                                                             </button>
                                                                             <button type="button" class="buttonSymbols" onclick="deleteOffer('.$offer->getOfferID().');">
