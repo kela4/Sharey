@@ -10,7 +10,7 @@
                  </button>
              </div>
              <div class="modal-body">
-                <p id="newEntryModalInfoText"></p>
+                 <p id="newEntryModalInfoText"></p>
                  <form id="newOfferEntryForm" method="post" action="php/newOffer.php" enctype="multipart/form-data">
                      <div class="form-group">
                          <label for="title">Titel</label>
@@ -48,28 +48,28 @@
                      <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
                      <input id="inputFileHiddenInForm" type="hidden" name="img" value="">
                  </form>
-                    <!--out of the form-->
-                    <div class="form-group">
-                         <label for="modalImage">Bild</label>
-                         <div class="input-group" id="modalImage">
-                             <input id="inputFileName" type="text" class="form-control" readonly>
-                             <label class="input-group-btn">
-                                 <span class="btn btn-secondary">
-                                     Browse&hellip; <input id="inputFile" type="file" style="display: none;">
-                                 </span>
-                             </label>
-                         </div>
-                         <small id="imgHelp" class="form-text text-muted">Bitte nur Dateien im Format
-                             '<strong>.jpg</strong>' und
-                             '<strong>.png</strong>' mit einer maximalen Größe von <strong>1MB</strong> hochladen.
-                             &#128522;</small>
+                 <!--out of the form-->
+                 <div class="form-group">
+                     <label for="modalImage">Bild</label>
+                     <div class="input-group" id="modalImage">
+                         <input id="inputFileName" type="text" class="form-control" readonly>
+                         <label class="input-group-btn">
+                             <span class="btn btn-secondary">
+                                 Browse&hellip; <input id="inputFile" type="file" style="display: none;">
+                             </span>
+                         </label>
                      </div>
+                     <small id="imgHelp" class="form-text text-muted">Bitte nur Dateien im Format
+                         '<strong>.jpg</strong>' und
+                         '<strong>.png</strong>' hochladen.
+                         &#128522;</small>
+                 </div>
 
-                     <button type="button" onclick="formSubmit();" class="btn btn-dark float-right">Erstellen</button>
+                 <button type="button" onclick="formSubmit();" class="btn btn-dark float-right">Erstellen</button>
              </div>
          </div>
      </div>
  </div>
 
-<script type="text/javascript" src="../js/createOfferFunctions.js"></script>
+ <script type="text/javascript" src="../js/createOfferFunctions.js"></script>
  <!--end Modal-->
