@@ -106,7 +106,6 @@
         <!--IMPORTANT NOTE: the normal script files are loaded on this page in the head area-->
 
         <!--Script for pagedynamic e.g. dynamic offer loading-->
-        <script type="text/javascript" src="js/dynamicFontSizeLibary.js"></script>
         <script type="text/javascript" src="js/dynamicOfferLoading.js"></script>
         <script type="text/javascript" src="js/createOfferModalFiller.js"></script>
 
