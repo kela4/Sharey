@@ -26,7 +26,7 @@
                      <div class="row">
                          <div class="col-sm-12">
                              <div class="form-group">
-                                 <label for="plzSelectionNewOffer">PLZ</label>
+                                 <label for="plzSelectionNewOffer">PLZ/Ort</label>
                                  <select id="plzSelectionNewOffer" required class="form-control" name="plzID"></select>
                              </div>
                          </div>
