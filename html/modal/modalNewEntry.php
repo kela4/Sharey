@@ -24,19 +24,19 @@
 
 
                      <div class="row">
-                         <div class="col-sm-4">
+                         <div class="col-sm-12">
                              <div class="form-group">
                                  <label for="plzSelectionNewOffer">PLZ</label>
                                  <select id="plzSelectionNewOffer" required class="form-control" name="plzID"></select>
                              </div>
                          </div>
-                         <div class="col-sm-4">
+                         <div class="col-sm-6">
                              <div class="form-group">
                                  <label for="tagSelectionNewOffer">Tag</label>
                                  <select id="tagSelectionNewOffer" required class="form-control" name="tagID"></select>
                              </div>
                          </div>
-                         <div class="col-sm-4">
+                         <div class="col-sm-6">
                              <div class="form-group">
                                  <label for="mhd">MHD</label>
                                  <input type="date" class="form-control" id="mhd" placeholder="TT.MM.JJJJ"
