@@ -59,7 +59,7 @@
         include('basicsiteelements/navigation.php');
     ?>
 
-    <div class="content mt-4">
+    <div class="content">
         <!-- Div content for padding-top (header) -->
 
         <div id="paddingtopMobil"></div>
