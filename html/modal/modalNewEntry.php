@@ -11,7 +11,7 @@
              </div>
              <div class="modal-body">
                 <p id="newEntryModalInfoText"></p>
-                 <form is="newOfferEntryForm" method="post" action="php/newOffer.php" enctype="multipart/form-data">
+                 <form id="newOfferEntryForm" method="post" action="php/newOffer.php" enctype="multipart/form-data">
                      <div class="form-group">
                          <label for="title">Titel</label>
                          <input type="text" required class="form-control" id="title" placeholder="Titel" name="title">
