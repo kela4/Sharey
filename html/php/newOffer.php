@@ -57,7 +57,7 @@
             if($success){
                 header("Location: ../account.php");
             }else{
-                header("Location: ../error.php?errormessage=Bitte überprüfe, ob dein Bild die maximale Bildgröße von <strong>1MB</strong> nicht überschreitet.");
+                header("Location: ../error.php?errormessage=Success failed. Bitte überprüfe, ob dein Bild die maximale Bildgröße von <strong>1MB</strong> nicht überschreitet.");
                 exit;
             }
                     
