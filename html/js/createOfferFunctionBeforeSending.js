@@ -7,6 +7,7 @@ function checkImg(){
     //console.log(inputFileField.val());
 
     if(inputFileField.files){
+        console.log('in files');
         console.log(inputFileField.files[0]);
 
         $('#inputFileName').removeClass('is-invalid');
@@ -66,6 +67,7 @@ function checkImg(){
 
     }else{
         //no img is selected -> form submit
+        console.log('in nicht files');
         $('#newOfferEntryForm').submit();
     }
     
