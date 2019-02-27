@@ -15,7 +15,19 @@
             
             $imageData = null;
 
-            if(isset($_FILES['img']) && !empty($_FILES['img']) && $_FILES['img'] != "" 
+            if(isset($_POST['img']) && !empty($_POST['img']) && $_POST['img'] != ""){
+                $image = $_POST['img'];
+                if(strpos($image, 'data:image/jpeg;base64,')){
+                    $image = str_replace('data:image/jpeg;base64,', '', $image);
+                }
+                if(strpos($image, 'data:image/png;base64,')){
+                    $image = str_replace('data:image/png;base64,', '', $image);
+                }
+                $image = str_replace(' ', '+', $image);
+                $imageData = base64_decode($image);
+            }
+
+            /*if(isset($_FILES['img']) && !empty($_FILES['img']) && $_FILES['img'] != "" 
                 && isset($_FILES['img']['name']) && !empty($_FILES['img']['name']) && $_FILES['img']['name'] != ""){
                 
                 if(isset($_FILES['img']['size']) && !empty($_FILES['img']['size'])
@@ -33,7 +45,7 @@
                         $imageData = addslashes(file_get_contents($_FILES['img']['tmp_name']));
                     }           
                 }
-            }
+            }*/
 
             $expdate = new DateTime('0000-00-00');
             if(isset($_POST['expdate']) && !empty($_POST['expdate'])){
