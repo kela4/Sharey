@@ -208,7 +208,7 @@
                                                                             </div>
                                                                             <div class="col-auto">
                                                                                 <div id="offerSiteCityDiv">
-                                                                                    <span class="whiteText">'.utf8_decode($offer->getPlz()->getLocation()).'</span>
+                                                                                    <div id="offerLocationDiv" class="whiteText locationDiv">'.utf8_decode($offer->getPlz()->getLocation()).'</div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -268,6 +268,12 @@
     <?php
         include('basicsiteelements/scripts.php');
     ?>
+
+    <script type="text/javascript" src="js/dynamicFontSizeLibary.js"></script>
+
+    <script type="text/javascript">
+        $(".locationDiv").boxfit({align_center:false, align_middle:false, maximum_font_size: 16});
+    </script>
 </body>
 
 </html>
