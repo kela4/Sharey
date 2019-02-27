@@ -37,7 +37,7 @@
                 <div class="col-12 col-md-10 align-self-center">
 				
                     <p>
-                        Um ein Angebot anzulegen, gegibt dich auf unsere Startseite. Dort klickst du auf den runden "+" Button in der
+                        Um ein Angebot anzulegen, begibt dich auf unsere Startseite. Dort klickst du auf den runden "+" Button in der
                         unteren
                         Bildschirmmitte.						
                     </p>
