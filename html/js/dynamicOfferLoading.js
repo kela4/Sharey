@@ -83,7 +83,7 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
 
                 });
                 
-                $(".locationDiv").boxfit();
+                $(".locationDiv").boxfit({maximum_font_size: 16});
             }else{
                 offerContainer.append('<p>Leider sind keine passenden Angebote vorhanden. Versuche doch mal eine andere Such- und Filtereinschränkung.</p>');
             }
