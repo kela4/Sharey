@@ -20,40 +20,19 @@
 
                 if(strpos($image, 'data:image/jpeg;base64,') === 0){
                     $image = str_replace('data:image/jpeg;base64,', '', $image);
-                }
-
-                if(strpos($image, 'data:image/jpg;base64,') === 0){
-                    $image = str_replace('data:image/jpeg;base64,', '', $image);
-                }
-
-                if(strpos($image, 'data:image/png;base64,') === 0){
+                }elseif(strpos($image, 'data:image/jpg;base64,') === 0){
+                    $image = str_replace('data:image/jpg;base64,', '', $image);
+                }elseif(strpos($image, 'data:image/png;base64,') === 0){
                     $image = str_replace('data:image/png;base64,', '', $image);
+                }else{
+                    header("Location: ../error.php?errormessage=Bitte nur Bilder in den Formaten <strong>jpg, jpeg und png</strong> auswählen.");
+                    exit;
                 }
-                
+
                 $image = str_replace(' ', '+', $image);
 
                 $imageData = addslashes(base64_decode($image));
             }
-
-            /*if(isset($_FILES['img']) && !empty($_FILES['img']) && $_FILES['img'] != "" 
-                && isset($_FILES['img']['name']) && !empty($_FILES['img']['name']) && $_FILES['img']['name'] != ""){
-                
-                if(isset($_FILES['img']['size']) && !empty($_FILES['img']['size'])
-                    && $_FILES['img']['size'] != "" && $_FILES['img']['size'] > 1000000){
-                    header("Location: ../error.php?errormessage=Dein Bild überschreitet die maximale Bildgröße von <strong>1MB</strong>.");
-                    exit;
-                }else{
-                    $fileExtension = strtolower(pathinfo($_FILES['img']['name'], PATHINFO_EXTENSION));
-                    
-                    if($fileExtension != "jpg" && $fileExtension != "png" && $fileExtension != "jpeg"){
-                        header("Location: ../error.php?errormessage=Nur Bilder mit den Formaten <strong>jpg, png oder jpeg</strong> sind gültig.");
-                        exit;
-                    }else{
-                        //get image data as byte
-                        $imageData = addslashes(file_get_contents($_FILES['img']['tmp_name']));
-                    }           
-                }
-            }*/
 
             $expdate = new DateTime('0000-00-00');
             if(isset($_POST['expdate']) && !empty($_POST['expdate'])){
@@ -65,7 +44,7 @@
             if($success){
                 header("Location: ../account.php");
             }else{
-                header("Location: ../error.php?errormessage=Success failed. Bitte überprüfe, ob dein Bild die maximale Bildgröße von <strong>1MB</strong> nicht überschreitet.");
+                header("Location: ../error.php?errormessage=Bitte überprüfe, ob dein Bild die maximale Bildgröße von <strong>1MB</strong> nicht überschreitet.");
                 exit;
             }
                     
