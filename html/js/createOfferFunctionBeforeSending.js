@@ -11,7 +11,7 @@ function checkImg(){
         $('#inputFileName').removeClass('is-invalid');
 
         //check img
-        var imageFile = inputFileField.target.files[0];
+        var imageFile = inputFileField.files[0];
         if(imageFile.type == "image/jpeg" || imageFile.type == "image/png"){
             var fileReader = new FileReader();
 
