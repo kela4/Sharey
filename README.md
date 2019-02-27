@@ -9,4 +9,4 @@ Stylesheets sind im Ordner "css" vorzufinden. Hier ist auch die Bootstrap-Datei 
 Alle Bilder (auch das Favicon) sind im Ordner "images" gespeichert.
 Skripte für die Dynamik der Webseite sind unter "js" vorzufinden.
 Modale (Pop-Ups) die auf der Webseite angezeigt werden sind Zentral in "modal" gespeichert. Diese werden in die Seiten mittels PHP eingebunden.
-Klassen und Logik welche mittels PHP abgebildet sind, sind unter "php" vorzufinden.
+Klassen und Logik, welche mittels PHP abgebildet sind, sind unter "php" vorzufinden.
