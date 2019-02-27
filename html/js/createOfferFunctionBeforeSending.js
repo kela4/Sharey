@@ -1,4 +1,4 @@
-function checkImg(){
+/*function checkImg(){
 
     //show loadingContainer:
     $('#loadingContainer').show();
@@ -73,4 +73,4 @@ function checkImg(){
         $('#newOfferEntryForm').submit();
     }
     
-}
+}*/
