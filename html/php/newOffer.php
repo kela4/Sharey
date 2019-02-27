@@ -17,6 +17,8 @@
 
             if(isset($_POST['img']) && !empty($_POST['img']) && ($_POST['img'] != "") && (strpos($_POST['img'], 'data:image') === 0)){
                 $image = $_POST['img'];
+                echo strpos($image, 'data:image/png;base64,');
+                exit;
 
                 if(strpos($image, 'data:image/jpeg;base64,') === 0){
                     $image = str_replace('data:image/jpeg;base64,', '', $image);
