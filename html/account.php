@@ -62,7 +62,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row mt-4">
 
                 <div class="col-lg-6">
                     <h1>Account</h1>
@@ -175,7 +175,7 @@
 
             </div>
 
-            <div class="row">
+            <div class="row mt-4">
 
                 <div class="col-sm-12">
                     <h1>Eigene Angebote</h1>

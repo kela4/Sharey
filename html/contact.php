@@ -18,7 +18,7 @@
 
     <div class="content">
         <!-- Div content for padding-top (header) -->
-        <div class="container">
+        <div class="container  mt-4">
             <h1>Kontakt</h1>
 
 

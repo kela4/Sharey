@@ -16,7 +16,7 @@
        include('basicsiteelements/navigationpages.php');
     ?>
 
-    <div class="content">
+    <div class="content mt-4">
         <!-- Div content for padding-top (header) -->
         <div class="container">
             <h1>Datenschutzerkl&auml;rung</h1>
