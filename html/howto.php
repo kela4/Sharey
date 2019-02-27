@@ -20,7 +20,7 @@
         <!-- Div content for padding-top (header) -->
         <div class="container">
             <h1>How To</h1>
-
+	    <br>
             <h3>Eine kurze Anleitung, wie du mitmachen kannst!</h3>
 			
 			<p> Auf dieser Plattform kannst du dazu beitragen, die Verschwendung von Ressourcen auf unserer Erde
