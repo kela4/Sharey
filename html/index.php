@@ -10,10 +10,7 @@
         include('basicsiteelements/scripts.php');
     ?>
 
-
-
     <!-- Filter -->
-
     <script>
     $(document).ready(function() {
         $('.navbar .dropdown-menu').on('click', function(e) {
@@ -21,7 +18,6 @@
         });
     });
     </script>
-
 </head>
 
 <body>
@@ -44,18 +40,9 @@
 
     <?php
         include('modal/modalNewEntry.php');
-    ?>
-    <?php
         include('modal/modalOffer.php');
-    ?>
-    <?php
         include('modal/modalLogin.php');
-    ?>
-    <?php
         include('modal/modalRegister.php');
-    ?>
-
-    <?php
         include('basicsiteelements/navigation.php');
     ?>
 
@@ -64,8 +51,7 @@
 
         <div id="paddingtopMobil"></div>
 
-        <div class="container-fluid mt-4 offerSiteContainer">
-            <!-- Fluid -->
+        <div class="container mt-4 offerSiteContainer">
 
             <div id="loadingOffers" class="row justify-content-center" style="display:none">
                 <div class="col-6">
@@ -103,9 +89,9 @@
 
         </div>
 
-        <!--IMPORTANT NOTE: the normal script files are loaded on this page in the head area-->
+        <!-- IMPORTANT NOTE: the normal script files are loaded on this page in the head area -->
 
-        <!--Script for pagedynamic e.g. dynamic offer loading-->
+        <!-- Script for pagedynamic e.g. dynamic offer loading -->
         <script type="text/javascript" src="js/dynamicFontSizeLibary.js"></script>
         <script type="text/javascript" src="js/dynamicOfferLoading.js"></script>
         <script type="text/javascript" src="js/createOfferModalFiller.js"></script>
