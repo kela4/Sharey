@@ -610,7 +610,7 @@ a[data-toggle="collapse"] {
 
 #loading {
     padding-top: 50vh;
-    z-index: 9999;
+    z-index: 1000;
     position: fixed;
     width: 100%
 }
