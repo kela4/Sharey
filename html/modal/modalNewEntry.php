@@ -46,7 +46,7 @@
                      </div>
 
                      <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
-                     <input id="inputFileHiddenInForm" type="file" hidden name="img">
+                     <input id="inputFileHiddenInForm" type="file" hidden name="img" val="">
                  </form>
                     <!--out of the form-->
                     <div class="form-group">
