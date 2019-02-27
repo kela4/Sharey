@@ -26,7 +26,7 @@
                         <input type="password" class="form-control" id="password" placeholder="Passwort"
                             name="password">
                     </div>
-                    <button type="submit" class="btn btn-dark float-right">Registrieren</button>
+                    <button type="button" class="btn btn-dark float-right" onclick="alert('Diese Funktion ist im Prototypen nicht implementiert.');">Registrieren</button>
                 </form>
             </div>
         </div>

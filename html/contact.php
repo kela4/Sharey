@@ -70,7 +70,7 @@
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <input type="submit" class="btn btn-secondary btn-send float-right" value="Senden">
+                            <input type="button" class="btn btn-secondary btn-send float-right" onclick="alert('Diese Funktion ist im Prototypen nicht implementiert.');" value="Senden">
                         </div>
                     </div>
 
