@@ -30,9 +30,6 @@
                 $image = str_replace(' ', '+', $image);
 
                 $imageData = addslashes(base64_decode($image));
-
-                echo $imageData;
-                exit;
             }
 
             /*if(isset($_FILES['img']) && !empty($_FILES['img']) && $_FILES['img'] != "" 
