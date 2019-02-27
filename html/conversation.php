@@ -62,7 +62,6 @@
                 </div>
             </div>
 
-
             <div id="conversationHeading">
                 <h1>Konversation zu <?php echo $conversation->getOfferTitle();?></h1>
             </div>

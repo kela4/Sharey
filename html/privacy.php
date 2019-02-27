@@ -11,9 +11,7 @@
 <body>
     <?php
         include('modal/modalLogin.php');
-    ?>
-    <?php
-       include('basicsiteelements/navigationpages.php');
+        include('basicsiteelements/navigationpages.php');
     ?>
 
     <div class="content mt-4">
