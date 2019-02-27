@@ -385,12 +385,17 @@ a[data-toggle="collapse"] {
     margin-top: 10px;
 }
 
+#omImage {
+    max-height: 130px;
+}
+
 #omTagDiv {
     margin-left: 10px;
 }
 
 #omLocationTagDiv {
-    margin-top: 17px;
+    margin-top: 40px;
+    margin-bottom: 15px;
 }
 
 #omLocationTag {
@@ -401,13 +406,13 @@ a[data-toggle="collapse"] {
 }
 
 #omCityDiv {
-    margin-top: 17px;
+    margin-top: 40px;
     padding-right: 17px;
+    margin-bottom: 15px;
 }
 
-.omCitySpan {
-    -moz-text-size-adjust: auto;
-    -webkit-text-size-adjust: auto;
+#omCityDynamicFontSize {
+    width: 50px;
 }
 
 #omReportOffer {
