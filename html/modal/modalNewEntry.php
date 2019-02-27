@@ -10,7 +10,8 @@
                  </button>
              </div>
              <div class="modal-body">
-                 <form method="post" action="php/newOffer.php" enctype="multipart/form-data">
+                <p id="newEntryModalInfoText"></p>
+                 <form is="newOfferEntryForm" method="post" action="php/newOffer.php" enctype="multipart/form-data">
                      <div class="form-group">
                          <label for="title">Titel</label>
                          <input type="text" required class="form-control" id="title" placeholder="Titel" name="title">
@@ -45,14 +46,16 @@
                      </div>
 
                      <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
-
-                     <div class="form-group">
+                     <input id="inputFileHiddenInForm" type="file" style="display: none;" name="img">
+                 </form>
+                    <!--out of the form-->
+                    <div class="form-group">
                          <label for="modalImage">Bild</label>
                          <div class="input-group" id="modalImage">
                              <input id="inputFileName" type="text" class="form-control" readonly>
                              <label class="input-group-btn">
                                  <span class="btn btn-secondary">
-                                     Browse&hellip; <input id="inputFile" type="file" style="display: none;" name="img">
+                                     Browse&hellip; <input id="inputFile" type="file" style="display: none;">
                                  </span>
                              </label>
                          </div>
@@ -74,10 +77,11 @@
                      });
                      </script>
 
-                     <button type="submit" class="btn btn-dark float-right">Erstellen</button>
-                 </form>
+                     <button type="button" onclick="checkImg();" class="btn btn-dark float-right">Erstellen</button>
              </div>
          </div>
      </div>
  </div>
+
+ <script type="text/javascript" src="../js/createOfferFunctionBeforeSending.js"></script>
  <!--end Modal-->
