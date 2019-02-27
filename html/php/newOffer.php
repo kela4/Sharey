@@ -24,9 +24,12 @@
                 if(strpos($image, 'data:image/png;base64,') === 0){
                     $image = str_replace('data:image/png;base64,', '', $image);
                 }
-                
+
                 $image = str_replace(' ', '+', $image);
                 $imageData = base64_decode($image);
+
+                echo $imageData;
+                exit;
             }
 
             /*if(isset($_FILES['img']) && !empty($_FILES['img']) && $_FILES['img'] != "" 
