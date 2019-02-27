@@ -18,15 +18,18 @@
             if(isset($_POST['img']) && !empty($_POST['img']) && ($_POST['img'] != "") && (strpos($_POST['img'], 'data:image') === 0)){
                 $image = $_POST['img'];
 
-                /*if(strpos($image, 'data:image/jpeg;base64,') === 0){
+                if(strpos($image, 'data:image/jpeg;base64,') === 0){
+                    $image = str_replace('data:image/jpeg;base64,', '', $image);
+                }
+
+                if(strpos($image, 'data:image/jpg;base64,') === 0){
                     $image = str_replace('data:image/jpeg;base64,', '', $image);
                 }
 
                 if(strpos($image, 'data:image/png;base64,') === 0){
                     $image = str_replace('data:image/png;base64,', '', $image);
-                }*/
-
-                $image = str_replace('data:image/png;base64,', '', $image);
+                }
+                
                 $image = str_replace(' ', '+', $image);
 
                 $imageData = addslashes(base64_decode($image));
