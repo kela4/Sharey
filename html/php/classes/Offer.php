@@ -62,7 +62,7 @@ class Offer{
         mysqli_select_db($connection, 'db_sharey');
 
         //query without filter and search (default for prototype):
-        $query = "SELECT o.*, t.*, p.pz_plzID, p.pz_location, p.pz_plz FROM tbl_offer AS o 
+        $query = "SELECT o.*, t.*, p.* FROM tbl_offer AS o 
                     JOIN tbl_plz p 
                         ON p.pz_plzID = o.or_plzID 
                     JOIN tbl_tag t 
@@ -138,17 +138,26 @@ class Offer{
 
         $offersWithDistanceFromPoint = [];
         
-        //distance muss noch berechnet werden!!!
+        //calc distance from Mosbach:
+        $startDistanceY = 9.15110; //longitude
+        $startDistanceX = 49.35360; //latitude
         
         while(($data = mysqli_fetch_array($res)) != false){
+            $distanceFromMosbach = round(doubleval(getDistanceBetween($startDistanceX, $startDistanceY, $data['pz_latitude'], $data['pz_longitude'])));
+
             $offersWithDistanceFromPoint[] = [
                                                 "offer" => new Offer($data['or_active'], new DateTime($data['or_creationDate']), $data['or_description'], new DateTime($data['or_mhd']), $data['or_offerID'], $data['or_picture'], new PLZ($data['pz_location'], $data['pz_plz'], $data['pz_plzID']), $data['or_report'], new Tag($data['tg_color'], $data['tg_description'], $data['tg_tagID']), $data['or_title'], $data['or_ocID']),
-                                                "distanceFromStartPoint" => "10"
+                                                "distanceFromStartPoint" => $distanceFromMosbach
                                                 ];
             
         }
 
         return $offersWithDistanceFromPoint;
+    }
+
+    public function getDistanceBetween($pointOneX, $pointOneY, $pointTwoX, $pointTwoY){
+        $d = sqrt( pow( (doubleval($pointOneX) - doubleval($ointTwoX)), 2) + pow( ( doubleval($pointOneY) - doubleval($pointTwoY)), 2) );   //d = Quadratwurzel( (x1-x2)^2 + (y1-y2)^2 )
+        return $d;
     }
 
     public static function getOffer(int $offerID){
