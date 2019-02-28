@@ -144,7 +144,7 @@ class Offer{
         
         while(($data = mysqli_fetch_array($res)) != false){
             $distanceFromMosbach = round(getDistanceBetween(floatval($startDistanceX), floatval($startDistanceY), floatval($data['pz_latitude']), floatval($data['pz_longitude'])));
-            $distanceFromMosbach = $distanceFromMosbach/1*111; //in km
+            $distanceFromMosbach = 111*1/$distanceFromMosbach; //in km
             
             //$distanceFromMosbach = 10;
             $offersWithDistanceFromPoint[] = [
