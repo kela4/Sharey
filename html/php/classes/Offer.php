@@ -143,8 +143,8 @@ class Offer{
         $startDistanceX = 49.35360; //latitude
         
         while(($data = mysqli_fetch_array($res)) != false){
-            $distanceFromMosbach = round(doubleval(getDistanceBetween($startDistanceX, $startDistanceY, $data['pz_latitude'], $data['pz_longitude'])));
-
+            //$distanceFromMosbach = round(doubleval(getDistanceBetween($startDistanceX, $startDistanceY, $data['pz_latitude'], $data['pz_longitude'])));
+            $distanceFromMosbach = 10;
             $offersWithDistanceFromPoint[] = [
                                                 "offer" => new Offer($data['or_active'], new DateTime($data['or_creationDate']), $data['or_description'], new DateTime($data['or_mhd']), $data['or_offerID'], $data['or_picture'], new PLZ($data['pz_location'], $data['pz_plz'], $data['pz_plzID']), $data['or_report'], new Tag($data['tg_color'], $data['tg_description'], $data['tg_tagID']), $data['or_title'], $data['or_ocID']),
                                                 "distanceFromStartPoint" => $distanceFromMosbach
