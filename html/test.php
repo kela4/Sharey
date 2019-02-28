@@ -1,7 +1,7 @@
 <?php
 
 echo (
-file_get_contents('https://sharey.rollingrelease.de/php/classes/dbconnect.php')
+file_get_contents('php/classes/dbconnect.php')
 );
 
 ?>
