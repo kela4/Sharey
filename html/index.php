@@ -100,6 +100,9 @@
         <script type="text/javascript" src="js/offerSearchFiller.js"></script>
         <script type="text/javascript" src="js/dynamicOfferLoading.js"></script>
         <script type="text/javascript" src="js/createOfferModalFiller.js"></script>
+        <script type="text/javascript">
+            //show offerModal or newOfferModal based on get-params in Url
+        </script>
 
         <!-- Filter -->
         <script>

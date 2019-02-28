@@ -24,7 +24,7 @@ if(isset($_POST['surrounding']) && !empty($_POST['surrounding'])){
 }
 
 if(isset($_POST['tagID']) && !empty($_POST['tagID'])){
-    $tagID = inval($_POST['tagID']);
+    $tagID = intval($_POST['tagID']);
 }
 
 $offersWithDistance = Offer::setSearch($searchTerm, $plzID, $surrounding, $tagID);

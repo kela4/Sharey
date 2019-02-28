@@ -143,10 +143,10 @@ class Offer{
         $startDistanceX = 49.35360; //latitude
         
         while(($data = mysqli_fetch_array($res)) != false){
-            //$distanceFromMosbach = round(getDistanceBetween($startDistanceX, $startDistanceY, $data['pz_latitude'], $data['pz_longitude']));
-            //$distanceFromMosbach = $distanceFromMosbach/1*111; //in km
+            $distanceFromMosbach = round(getDistanceBetween(floatval($startDistanceX), floatval($startDistanceY), floatval($data['pz_latitude']), floatval($data['pz_longitude'])));
+            $distanceFromMosbach = $distanceFromMosbach/1*111; //in km
             
-            $distanceFromMosbach = 10;
+            //$distanceFromMosbach = 10;
             $offersWithDistanceFromPoint[] = [
                                                 "offer" => new Offer($data['or_active'], new DateTime($data['or_creationDate']), $data['or_description'], new DateTime($data['or_mhd']), $data['or_offerID'], $data['or_picture'], new PLZ($data['pz_location'], $data['pz_plz'], $data['pz_plzID']), $data['or_report'], new Tag($data['tg_color'], $data['tg_description'], $data['tg_tagID']), $data['or_title'], $data['or_ocID']),
                                                 "distanceFromStartPoint" => $distanceFromMosbach
@@ -155,11 +155,6 @@ class Offer{
         }
 
         return $offersWithDistanceFromPoint;
-    }
-
-    public function getDistanceBetween(float $pointOneX, float $pointOneY, float $pointTwoX, float $pointTwoY){
-        $d = sqrt( pow( ($pointOneX - $ointTwoX), 2) + pow( ( $pointOneY - $pointTwoY), 2) );   //d = Quadratwurzel( (x1-x2)^2 + (y1-y2)^2 )
-        return floatval($d);
     }
 
     public static function getOffer(int $offerID){
@@ -269,6 +264,11 @@ class Offer{
     }
 #endregion
 
+}
+
+function getDistanceBetween(float $pointOneX, float $pointOneY, float $pointTwoX, float $pointTwoY){
+    $d = sqrt( pow( ($pointOneX - $ointTwoX), 2) + pow( ( $pointOneY - $pointTwoY), 2) );   //d = Quadratwurzel( (x1-x2)^2 + (y1-y2)^2 )
+    return floatval($d);
 }
 
 ?>
