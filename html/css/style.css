@@ -314,6 +314,10 @@ a[data-toggle="collapse"] {
     width: 300px;
 }
 
+.cardCursor {
+    cursor: pointer;
+}
+
 #cardContent {
     margin-top: 10px;
 }
