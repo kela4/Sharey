@@ -81,6 +81,7 @@
                 }else{ //if no user is logged in --> show login modal
                     ?>
                 <script type="text/javascript">
+                    $('#loginModalInfoText').html('Bitte melde dich an und erstelle dann das neue Angebot.');
                     $('#loginFrom').val('1');
                 </script>
                 <a id="newOffer" class="center-block" data-toggle="modal" data-target="#loginModal">
