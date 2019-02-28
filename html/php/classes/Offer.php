@@ -69,7 +69,7 @@ class Offer{
                         ON t.tg_tagID = o.or_tagID 
                     WHERE o.or_active = 1;";
 
-        //query only with filter and all tags:
+        /*//query only with filter and all tags:
         if(isset($plzID) && !empty($plzID) 
             && isset($surrounding) && !empty($surrounding)
             && isset($tagID) && !empty($tagID) && $tagID == 0){ //0 = all tags
@@ -111,7 +111,7 @@ class Offer{
         }  
 
         //query with search and filter (not implemented in prototype):
-        /*if(isset($searchTerm) && !empty($searchTerm) && $searchTerm != ""
+        if(isset($searchTerm) && !empty($searchTerm) && $searchTerm != ""
             && isset($plzID) && !empty($plzID) 
             && isset($surrounding) && !empty($surrounding)
             && isset($tagID) && !empty($tagID)){

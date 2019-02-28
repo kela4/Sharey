@@ -122,7 +122,7 @@
                 placeholder=" Suchbegriff eingeben" title="Suchbegriff eingeben">
 
             <div class="input-group-append">
-                <button class="btn btn-secondary" id="search" type="button" onclick="offerLoading();" title="Suchen und Filtern">
+                <button class="btn btn-secondary" id="search" type="button" onclick="alert('Diese Funktion ist im Prototypen nicht implementiert.');" title="Suchen und Filtern">
                     <i class="fa fa-search"></i>
                 </button>
             </div>

@@ -15,20 +15,9 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
     //show loadingOffers-ProgressBar
     loadingOffers.css('display', '');
 
-    //search- and filter-params:
-    /*var searchTerm = $('#searchBox').val();
-    var plzID = $('#searchFilterPLZ').val();
-    var surrounding = $('#searchFilterSurrounding').val();
-    var tagID = $('#searchFilterTag').val();*/
-
-    var searchTerm = "";
-    var plzID = 2092;
-    var surrounding = 5;
-    var tagID = 0;
-
     $.ajax({
         url: '../php/getOffers.php',
-        data: {searchTerm: searchTerm, plzID: plzID, surrounding: surrounding, tagID: tagID},
+        //data: {searchTerm: searchTerm, plzID: plzID, surrounding: surrounding, tagID: tagID},
         dataType: 'json',
         type: 'post',
         success: function(data){
