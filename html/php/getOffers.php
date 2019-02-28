@@ -16,15 +16,15 @@ if(isset($_POST['searchTerm']) && !empty($_POST['searchTerm'])){
 }
 
 if(isset($_POST['plzID']) && !empty($_POST['plzID'])){
-    $plzID = $_POST['plzID'];
+    $plzID = intval($_POST['plzID']);
 }
 
 if(isset($_POST['surrounding']) && !empty($_POST['surrounding'])){
-    $surrounding = $_POST['surrounding'];
+    $surrounding = intval($_POST['surrounding']);
 }
 
 if(isset($_POST['tagID']) && !empty($_POST['tagID'])){
-    $tagID = $_POST['tagID'];
+    $tagID = inval($_POST['tagID']);
 }
 
 $offersWithDistance = Offer::setSearch($searchTerm, $plzID, $surrounding, $tagID);

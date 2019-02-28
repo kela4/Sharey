@@ -4,7 +4,7 @@ $(document).ready(function(){
     //for prototype solid plz later will be also dynamic filling like tags
     var searchFilterPLZ = $('#searchFilterPLZ');
     searchFilterPLZ.append('<option value="2049">69437 Neckargerach</option>');
-    searchFilterPLZ.append('<option value="2092">74821 Mosbach</option>');
+    searchFilterPLZ.append('<option value="2092" selected>74821 Mosbach</option>');
     searchFilterPLZ.append('<option value="2093">74834 Elztal</option>');
     searchFilterPLZ.append('<option value="2096">74847 Obrigheim</option>');
     searchFilterPLZ.append('<option value="2098">74855 Haßmersheim</option>');
