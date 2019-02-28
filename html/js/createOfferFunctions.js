@@ -66,12 +66,12 @@ function formSubmit(){
     titleField.removeClass('is-invalid');
     descriptionField.removeClass('is-invalid');
 
-    if(title == null){
+    if(title == null || title == ""){
         $('#newEntryModalInfoText').html('Bitte alle Pflichtfelder ausfüllen.');
         titleField.addClass('is-invalid');
     }
 
-    if(description == null){
+    if(description == null || title == ""){
         $('#newEntryModalInfoText').html('Bitte alle Pflichtfelder ausfüllen.');
         descriptionField.addClass('is-invalid');
     }
