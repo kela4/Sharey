@@ -16,10 +16,15 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
     loadingOffers.css('display', '');
 
     //search- and filter-params:
-    var searchTerm = $('#searchBox').val();
+    /*var searchTerm = $('#searchBox').val();
     var plzID = $('#searchFilterPLZ').val();
     var surrounding = $('#searchFilterSurrounding').val();
-    var tagID = $('#searchFilterTag').val();
+    var tagID = $('#searchFilterTag').val();*/
+
+    var searchTerm = "";
+    var plzID = 2092;
+    var surrounding = 5;
+    var tagID = 0;
 
     $.ajax({
         url: '../php/getOffers.php',
