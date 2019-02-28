@@ -267,7 +267,7 @@ class Offer{
 }
 
 function getDistanceBetween(float $pointOneX, float $pointOneY, float $pointTwoX, float $pointTwoY){
-    $d = sqrt( pow( ($pointOneX - $ointTwoX), 2) + pow( ( $pointOneY - $pointTwoY), 2) );   //d = Quadratwurzel( (x1-x2)^2 + (y1-y2)^2 )
+    $d = sqrt( pow( ($pointOneX - $pointTwoX), 2) + pow( ( $pointOneY - $pointTwoY), 2) );   //d = Quadratwurzel( (x1-x2)^2 + (y1-y2)^2 )
     return floatval($d);
 }
 
