@@ -19,22 +19,9 @@
             $success = User::login($_POST['mail'], $_POST['password']);
             
             if($success == true){
-                if($loginFrom == 1){ //login from "newOffer"
-                    header("Location: ../index.php?from=1");
-                    exit;
-                }elseif($loginFrom == 2){ //login from "interesse zeigen"
-                    if(isset($_POST['loginShowOfferID']) && !empty($_POST['loginShowOfferID'])
-                        && isset($_POST['loginShowOfferDistance']) && !empty($_POST['loginShowOfferDistance'])){
-                        header("Location: ../index.php?from=2&id=".$_POST['loginShowOfferID']."&distance=".$_POST['loginShowOfferDistance']);
-                        exit;
-                    }else{
-                        header("Location: ../index.php?from=2");
-                        exit;
-                    }
-                }else{ //show account
-                    header("Location: ../account.php");
-                    exit;
-                }
+                //show account
+                header("Location: ../account.php");
+                exit;
             }else{
                 header("Location: ../error.php?errormessage=Nutzerdaten falsch.");
                 exit;

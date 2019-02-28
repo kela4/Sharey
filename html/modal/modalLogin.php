@@ -12,9 +12,6 @@
             <div class="modal-body">
                 <p id="loginModalInfoText"></p>
                 <form id="loginModalForm" method="post" action="../php/login.php">
-                    <input id="loginFrom" hidden name="loginFrom">
-                    <input id="loginShowOfferID" hidden name="loginShowOfferID">
-                    <input id="loginShowOfferDistance" hidden name="loginShowOfferDistance">
                     <div class="form-group">
                         <label for="email">E-Mail</label>
                         <input type="email" required class="form-control" id="email"

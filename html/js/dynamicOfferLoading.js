@@ -195,11 +195,7 @@ function showInterest(offerID, distance){
                 });
             }else{
                 $('#offerModal').modal('hide');
-
-                $('#loginModalInfoText').html('Bitte melde dich an und wähle dann den Interesse-Button aus.');
-                $('#loginFrom').val('2');
-                $('#loginShowOfferID').val(offerID);
-                $('#loginShowOfferDistance').val(distance);
+                $('#loginModalInfoText').html('Bitte melde dich an, kehre zur Startseite zurück und wähle dann den Interesse-Button aus.');
                 $('#loginModal').modal('show');
             }
         },
