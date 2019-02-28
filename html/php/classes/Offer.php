@@ -143,7 +143,7 @@ class Offer{
         $startDistanceX = 49.35360; //latitude
         
         while(($data = mysqli_fetch_array($res)) != false){
-            $distanceFromMosbach = getDistanceBetween(floatval($startDistanceX), floatval($startDistanceY), floatval($data['pz_latitude']), floatval($data['pz_longitude']));
+            $distanceFromMosbach = getDistanceBetween(floatval($startDistanceX), floatval($startDistanceY), floatval(48.35360), floatval(10.15110));
             $distanceFromMosbach = round(111*1/$distanceFromMosbach); //in km
             
             //$distanceFromMosbach = 10;
