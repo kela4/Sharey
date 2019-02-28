@@ -76,7 +76,7 @@ function formSubmit(){
         descriptionField.addClass('is-invalid');
     }
 
-    if(title != null && description != null){
+    if(title != null && title != "" && description != null && description != ""){
         $('#newOfferEntryForm').submit();
     }
 }
