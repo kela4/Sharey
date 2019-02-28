@@ -80,6 +80,10 @@
                 <?php
                 }else{ //if no user is logged in --> show login modal
                     ?>
+                <script type="text/javascript">
+                    $('#loginModalInfoText').html('Bitte melde dich an und erstelle dann das neue Angebot.');
+                    $('#loginFrom').val('1');
+                </script>
                 <a id="newOffer" class="center-block" data-toggle="modal" data-target="#loginModal">
                     <?php
                 }
@@ -93,8 +97,12 @@
 
         <!-- Script for pagedynamic e.g. dynamic offer loading -->
         <script type="text/javascript" src="js/dynamicFontSizeLibary.js"></script>
+        <script type="text/javascript" src="js/offerSearchFiller.js"></script>
         <script type="text/javascript" src="js/dynamicOfferLoading.js"></script>
         <script type="text/javascript" src="js/createOfferModalFiller.js"></script>
+        <script type="text/javascript">
+            //show offerModal or newOfferModal based on get-params in Url
+        </script>
 
         <!-- Filter -->
         <script>

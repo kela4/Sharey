@@ -90,26 +90,26 @@
                                 <div class="col-sm-9">
                                     <div class="form-group">
                                         <label>PLZ/Ort</label>
-                                        <input class="form-control" type="text" placeholder="PLZ/Ort">
+                                        <select id="searchFilterPLZ" class="custom-select">
+                                            <!--rest will be filled by offerSearchFiller.js-->
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
+                                    <!--only fixed values in prototype-->
                                     <label>Umkreis</label>
-                                    <select class="custom-select">
-
-                                        <option selected>+5</option>
-                                        <option value="1">+10</option>
-                                        <option value="2">+20</option>
-                                        <option value="3">...</option>
+                                    <select id="searchFilterSurrounding" class="custom-select">
+                                        <option value="5" selected>+5</option>
+                                        <option value="10">+10</option>
+                                        <option value="15">+15</option>
+                                        <option value="20">+20</option>
                                     </select>
                                 </div>
                             </div>
                             <label>Tag</label>
-                            <select class="custom-select">
-                                <option selected>Alle</option>
-                                <option value="1">Essen</option>
-                                <option value="2">Sonstiges</option>
-                                <option value="3">...</option>
+                            <select id="searchFilterTag" class="custom-select">
+                                <option value="0" selected>Alle</option>
+                                <!--rest will be filled by offerSearchFiller.js-->
                             </select>
                     </div>
                 </div>

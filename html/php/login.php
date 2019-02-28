@@ -9,12 +9,30 @@
 
     if(isset($_POST['mail']) && !empty($_POST['mail'])){
         if(isset($_POST['password']) && !empty($_POST['password'])){
+
+            $loginFrom = 0;
+            if(isset($_POST['loginFrom']) && !empty($_POST['loginFrom'])){
+                $loginFrom = $_POST['loginFrom'];
+            }
+
             //call login-method of User
             $success = User::login($_POST['mail'], $_POST['password']);
             
             if($success == true){
-                header("Location: ../account.php");
-                exit;
+                if($loginFrom == 1){ //login from "newOffer"
+                    header("Location: ../index.php?from=1");
+                    exit;
+                }elseif($loginFrom == 2){ //login from "interesse zeigen"
+                    if(isset($_POST['loginShowOfferID']) && !empty($_POST['loginShowOfferID'])){
+                        header("Location: ../index.php?from=2&id=".$_POST['loginShowOfferID']."");
+                        exit;
+                    }
+                    header("Location: ../index.php?from=2");
+                    exit;
+                }else{ //show account
+                    header("Location: ../account.php");
+                    exit;
+                }
             }else{
                 header("Location: ../error.php?errormessage=Nutzerdaten falsch.");
                 exit;
