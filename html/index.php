@@ -80,6 +80,9 @@
                 <?php
                 }else{ //if no user is logged in --> show login modal
                     ?>
+                <script type="text/javascript">
+                    $('#loginFrom').val('1');
+                </script>
                 <a id="newOffer" class="center-block" data-toggle="modal" data-target="#loginModal">
                     <?php
                 }
