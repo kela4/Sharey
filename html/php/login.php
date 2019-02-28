@@ -20,10 +20,14 @@
             
             if($success == true){
                 if($loginFrom == 1){ //login from "newOffer"
-                    header("Location: ../index.php");
+                    header("Location: ../index.php?from=1");
                     exit;
                 }elseif($loginFrom == 2){ //login from "interesse zeigen"
-                    header("Location: ../index.php");
+                    if(isset($_POST['loginShowOfferID']) && !empty($_POST['loginShowOfferID'])){
+                        header("Location: ../index.php?from=2&id=".$_POST['loginShowOfferID']."");
+                        exit;
+                    }
+                    header("Location: ../index.php?from=2");
                     exit;
                 }else{ //show account
                     header("Location: ../account.php");

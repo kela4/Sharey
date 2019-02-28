@@ -195,6 +195,10 @@ function showInterest(offerID){
                 });
             }else{
                 $('#offerModal').modal('hide');
+
+                $('#loginModalInfoText').html('Bitte melde dich an und wähle dann den Interesse-Button aus.');
+                $('#loginFrom').val('2');
+                $('#loginShowOfferID').val(offerID);
                 $('#loginModal').modal('show');
             }
         },
