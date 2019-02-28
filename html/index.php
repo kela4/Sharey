@@ -54,7 +54,7 @@
         <div class="container mt-4 offerSiteContainer">
 
             <div id="loadingOffers" class="row justify-content-center" style="display:none">
-                <div class="col-6">
+                <div class="col-10 col-md-6">
                     <div class="progress" id="progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
                             role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0"
@@ -96,7 +96,7 @@
         <script type="text/javascript" src="js/offerSearchFiller.js"></script>
         <script type="text/javascript" src="js/dynamicOfferLoading.js"></script>
         <script type="text/javascript" src="js/createOfferModalFiller.js"></script>
-    
+
         <!-- Filter -->
         <script>
         $('.navbar .dropdown-menu').on('click', function(e) {
