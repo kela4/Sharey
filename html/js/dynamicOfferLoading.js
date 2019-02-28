@@ -16,10 +16,10 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
     loadingOffers.css('display', '');
 
     //search- and filter-params:
-    var searchTerm = "";
-    var plzID = 2092;
-    var surrounding = 20;
-    var tagID = 0;
+    var searchTerm = $('#searchBox').val();
+    var plzID = $('#searchFilterPLZ').val();
+    var surrounding = $('#searchFilterSurrounding').val();
+    var tagID = $('#searchFilterTag').val();
 
     $.ajax({
         url: '../php/getOffers.php',
