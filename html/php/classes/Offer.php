@@ -145,18 +145,19 @@ class Offer{
         while(($data = mysqli_fetch_array($res)) != false){
             $distanceFromMosbach = getDistanceBetween(floatval($startDistanceX), floatval($startDistanceY), floatval($data['pz_latitude']), floatval($data['pz_longitude']));
             if(isset($distanceFromMosbach) && !empty($distanceFromMosbach) && $distanceFromMosbach != 0){
-                $distanceFromMosbach = round(111*100/$distanceFromMosbach); //in km
+                $distanceFromMosbach = round(111/$distanceFromMosbach/100); //in km
             }else{
                 $distanceFromMosbach = 0;
             }
-            
-            //$distanceFromMosbach = 10;
+
             $offersWithDistanceFromPoint[] = [
-                                                "offer" => new Offer($data['or_active'], new DateTime($data['or_creationDate']), $data['or_description'], new DateTime($data['or_mhd']), $data['or_offerID'], $data['or_picture'], new PLZ($data['pz_location'], $data['pz_plz'], $data['pz_plzID']), $data['or_report'], new Tag($data['tg_color'], $data['tg_description'], $data['tg_tagID']), $data['or_title'], $data['or_ocID']),
-                                                "distanceFromStartPoint" => $distanceFromMosbach
+                                                "distanceFromStartPoint" => $distanceFromMosbach,
+                                                "offer" => new Offer($data['or_active'], new DateTime($data['or_creationDate']), $data['or_description'], new DateTime($data['or_mhd']), $data['or_offerID'], $data['or_picture'], new PLZ($data['pz_location'], $data['pz_plz'], $data['pz_plzID']), $data['or_report'], new Tag($data['tg_color'], $data['tg_description'], $data['tg_tagID']), $data['or_title'], $data['or_ocID'])
                                                 ];
             
         }
+
+        usort($offersWithDistanceFromPoint, 'compareDistance');
 
         return $offersWithDistanceFromPoint;
     }
@@ -273,6 +274,10 @@ class Offer{
 function getDistanceBetween(float $pointOneX, float $pointOneY, float $pointTwoX, float $pointTwoY){
     $d = sqrt( pow( ($pointOneX - $pointTwoX), 2) + pow( ( $pointOneY - $pointTwoY), 2) );   //d = Quadratwurzel( (x1-x2)^2 + (y1-y2)^2 )
     return floatval($d);
+}
+
+function compareDistance($a, $b){
+    return strnatcmp($a['distanceFromStartPoint'], $b['distanceFromStartPoint']);
 }
 
 ?>

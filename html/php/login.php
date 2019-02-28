@@ -23,12 +23,14 @@
                     header("Location: ../index.php?from=1");
                     exit;
                 }elseif($loginFrom == 2){ //login from "interesse zeigen"
-                    if(isset($_POST['loginShowOfferID']) && !empty($_POST['loginShowOfferID'])){
-                        header("Location: ../index.php?from=2&id=".$_POST['loginShowOfferID']."");
+                    if(isset($_POST['loginShowOfferID']) && !empty($_POST['loginShowOfferID'])
+                        && isset($_POST['loginShowOfferDistance']) && !empty($_POST['loginShowOfferDistance'])){
+                        header("Location: ../index.php?from=2&id=".$_POST['loginShowOfferID']."&distance=".$_POST['loginShowOfferDistance']);
+                        exit;
+                    }else{
+                        header("Location: ../index.php?from=2");
                         exit;
                     }
-                    header("Location: ../index.php?from=2");
-                    exit;
                 }else{ //show account
                     header("Location: ../account.php");
                     exit;
