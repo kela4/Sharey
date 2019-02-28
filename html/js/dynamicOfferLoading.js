@@ -28,8 +28,8 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
 
     $.ajax({
         url: '../php/getOffers.php',
-        dataType: 'json',
         data: {searchTerm: searchTerm, plzID: plzID, surrounding: surrounding, tagID: tagID},
+        dataType: 'json',
         type: 'post',
         success: function(data){
             if(data.offersAvailable){
