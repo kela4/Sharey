@@ -144,7 +144,7 @@ function openModal(offerID, distance){
                 //add actionbuttons:
                 var offerModalActionButtons = $('#offerModalActionButtons');
                 offerModalActionButtons.empty();
-                offerModalActionButtons.append('<button type="button" class="btn btn-dark float-right" onclick="showInterest(' + offer.offerID + ');">Interesse</button>' +
+                offerModalActionButtons.append('<button type="button" class="btn btn-dark float-right" onclick="showInterest(' + offer.offerID + ', ' + distance + ');">Interesse</button>' +
                                                         '<button type="button" class="btn btn-light float-right whiteText" id="omReportOffer" onclick="alert(\'Diese Funktion ist im Prototypen nicht implementiert.\');">Melden</button>');
 
                 $('#offerModal').modal('show');
@@ -159,7 +159,7 @@ function openModal(offerID, distance){
     });
 }
 
-function showInterest(offerID){
+function showInterest(offerID, distance){
     //show loadingContainer:
     $('#loadingContainer').show();
 
@@ -199,6 +199,7 @@ function showInterest(offerID){
                 $('#loginModalInfoText').html('Bitte melde dich an und wähle dann den Interesse-Button aus.');
                 $('#loginFrom').val('2');
                 $('#loginShowOfferID').val(offerID);
+                $('#loginShowOfferDistance').val(distance);
                 $('#loginModal').modal('show');
             }
         },

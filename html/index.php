@@ -106,7 +106,15 @@
             var url = new URL(url_string);
             var from = url.searchParams.get("from");
             var id = url.searchParams.get("id");
-            console.log(from + ' ' + id);
+            var distance = url.searchParams.get("distance");
+
+            if(from != null){
+                if(from == 1){//from new offer --> show new Offer modal
+                    $('#newOfferModal').modal('show');
+                }else if(from == 2 && id != null && distance != null){//from interesse-button --> show offer-modal
+                    openModal(id, distance);
+                }
+            }
         </script>
     
         <!-- Filter -->
