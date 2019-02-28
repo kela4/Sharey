@@ -30,7 +30,11 @@ class User{
         
         $data = mysqli_fetch_array($res);
 
-        if(hash('sha256', $password) == $data['ur_userPassword']){
+        $saltDynamic = substr($mail, 0, 4);
+        $saltStatic = "!Ma4#0";
+        $hashedPassword = hash('sha256', $saltDynamic.$password.$saltStatic);
+
+        if($hashedPassword == $data['ur_userPassword']){
             //password right
             session_start();
             $_SESSION['user'] = new User(true, $userMail, $data['ur_notification'], $data['ur_userPassword'], $data['ur_userID']);
@@ -55,7 +59,11 @@ class User{
         if($resRowsNo != 0){
             $data = mysqli_fetch_array($res);
 
-            if(hash('sha256', $password) == $data['ur_userPassword']){
+            $saltDynamic = substr($mail, 0, 4);
+            $saltStatic = "!Ma4#0";
+            $hashedPassword = hash('sha256', $saltDynamic.$password.$saltStatic);
+
+            if($hashedPassword == $data['ur_userPassword']){
                 return true;
             }else{
                 return false;
