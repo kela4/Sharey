@@ -102,8 +102,13 @@
         <script type="text/javascript" src="js/createOfferModalFiller.js"></script>
         <script type="text/javascript">
             //show offerModal or newOfferModal based on get-params in Url
+            var url_string = window.location.href
+            var url = new URL(url_string);
+            var from = url.searchParams.get("from");
+            var id = url.searchParams.get("id");
+            console.log(from + ' ' + id);
         </script>
-
+    
         <!-- Filter -->
         <script>
         $('.navbar .dropdown-menu').on('click', function(e) {
