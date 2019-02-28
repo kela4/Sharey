@@ -57,5 +57,26 @@ $(document).ready(function() {
 });
 
 function formSubmit(){
-    $('#newOfferEntryForm').submit();
+    //check if all required fields are filled out:
+    var titleField = $('#title');
+    var descriptionField = $('#description');
+
+    var title = titleField.val();
+    var description = descriptionField.val();
+    titleField.removeClass('is-invalid');
+    descriptionField.removeClass('is-invalid');
+
+    if(title == null || title == ""){
+        $('#newEntryModalInfoText').html('Bitte alle Pflichtfelder ausfüllen.');
+        titleField.addClass('is-invalid');
+    }
+
+    if(description == null || title == ""){
+        $('#newEntryModalInfoText').html('Bitte alle Pflichtfelder ausfüllen.');
+        descriptionField.addClass('is-invalid');
+    }
+
+    if(title != null && description != null){
+        $('#newOfferEntryForm').submit();
+    }
 }
