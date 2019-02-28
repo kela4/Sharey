@@ -99,10 +99,7 @@
                                     <!--only fixed values in prototype-->
                                     <label>Umkreis</label>
                                     <select id="searchFilterSurrounding" class="custom-select">
-                                        <option value="5" selected>+5</option>
-                                        <option value="10">+10</option>
-                                        <option value="15">+15</option>
-                                        <option value="20">+20</option>
+                                        <option value="20" selected>+20</option>
                                     </select>
                                 </div>
                             </div>
@@ -111,6 +108,7 @@
                                 <option value="0" selected>Alle</option>
                                 <!--rest will be filled by offerSearchFiller.js-->
                             </select>
+                            <small>*Nicht implementiert*</small>
                     </div>
                 </div>
             </div>
