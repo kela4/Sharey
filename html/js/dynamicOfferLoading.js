@@ -134,9 +134,9 @@ function openModal(offerID, distance){
 
                 //add img:
                 var imageContainer = $('#modalOfferImageContainer');
-                var image = '<img src="" class="img-fluid" id="omImage">';
+                var image = '<img src="" class="img-fluid omImageClass" id="omImage">';
                 if(offer.picture){
-                    image = '<img src="data:image/jpeg;base64,' + offer.picture + '" class="img-fluid" id="omImage">';
+                    image = '<img src="data:image/jpeg;base64,' + offer.picture + '" class="img-fluid omImageClass" id="omImage">';
                 }
                 imageContainer.empty();
                 imageContainer.append(image);
