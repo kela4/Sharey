@@ -245,9 +245,6 @@ a[data-toggle="collapse"] {
         width: 250px;
         left: -250px;
     }
-    div #omImage {
-        margin-left: -45px;
-    }
     .dropdown-menu {
         width: 540px !important;
     }
@@ -385,8 +382,8 @@ a[data-toggle="collapse"] {
     margin-top: 10px;
 }
 
-#omImage {
-    max-height: 130px;
+.omImageClass {
+    max-height: 300px;
 }
 
 #omTagDiv {
