@@ -22,7 +22,11 @@ $(document).ready(function(){
             if(data != false){
                 data.forEach(function(tagElement) {
                     var tag = JSON.parse(tagElement);
-                    tagSelectionNewOffer.append('<option value="' + tag.tagID + '">' + tag.description + '</option>');
+                    if(tag.tagID == 4){ //sonstiges
+                        tagSelectionNewOffer.append('<option selected value="' + tag.tagID + '">' + tag.description + '</option>');
+                    }else{
+                        tagSelectionNewOffer.append('<option value="' + tag.tagID + '">' + tag.description + '</option>');
+                    }
                 });
             }
         },
