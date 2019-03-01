@@ -22,8 +22,12 @@ class Conversation{
         $this->offerTitle = $offerTitle;
     }
 
+    /**
+     * creates a new converation in database and sends the autostartmessage that 
+     * an user has interest of an offer
+     */
     public static function startConversation(int $oaID, int $offerID){ 
-        //get int $ocID
+        //get int $ocID --> check if offerinterestor not equals to offercreator
         require('dbconnect.php');
         mysqli_select_db($connection, 'db_sharey');
 
@@ -34,17 +38,18 @@ class Conversation{
         $data = mysqli_fetch_array($res);
         $ocID  = $data['or_ocID'];
 
-        if($ocID == $oaID){ //eigenes Angebot
+        if($ocID == $oaID){ //own offer --> conversation can't be started
             return false;
         }
 
-        //start con
+        //start conversation
         $query = "INSERT INTO tbl_conversation(cn_active, cn_oaID, cn_ocID, cn_offerID) 
                     VALUES (true, ".$oaID.", ".$ocID.", ".$offerID.");";
 
         $success = mysqli_query($connection, $query);
         
         if($success){
+            //get ConID of new Conversation
             $query = "SELECT cn_conID 
                         FROM tbl_conversation 
                         WHERE cn_oaID = ".$oaID." AND cn_ocID = ".$ocID." AND cn_offerID = ".$offerID." AND cn_active = 1";
@@ -53,18 +58,18 @@ class Conversation{
             $data = mysqli_fetch_array($res);
             $conID  = $data['cn_conID'];
 
-            //create autoStart Message:
+            //send and create autoStart Message:
             $success = Message::sendAutoStartMessage($conID, $oaID);
             return $success;
 
         }else{
             return false;
         }
-
-        //send autostart message
-        return true;
     }
 
+    /**
+     * deletes a conversation (set to inactive) and deletes all messages of the conversation 
+     */
     public static function deleteConversation(int $conID){
         //set conversation to inactive
         require('dbconnect.php');
@@ -96,7 +101,7 @@ class Conversation{
     }
 
     /**
-     * returns a conversation
+     * returns a specific conversation
      */
     public static function getConversation(int $conID){
         require('dbconnect.php');
@@ -115,6 +120,9 @@ class Conversation{
         return new Conversation($data['cn_active'], $data['cn_conID'], $data['cn_oaID'], $data['cn_ocID'], $data['cn_offerID'], null, $data['or_title']);
     }
 
+    /**
+     * get all conversations to a specific offer
+     */
     public static function getConversationsToOffer(int $offerID){
         require('dbconnect.php');
         mysqli_select_db($connection, 'db_sharey');
@@ -182,7 +190,7 @@ class Conversation{
             $messages[] = new Message($data['me_conID'], $data['me_content'], new DateTime($data['me_sendDate']), $data['me_messageID'], $data['me_messageRead'], $data['me_senderID']);
         }
 
-        //mark all unread messages as readed:
+        //get all unread messages:
         $unreadMessages = [];
 
         foreach($messages as $message){
@@ -191,6 +199,7 @@ class Conversation{
             }
         }
 
+        //mark all unread Messages as readed
         if($unreadMessages){
             markMessagesAsReaded($unreadMessages);
         }        
@@ -231,12 +240,15 @@ class Conversation{
     #endregion
 }
 
+/**
+ * function to mark all messages in $messages als readed
+ */
 function markMessagesAsReaded($messages){
     if($messages){
         require('dbconnect.php');
         mysqli_select_db($connection, 'db_sharey');
 
-        //create ID-String for Query
+        //create ID-String of messages for Query
         $messageIDs = "";
         foreach($messages as $message){
             $messageIDs = $messageIDs.', '.$message->getMessageID();

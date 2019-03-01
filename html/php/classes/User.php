@@ -18,6 +18,9 @@ class User{
         $this->userID = $userID;
     }
 
+    /**
+     * check correct login-dates and start a session, add user-object to sessionstorage
+     */
     public static function login(string $mail, string $password){         
         require('dbconnect.php');
         mysqli_select_db($connection, 'db_sharey');
@@ -30,6 +33,7 @@ class User{
         
         $data = mysqli_fetch_array($res);
 
+        //salting password and hash salt+password:
         $saltDynamic = substr($mail, 0, 4);
         $saltStatic = "!Ma4#0";
         $hashedPassword = hash('sha256', $saltDynamic.$password.$saltStatic);
@@ -45,6 +49,9 @@ class User{
         }
     }
 
+    /**
+     * only check, that logindates are correct, don't start a session
+     */
     public static function checkLoginDates(string $mail, string $password){         
         require('dbconnect.php');
         mysqli_select_db($connection, 'db_sharey');
@@ -59,6 +66,7 @@ class User{
         if($resRowsNo != 0){
             $data = mysqli_fetch_array($res);
 
+            //salting password and hash salt+password:
             $saltDynamic = substr($mail, 0, 4);
             $saltStatic = "!Ma4#0";
             $hashedPassword = hash('sha256', $saltDynamic.$password.$saltStatic);
@@ -73,21 +81,33 @@ class User{
         }
     }
 
+    /**
+     * delete User
+     */
     public static function deleteUser(int $userID){
         //not implemented in prototype
         return true;
     }
 
+    /**
+     * register new user
+     */
     public static function registration(string $mail, string $password){ 
         //not implemented in prototype
         return $user;
     }
 
+    /**
+     * edit account informations ex. e-mail-notifications
+     */
     public function changeAccount(string $password, string $mail){
         //not implemented in prototype 
         return true;
     }
 
+    /**
+     * create new offer
+     */
     public function createOffer(string $content, $mhd = null, string $title, int $tagID, $picture = null, int $plzID){
         //insert offer into db:
         require('dbconnect.php');
@@ -103,22 +123,34 @@ class User{
         }
     }
 
+    /**
+     * edit own offer
+     */
     public function editOffer(int $offerID, bool $active, string $title, string $content, string $picture){
         //not implemented in prototype
         return $offer;
     }
 
+    /**
+     * logout user --> destroy session
+     */
     public function logout(){
         session_destroy();
 
         return !empty($_SESSION['user']);
     }
 
+    /**
+     * report an offer
+     */
     public function reportOffer(int $offerID){
         //not implemented in prototype
         return true;
     }
 
+    /**
+     * send a message in conversation
+     */
     public function sendMessage(int $conID, string $content){ 
         $message = Message::createMessage($this->userID, $conID, $content);
 
@@ -129,8 +161,11 @@ class User{
         }
     }
 
+    /**
+     * show interest of an offer
+     * check -> is there an active con in db with same offerID and userID? if not --> start new con
+     */
     public function showInterest(int $offerID){
-        //prüfen -> gibt es schon eine Con mit active, offerID und userID? falls nicht, starten
         require('dbconnect.php');
         mysqli_select_db($connection, 'db_sharey');
 

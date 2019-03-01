@@ -14,11 +14,17 @@ class PLZ{
         $this->plzID = $plzID;
     }
 
+    /**
+     * get specific PLZ
+     */
     public static function getPLZ(int $plzID){
         //not implemented in prototype
         return $plz;
     }
 
+    /**
+     * get all PLZ that start with $firstNumbers
+     */
     public static function getPLZStartWithNumbers(string $firstNumbers){
         require('dbconnect.php');
         mysqli_select_db($connection, 'db_sharey');
@@ -38,6 +44,9 @@ class PLZ{
         return $plzs;
     }
 
+    /**
+     * convert a PLZ-Object to JSON-Object
+     */
     public function toJson() {
         return json_encode(array(
             'location' => $this->getLocation(),

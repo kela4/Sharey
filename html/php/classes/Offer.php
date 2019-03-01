@@ -30,6 +30,10 @@ class Offer{
         $this->ocID = $ocID; 
     }
 
+    /**
+     * delete an offer (set to inactive), delete all conversations of this offer (set to inactive)
+     * and send offerDeleted-InfoMessage
+     */
     public static function deleteOffer(int $offerID){ 
         require('dbconnect.php');
         mysqli_select_db($connection, 'db_sharey');
@@ -50,12 +54,17 @@ class Offer{
                 Message::sendOfferDeletedMessage($conversation->getConID(), $conversation->getOcID());
             }
 
-            return true; //offer was deleted (set to inactive)
+            return true; //offer was deleted
         }else{
             return false;
         }
     }
 
+    /**
+     * get all offers that corresponding to the search- and filterparams
+     * search- and filter not implemented in prototype
+     * maybe can be implemented like the commented part in this function
+     */
     public static function setSearch(string $searchTerm = null, int $plzID = null, int $surrounding = null, int $tagID = null){
         //search- and filterparameters not implemented yet
         require('dbconnect.php');
@@ -138,14 +147,14 @@ class Offer{
 
         $offersWithDistanceFromPoint = [];
         
-        //calc distance from Mosbach:
+        //calc distance from Mosbach (initial startpoint for prototype):
         $startDistanceY = 9.15110; //longitude
         $startDistanceX = 49.35360; //latitude
         
         while(($data = mysqli_fetch_array($res)) != false){
             $distanceFromMosbach = getDistanceBetween(floatval($startDistanceX), floatval($startDistanceY), floatval($data['pz_latitude']), floatval($data['pz_longitude']));
             if(isset($distanceFromMosbach) && !empty($distanceFromMosbach) && $distanceFromMosbach != 0){
-                $distanceFromMosbach = round($distanceFromMosbach*111); //in km
+                $distanceFromMosbach = round($distanceFromMosbach*111); //convert to km
             }else{
                 $distanceFromMosbach = 0;
             }
@@ -157,11 +166,15 @@ class Offer{
             
         }
 
+        //sort array by distance to the starting point
         usort($offersWithDistanceFromPoint, 'compareDistance');
 
         return $offersWithDistanceFromPoint;
     }
 
+    /**
+     * get data of specific offer
+     */
     public static function getOffer(int $offerID){
         require('dbconnect.php');
         mysqli_select_db($connection, 'db_sharey');
@@ -186,6 +199,9 @@ class Offer{
         return $offer;
     }
 
+    /**
+     * convert Offer-Object to JSON-Object
+     */
     public function toJson() {
         $mhd = null;
         if($this->getMhd() != new DateTime('0000-00-00')){
@@ -206,6 +222,9 @@ class Offer{
         ));
     }
 
+    /**
+     * edit an offer
+     */
     public function edit(string $title, string $content, int $tagID, DateTime $mhd, string $picture){ //String, String, int, date, String
         //not implemented in prototype
         return $offer;
@@ -271,11 +290,17 @@ class Offer{
 
 }
 
+/**
+ * get distance between to points in a coordinate system
+ */
 function getDistanceBetween(float $pointOneX, float $pointOneY, float $pointTwoX, float $pointTwoY){
     $d = sqrt( pow( ($pointOneX - $pointTwoX), 2) + pow( ( $pointOneY - $pointTwoY), 2) );   //d = Quadratwurzel( (x1-x2)^2 + (y1-y2)^2 )
     return floatval($d);
 }
 
+/**
+ * comparer for sorting offers by array-key distancefromstartpoint
+ */
 function compareDistance($a, $b){
     return strnatcmp($a['distanceFromStartPoint'], $b['distanceFromStartPoint']);
 }

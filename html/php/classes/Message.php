@@ -19,7 +19,10 @@ class Message{
         $this->messageRead = $messageRead;
         $this->senderID = $senderID;
     }
-
+    
+    /**
+     * create new message in database, senddate = currentdate
+     */
     public static function createMessage(int $senderID, int $conID, string $content){
         $sendDate = date('Y-m-d H:i:s');
         
@@ -40,24 +43,37 @@ class Message{
         }
     }
 
+    /**
+     * send autoStart message for user has interest of an offer
+     */
     public static function sendAutoStartMessage(int $conID, int $senderID){
         $content = "Hallo, ich habe Interesse an deinem Angebot. ~ diese Nachricht wurde automatisch vom System versendet ~";
         $success = Message::createMessage($senderID, $conID, $content);
         return $success;
     }
 
+    /**
+     * send autoInfo message for offer was deleted
+     */
     public static function sendOfferDeletedMessage(int $conID, int $senderID){ 
         $content = "Das Angebot wurde vom Ersteller entfernt. ~ diese Nachricht wurde automatisch vom System versendet ~";
         $success = Message::createMessage($senderID, $conID, $content);
         return $success;
     }
 
+    /**
+     * send autoInfo message for conversation was deleted
+     */
     public static function sendConversationDeletedMessage(int $conID, int $senderID){
         $content = "Diese Konversation wurde gelöscht. ~ diese Nachricht wurde automatisch vom System versendet ~";
         $success = Message::createMessage($senderID, $conID, $content);
         return $success;
     }
 
+    /**
+     * convert a message-object in a JSON-object
+     * format senddate to DD-MM-YY hh:mm
+     */
     public function toJson() {
         return json_encode(array(
             'conID' => $this->getConID(),

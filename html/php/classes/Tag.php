@@ -14,11 +14,17 @@ class Tag{
         $this->tagID = $tagID;
     }
 
+    /**
+     * get specific tag
+     */
     public static function getTag(int $tagID){
         //not implemented in prototype
         return $tag;
     }
 
+    /**
+     * get all tags
+     */
     public static function getAllTags(){
         require('dbconnect.php');
         mysqli_select_db($connection, 'db_sharey');
@@ -36,6 +42,9 @@ class Tag{
         return $tags;
     }
 
+    /**
+     * convert Tag-Object to JSON-object
+     */
     public function toJson() {
         return json_encode(array(
             'color' => $this->getColor(),
