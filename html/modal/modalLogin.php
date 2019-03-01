@@ -22,12 +22,10 @@
                         <input type="password" required class="form-control" id="password" placeholder="Passwort"
                             name="password">
                     </div>
-                    <!-- Javascript der Login Modal schließt -->
+                    <!-- Javascript that close Modal -->
                     <button type="button" class="btn btn-dark float-right" onclick="loginCheck();">Login</button>
-                    <button type="button" class="btn btn-light float-right"
-                        onclick="$('#loginModal').modal('hide');
-                        $('#registerModal').modal('show');"
-                        id="register">Registrieren</button>
+                    <button type="button" class="btn btn-light float-right" onclick="$('#loginModal').modal('hide');
+                        $('#registerModal').modal('show');" id="register">Registrieren</button>
                 </form>
             </div>
         </div>
