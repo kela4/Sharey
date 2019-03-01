@@ -1,6 +1,8 @@
 <?php
     require_once('classes/Tag.php');
 
+    //returns all tags as JSON-data
+
     $tags = Tag::getAllTags();
     
     if(!empty($tags)){

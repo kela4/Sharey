@@ -5,7 +5,7 @@ require_once('classes/Offer.php');
 
 //returns offers depending on search restrictions
 
-//search- and filterparameters not full implemented in prototype
+//search- and filterparameters not implemented in prototype
 $searchTerm = "";
 $plzID = 0;
 $surrounding = 0;
@@ -27,6 +27,7 @@ if(isset($_POST['tagID']) && !empty($_POST['tagID'])){
     $tagID = intval($_POST['tagID']);
 }
 
+//get offers based on search- and filter-options
 $offersWithDistance = Offer::setSearch($searchTerm, $plzID, $surrounding, $tagID);
 
 if(!empty($offersWithDistance)){

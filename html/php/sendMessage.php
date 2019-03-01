@@ -14,6 +14,7 @@ if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
             $content = $_POST['messageContent'];
             $conID = intval($_POST['conID']);
 
+            //call user-function sendMessage
             $message = $_SESSION['user']->sendMessage($conID, $content);
 
             if(!empty($message)){

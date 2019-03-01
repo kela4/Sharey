@@ -15,9 +15,11 @@
             
             $imageData = null;
 
+            //add imagedate if image is set:
             if(isset($_POST['img']) && !empty($_POST['img']) && ($_POST['img'] != "") && (strpos($_POST['img'], 'data:image') === 0)){
                 $image = $_POST['img'];
 
+                //clear sended image-string
                 if(strpos($image, 'data:image/jpeg;base64,') === 0){
                     $image = str_replace('data:image/jpeg;base64,', '', $image);
                 }elseif(strpos($image, 'data:image/jpg;base64,') === 0){
@@ -29,16 +31,18 @@
                     exit;
                 }
 
+                //convert base64 img-data to binary-img-data
                 $image = str_replace(' ', '+', $image);
-
                 $imageData = addslashes(base64_decode($image));
             }
 
+            //add expectationdate if is set
             $expdate = new DateTime('0000-00-00');
             if(isset($_POST['expdate']) && !empty($_POST['expdate'])){
                 $expdate = new DateTime($_POST['expdate']);
             }
 
+            //call user-function createOffer
             $success = $_SESSION['user']->createOffer($_POST['desc'], $expdate, $_POST['title'], intval($_POST['tagID']), $imageData, intval($_POST['plzID']));
             
             if($success){

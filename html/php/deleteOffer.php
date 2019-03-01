@@ -6,6 +6,8 @@ require_once('classes/Offer.php');
 require_once('classes/Conversation.php');
 require_once('classes/Message.php');
 
+//delete an offer, returns if it was successfull
+
 session_start();
 if(isset($_SESSION['user']) && !empty($_SESSION['user'])
     && isset($_POST['offerID']) && !empty($_POST['offerID'])){

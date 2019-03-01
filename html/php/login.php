@@ -1,5 +1,7 @@
 <?php 
 
+    //performs the actual login
+
     require_once('classes/User.php');
     require_once('classes/PLZ.php');
     require_once('classes/Tag.php');
@@ -9,11 +11,6 @@
 
     if(isset($_POST['mail']) && !empty($_POST['mail'])){
         if(isset($_POST['password']) && !empty($_POST['password'])){
-
-            $loginFrom = 0;
-            if(isset($_POST['loginFrom']) && !empty($_POST['loginFrom'])){
-                $loginFrom = $_POST['loginFrom'];
-            }
 
             //call login-method of User
             $success = User::login($_POST['mail'], $_POST['password']);

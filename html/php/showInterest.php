@@ -10,6 +10,7 @@ require_once('classes/Conversation.php');
 session_start();
 if(isset($_SESSION['user']) && !empty($_SESSION['user']) 
     && isset($_POST['offerID']) && !empty($_POST['offerID'])){
+        //call user-function showInterest 
         $success = $_SESSION['user']->showInterest(intval($_POST['offerID']));
         if($success){
             echo json_encode(true);

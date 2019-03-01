@@ -8,7 +8,7 @@
 
     if(isset($_POST['mail']) && !empty($_POST['mail'])
         && isset($_POST['password']) && !empty($_POST['password'])){
-            //check if user and password are correct
+            //check if user and password are correct, call user-function checkLoginDates
             $success = User::checkLoginDates($_POST['mail'], $_POST['password']);
             
             if($success == true){

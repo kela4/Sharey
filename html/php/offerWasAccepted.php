@@ -10,9 +10,10 @@ session_start();
 if(isset($_SESSION['user']) && !empty($_SESSION['user'])
     && isset($_POST['conID']) && !empty($_POST['conID'])
     && isset($_POST['offerID']) && !empty($_POST['offerID'])){
-        //a counter of the completed offers per user can be implemented via the conID, which can be used for the later implementation of user-experience-status
+        //a counter of the completed offers per user can be implemented via the conID, 
+        //which can be used for the later implementation of user-experience-status
         
-        //delete offer:
+        //call offer-function deleteOffer:
         $success = Offer::deleteOffer(intval($_POST['offerID']));
         
         if($success){

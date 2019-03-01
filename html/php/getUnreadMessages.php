@@ -1,5 +1,7 @@
 <?php
 
+//returns as JSON-data if unread messages are available + message data
+
 require_once('classes/User.php');
 require_once('classes/PLZ.php');
 require_once('classes/Tag.php');

@@ -6,6 +6,8 @@ require_once('classes/Offer.php');
 require_once('classes/Conversation.php');
 require_once('classes/Message.php');
 
+//delete conversation and send the auto conversation-was-deleted-infomessage
+
 session_start();
 if(isset($_SESSION['user']) && !empty($_SESSION['user'])
     && isset($_POST['conID']) && !empty($_POST['conID'])){

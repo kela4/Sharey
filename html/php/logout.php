@@ -8,6 +8,7 @@
 
     session_start();
     if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
+        //call user-function logout
         $success = $_SESSION['user']->logout();
             
         if($success == true){
