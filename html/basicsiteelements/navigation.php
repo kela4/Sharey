@@ -15,7 +15,7 @@
 
     <ul class="list-unstyled components text-center">
         <?php
-            if(!isLoggedIn()){ //user isn't logged in
+            if(!isLoggedIn()){ //user isn't logged in --> show login and register - options
                 ?>
         <li>
             <a data-toggle="modal" data-target="#loginModal" title="Login">Login</a>
@@ -25,7 +25,7 @@
             <a data-toggle="modal" data-target="#registerModal" title="Registrieren">Registrieren</a>
         </li>
         <?php
-            }else{ //user is logged in
+            }else{ //user is logged in --> show account and logout - options
                 ?>
         <li>
             <a href="account.php" title="Account">Account</a>
@@ -96,7 +96,7 @@
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
-                                    <!--only fixed values in prototype-->
+                                    <!--only fixed value in prototype-->
                                     <label>Umkreis</label>
                                     <select id="searchFilterSurrounding" class="custom-select">
                                         <option value="20" selected>+20</option>

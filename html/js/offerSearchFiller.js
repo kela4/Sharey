@@ -1,3 +1,7 @@
+/**
+ * fill dynamically the search- and filter-options
+ * this function isn't impemented in prototype
+ */
 $(document).ready(function(){
 
     //filler for plz:

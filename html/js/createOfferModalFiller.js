@@ -14,6 +14,7 @@ $(document).ready(function(){
     //filler for tags:
     var tagSelectionNewOffer = $('#tagSelectionNewOffer');
 
+    //get the tags dynamically from db with the help of the getAllTags-phpscript
     $.ajax({
         url: '../php/getAllTags.php',
         dataType: 'json',

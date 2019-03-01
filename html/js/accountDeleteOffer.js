@@ -1,3 +1,8 @@
+/**
+ * function that will be called, if user clicks on the delete-Button in his own offers at account-page
+ * offer will be deleted (set to inactive) in DB and if it was successfull, the page refreshs
+ * @param {*} offerID offerID of offer that should deleted
+ */
 function deleteOffer(offerID){
     if (confirm('Möchtest du dieses Angebot endgültig löschen?')) {
 

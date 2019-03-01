@@ -1,10 +1,14 @@
 $(document).ready(function(){
+    //if index.php was fully loaded --> call offerLoading-function and load the offers with initial search- and filter-parameters
     offerLoading();
 });
 
-function offerLoading(){ //search- and filterparameters not implemented yet,...
-    //loading offers from DB
-
+/**
+ * load offers dynamically from database and add them to the offerContainer in index.php
+ * search- and filterparameters not implemented in prototype but later they will be getted 
+ * also in this function and send them with the data-attribute of ajax-function to the backend 
+ */
+function offerLoading(){
     //get html-Elements
     var loadingOffers = $('#loadingOffers');
     var offerContainer = $('#offerContainer');
@@ -22,23 +26,24 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
         type: 'post',
         success: function(data){
             if(data.offersAvailable){
-                
+                //get JSON-data as JS-Objects and print all offers
                 var offers = JSON.parse(data.offers);
 
                 offers.forEach(function(offerElementWithDistanceArray){
+                    //get JSON-data as JS-Objects:
                     var offerElementWithDistance = JSON.parse(offerElementWithDistanceArray);
-
                     var offer = JSON.parse(offerElementWithDistance.offer);
                     var tag = JSON.parse(offer.tag);
                     var plz = JSON.parse(offer.plz);
                     var distance = JSON.parse(offerElementWithDistance.distance);
 
+                    //create the img-tag accordingly if the offer has an image 
                     var image = '<img src="" id="offerImage">';
                     if(offer.picture){
                         image = '<img src="data:image/jpeg;base64,' + offer.picture + '" id="offerImage">';
                     }
 
-                    //print offers 
+                    //print offers (append them to offerContainer) 
                     offerContainer.append(      '<div onclick="openModal(' + offer.offerID + ', ' + distance + ');" id="' + offer.offerID + '" class="col-auto m-3 card offerCardSize cardCursor" style="background-color:' + tag.color + '">' +
                                                     '<div id="cardContent">' +
                                                         '<div class="row">' +
@@ -83,8 +88,10 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
 
                 });
                 
+                //fit font-size of location-name 
                 $(".locationDiv").boxfit({align_center:false, align_middle:false, maximum_font_size: 16});
             }else{
+                //if there are no offers to the selected paramters available:
                 offerContainer.append('<p>Leider sind keine passenden Angebote vorhanden. Versuche doch mal eine andere Such- und Filtereinschränkung.</p>');
             }
 
@@ -97,6 +104,12 @@ function offerLoading(){ //search- and filterparameters not implemented yet,...
     });
 }
 
+/**
+ * gets the infos of one specific offer, fills the offer-Modal fields with the informations
+ * and shows the offer-modal
+ * @param {*} offerID id of offer
+ * @param {*} distance the distance of the selected offer (that can not be recalculated by backend without search- and filterparameters)
+ */
 function openModal(offerID, distance){
     //show loadingContainer:
     $('#loadingContainer').show();
@@ -107,17 +120,19 @@ function openModal(offerID, distance){
         dataType: 'json',
         type: 'post',
         complete: function(){
-            //hide loadingContainer
+            //hide loadingContainer with a timeout of 0.5 sec
             setTimeout(function(){ 
                 $('#loadingContainer').hide();
             }, 500);
         },
         success: function(data){
             if(data.offerAvailable){
+                //parse JSON-data to JS-objects
                 var offer = JSON.parse(data.offer);
                 var tag = JSON.parse(offer.tag);
                 var plz = JSON.parse(offer.plz);
 
+                //set offer-data to the offer-modal-fields:
                 $('.omColor').css("background-color", tag.color);
                 $('#offerModalTitle').html(offer.title);
                 $('#offerModalTagText').html(tag.description);
@@ -132,7 +147,7 @@ function openModal(offerID, distance){
                     $('#offerModalMHDText').html('');
                 }
 
-                //add img:
+                //create and add the img-tag accordingly if the offer has an image 
                 var imageContainer = $('#modalOfferImageContainer');
                 var image = '<img src="" class="img-fluid omImageClass" id="omImage">';
                 if(offer.picture){
@@ -141,12 +156,13 @@ function openModal(offerID, distance){
                 imageContainer.empty();
                 imageContainer.append(image);
 
-                //add actionbuttons:
+                //add actionbuttons with specific offerID:
                 var offerModalActionButtons = $('#offerModalActionButtons');
                 offerModalActionButtons.empty();
                 offerModalActionButtons.append('<button type="button" class="btn btn-dark float-right" onclick="showInterest(' + offer.offerID + ', ' + distance + ');">Interesse</button>' +
                                                         '<button type="button" class="btn btn-light float-right whiteText" id="omReportOffer" onclick="alert(\'Diese Funktion ist im Prototypen nicht implementiert.\');">Melden</button>');
 
+                //showw offer-modal
                 $('#offerModal').modal('show');
 
             }else{
@@ -159,10 +175,18 @@ function openModal(offerID, distance){
     });
 }
 
+/**
+ * if a user has interest on an offer, he clicks the interesse-button
+ * than this function will be called
+ * fist will be checked, if a user is logged in, if not, the user must loggin firs
+ * if yes -> php-script showInterest will be called and if this returns true (means everything worked in the script),
+ * a redirect to account-page will be accomplished
+ */
 function showInterest(offerID, distance){
     //show loadingContainer:
     $('#loadingContainer').show();
 
+    //check if a user is logged in:
     $.ajax({
         url: '../php/isLoggedInJSON.php',
         dataType: 'json',
@@ -175,7 +199,6 @@ function showInterest(offerID, distance){
         },
         success: function(data){
             if(data){ //true = User ist eingeloggt
-                 //hier ajax zu interesseZeigen.php, dann Rückmeldung true/false obs geklappt hat,
                 $.ajax({
                     url: '../php/showInterest.php',
                     data: {offerID: offerID},
@@ -194,6 +217,7 @@ function showInterest(offerID, distance){
                     }
                 });
             }else{
+                //show info-text that user must logged in
                 $('#offerModal').modal('hide');
                 $('#loginModalInfoText').html('Bitte melde dich an, kehre zur Startseite zurück und wähle dann den Interesse-Button aus.');
                 $('#loginModal').modal('show');

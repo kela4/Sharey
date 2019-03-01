@@ -1,10 +1,18 @@
+/**
+ * function checks, if a visitor enters correct login-dates to the login-modal
+ * if no --> a info-message will be shown
+ * if yes --> the loginForm will be submitted
+ */
 function loginCheck(){
 
     //show loadingContainer:
     $('#loadingContainer').show();
+
+    //get values of email and password field in form
     var mail = $('#email').val();
     var password = $('#password').val();
 
+    //call loginCheck php-script
     $.ajax({
         url: '../php/loginCheck.php',
         data: {mail: mail, password: password},
@@ -24,7 +32,7 @@ function loginCheck(){
                 $('#loginModalInfoText').html('');
                 $('#loginModalForm').submit();
             }else{
-                //info that mail or password is wrong, mark the fields
+                //info that mail or password is wrong, mark both fields, don't submit
                 $('#loginModalInfoText').html('E-Mail oder Passwort sind falsch.');
                 $('#email').addClass('is-invalid');
                 $('#password').addClass('is-invalid');

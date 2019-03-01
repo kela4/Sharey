@@ -48,7 +48,8 @@
                      <input type="hidden" name="MAX_FILE_SIZE" value="1000000" />
                      <input id="inputFileHiddenInForm" type="hidden" name="img" value="">
                  </form>
-                 <!--out of the form-->
+                 <!--out of the form cause of only resized image will be sended to server
+                     this elements will be needed to get normal image and resize it-->
                  <div class="form-group">
                      <label for="modalImage">Bild</label>
                      <div class="input-group" id="modalImage">
@@ -60,7 +61,8 @@
                          </label>
                      </div>
                      <small id="imgHelp" class="form-text text-muted">Bitte nur Dateien im Format
-                         '<strong>.jpg</strong>' und
+                         '<strong>.jpg</strong>',
+                         '<strong>.jpeg</strong>' und
                          '<strong>.png</strong>' hochladen.
                          &#128522;</small>
                  </div>
@@ -70,6 +72,7 @@
          </div>
      </div>
  </div>
-
- <script type="text/javascript" src="../js/createOfferFunctions.js"></script>
  <!--end Modal-->
+
+<!--script for formSubmit and resizeImage-->
+ <script type="text/javascript" src="../js/createOfferFunctions.js"></script>
