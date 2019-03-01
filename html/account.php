@@ -47,7 +47,8 @@
         <div class="container">
 
             <?php
-            if(isset($_SESSION['user']) && !empty($_SESSION['user'])){ //only show page if a user is logged in
+            if(isset($_SESSION['user']) && !empty($_SESSION['user'])){ 
+                //only show page if a user is logged in
         ?>
 
             <div class="container fixed-top" id="conversationButtons">
@@ -94,8 +95,10 @@
                                     $acceptorCounter = 1;
                                     $offerCounter = 0;
 
-                                    foreach($conversations as $conversation){ //if offerID of current conversation equals to offerID of the previous conversation --> add only the lastMessage
-                                        if(!empty($conversation->getLastMessage())){ //if in the conversation actually a message is present
+                                    foreach($conversations as $conversation){ 
+                                        //if offerID of current conversation equals to offerID of the previous conversation --> add only the lastMessage
+                                        if(!empty($conversation->getLastMessage())){ 
+                                            //if in the conversation actually a message is present
                                                                                         
                                             if($conversation->getOfferID() == $currentOfferID){
                                                 //color for timestamp-field:
@@ -113,7 +116,8 @@
                                                                 </button>
                                                             </div>
                                                         </form>';
-                                            }else{ //if offerID of current conversation not equals to offerID of the previous conversation --> add a new title and then the lastMessage
+                                            }else{ 
+                                                //if offerID of current conversation not equals to offerID of the previous conversation --> add a new title and then the lastMessage
                                                 
                                                 $offerCounter++;
 
@@ -142,12 +146,12 @@
                                                         $messageUnreaded = "font-weight-bold"; //set this class to last message textdiv
                                                 }
 
+                                                //add "ich" if sender of lastMessage equals to currentUser
                                                 $messageSendedByCurrentUser = "";
                                                 if($conversation->getLastMessage()->getSenderID() == $_SESSION['user']->getUserID()){
                                                     $messageSendedByCurrentUser = "<i>Ich:</i> ";
                                                 }
 
-                                                //if offer-counter ist ungerade, dann dunkelgrau er div, sonst hellgrau
                                                 echo '<div class="card" id="'.$colorOfferGroup.'">
                                                         <h4>'.$conversation->getOfferTitle().'</h4>
                                                         <form method="POST" action="conversation.php#anker">
@@ -272,6 +276,7 @@
     <script type="text/javascript" src="js/dynamicFontSizeLibary.js"></script>
 
     <script type="text/javascript">
+        //fit location font-size
         $(".locationDiv").boxfit({align_center:false, align_middle:false, maximum_font_size: 16});
     </script>
 </body>

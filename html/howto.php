@@ -60,16 +60,16 @@
                 <div class="col-12 col-md-10 align-self-center">
 
                     <p>
-                        Nun siehst du ein leeres Angebot, dass du mit deinen Angaben ausfüllst.
+                        Nun siehst du ein leeres Angebot, das du mit deinen Angaben ausfüllst.
                         Beschreibe am besten kurz, was du anbieten möchtest und warum. Auch den Zustand solltest du
-                        beschreiben, als z.B. ob das Produkt ungeöffnet oder geöffnet ist.
+                        beschreiben, z.B. ob das Produkt ungeöffnet oder geöffnet ist.
                     </p>
 
                     <p>
                         Wichtig ist auch, dass du das Mindesthaltbarkeitsdatum (MHD) angibst.
                         Keine Angst, nur weil das MHD abgelaufen ist, werden wir dein Angebot nicht löschen. Denn fast
                         immer
-                        sind Lebensmittel und Drogerieprodukte auch nach dem MHD noch genießbar.
+                        sind Lebensmittel und Drogerieprodukte auch nach dem MHD noch genieß- und nutzbar.
                     </p>
 
                 </div>
@@ -92,7 +92,7 @@
 
                     <p>
                         Achte darauf, dass das Produkt gut zu sehen und scharf ist. Außerdem sollte es gut ausgeleuchtet
-                        sein. Und je weniger Drumherum sichtbar ist, desto besser für die Aufmerksamkeit auf dein
+                        sein. Und je weniger Drumherum sichtbar ist, desto besser richtet sich die Aufmerksamkeit auf dein
                         Angebot.
                     </p>
 
@@ -110,12 +110,12 @@
 
                     <p>
                         Nachdem du uns nun alles zu deinem Angebot mitgeteilt hast, kannst du es speichern.
-                        Nun ist das Angebot für alle unsere User sichtbar.
+                        Nun ist das Angebot für all unsere User sichtbar.
                     </p>
 
                     <p>
-                        Angebote kann man nach Textinhalten und Tag suchen, sowie den Radius der Suche einschränken.
-                        Sobald ein User Interesse an deinem Angebot hat erhältst du von uns eine Nachricht.
+                        Angebote kann man nach Textinhalten und Tag duchsuchen, sowie den Radius der Suche einschränken.
+                        Sobald ein User Interesse an deinem Angebot hat, erhältst du von uns eine Nachricht.
                     </p>
 
                 </div>

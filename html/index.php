@@ -64,7 +64,7 @@
             </div>
 
             <div id="offerContainer" class="row justify-content-center">
-                <!--is filled by JS-Funktion offerLoading()-->
+                <!--is filled by JS-Funktion offerLoading() in dynamic offer loading-->
             </div>
 
         </div>

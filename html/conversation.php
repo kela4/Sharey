@@ -34,6 +34,7 @@
             <?php
         if(isset($_SESSION['user']) && !empty($_SESSION['user'])){
             if(isset($_POST['conID']) && !empty($_POST['conID'])){
+                //show page only if user is logged in and conID is available
                 $conversation = Conversation::getConversation(intval($_POST['conID']));
         ?>
 
@@ -42,6 +43,7 @@
                     <div class="col-10">
                         <?php
                         if($conversation->getActive()){
+                            //show buttons only if conversation is active
                             if($_SESSION['user']->getUserID() == $conversation->getOcID()){
                                 //acceptoffer-button only for offercreator
                                 echo '<button type="button" onclick="offerWasHandedOver('.$conversation->getConID().', '.$conversation->getOfferID().')" class="btn btn-sm btn-success" title="Angebot wurde von einem User angenommen und das Produkt übergeben">
@@ -69,6 +71,7 @@
             <div id="messageArea">
 
                 <?php
+                        //print all messages to conversation
                         $messages = $conversation->getAllMessages($_SESSION['user']->getUserID());
                         foreach($messages as $message){
                             if($message->getSenderID() == $_SESSION['user']->getUserID()){

@@ -22,6 +22,7 @@
             <h1>Da ist wohl etwas schief gegangen...</h1>
             <p>Bitte versuche es erneut.</p>
             <?php
+                //if error-message is set as get-parameter, show this message
                 if(isset($_GET['errormessage']) && !empty($_GET['errormessage'])){
                     echo '<p>'.$_GET['errormessage'].'</p>';
                 }
